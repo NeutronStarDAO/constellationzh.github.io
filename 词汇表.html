@@ -1,0 +1,700 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>词汇表 - 互联网计算机漫游指南（Constellation Book）</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="index.html"><strong aria-hidden="true">1.</strong> 互联网计算机漫游指南</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅</li><li class="chapter-item "><a href="0.去中心化之旅/造梦家的冒险之旅.html"><strong aria-hidden="true">2.</strong> 造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="0.去中心化之旅/未来已来.html"><strong aria-hidden="true">2.1.</strong> 未来已来</a></li><li class="chapter-item "><a href="0.去中心化之旅/加密朋克的那些事.html"><strong aria-hidden="true">2.2.</strong> 加密朋克的那些事</a></li><li class="chapter-item "><a href="0.去中心化之旅/区块链是啥？.html"><strong aria-hidden="true">2.3.</strong> 区块链是啥？</a></li><li class="chapter-item "><a href="0.去中心化之旅/什么是以太坊？.html"><strong aria-hidden="true">2.4.</strong> 什么是以太坊？</a></li><li class="chapter-item "><a href="0.去中心化之旅/我的网络隐私呢？.html"><strong aria-hidden="true">2.5.</strong> 我的网络隐私呢？</a></li><li class="chapter-item "><a href="0.去中心化之旅/比特币.html"><strong aria-hidden="true">2.6.</strong> 比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC</li><li class="chapter-item "><a href="1.了解IC/1.了解IC.html"><strong aria-hidden="true">3.</strong> 了解IC</a></li><li class="chapter-item affix "><li class="part-title">核心协议</li><li class="chapter-item "><a href="2.核心协议/1.P2P层.html"><strong aria-hidden="true">4.</strong> P2P层</a></li><li class="chapter-item "><a href="2.核心协议/2.共识层.html"><strong aria-hidden="true">5.</strong> 共识层</a></li><li class="chapter-item "><a href="2.核心协议/3.消息路由层.html"><strong aria-hidden="true">6.</strong> 消息路由层</a></li><li class="chapter-item "><a href="2.核心协议/4.执行层.html"><strong aria-hidden="true">7.</strong> 执行层</a></li><li class="chapter-item "><a href="2.核心协议/代码分析简介.html"><strong aria-hidden="true">8.</strong> 代码分析</a></li><li class="chapter-item "><a href="2.核心协议/相关概念介绍/简介.html"><strong aria-hidden="true">9.</strong> 相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="2.核心协议/相关概念介绍/共识委员会数量如何确定？.html"><strong aria-hidden="true">9.1.</strong> 共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html"><strong aria-hidden="true">9.2.</strong> P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">Chain key</li><li class="chapter-item affix "><li class="part-title">NNS</li><li class="chapter-item affix "><li class="part-title">经济模型</li><li class="chapter-item affix "><li class="part-title">canister与智能合约</li><li class="chapter-item affix "><li class="part-title">互联网身份</li><li class="chapter-item affix "><li class="part-title">IC里的密码学</li><li class="chapter-item affix "><li class="part-title">开发Dapp</li><li class="spacer"></li><li class="chapter-item affix "><a href="词汇表.html" class="active">词汇表</a></li><li class="chapter-item affix "><a href="贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南（Constellation Book）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h1 id="web3领域"><a class="header" href="#web3领域">Web3领域</a></h1>
+<h2 id="web3"><a class="header" href="#web3">Web3</a></h2>
+<p>Web3 是互联网的下一代版本，它旨在为我们的在线世界带来更多的去中心化、安全和透明度。想象一下，现在的互联网（我们称之为 Web2 ）主要由一些大公司控制，而 Web3 则试图将权力和控制分散到用户手中。这意味着，在 Web3 世界里，用户对自己的数据和身份有更大的控制权，而不是将它们完全交给像谷歌、脸书这样的公司。</p>
+<p>Web3 的核心技术是区块链，这是一种去中心化、安全的分布式数据库。你可以把区块链想象成一个公共账本，它能记录所有人的交易和活动，而且一旦记录就无法篡改。基于区块链技术的应用程序，如智能合约、去中心化金融（DeFi）和去中心化应用（Dapp），都是Web3的重要组成部分。</p>
+<p>让我们用一个例子来说明 Web3 是如何改变现有互联网的。在 Web2 ，艺术家想要在网上出售自己的作品，通常需要依赖一些中心化的平台（如 eBay 、亚马逊等）。这些平台往往会收取高昂的手续费，并控制用户的交易过程。而在 Web3 的世界里，艺术家可以使用去中心化的市场（如OpenSea）出售他们的作品。在这里，艺术家可以将自己的作品制作成非同质化代币（NFT），并将其直接出售给购买者，无需第三方的干预。这样，艺术家可以获得更大的收益，而且对交易有更多的控制权。</p>
+<p>Web3 还为在线隐私提供了更好的保护。在目前的互联网上，用户的数据和隐私往往容易受到侵犯。在 Web3 中，用户可以通过加密和自主管理的身份来确保他们的数据安全。这使得整个网络更加安全、可靠。</p>
+<p>Web3 是基于区块链技术的互联网新时代，它将权力和控制重新分配给用户，提高安全性和透明度。通过去中心化的应用和服务，Web3有望改变我们与互联网的互动方式，创造出更加公平、自由的在线世界。</p>
+<h2 id="智能合约smart-contract"><a class="header" href="#智能合约smart-contract">智能合约（Smart Contract）</a></h2>
+<p>智能合约就像一个自动执行的数字合同，它定义了一组事先编写好的规则。一旦这些规则被满足，智能合约就会自动执行相应的操作。它是基于区块链技术的，这意味着它是去中心化的、安全的，而且一旦部署就无法修改。简单来说，智能合约就是一段自动执行的计算机程序，它确保双方在没有第三方的情况下，也能完成交易、签订合同等操作。</p>
+<p>它就像一个自动售货机，你投 5 块钱，它就吐 5 块钱的饮料。</p>
+<p>想象一下，你和朋友打赌，赌哪个足球队会赢得比赛。在现实生活中，你们可能需要找一个可靠的第三方来保管赌注。但在智能合约的情况下，你们可以创建一个程序来代替这个第三方。这个程序会接收你们的赌注，并在比赛结束后，根据比赛结果自动将赌金发给胜利者。这样一来，就不需要让一个真人参与其中，而且你们也不用担心对方不守信用。</p>
+<p>智能合约的应用范围十分广泛，如金融、房地产、保险等领域。举个例子，想象一个保险公司。如果你购买了一份航班延误保险，当你的航班确实延误时，通常你需要提交一些材料并等待保险公司的审批。但是，如果有一个基于智能合约的保险系统，只要你的航班信息被确认为延误，智能合约就会自动执行，立即为你支付赔偿金。这样一来，整个过程变得更加简单、高效和透明。</p>
+<p>智能合约是一种自动执行、基于区块链技术的数字合同。它可以在各种场景下简化流程，提高效率，确保交易安全。</p>
+<h2 id="dapp"><a class="header" href="#dapp">Dapp</a></h2>
+<p>DApp（去中心化应用）是一种运行在区块链网络上的应用程序，它不受任何中心化实体的控制，这意味着没有一个公司或个体可以完全控制它。DApp 的设计使其更加安全、透明和可靠，因为它们的数据和操作是基于区块链技术的，这是一种去中心化、不可篡改的分布式数据库。</p>
+<p>想象一下，你正在使用一个中心化的社交媒体平台（如 Facebook 或 Twitter ）。这些平台掌握着你的数据和隐私，它们可以随意更改规则、审查内容或甚至出售你的信息。而 DApp 则为你提供了一个去中心化的社交媒体平台，它不受任何中心化实体的控制，使你能够自主管理自己的数据和隐私。</p>
+<p>DApp 的一个很好的例子是加密货币交易所。在传统的中心化交易所（如 Coinbase 或 Binance ）中，用户的资金和交易信息都被存储在交易所的服务器上。然而，去中心化交易所（DEX ，如 Uniswap ）是基于区块链技术的 DApp ，它允许用户在不涉及第三方的情况下直接进行数字货币交易。这样，用户可以在保持资金安全的同时，享受更高的隐私和自主权。</p>
+<p>除了交易所以外，DApp 还有许多其他应用场景，如去中心化金融（DeFi）平台、游戏、市场等。这些去中心化应用程序为用户提供了一个更加自由、安全和透明的互联网环境。</p>
+<p>DApp 是一种基于区块链技术的去中心化应用程序，它摆脱了中心化实体的控制。通过使用 DApp ，用户可以更好地保护自己的数据和隐私，同时享受更高的安全性和透明度。DApp 是 Web3 时代的关键组成部分，它们共同助力构建一个更加公平、安全的互联网未来。</p>
+<h2 id="大饼"><a class="header" href="#大饼">大饼</a></h2>
+<p>BTC。比特币的别称。</p>
+<h2 id="all-in--梭哈"><a class="header" href="#all-in--梭哈">All in / 梭哈</a></h2>
+<p>拿所有家当买某个东西。全押。“梭哈”或“All in”是一种扑克术语，通常在德州扑克（Texas Hold'em）中使用。当玩家将所有筹码押上时，就表示他们决定“全押”或“梭哈”。这是一种高风险、高回报的策略，因为玩家可能一下子赢得所有对手的筹码，也有可能输掉手中所有筹码。</p>
+<p>想象一下，你正在参加一场德州扑克比赛，玩家们围坐在一张桌子旁，手里拿着筹码。在游戏的每一轮中，你需要根据手中的牌和桌面上的公共牌来判断自己的胜算。如果你认为自己的牌型非常好，胜算很高，那么你可能会选择“梭哈”，把所有筹码押上。这样，你可能会赢得这一轮的底池，也可能让其他玩家畏惧不敢跟注。</p>
+<p>然而，“梭哈”也有很大的风险。如果对手手中的牌型更好，你可能会输掉所有筹码，被淘汰出局。因此，“梭哈”是一种需要玩家谨慎考虑的策略。在决定“梭哈”之前，你需要权衡胜算、底池大小、对手的行为模式等多种因素。</p>
+<p>此外，“梭哈”这个概念在现实生活中也经常被用来形容一种豁出去、孤注一掷的态度。当一个人在某个决定性时刻，为了追求成功或实现梦想而全力以赴，我们也可以说他（她）“梭哈”了。比如，一个创业者决定把所有的积蓄和精力投入到自己的创业项目中，这就是一种“梭哈”的精神。</p>
+<p>“梭哈”或“All in”是一个源自扑克游戏的术语，表示玩家将所有筹码押上的行为。它既是一种高风险、高回报的策略，也是一种敢于冒险、勇往直前的态度。在现实生活中，“梭哈”精神鼓励我们在关键时刻勇敢追求目标，不畏艰难，全力以赴。</p>
+<h2 id="ecdsa"><a class="header" href="#ecdsa">ECDSA</a></h2>
+<p>ECDSA（椭圆曲线数字签名算法）是一种加密技术，它用于确保数据的安全和完整性。它的原理是通过椭圆曲线密码学生成一对密钥：公钥和私钥。公钥是公开的，可以与其他人分享；而私钥是保密的，仅由密钥拥有者知道。这种加密方法可以帮助我们在网络中安全地发送信息和验证数据的来源。</p>
+<p>想象一下，你正在给一个朋友寄信。为了确保信件的安全，你需要把它放在一个锁着的箱子里。在这个例子中，ECDSA 就像是一个特殊的锁：用你的私钥锁上箱子，而这把锁只能用你的公钥打开。这样，当你的朋友收到信件时，他们可以用你的公钥打开箱子，确定信件是从你那里发送的，而且没有被篡改。</p>
+<p>ECDSA 在加密货币和区块链技术中有着广泛的应用。比特币和以太坊等加密货币就使用了 ECDSA 作为其加密和数字签名标准。在这些系统中，用户的私钥用于对交易进行签名，而公钥用于验证交易。这样可以确保交易的安全和完整性，防止他人伪造或篡改交易。</p>
+<p>ECDSA 的一个重要特点是它提供了高度的安全性，同时需要较低的计算资源和存储空间。这使得它在加密货币和其他安全敏感应用中非常有用。然而，ECDSA 也有一些局限性，例如它不能抵抗量子计算攻击。因此，随着技术的发展，未来可能需要采用新的加密方法来保护我们的数据安全。</p>
+<p>ECDSA 是一种基于椭圆曲线密码学的加密技术，它通过生成一对公钥和私钥来确保数据的安全和完整性。在网络通信和加密货币领域，ECDSA 发挥着重要作用，帮助我们保护信息和验证数据的来源。尽管它具有一定的局限性，但 ECDSA 仍然是当前许多应用的关键加密技术。</p>
+<h2 id="bls"><a class="header" href="#bls">BLS</a></h2>
+<p>BLS（Boneh-Lynn-Shacham）签名是一种加密技术，它的主要优势在于能够实现非常高效的聚合签名。这意味着，可以将多个签名聚合成一个单独的签名，从而大大减小了存储和传输的开销。BLS 签名在区块链、分布式系统和密码学研究中得到了广泛的应用。</p>
+<p>假设有一群人在一起合作完成一个项目，每个人都需要在项目报告上签名。在传统的签名方法中，每个人都需要在报告上单独签名，这会占用很多空间。然而，使用 BLS 签名的话，这群人可以将他们的签名聚合成一个紧凑的签名，大大减小了报告的体积。这样，验证者只需检查这个聚合签名，就能确保所有参与者都已签名。</p>
+<p>BLS 签名在区块链领域具有重要应用，尤其是在一些去中心化的共识算法中，如以太坊 2.0 的共识协议。在这些系统中，节点需要对交易或区块进行签名以表达他们的共识。通过使用 BLS 签名，可以将多个节点的签名聚合成一个签名，从而降低了网络传输和存储的开销。这有助于提高区块链的可扩展性和性能。</p>
+<p>BLS 签名是一种高效的加密技术，它可以将多个签名聚合成一个紧凑的签名。这种方法节省了存储空间和传输带宽，提高了系统的性能。在区块链和分布式系统领域，BLS 签名发挥着重要作用，帮助实现更高效、可扩展的共识机制。</p>
+<h2 id="默克尔树"><a class="header" href="#默克尔树">默克尔树</a></h2>
+<p>默克尔树（Merkle Tree）是一种树形数据结构，用于存储和验证数据的完整性。你可以把它想象成一棵树，树上的每个节点都有一个哈希值，而这个哈希值是由它的子节点的哈希值计算而来。树的底层（叶子节点）存储的是实际数据的哈希值。</p>
+<p>举个例子，假设我们有四个文件：A、B、C 和 D。我们首先对这四个文件分别计算哈希值，得到哈希值 HA、HB、HC 和 HD。然后我们把这些哈希值两两组合，计算它们的哈希值：比如将 HA 和 HB 组合，计算得到新的哈希值 HAB；同理，将 HC 和 HD 组合，得到哈希值 HCD。最后，我们再将 HAB 和 HCD 组合，得到树的根节点哈希值 HABCD。这样，整棵默克尔树就构建完成了。</p>
+<p>那么，默克尔树的优势在哪里呢？首先，它可以快速验证数据的完整性。假设我们要检查文件 A 是否被篡改，我们只需要计算 A 的哈希值，然后通过树的其他节点（比如 HB、HCD）来验证根节点哈希值是否正确。这样，我们就可以在不获取完整数据的情况下检查数据的完整性。这对于分布式系统和区块链技术非常有用。</p>
+<p>其次，默克尔树还可以有效地提高数据存储效率。因为每个节点都保存了它的子节点的哈希值，我们可以通过逐层计算哈希值，来找到某个数据。这样，就避免了遍历整个数据集的时间消耗。</p>
+<p>总的来说，默克尔树是一种非常实用的数据结构，它能高效地验证和存储数据，特别适合分布式系统和区块链技术。像树一样，根节点包含着整棵树的信息，通过简单地计算哈希值，我们就可以轻松地确保数据的完整性。</p>
+<h2 id="gas-fee"><a class="header" href="#gas-fee">Gas fee</a></h2>
+<p>在区块链网络上，当你想要完成一笔交易或执行一个智能合约时，需要支付一定的费用。这个费用就是 Gas fee 。</p>
+<p>那么为什么需要支付这个费用呢？这是为了给那些为区块链网络提供计算能力的 “ 矿工 ” 们一些激励。矿工们负责验证交易，确保交易的合法性，并把交易记录打包到一个区块中。为了激励他们工作，用户需要支付 Gas fee 给他们。</p>
+<p>以太坊的 Gas fee 的价格会波动，这取决于网络上的交易量。当很多人都在使用区块链网络时，Gas fee 会上涨，就像在交通拥堵时期，打车费会变得更贵一样。你可以自己设定 Gas fee 的价格，但要注意，如果你设定的价格太低，矿工们可能不愿意优先处理你的交易，导致交易延迟甚至失败。</p>
+<p>在 IC 上，Gas 费是固定的，而且不受网络影响随意波动。普通用户一般可以直接忽略 Gas 费。在<a href="/2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/4.%E6%89%A7%E8%A1%8C%E5%B1%82.html#cycles-%E8%AE%A1%E8%B4%B9">这里</a>了解关于 Gas 费的更多内容。</p>
+<h2 id="defi"><a class="header" href="#defi">DeFi</a></h2>
+<p>DeFi（去中心化金融）是一种基于区块链技术的金融服务模式，它旨在消除传统金融系统中的中心化机构，如银行、交易所和保险公司。通过利用智能合约和加密货币，DeFi 为用户提供了一种更加透明、开放和可靠的金融服务方式。</p>
+<p>假如你需要贷款购买一辆新汽车。在传统金融体系中，你需要去银行提交申请，银行会根据你的信用评分和收入情况决定是否批准你的贷款。这个过程可能既费时又复杂，而且对于没有信用记录或无法提供足够担保的人来说，获得贷款可能更加困难。</p>
+<p>然而，在 DeFi 体系中，你可以通过一个去中心化的借贷平台来申请贷款。这个平台不是由一个中心化机构运营的，而是基于区块链技术的智能合约。你只需将一定数量的加密货币作为抵押品，就可以立即获得贷款，无需经过繁琐的审核过程。此外，DeFi 平台还可以让你随时查看贷款的状态和利息，提供更高的透明度。</p>
+<p>DeFi 不仅限于借贷服务，它还包括了一系列金融产品和服务，如去中心化交易所（DEX）、稳定币、资产管理、预测市场等。这些服务可以让用户直接在区块链上进行交易和投资，无需依赖传统金融机构。</p>
+<p>DeFi 是一种基于区块链技术的金融服务模式，它旨在消除金融系统中的中心化机构，提供更加透明、开放和可靠的金融服务。无论是借贷、交易还是投资，DeFi 都有望改变我们对金融服务的认知，让金融市场变得更加包容和高效。</p>
+<h2 id="流动性提供者liquidity-provider与流动资金池子liquidity-pools"><a class="header" href="#流动性提供者liquidity-provider与流动资金池子liquidity-pools">流动性提供者（Liquidity Provider）与流动资金池子（Liquidity Pools）</a></h2>
+<p>流动性提供者（Liquidity Provider，简称LP）是在去中心化金融（DeFi，Decentralized Finance）市场中的一个重要角色。他们通过向交易所或去中心化平台注入资产，帮助提高市场的流动性。简单来说，流动性提供者就像是金融市场中的“水管工”，他们确保资金在市场中顺畅流动，以便参与者能够轻松地进行交易。</p>
+<p>假如市场里有很多水果摊。顾客可以在这些摊位之间自由购买水果。然而，为了确保顾客能够找到他们想要的水果，摊主需要保持足够的库存。这就是流动性提供者的作用：他们为市场提供货物（金融市场中的资产），以满足交易需求。</p>
+<p>在去中心化金融市场，流动性提供者通常将自己的资产注入一个名为 “ <strong>流动性池</strong> ” 的智能合约中。这些资产可以是加密货币、代币等。通过向流动性池注入资产，流动性提供者帮助平台用户进行交易，例如代币兑换、借贷等。</p>
+<p>作为回报，流动性提供者可以从交易手续费中获得收益。这就像水果摊主通过出售水果赚取利润一样。此外，一些去中心化金融平台还会向流动性提供者发放奖励代币，以激励他们参与并提高市场的流动性。</p>
+<p>然而，流动性提供者也要面临一定的风险，如“无常损失”（Impermanent Loss）。这种风险源于流动性池中资产价格的波动，可能导致流动性提供者在赎回资产时损失价值。因此，在成为流动性提供者之前，需要仔细评估潜在的风险和收益。</p>
+<p>流动性提供者在去中心化金融市场中扮演着重要角色，他们通过向市场注入资产，提高交易流动性，以便参与者能够顺畅地进行交易。作为回报，流动性提供者可以从交易手续费和奖励代币中获得收益。但同时，他们也需要关注潜在的风险，如无常损失。</p>
+<h2 id="自动做市商amm"><a class="header" href="#自动做市商amm">自动做市商（AMM）</a></h2>
+<p>自动做市商（Automated Market Maker，简称 AMM）是一种在去中心化金融（DeFi）交易所中使用的算法，它用于确保市场上的交易流动性。与传统的交易所不同，AMM 不需要买家和卖家之间进行交易配对。相反，AMM 通过一个预先设置的数学公式，自动计算资产的交易价格。</p>
+<p>AMM 通过智能合约和流动性池来实现。流动性池是由流动性提供者注入的资产组成的，用户可以在这些池子里进行资产交换。当用户想要交换两种资产时，AMM 会根据预设的数学公式计算交换比例。这个比例会随着交易发生而实时调整，以保持市场的平衡。</p>
+<p>Uniswap 是一个典型的采用 AMM 算法的去中心化交易所。它使用了一个名为 $x * y = k$ 的公式来确定交易价格。在这个公式中，x 和 y 分别表示流动性池中两种资产的数量，而k是一个恒定值。当用户在池中进行交易时，x 和 y 的数量会发生变化，但 k 值保持不变。这样可以确保交易价格自动调整，以维持市场的平衡。</p>
+<p>假设我们有一个去中心化交易所，其中有一个基于 AMM 的流动性池，允许用户在两种代币（代币 A 和代币 B）之间进行交换。我们用 Uniswap 的 $x * y = k$ 公式作为 AMM 算法。</p>
+<p>首先，流动性提供者将代币 A 和代币 B 注入流动性池。假设初始状态下，流动性池中有 1000 个代币 A 和 1000 个代币 B 。根据 AMM 公式，我们有：</p>
+<p>$$
+x * y = k
+$$</p>
+<p>$$
+1000 * 1000 = 1,000,000
+$$</p>
+<p>在这种情况下，恒定值 k 为 1,000,000 。</p>
+<p>现在，假设用户想用 100 个代币 A 来购买代币 B 。他们将会把 100 个代币 A 注入到流动性池中，使得池中的代币 A 数量变为 1100 个。为了保持恒定值 k 不变，我们需要重新计算代币B的数量。根据 AMM 公式：</p>
+<p>$$
+1100 * y = 1,000,000
+$$</p>
+<p>$$
+y ≈ 909.09
+$$</p>
+<p>因此，流动性池中现在剩余约 909.09 个代币 B 。用户用 100 个代币 A 换得了约 90.91 个代币 B（1000 - 909.09）。此外，交易手续费（如果有的话）将被分配给流动性提供者。</p>
+<p>在这个过程中，AMM 根据预设的公式自动调整了代币 A 和代币 B 的交换比例。随着交易的发生，代币价格会实时调整，以保持市场的平衡。这就是 AMM 的基本工作原理。</p>
+<p>需要注意的是，这个例子是一个简化版本，实际操作中可能会涉及到额外的细节，如手续费、滑点等。不过这个例子应该足以帮助你理解 AMM 的核心概念和工作原理。</p>
+<p>AMM 带来了一些优势，如简化交易过程、提高市场流动性以及降低交易延迟。然而，它也存在一些缺点，如可能产生的无常损失（Impermanent Loss）和潜在的价格滑点。</p>
+<p>自动做市商（AMM）是一种在去中心化金融交易所中使用的算法，用于确保市场交易流动性。通过智能合约和流动性池，AMM 可以自动计算资产的交易价格，简化交易过程并降低延迟。虽然 AMM 具有一定的优势，但在使用时也需关注潜在的风险。</p>
+<h2 id="gamefi"><a class="header" href="#gamefi">GameFi</a></h2>
+<p>GameFi 是 “ Game Finance ” 的缩写，它是指将去中心化金融（DeFi）和区块链技术应用于游戏领域的一种新兴趋势。简而言之，GameFi 是一种将游戏和金融相结合的创新方式，使玩家在玩游戏的同时，也能在虚拟世界中赚取收益。</p>
+<p>想象一下，你在玩一个冒险游戏，通过完成任务、打怪等方式，获得了一些游戏内的虚拟物品和货币。通常情况下，这些物品和货币只能在游戏内使用。然而，在 GameFi 的世界里，这些虚拟物品和货币可以转化为现实世界的价值。这是因为游戏内的物品和货币往往采用加密代币（如 NFT ，非同质化代币）来表示，它们具有独特性和稀缺性，可以在区块链上进行交易。</p>
+<p>让我们用一个简单的类比来说明GameFi的概念。想象一下，你在玩一个 “ 宠物养成 ” 游戏，游戏中的每个宠物都是一个独特的 NFT 。通过照顾和培养宠物，你可以提高宠物的属性和技能，从而提高宠物的价值。在 GameFi 的环境中，你可以将这些宠物在游戏内或游戏外的市场上出售，换取其他玩家的加密货币。这些加密货币可以在区块链上进行交易，甚至可以兑换成法定货币。这样一来，你就能在享受游戏乐趣的同时，还能赚取收益。</p>
+<p>此外，GameFi 还鼓励玩家参与游戏的治理和生态建设。例如，通过持有游戏内的治理代币，玩家可以参与决策游戏的未来发展方向、规则设定等。这有助于建立一个去中心化、共享的游戏世界，让玩家成为真正的利益相关者。</p>
+<p>GameFi 是将去中心化金融和区块链技术应用于游戏领域的新兴趋势。它将游戏和金融相结合，使玩家在虚拟世界中赚取收益，并参与游戏的治理和生态建设。这种模式为游戏行业带来了新的商业模式和收益机会，同时也为玩家提供了更多的参与度和价值体现。</p>
+<h2 id="socialfi"><a class="header" href="#socialfi">SocialFi</a></h2>
+<p>SocialFi 是一个将社交媒体和去中心化金融（DeFi）相结合的新兴领域。它通过整合社交网络和金融工具，为用户提供更加便捷、有趣和个性化的金融服务。SocialFi 的目标是让金融服务变得更加社交化，同时利用区块链技术带来的去中心化、安全和透明的优势。</p>
+<p>为了让你更好地理解 SocialFi，我们可以将其比喻为一场金融领域的社交派对。在这个派对上，你不仅可以与朋友和家人交流互动，还可以一起参与各种金融活动，如投资、借贷和交易。这样，金融服务变得更加亲切和有趣。</p>
+<p>SocialFi 的一个典型应用是社交型代币。社交型代币是由社区或个人发行的加密货币，它们代表了社区成员之间的价值和信任。用户可以通过购买、持有和交易这些代币来参与社区的活动，例如参与投票、获取特权或分享利润。比如，一个音乐人可以发行自己的社交型代币，粉丝购买这些代币来支持音乐人，并获得音乐专辑、演唱会门票等特权。</p>
+<p>此外，SocialFi 还包括了一系列基于社交网络的金融工具和服务，如去中心化预测市场、社交投资组合以及社区治理等。这些工具和服务使得金融市场变得更加透明、公平和包容，让更多人能够参与和受益。</p>
+<p>SocialFi 是一种将社交媒体和去中心化金融相结合的新兴领域。通过整合社交网络和金融工具，SocialFi 为用户提供了更加便捷、有趣和个性化的金融服务。它有望改变我们对金融服务的认知，让金融市场变得更加社交化、公平和包容。</p>
+<h2 id="多方安全计算mpc"><a class="header" href="#多方安全计算mpc">多方安全计算（MPC）</a></h2>
+<h2 id="wallet"><a class="header" href="#wallet">Wallet</a></h2>
+<h2 id="token"><a class="header" href="#token">Token</a></h2>
+<p>Token（代币）是一种基于区块链技术的数字资产，通常用于表示某种价值或权益。在加密货币世界中，代币可以用于交换商品、服务或作为投资工具。与加密货币（如比特币、以太坊等）不同，代币通常是基于现有区块链平台（如以太坊）创建的，而非拥有独立的区块链网络。</p>
+<p>Token 的应用场景很广泛，包括：实用型代币（Utility Token）用于访问特定服务或应用；治理型代币（Governance Token）用于参与项目的决策制定；以及安全型代币（Security Token）代表实际资产（如股票、房地产等）的所有权。因此，在投资代币时，了解其背后的项目和价值是非常重要的。</p>
+<h2 id="whale"><a class="header" href="#whale">Whale</a></h2>
+<p>Whale（鲸鱼）是指拥有大量数字货币或代币的投资者。这些投资者的资产规模很大，因此他们的交易行为可能对市场价格产生显著影响。当鲸鱼买入或卖出大量代币时，市场价格可能会迅速上涨或下跌，引发其他投资者的关注和跟随。</p>
+<h2 id="did-去中心化身份"><a class="header" href="#did-去中心化身份">DID （去中心化身份）</a></h2>
+<p>当谈到区块链中的 DID（去中心化身份）时，可以将其想象为一种数字身份证明，它可以帮助我们在互联网上安全地验证和管理个人身份信息。传统的身份验证方式通常需要信任第三方机构，比如银行或政府，但 DID 利用区块链技术，使得身份验证过程更加去中心化和透明。</p>
+<p>DID 是由一长串数字和字母组成的唯一标识符，类似于你在现实生活中的身份证号码。但与身份证不同的是，DID 不由中央机构颁发，而是由个人自主创建和控制。这意味着你可以在没有中间人的情况下管理和掌握自己的身份信息。</p>
+<p>举个例子，想象一下你想在一个网上社交平台上注册一个账号。通常情况下，你需要提供大量的个人信息，包括姓名、地址、电话号码等，然后将这些信息交给平台进行验证和保存。然而，这种方式存在着隐私和安全的风险，因为你无法完全掌控你的数据。</p>
+<p>而使用 DID，你可以创建一个自己的数字身份，并将需要验证的信息存储在区块链上。平台只需验证你的 DID 是否有效，而无需直接访问你的个人信息。这样一来，你的身份信息不会集中存储在一个地方，而是分散存储在区块链的不同节点上，大大减少了数据被黑客攻击或滥用的风险。</p>
+<p>另外，DID 还可以让你在不同的场景中重复使用你的身份信息。想象一下你要去租一辆汽车，通常情况下你需要提供驾照、信用卡等身份信息。但有了 DID，你只需通过一个验证过程，然后使用你的数字身份在多个场景中进行身份认证，从租车公司到酒店再到航空公司，避免了重复填写和验证个人信息的麻烦。</p>
+<p>综上所述，DID 是一种创新的数字身份验证方式，通过区块链技术实现去中心化和安全管理个人身份信息。它给互联网带来了更高的隐私保护和便捷性，让个人能够更好地掌控自己的身份数据。</p>
+<h2 id="kyc"><a class="header" href="#kyc">KYC</a></h2>
+<p>Know Your Customer</p>
+<h2 id="fork"><a class="header" href="#fork">Fork</a></h2>
+<p>分叉</p>
+<h2 id="ama"><a class="header" href="#ama">AMA</a></h2>
+<p>Ask me Anything。</p>
+<h2 id="roadmap"><a class="header" href="#roadmap">Roadmap</a></h2>
+<h2 id="whitepaper"><a class="header" href="#whitepaper">Whitepaper</a></h2>
+<p>白皮书</p>
+<h2 id="public-chain"><a class="header" href="#public-chain">Public Chain</a></h2>
+<p>公链</p>
+<h2 id="seed-phrase"><a class="header" href="#seed-phrase">Seed Phrase</a></h2>
+<p>Seed Phrase（助记词）是一组由 12 到 24 个单词组成的短语，用于恢复加密货币钱包的访问权限。当你创建一个新的数字钱包时，系统会生成一个独特的助记词，由私钥转化而来。所以和私钥一样重要。这些词就像是钥匙，可以让你控制和访问钱包中的资产。</p>
+<p>注意，助记词非常重要！务必妥善保管，避免泄露给他人。一旦他人获取了你的助记词，他们就可以轻易地控制你的资产。为了安全起见，建议将助记词抄写在纸上，保存在安全的地方。</p>
+<h2 id="ido"><a class="header" href="#ido">IDO</a></h2>
+<p>IDO（Initial DEX Offering）是一种加密货币项目筹资的方式，它类似于传统股票市场中的 IPO（首次公开募股），但发生在去中心化交易所（DEX）上。IDO 的目的是为新项目筹集资金，并为项目的代币提供流动性和初步定价。</p>
+<p>让我们用一个简单的类比来理解 IDO 。想象一下，有一家初创公司（如某个创新的加密货币项目）想要筹集资金来支持它的业务发展。在传统的股票市场中，这家公司可以选择进行 IPO ，向公众出售它的股票。而在加密货币市场中，这家公司可以选择进行 IDO ，通过去中心化交易所向公众发售它的代币。</p>
+<p>进行 IDO 的一般流程是这样的：</p>
+<ol>
+<li>
+<p>项目方选择在某个去中心化交易所进行 IDO 。这个交易所需要提供发起IDO的平台，如 PancakeSwap 、Uniswap 等。</p>
+</li>
+<li>
+<p>项目方确定 IDO 的条件，包括代币价格、总发行量、筹资目标等。这些信息需要公开透明，让投资者了解项目的基本情况。</p>
+</li>
+<li>
+<p>在 IDO 开始时，投资者可以购买项目方发行的代币。这个过程通常是先到先得的，有时还会设置购买上限，以避免单个投资者独占大量代币。</p>
+</li>
+<li>
+<p>IDO 结束后，项目方会将筹集到的资金用于项目开发、营销等方面。与此同时，投资者持有的代币可以在去中心化交易所上进行交易。这样，代币价格就由市场供需关系决定，形成一个自由的市场价格。</p>
+</li>
+</ol>
+<p>IDO 是一种发生在去中心化交易所上的加密货币项目筹资方式。通过 IDO ，新项目可以筹集资金、分发代币，并为代币提供流动性和初步定价。这种方式相对于传统的 IPO ，具有更低的门槛、更高的透明度和更快的交易速度等优点。然而 IDO 也可能带来更高的风险，因为加密货币市场相对较新，监管和市场稳定性方面可能存在不足。投资者在参与 IDO 时，需要谨慎评估项目的潜在价值和风险。</p>
+<h2 id="ico"><a class="header" href="#ico">ICO</a></h2>
+<p>ICO（Initial Coin Offering）是一种加密货币项目筹资的方式，类似于传统股票市场中的IPO（首次公开募股）。通过 ICO ，新项目可以筹集资金来支持它的发展，并向投资者发行代币。这些代币往往具有某种实用性，如在项目的生态系统中使用，或用作治理权益等。</p>
+<p>假如有一家初创公司（如某个加密货币项目）想要筹集资金来支持它的业务发展。在传统的股票市场中，这家公司可以选择进行 IPO ，向公众出售它的股票。而在加密货币市场中，这家公司可以选择进行 ICO ，向公众发售它的代币。</p>
+<p>进行 ICO 的一般流程是这样的：</p>
+<ol>
+<li>
+<p>项目方发布白皮书，详细介绍项目的背景、目标、技术架构等信息。白皮书的目的是让投资者了解项目的基本情况，并评估其潜在价值。</p>
+</li>
+<li>
+<p>项目方确定 ICO 的条件，包括代币价格、总发行量、筹资目标等。这些信息需要公开透明，让投资者了解项目的基本情况。</p>
+</li>
+<li>
+<p>在 ICO 开始时，投资者可以购买项目方发行的代币。这个过程通常是先到先得的，有时还会设置购买上限，以避免单个投资者独占大量代币。</p>
+</li>
+<li>
+<p>ICO 结束后，项目方会将筹集到的资金用于项目开发、营销等方面。与此同时，投资者持有的代币可以在加密货币交易所上进行交易。这样，代币价格就由市场供需关系决定，形成一个自由的市场价格。</p>
+</li>
+</ol>
+<p>ICO 是一种加密货币项目筹资的方式，通过 ICO ，新项目可以筹集资金、分发代币，并为代币提供流动性。这种方式相对于传统的 IPO ，具有更低的门槛、更高的透明度和更快的交易速度等优点。然而，与此同时，ICO 也可能带来更高的风险，因为加密货币市场相对较新，监管和市场稳定性方面可能存在不足。投资者在参与 ICO 时，需要谨慎评估项目的潜在价值和风险。</p>
+<h2 id="ipo"><a class="header" href="#ipo">IPO</a></h2>
+<p>IPO（Initial Public Offering，首次公开募股）是一家公司在股票市场上首次向公众出售其股票的过程。通过 IPO ，公司可以筹集资金以支持其业务发展，同时为投资者提供一个投资机会。IPO 是一种将公司从私有变为公开上市公司的重要途径。</p>
+<p>让我们用一个简单的类比来理解 IPO 。想象一下，你和你的朋友们创建了一家公司，开始时这家公司只属于你们几个创始人。随着时间的推移，公司取得了成功，业务不断扩张，你们决定筹集更多资金来支持公司的持续发展。一种可行的方法就是通过 IPO ，在股票市场上向公众出售公司的股票。这样一来，公司能够筹集到资金，而投资者则有机会分享公司未来的收益。</p>
+<p>进行 IPO 的一般流程是这样的：</p>
+<ol>
+<li>
+<p>公司决定进行 IPO ，并聘请投资银行等专业机构，为IPO做准备。这包括撰写招股说明书、审计财务报表等。</p>
+</li>
+<li>
+<p>公司提交招股说明书和相关文件给监管部门，如美国的证券交易委员会（SEC）。监管部门会对提交的文件进行审查，确保其符合法规要求。</p>
+</li>
+<li>
+<p>审查通过后，公司确定IPO的细节，包括股票发行价格、发行量、上市交易所等。</p>
+</li>
+<li>
+<p>IPO 开始时，投资者可以购买公司发行的股票。通常，股票的初始价格是由投资银行和公司共同确定的，而后续的股票价格则由市场供求关系决定。</p>
+</li>
+<li>
+<p>IPO 结束后，公司成功上市，其股票在交易所上公开交易。投资者可以买卖公司的股票，分享公司的成长和盈利。</p>
+</li>
+</ol>
+<p>总的来说，IPO 是一家公司在股票市场上首次向公众出售股票的过程。通过 IPO ，公司可以筹集资金支持业务发展，而投资者则有机会分享公司的收益。进行 IPO 的公司需要遵循严格的法规要求和审查流程，以确保投资者的权益得到保障。</p>
+<h2 id="otc"><a class="header" href="#otc">OTC</a></h2>
+<p>OTC（Over-The-Counter，场外交易）是指在交易所之外进行的交易。与在交易所进行的交易不同，OTC 交易通常是双方直接进行，而不经过中央交易所。这种交易方式在股票、债券、衍生品等金融产品中都有应用。</p>
+<p>如果你想要购买一辆二手汽车。在交易所购买的类似于去一个有组织的二手车市场，那里有很多卖家、买家和中介（如交易所）参与其中，价格和交易规则都是标准化和公开的。而进行 OTC 交易就像是通过个人渠道购买二手车，你可以直接与车主沟通，商定价格和交易条件。</p>
+<p>OTC 交易的特点如下：</p>
+<ol>
+<li>
+<p>灵活性：OTC 交易允许双方根据自己的需求自由协商交易条件，如价格、数量、结算方式等。这种灵活性使得 OTC 交易在某些情况下更具吸引力。</p>
+</li>
+<li>
+<p>隐私性：OTC 交易不像在交易所进行的交易那样公开透明，双方可以保持交易的隐私。这在某些情况下可能是有益的，如大宗交易、敏感信息交易等。</p>
+</li>
+<li>
+<p>风险性：由于 OTC 交易不经过中央交易所，双方的信用风险可能较高。为了降低风险，参与者可能需要进行额外的信用调查或使用第三方担保机构。</p>
+</li>
+<li>
+<p>监管难度：OTC 交易的去中心化特性使得监管较为困难。因此，在某些情况下，OTC 交易可能容易受到操纵、欺诈等不良行为的影响。</p>
+</li>
+</ol>
+<p>OTC 是一种在交易所之外进行的交易方式，具有灵活性、隐私性等特点。然而，与此同时，OTC 交易也可能带来较高的风险和监管难度。在参与 OTC 交易时，投资者需要充分了解交易对手、评估信用风险，并确保遵守相关法律法规。</p>
+<h2 id="c2c"><a class="header" href="#c2c">C2C</a></h2>
+<p>C2C（Consumer-to-Consumer，消费者对消费者）是一种消费者之间直接进行交易的模式，通常通过在线平台进行。C2C 平台充当了买卖双方之间的中介，帮助消费者在互联网上找到、评估和联系其他消费者，以便完成交易。</p>
+<p>如果，你想要出售你的旧自行车。在 C2C 模式下，你可以在网上发布一个广告，描述自行车的状况和价格。其他消费者看到你的广告后，可以与你联系，协商交易细节。在这个过程中，你和买家直接交易，不需要通过商家或其他中间人。（咸鱼、跳蚤市场）</p>
+<p>C2C 交易的特点如下：</p>
+<ol>
+<li>
+<p>去中心化：C2C 交易直接在消费者之间进行，不需要通过商家等中间人。这有助于降低交易成本，让买卖双方可以获取更好的价格。</p>
+</li>
+<li>
+<p>便捷性：C2C 平台通常采用在线操作，让消费者可以随时随地进行购买和出售。这种便捷性使得 C2C 交易在某些情况下更具吸引力。</p>
+</li>
+<li>
+<p>多样性：C2C平台上的商品和服务种类繁多，消费者可以在同一个平台上购买各种不同类型的产品。这种多样性使得 C2C 交易更加丰富有趣。</p>
+</li>
+<li>
+<p>风险性：由于 C2C 交易不经过商家，交易安全性可能较低。为了降低风险，消费者需要对交易对手进行评估，并采用安全的支付方式。同时，平台方也需要采取一定的措施，如实名制、信用评级等，以保障交易安全。</p>
+</li>
+</ol>
+<p>C2C 是一种消费者之间直接进行交易的模式，通常通过在线平台进行。C2C 交易具有去中心化、便捷性、多样性等特点，可以让买卖双方获取更好的价格。然而，与此同时，C2C 交易也可能带来较高的风险。在参与 C2C 交易时，消费者需要充分了解交易对手、评估交易安全，并确保遵守相关法律法规。</p>
+<h2 id="dex"><a class="header" href="#dex">DEX</a></h2>
+<p>DEX（Decentralized Exchange，去中心化交易所）是一种基于区块链技术的交易平台，允许用户在没有中心化中介的情况下直接进行加密货币的交易。与传统的中心化交易所不同，DEX不托管用户的资产，而是直接在用户的加密钱包之间完成交易。</p>
+<p>DEX 交易的特点如下：</p>
+<ol>
+<li>
+<p>去中心化：DEX 不托管用户的资产，交易直接在用户的加密钱包之间完成。这有助于降低信任风险，提高资产安全性。</p>
+</li>
+<li>
+<p>透明性：由于基于区块链技术，DEX 的交易记录是公开的，可以随时查询。这种透明性使得 DEX 交易更加公正、公平。</p>
+</li>
+<li>
+<p>隐私性：DEX 允许用户在不透露身份的情况下进行交易，提高了交易隐私。然而这也可能导致一定的监管难度。</p>
+</li>
+<li>
+<p>速度与效率：由于去中心化的特点，DEX 交易可能在速度和效率上不如中心化交易所。为了提高交易速度，DEX 需要采用一些技术优化，如链下扩容、跨链互操作等。</p>
+</li>
+</ol>
+<p>DEX 是一种基于区块链技术的去中心化交易所，可以让用户在没有中心化中介的情况下直接进行加密货币的交易。DEX 具有去中心化、透明性、隐私性等特点，可以提高资产安全性。与此同时，DEX 交易在速度和效率方面可能存在一定的挑战。在使用 DEX 进行交易时，用户需要充分了解平台特点、评估交易风险，并确保遵守相关法律法规。</p>
+<h2 id="cex"><a class="header" href="#cex">CEX</a></h2>
+<p>CEX（Centralized Exchange，中心化交易所）是一种加密货币交易平台，用户可以在这里买卖不同的加密货币。与去中心化交易所（DEX）不同，CEX 是由一个中心化的公司或组织运营的，用户的资产会被托管在交易所的账户中。</p>
+<p>CEX 交易的特点是：</p>
+<ol>
+<li>中心化：CEX 由一个中心化的公司或组织运营，托管用户的资产。这使得交易过程更加简便，但也可能带来一定的信任风险和资产安全问题。</li>
+<li>速度与效率：CEX 通常采用高性能的服务器和技术架构，可以提供较高的交易速度和效率。然而，这也可能导致交易所成为攻击的目标，增加安全风险。</li>
+<li>交易对与流动性：CEX 通常提供多种加密货币的交易对，以及较高的交易流动性。这使得用户可以更容易地买卖不同的加密货币，以实现投资目标。</li>
+</ol>
+<p>CEX 是一种中心化的加密货币交易所，可以让用户在一个有组织的平台上买卖不同的加密货币。CEX 具有速度、效率、监管与合规等优点，但也可能面临信任风险和资产安全问题。在使用 CEX 进行交易时，用户需要充分了解平台特点、评估交易风险，并确保遵守相关法律法规。</p>
+<h2 id="wagmi"><a class="header" href="#wagmi">WAGMI</a></h2>
+<p>WAGMI 是 &quot; We're All Gonna Make It &quot; 的缩写，中文意思是 “ 我们都会成功 ” 。这是一种常用于加密货币和投资社区的口头禅，用来表示对市场和投资者的乐观态度。当市场上涨或某个投资项目取得成功时，人们会使用 WAGMI 来表达信心和鼓舞士气。</p>
+<h2 id="buidl"><a class="header" href="#buidl">Buidl</a></h2>
+<p>构建产品。</p>
+<h2 id="buidler"><a class="header" href="#buidler">Buidler</a></h2>
+<p>建设者。</p>
+<h2 id="airdrop"><a class="header" href="#airdrop">Airdrop</a></h2>
+<p>Airdrop（空投）是一种加密货币的分发方式，通常用于推广新的数字货币或代币。在空投活动中，项目方会免费分发一定数量的代币给满足特定条件的用户，比如关注社交媒体、参加社区活动或持有某种特定资产。</p>
+<p>空投就像一个公司发放免费样品，以吸引更多的人关注和尝试他们的产品。在加密货币市场，空投可以帮助项目方扩大知名度、吸引用户，并提高市场流动性。然而，需要注意的是，参与空投的投资者应仔细了解项目背景和代币价值，以避免潜在风险。</p>
+<h2 id="cz"><a class="header" href="#cz">CZ</a></h2>
+<p><a href="https://zh.wikipedia.org/wiki/%E8%B5%B5%E9%95%BF%E9%B9%8F">Changpeng Zhao 赵长鹏</a>。CZ 是<strong>赵长鹏</strong>的简称，他是一位华裔加拿大籍企业家，也是加密货币领域的知名人物。他是币安（Binance）的创始人，这是目前全球最大的加密货币交易所。他曾在东京证券交易所、彭博有限合伙企业、Blockchain.info 和 OKCoin 等公司工作过。</p>
+<h2 id="sbf"><a class="header" href="#sbf">SBF</a></h2>
+<p>SBF 是 <strong>Sam Bankman-Fried</strong> 的简称，他是一位美国的企业家，也是加密货币领域的知名人物。 他是 Alameda Research 的创始人和首席执行官，这是一家专注于量化交易和流动性提供的公司。他还是 FTX 交易所的联合创始人和前首席执行官，这是一家提供各种数字资产衍生品的平台。</p>
+<p>SBF 出生于 1992 年 3 月 6 日，他的父母都是斯坦福大学法学院的教授。他于 2010 年至 2014 年在麻省理工学院学习物理学，并获得了学位。SBF 的职业生涯开始于简街资本，这是一家自营交易公司，主要交易国际 ETFs 。2017 年，他创立了 Alameda Research ，并在 2019 年创立了 FTX 。他凭借其创新的产品和对市场需求的敏锐嗅觉，使 FTX 成为全球第二大的加密货币交易所。</p>
+<h2 id="ftx"><a class="header" href="#ftx">FTX</a></h2>
+<p>FTX 是一家<strong>数字资产衍生品交易所</strong>，成立于 2019 年 5 月，由 SBF 创立。 用户可以在其中交易比特币、以太币和其他加密货币，以及相关的衍生品。 FTX 在 2021 年 7 月完成了 9 亿美元 B 轮融资，估值达 180 亿美元，是加密行业历史规模最大的融资。</p>
+<p>FTX 倒闭的原因是其陷入了<strong>流动性危机</strong>，导致无法满足客户的提现需求。 有消息称，FTX 的关联公司 Alameda Research 将大部分资产用于抵押FTX 自行发行的 FTT 代币，而这些代币在市场上大幅下跌，造成资金链断裂。</p>
+<p>FTX 于 2022 年 11 月 11 日宣布在美国申请破产，并暂停了加密货币提取业务。SBF 辞去了首席执行官一职，但表示将继续协助公司有序过渡。 FTX 的倒闭引发了加密货币市场的恐慌，比特币等主流货币价格出现大幅下跌。</p>
+<p>FTX 是一家曾经辉煌的加密货币交易所，但由于资金管理不善和市场波动而导致破产。这对加密货币行业和投资者都是一个沉重的打击。</p>
+<h2 id="孙割"><a class="header" href="#孙割">孙割</a></h2>
+<p>孙宇晨</p>
+<h2 id="og"><a class="header" href="#og">OG</a></h2>
+<p>元老。OG（Original Gangster）原本是一个源自美国嘻哈文化的词汇，用来形容在某个领域、社群或行业中具有资深经验和地位的人。OG 表示这个人在他们所在领域具有丰富的知识、经验和影响力，通常受到周围人的尊敬和敬仰。在加密货币和区块链领域中，OG 同样可以用来形容一些早期参与者、创新者和领导者。</p>
+<p>OG 通常在他们的领域积累了大量的经验和知识。由于 OG 在行业中的资深地位和丰富经验，他们的观点和建议通常具有较高的权威性，容易受到周围人的关注和尊重。</p>
+<p>OG 是一种用来形容在某个领域、社群或行业中具有资深经验和地位的人的词汇。在加密货币和区块链领域，OG 可以表示那些早期参与者、创新者和领导者，他们凭借丰富的经验、影响力和创新精神，为整个行业的发展做出了重要贡献。</p>
+<h2 id="白名单白"><a class="header" href="#白名单白">白名单，白</a></h2>
+<h2 id="dm"><a class="header" href="#dm">DM</a></h2>
+<p>私信。</p>
+<h2 id="to-the-moon"><a class="header" href="#to-the-moon">To the Moon</a></h2>
+<p>&quot;To the Moon&quot;（去月球）是一个在加密货币和投资领域广泛使用的俚语，用来表示某种资产（通常是加密货币）的价格预期将会急剧上涨。这个短语往往在社交媒体、论坛和聊天群组中使用，以表达投资者对未来市场表现的乐观预期。</p>
+<p>加密货币市场是一个巨大的火箭发射场，火箭代表着各种加密货币。当市场预期某种货币的价格将要猛涨时，人们会说这个货币 &quot;To the Moon&quot;，好像火箭即将发射到月球一样。</p>
+<p>这个短语反映了投资者对某种资产未来表现的乐观预期，他们认为资产的价格将会急剧上涨。&quot;To the Moon&quot; 通常在社交媒体和网络社群中流行，人们用这个短语来表达他们对某个投资的热情和信心。&quot;To the Moon&quot; 很大程度上受到市场情绪的影响，当市场对某种资产持有强烈的乐观情绪时，这个短语的使用频率就会上升。</p>
+<h2 id="bull"><a class="header" href="#bull">Bull</a></h2>
+<h2 id="bear"><a class="header" href="#bear">Bear</a></h2>
+<h2 id="gm"><a class="header" href="#gm">GM</a></h2>
+<h2 id="gn"><a class="header" href="#gn">GN</a></h2>
+<h2 id="lol"><a class="header" href="#lol">Lol</a></h2>
+<h2 id="lamo"><a class="header" href="#lamo">LAMO</a></h2>
+<h2 id="fomo"><a class="header" href="#fomo">FOMO</a></h2>
+<p>FOMO（Fear of Missing Out，错失恐惧症）是一种心理现象，指的是人们担心自己会错过某个重要的事件、机会或趋势，从而产生的紧迫感和不安。在投资领域，尤其是加密货币市场，FOMO 是一种常见的情绪反应，当市场表现出强烈的上涨趋势时，人们可能会因为担心错过机会而盲目跟风投资。</p>
+<p>加密货币市场是一个热闹的派对，所有人都在尽情地跳舞、欢呼，享受着市场上涨带来的快感。这时，站在派对门外的你，看着大家的欢乐，开始担心自己会错过这个难得的机会，于是决定加入其中，尽管你可能并不了解加密货币投资的风险。</p>
+<ul>
+<li>情绪驱动：FOMO 是一种基于情绪的反应，当人们看到周围的人获得成功或享受某种乐趣时，很容易产生想要加入其中的冲动。</li>
+<li>后知后觉：FOMO 往往发生在市场或趋势已经出现一段时间后，人们在看到别人已经获得收益时，才开始考虑加入。</li>
+<li>盲目跟风：由于 FOMO 产生的心理压力，人们可能在没有充分了解风险的情况下，盲目跟风投资，从而导致损失。</li>
+<li>高风险：在加密货币市场中，FOMO 可能导致投资者在市场高峰时买入，而在价格回落时出现恐慌性抛售，从而蒙受损失。</li>
+</ul>
+<p>FOMO 是一种心理现象，表示人们担心错过重要的事件、机会或趋势。在投资领域，特别是加密货币市场，FOMO 可能导致盲目跟风和高风险的投资行为。要避免 FOMO，投资者应保持冷静，对市场和投资标的进行充分的了解和分析，遵循自己的投资策略和风险承受能力。</p>
+<h2 id="fud"><a class="header" href="#fud">FUD</a></h2>
+<p>FUD（Fear, Uncertainty, and Doubt，恐惧、不确定和怀疑）是一种心理现象，指的是在某个领域，特别是投资市场中，人们因为对未来充满恐惧、不确定和怀疑而产生的负面情绪。</p>
+<p>FUD 是一种基于情绪的反应，人们在面对未来的恐惧、不确定和怀疑时，容易感到焦虑和担忧。FUD 通常伴随着负面消息的传播，这些消息可能来源于媒体报道、网络论坛或社交媒体，容易引发市场恐慌。在某种程度上，FUD 可能成为一种自我实现的预言，恐慌情绪的传播和投资者的抛售行为可能导致市场价格进一步下跌。对于有经验的投资者来说，FUD 也可能带来投资机会。在市场恐慌时，他们可能会寻找被低估的优质资产，实施逆市操作。</p>
+<p>在加密货币市场，FUD 可能导致市场恐慌、投资者抛售和价格下跌。要避免受到 FUD 的影响，投资者应保持理性，对市场和投资标的进行充分的了解和分析，做出明智的投资决策。</p>
+<h2 id="mint"><a class="header" href="#mint">Mint</a></h2>
+<p>铸造 NFT</p>
+<h1 id="交易"><a class="header" href="#交易">交易</a></h1>
+<h2 id="做多"><a class="header" href="#做多">做多</a></h2>
+<h2 id="做空"><a class="header" href="#做空">做空</a></h2>
+<h2 id="割肉"><a class="header" href="#割肉">割肉</a></h2>
+<h2 id="拉盘"><a class="header" href="#拉盘">拉盘</a></h2>
+<h2 id="砸盘"><a class="header" href="#砸盘">砸盘</a></h2>
+<h1 id="社区"><a class="header" href="#社区">社区</a></h1>
+<h2 id="大裁缝"><a class="header" href="#大裁缝">大裁缝</a></h2>
+<p>指 Dfinity 的创始人多米尼克·威廉姆斯（Dominic Williams）。因为经常在社区活动中送 Dfinity 周边衣服，中文社区给他起了外号 “ 大裁缝 ” 。</p>
+<h2 id="icu"><a class="header" href="#icu">ICU</a></h2>
+<p>ICP 的别称。早期 IC 社区选择投资 ICP 的人对 ICP 的调侃，意为 “ 买了 ICP 住进 ICU ” 。</p>
+<h1 id="开发"><a class="header" href="#开发">开发</a></h1>
+<h2 id="pow"><a class="header" href="#pow">PoW</a></h2>
+<p>PoW（Proof of Work，工作量证明）是一种用于加密货币和区块链网络的共识算法。它的核心思想是让网络中的参与者通过解决复杂数学问题来证明自己的工作量。这种方式既能确保网络安全，又能激励参与者维护网络。</p>
+<p>PoW 就像是一场数学竞赛，参与者需要尽快找到一个符合条件的数字，这个数字结合区块的信息，经过特定的计算方法，得到的结果是一个以若干个零开头的哈希值。这个过程就像在破解密码，因为找到正确答案需要大量的计算尝试，而验证答案却非常简单。</p>
+<p>为了让你更好地理解 PoW ，我们可以用挖矿作比喻。在比特币等加密货币的网络中，挖矿就是参与者通过不断尝试不同的数字，找到一个合适的答案来解锁新的区块。一旦解锁成功，参与者就会获得一定数量的比特币作为奖励，这就像是在挖矿过程中发现了金矿。</p>
+<p>然而，PoW 机制也存在一定的问题。首先，大量的计算过程会消耗大量的能源，对环境造成影响。其次，随着加密货币价格的上涨，越来越多的人投入挖矿，导致挖矿难度不断增加，使得普通用户难以参与。这可能导致网络的中心化，违背了区块链去中心化的初衷。</p>
+<p>PoW 是一种用于加密货币和区块链网络的共识算法，它通过让参与者解决复杂数学问题来证明自己的工作量。虽然PoW机制在一定程度上确保了网络的安全和激励参与者，但它也存在能源消耗和中心化的问题。为了解决这些问题，研究人员和开发者们提出了其他共识算法，如 Proof of Stake （权益证明）等，以减轻能源消耗和提高去中心化程度。</p>
+<h2 id="pos"><a class="header" href="#pos">PoS</a></h2>
+<p>PoS（Proof of Stake，权益证明）是一种用于加密货币和区块链网络的共识算法。与 PoW（工作量证明）不同，PoS 不是通过解决复杂数学问题来证明参与者的工作量，而是根据参与者持有的加密货币数量和时间来选择区块验证者。这样的设计旨在降低能源消耗，增加网络的去中心化程度，以及提高网络安全性。</p>
+<p>为了帮助你理解 PoS ，我们可以把它想象成一个加密货币的储蓄计划。在 PoS 网络中，你可以把自己持有的加密货币 “ 抵押 ” 或 “ 锁定 ” 在一个特定的地址上，这个过程称为 “ 权益抵押 ” 。抵押的加密货币越多，你被选为验证者（矿工）的几率就越大。验证者负责创建新区块并验证交易，完成这些操作后，验证者将获得一定数量的奖励。</p>
+<p>我们可以用一个抽奖活动来类比 PoS 。参与者需要购买彩票来参加抽奖，购买的彩票越多，中奖的几率就越大。在 PoS 网络中，持有和抵押的加密货币就相当于彩票，增加了你成为验证者的机会。</p>
+<p>PoS 机制相较于 PoW 具有一些优势。首先，PoS 减少了大量计算过程，从而降低了能源消耗和减轻了对环境的影响。其次，PoS鼓励参与者长期持有加密货币，有助于稳定价格。此外，PoS降低了网络中心化的风险，因为验证者的选择不再依赖计算能力，使得普通用户更容易参与。</p>
+<p>当然，PoS 也存在一定的缺点。如何确保验证者不作恶、防止少数人控制大量权益等问题需要解决。尽管如此，PoS 仍被认为是一种有效的区块链共识机制，许多新兴的加密货币和区块链项目已经采用了 PoS 算法，如以太坊 2.0 、Cardano 等。</p>
+<p>PoS 是一种用于加密货币和区块链网络的共识算法，它根据参与者持有的加密货币数量和时间来选择区块验证者。PoS 相较于 PoW 具有能源消耗低、去中心化程度高等优势，被认为是一种有前景的区块链共识机制。</p>
+<h2 id="子网subnet"><a class="header" href="#子网subnet">子网（Subnet）</a></h2>
+<p>A <strong>subnet</strong> (subnetwork) is a collection of <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">nodes</a> that run their own instance of the <a href="https://wiki.internetcomputer.org/wiki/Glossary#consensus">consensus</a> algorithm to produce a subnet blockchain that interacts with other subnets of the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer_.28IC.29">IC</a> using <a href="https://wiki.internetcomputer.org/wiki/Glossary#chain_key">chain key</a> cryptography. </p>
+<p>子网（Subnet）是由一组节点组成的集合，这些节点运行自己的共识算法实例，以生成一个子网区块链，并使用链密钥密码术与 IC 的其他子网交互。</p>
+<h2 id="chain-key"><a class="header" href="#chain-key">Chain Key</a></h2>
+<h2 id="dfx"><a class="header" href="#dfx">dfx</a></h2>
+<h2 id="actor"><a class="header" href="#actor">actor</a></h2>
+<h2 id="balance"><a class="header" href="#balance">balance</a></h2>
+<p>边缘节点（boundary node）</p>
+<h2 id="candid"><a class="header" href="#candid">Candid</a></h2>
+<h2 id="motoko"><a class="header" href="#motoko">Motoko</a></h2>
+<h2 id="canister"><a class="header" href="#canister">canister</a></h2>
+<p>A <strong>canister</strong> is a type of smart contract that bundles <em>code</em> and <em>state</em>. A canister can be deployed as a <a href="https://wiki.internetcomputer.org/wiki/Glossary#smart_contract">smart contract</a> on the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a> and accessed over the Internet.</p>
+<h2 id="canister-account"><a class="header" href="#canister-account">canister account</a></h2>
+<p>A <strong>canister account</strong> is a ledger account owned by a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> (i.e. whose <a href="https://wiki.internetcomputer.org/wiki/Glossary#fiduciary">fiduciary</a> is a canister). A non-canister account is a ledger account whose fiduciary is a non-canister <a href="https://wiki.internetcomputer.org/wiki/Glossary#principal">principal</a>.</p>
+<p>Canister 帐户是 Canister 拥有的分类帐帐户，这意味着 Canister 的委托人是该帐户的所有者。容器账户可以持有ICP，ICP可以用来支付计算和存储资源，也可以持有周期，周期是互联网计算机上的计算单位。另一方面，非罐账户是分类账户，其所有者是非罐委托人，例如个人或组织，也可以持有 ICP。</p>
+<p>一个canister账户是由一个canister拥有的账户，即其受托人是一个canister。一个非canister账户是其受托人是非canister原则的账户。</p>
+<h2 id="canister-identifier"><a class="header" href="#canister-identifier">canister identifier</a></h2>
+<p>The <strong>canister identifier</strong> or <strong>canister ID</strong> is a globally-unique identifier that identifies a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> and can be used to interact with it.</p>
+<p>canister标识符或canister ID是一种全局唯一的标识符，用于标识canister并与之交互。</p>
+<h2 id="canister-signature"><a class="header" href="#canister-signature">canister signature</a></h2>
+<p>A <strong>canister signature</strong> uses a signature scheme based on <a href="https://wiki.internetcomputer.org/wiki/Glossary#certified_variables">certified variables</a>. Public “keys” include a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister_identifier">canister id</a> plus a seed (so that every <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> has many public keys); signatures are certificates that prove that the canister has put the signed message at a specific place in its state tree. Details in the <a href="https://smartcontracts.org/docs/interface-spec/#canister-signatures">The Internet Computer Interface Specification</a>.</p>
+<p>容器签名是一种加密签名，用于验证消息是否已由特定容器签名。使用的签名方案基于经过认证的变量，其中公钥由容器 ID 和种子组成，允许每个容器拥有多个公钥。当容器对消息进行签名时，生成的签名是一个证书，证明容器已将已签名的消息放在其状态树中的特定位置。有关容器签名的更多信息，请参阅互联网计算机接口规范。</p>
+<p>一个 canister 签名使用基于认证变量的签名方案。公钥包括 canister ID 和种子(seed)（这样每个 canister 就有了多个公钥）; 签名是证书，证明 canister 已将签名消息放在其状态树的特定位置。详情请参见 《The Internet Computer Interface Specification》。</p>
+<p>一个canister signature使用基于认证变量的签名方案。公钥包括一个canister id和一个seed（因此每个canister都有很多公钥）；签名是证书，证明canister已将签名的消息放置在其状态树的特定位置。</p>
+<h2 id="canister-state"><a class="header" href="#canister-state">canister state</a></h2>
+<p>A <strong>canister state</strong> is the entire state of a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> at a given point in time. A canister’s state is divided into <em>user state</em> and <em>system state</em>. The user state is a <a href="https://wiki.internetcomputer.org/wiki/Glossary#WebAssembly">WebAssembly</a> module instance and the system state is the auxiliary state maintained by the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a> on behalf of the canister, such as its compute allocation, balance of <a href="https://wiki.internetcomputer.org/wiki/Glossary#cycles">cycles</a>, input and output queues, and other metadata. A canister interacts with its own system state either implicitly, such as when consuming cycles, or through the System API, such as when sending messages.</p>
+<p>一个 canister 的状态是在某个时间点上的整个状态。一个 canister 的状态分为用户状态和系统状态。用户状态是一个 WebAssembly 模块实例，系统状态是由 Internet Computer 代表该 canister 维护的辅助状态，例如计算分配、周期余额、输入和输出队列以及其他元数据。一个 canister 隐式地与其自身的系统状态交互，例如在消耗 cycles 时，或通过 System API 发送消息。</p>
+<h2 id="catch-up-package-cup"><a class="header" href="#catch-up-package-cup">catch-up package (CUP)</a></h2>
+<p>A <strong>catch-up package</strong> is a data bundle that contains everything needed to bootstrap a <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a> <a href="https://wiki.internetcomputer.org/wiki/Glossary#replica">replica</a>.</p>
+<p>&quot;catch-up package&quot; 指的是包含启动子网副本所需的所有数据的数据包。</p>
+<h2 id="certified-query"><a class="header" href="#certified-query">certified query</a></h2>
+<p>A <strong>certified query</strong> is a query call for which the response is certified.</p>
+<p>&quot;Certified query&quot; 指的是响应经过认证的查询调用。</p>
+<h2 id="certified-variable"><a class="header" href="#certified-variable">certified variable</a></h2>
+<p>A piece of data that a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> can store in its <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a>’s canonical state in the processing of an update call (or inter-canister call), so that during the handling of a <a href="https://wiki.internetcomputer.org/wiki/Glossary#query">query</a> call, the canister can return a certificate to the user that proves that it really committed to that value.</p>
+<p>在进行更新调用（或 canister 之间的调用）的过程中，canister 可以将一条数据存储在其子网的规范状态中，以便在处理查询调用时，神经元可以向用户返回一个证书，证明它确实承诺了该值。这条数据称为 “ 可认证状态数据 ”（certificate state data）。</p>
+<p>一个 canister 可以在更新调用（或者canister 之间调用）的处理过程中将一段数据存储在其子网的规范状态中，以便在处理查询调用时，该 canister 可以向用户返回一个证书，证明它确实承诺了该值。</p>
+<p><strong>Chain key</strong> cryptography consists of a set of cryptographic protocols that orchestrate the <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">nodes</a> that make up the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a>. The most visible innovation of chain key cryptography is that the Internet Computer has a single public key. This is a huge advantage as it allows any device, including smart watches and mobile phones, to verify the authenticity of artifacts from the Internet Computer.</p>
+<p>链键加密（Chain key cryptography）是一组协议，用于编排组成Internet Computer的节点之间的加密。链键加密最显著的创新是Internet Computer只有一个公钥。这是一个巨大的优势，因为它允许任何设备，包括智能手表和手机，验证来自Internet Computer的工件的真实性。</p>
+<h2 id="consensus"><a class="header" href="#consensus">consensus</a></h2>
+<p>In distributed computing, <strong>consensus</strong> is a fault tolerant mechanism by means of which a number of <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">nodes</a> can reach agreement about a value or state.</p>
+<p>Consensus is a core component of the <a href="https://wiki.internetcomputer.org/wiki/Glossary#replica">replica</a> software. The consensus layer selects <a href="https://wiki.internetcomputer.org/wiki/Glossary#messages">messages</a> from the peer-to-peer artifact pool and pulls messages from the cross-network streams of other <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnets</a> and organizes them into a <a href="https://wiki.internetcomputer.org/wiki/Glossary#batch">batch</a>, which is delivered to the <a href="https://wiki.internetcomputer.org/wiki/Glossary#message_routing">message routing</a> layer.</p>
+<p>在分布式计算中，共识（consensus）是一种容错机制，通过该机制一组节点可以就一个值或状态达成一致。</p>
+<p>共识是复制软件的核心组件。共识层从点对点工件池中选择消息，并从其他子网的跨网络流中拉取消息并将其组织成一批，然后将其传递到消息路由层。</p>
+<h2 id="controller"><a class="header" href="#controller">controller</a></h2>
+<p>A <strong>controller</strong> of a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> is a person, organization, or other canister that has administrative rights over the canister. Controllers are identified by their <a href="https://wiki.internetcomputer.org/wiki/Glossary#principal">principals</a>. For example, a controller of a canister can upgrade the <a href="https://wiki.internetcomputer.org/wiki/Glossary#WebAssembly">WebAssembly</a> code of the canister or delete the canister.</p>
+<p>一个 canister 的控制器是一个具有对该 canister 管理权限的人、组织或其他 canister 。控制器由其负责人来标识。例如， canister 的控制器可以升级 canister 的 WebAssembly 代码或删除 canister 。</p>
+<h2 id="cycle"><a class="header" href="#cycle">cycle</a></h2>
+<p>On the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a>, a <strong>cycle</strong> is the unit of measurement for resources consumed in the form of processing, memory, storage, and network bandwidth. Every canister has a cycles account to which resources consumed by the canister are charged. The Internet Computer’s utility token (<a href="https://wiki.internetcomputer.org/wiki/Glossary#ICP">ICP</a>) can be converted to cycles and transferred to a canister. Cycles can also be transferred between canisters by attaching them to an [inter-canister] message.</p>
+<p>ICP can always be converted to cycles using the current price of ICP measured in [SDR] using the convention that one trillion cycles correspond to one SDR.</p>
+<p>在Internet Computer上，一个“cycle”（周期）是衡量处理、内存、存储和网络带宽消耗资源的计量单位。每个 “ canister ” 都有一个 “ cycles account ”（周期账户）， canister 消耗的资源会计入该账户。Internet Computer的实用代币ICP可以转换为“cycles”，并转移到 canister 上。“Cycles”也可以通过将它们附加到一个 canister 间的消息上，在 canister 之间进行转移。</p>
+<p>ICP可以根据当前以SDR计价的ICP价格，按照一万亿个“cycles”对应一个SDR的约定进行转换。</p>
+<p>ICP</p>
+<p>节点（node）</p>
+<p>principal</p>
+<p>A <strong>principal</strong> is an entity that can be authenticated by the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a>. This is the same sense of the word principal as the <a href="https://en.wikipedia.org/wiki/Principal_(computer_security)">Wikipedia definition</a>. Principals that interact with the Internet Computer do so using a certain <a href="https://wiki.internetcomputer.org/wiki/Glossary#identity">identity</a>. </p>
+<p>在Internet Computer中，Principal是指可以通过身份验证访问网络的实体，可以是人、组织、设备等。Principal在Internet Computer上的身份验证是基于公钥加密的，每个Principal都有一个与其关联的公钥，私钥由Principal自己控制。这些公钥通常以Ed25519格式表示。Principal可以使用其公钥签署和验证消息，从而确保消息的完整性和身份认证。在Internet Computer中，每个Canister和Subnet都与一个特定的Principal关联。</p>
+<p>query call</p>
+<p>A <strong>query</strong> is an optimised way to execute operations on a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> where the state changes are not preserved. Queries are synchronous and can be made to any <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">node</a> that hosts the canister. Queries do not require <a href="https://wiki.internetcomputer.org/wiki/Glossary#consensus">consensus</a> to verify the result.</p>
+<h2 id="replica"><a class="header" href="#replica">replica</a></h2>
+<p>The <strong>replica</strong> is a collection of protocol components that are necessary for a <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">node</a> to participate in a <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a>.</p>
+<p>&quot;Replica&quot; 是一个由多个协议组件组成的集合，这些组件是一个节点（node）参与子网（subnet）的必要条件。</p>
+<h2 id="registry"><a class="header" href="#registry">registry</a></h2>
+<p>The IC <strong>registry</strong> manages the system meta-data maintained on the network nervous system (<a href="https://wiki.internetcomputer.org/wiki/Glossary#network_nervous_system_.28NNS.29">NNS</a>) and accessed by all <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a> blockchains.</p>
+<p>IC注册表（IC registry）管理着维护在网络神经系统（NNS）上的系统元数据，并被所有子网区块链所访问。</p>
+<h2 id="service-worker"><a class="header" href="#service-worker">service worker</a></h2>
+<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"><strong>service worker</strong></a>, which implements the <a href="https://wiki.internetcomputer.org/wiki/Glossary#HTTP_gateway_protocol">HTTP gateway protocol</a> and translates browser asset requests to the IC into API canister calls and verifies the asset certification.</p>
+<p>当浏览器向互联网计算机（Internet Computer，IC）请求资源时，这些资源可能存储在一个名为 API canister 的特殊神经元上。为了使这些资源可用，需要一个服务工作者来实现 HTTP 网关协议，将浏览器的请求转换为 API canister 调用，并验证这些资源的真实性。因此，这个服务工作者将作为一个中介，将浏览器和 API canister 连接起来，从而使浏览器可以访问存储在 IC 上的资源。</p>
+<p>它的作用是实现 HTTP 网关协议，将浏览器请求的静态资源转换为与 IC 通信的 API  canister 调用，并验证资源的认证。简单来说，就是它可以帮助浏览器请求静态资源并将其转换为与 IC（Internet Computer）通信的 API canister 调用，并且还可以确保这些资源是可信的。</p>
+<p>其中，HTTP 网关协议是指浏览器和服务工作者之间的通信协议，API canister 调用是指服务工作者向 IC 发送请求的方式，资产认证则是指在请求过程中确保资产的真实性和安全性。</p>
+<h2 id="node"><a class="header" href="#node">Node</a></h2>
+<p>Node 是承载 IC 的物理机节点。</p>
+<h2 id="replica-1"><a class="header" href="#replica-1">Replica</a></h2>
+<p>在 IC 中，副本是指在</p>
+<h2 id="webassembly"><a class="header" href="#webassembly">WebAssembly</a></h2>
+<p>WebAssembly ( Wasm) 是一种二进制指令格式，它可以提供一个虚拟机层面抽象的运行环境，具有安全、可移植、高效率，轻量化等特点，可以轻松实现毫秒级冷启动时间和极低的资源消耗。</p>
+<p>WebAssembly 最早应用于浏览器，目前逐渐向后端发展，可以把 C/C++，Rust、Motoko 等语言代码编译成为 WebAssembly 字节码，运行在沙箱环境中。</p>
+<p>目前主流公链都在支持 WebAssembly，IC 就是典型的支持 WebAssembly 的公链，可以通过 Motoko 或 Rust 编写 DApp，然后部署在 IC 中。</p>
+<p>除了 IC，还有 Dot、Near 等公链支持 WebAssembly。</p>
+<h2 id="canister-1"><a class="header" href="#canister-1">Canister</a></h2>
+<p>Canister 可以理解为一种特殊的容器，可以类比为 Kubernetes 中的 Container。</p>
+<p>Canister 中运行着 WebAssembly 代码，这些代码就是所谓的智能合约。</p>
+<p>Canister 有如下特点：</p>
+<ul>
+<li>Canister 基于 Actor 编程模型，<strong>目前每个 Canister 只包含一个 Actor</strong>（业界的编程模型还有 Golang 的 CSP 模型、Java 和 Python 的多进程模型）</li>
+<li>基于 Actor 编程模型，IC 上可以编写通用 DApp（以太坊上只能编写金融类应用）</li>
+<li>Canister 具有全局唯一 ID</li>
+<li>Canister 封装了所有编程逻辑、公共入口方法、所提供消息类型的接口描述以及它所描述的 DApp 的状态信息</li>
+</ul>
+<h2 id="actor-1"><a class="header" href="#actor-1">Actor</a></h2>
+<p>Actor 是编程语言中很早的概念，比如 Erlang 中就有 Actor。</p>
+<p>Actor 是一种特殊对象，每个 Actor 中的数据和其他 Actor 是隔离的，Actor 之间只能通过消息传递（函数）来改变 Actor 内部的数据。</p>
+<p>而且 Actor 之间的消息处理是异步的，内置了 Future 机制，如果想等待返回结果，使用 await 即可。</p>
+<p>一个 Actor 只能同时处理一个消息，是顺序执行的，没有锁的问题。</p>
+<p><strong>目前一个 Actor 就是一个 Canister。</strong></p>
+<p>在 IC 上，可以使用 IC 自己开发的 Motoko 编程语言进行 Actor 编程，当然使用 Rust 也可以。</p>
+<h2 id="ledger"><a class="header" href="#ledger">Ledger</a></h2>
+<p>IC 将所有涉及 ICP 代币的交易记录在一个专门的管理容器智能合约中，称为账本容器，即 Ledger Canister。</p>
+<p>Ledger Canister 实现了一个智能合约，该合约维护账户和余额，并保留影响账户和余额的交易历史。</p>
+<p>它提供了下面的能力：</p>
+<ul>
+<li>为帐户铸造 ICP 代币</li>
+<li>将 ICP 代币从一个账户转移到另一个账户</li>
+<li>烧掉 ICP 代币以消除它们的存在</li>
+</ul>
+<p>Ledger Canister 要归属于某个身份。</p>
+<h2 id="wallet-1"><a class="header" href="#wallet-1">Wallet</a></h2>
+<p>Wallet 是允许存储和管理 Cycle 的专用智能合约（Canister）。</p>
+<p>Cycle 用于支付 IC 的计算和资源消耗。</p>
+<p>Cycle 可以通过 ICP 转换获得。</p>
+<p>Wallet 要归属于某个身份。</p>
+<h2 id="principal-id"><a class="header" href="#principal-id">Principal id</a></h2>
+<p>Principal 本质是一种标识符，可以用于标识身份和 Canister（未来可能还有其他）。</p>
+<p>比如可以使用 Principal ID 标识一个身份，当你第一次使用 Dfinity Canister SDK 时，dfx 命令行工具会为你创建 default 开发者身份（和一对公钥私钥），default 这个开发者身份就是由 Principal ID 标识。</p>
+<p><em>注意，开发者身份还可用于派生 Account ID（类似于以太坊地址），以代表「身份」将 ICP 代币保存在 Ledger Canister 中。</em></p>
+<p>同样，Canister ID 也是一种 Principal。</p>
+<p>所以当说起 Principal 时，它可能会同时代表某个身份或者某个 Canister，比如 Wallet Canister。</p>
+<h2 id="controller-1"><a class="header" href="#controller-1">Controller</a></h2>
+<p>Controller 是具有安装、升级、删除 Canister 权限的 Principal。</p>
+<p>一般情况下，一个 Canister 的 Controller 可以指定为某个身份、或者某个身份对应的 Wallet Canister。</p>
+<p>在 dfx 0.9 之后，默认「身份」是 Canister 的 Controller 了，Wallet Canister 不再是默认 Controller（相当于 dfx 指定了 --no-wallet）。</p>
+<h2 id="分片sharding"><a class="header" href="#分片sharding">分片（sharding）</a></h2>
+<p>在传统不分片的区块链中，通常在一段时间里只产生一个块，全网所有的矿工竞争唯一的挖矿权，或者针对一个块达成共识。为了提高吞吐量和延迟，通常只能通过提高区块生产速度或者增加区块的大小来完成扩容。然而我在之前的文章也提到过，这两种方式都存在缺点（频繁分叉或者网络延迟）。随后开发者开始把视线集中在了分片上。分片是通过改变网络中验证块的方式来增加吞吐量的。</p>
+<p>分片思想：分而治之</p>
+<p>区块链分片是受传统数据库分片概念的启发，数据库分割为多个部分并放置在不同的服务器上。在分片网络中，节点被分到不同的分片中，网络中的交易也会被分到不同的分片中。因此，每个节点只处理一小部分传入交易，并且它将与网络上的其他节点并行执行。这样将网络分成碎片将导致更多事务被同时处理和验证，原本只能验证一个区块的时间内，可以同时验证多个区块，从而完成对吞吐量的扩展。分片的最大优势在于它可以真正做到线性扩展。吞吐量的大小同分片的数量线性相关。
+我们可以想象现有的区块链就像一条只有一个收费站的繁忙的高速公路。这样一定会导致交通堵塞，因为人们排长队等待并通过收费站。引入分片的区块链就像在高速公路上增加15或20个收费站。它将大大提高车辆通过的速度。分片会对交易的处理速度有非常大的提升。</p>
+<p>分片策略（分类）</p>
+<p>分片只是一个基本的概念。在实际的实现过程中可能有很多种方式。目前主流的分片实现方式可以分为以下三类：网络分片（network sharding），交易分片（transaction sharding）和状态分片（state sharding）。网络分片和交易分片更早被提出，网络中的节点被分到不同的分片中，每个分片针对不同的交易子集进行处理、验证并达成共识。这样不同的交易子集可以被并行处理，各个分片之间也不必进行频繁的通讯。
+另一方面，在如今的公共区块链系统中，节点为了可以验证交易的有效性，需要存储系统所有的历史交易区块和UTXOs（Unspent Transaction Outputs）。如果我们把区块链的吞吐量扩展到了Visa级别，简单的计算可以算出每年增长的存储消耗会高达21.5 TB，如下图。</p>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="贡献者名单.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="贡献者名单.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "词汇表.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="assets/custom.js"></script>
+        <script type="text/javascript" src="assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

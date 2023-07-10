@@ -1,0 +1,2192 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>互联网计算机漫游指南（Constellation Book）</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="index.html"><strong aria-hidden="true">1.</strong> 互联网计算机漫游指南</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅</li><li class="chapter-item "><a href="0.去中心化之旅/造梦家的冒险之旅.html"><strong aria-hidden="true">2.</strong> 造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="0.去中心化之旅/未来已来.html"><strong aria-hidden="true">2.1.</strong> 未来已来</a></li><li class="chapter-item "><a href="0.去中心化之旅/加密朋克的那些事.html"><strong aria-hidden="true">2.2.</strong> 加密朋克的那些事</a></li><li class="chapter-item "><a href="0.去中心化之旅/区块链是啥？.html"><strong aria-hidden="true">2.3.</strong> 区块链是啥？</a></li><li class="chapter-item "><a href="0.去中心化之旅/什么是以太坊？.html"><strong aria-hidden="true">2.4.</strong> 什么是以太坊？</a></li><li class="chapter-item "><a href="0.去中心化之旅/我的网络隐私呢？.html"><strong aria-hidden="true">2.5.</strong> 我的网络隐私呢？</a></li><li class="chapter-item "><a href="0.去中心化之旅/比特币.html"><strong aria-hidden="true">2.6.</strong> 比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC</li><li class="chapter-item "><a href="1.了解IC/1.了解IC.html"><strong aria-hidden="true">3.</strong> 了解IC</a></li><li class="chapter-item affix "><li class="part-title">核心协议</li><li class="chapter-item "><a href="2.核心协议/1.P2P层.html"><strong aria-hidden="true">4.</strong> P2P层</a></li><li class="chapter-item "><a href="2.核心协议/2.共识层.html"><strong aria-hidden="true">5.</strong> 共识层</a></li><li class="chapter-item "><a href="2.核心协议/3.消息路由层.html"><strong aria-hidden="true">6.</strong> 消息路由层</a></li><li class="chapter-item "><a href="2.核心协议/4.执行层.html"><strong aria-hidden="true">7.</strong> 执行层</a></li><li class="chapter-item "><a href="2.核心协议/代码分析简介.html"><strong aria-hidden="true">8.</strong> 代码分析</a></li><li class="chapter-item "><a href="2.核心协议/相关概念介绍/简介.html"><strong aria-hidden="true">9.</strong> 相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="2.核心协议/相关概念介绍/共识委员会数量如何确定？.html"><strong aria-hidden="true">9.1.</strong> 共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html"><strong aria-hidden="true">9.2.</strong> P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">Chain key</li><li class="chapter-item affix "><li class="part-title">NNS</li><li class="chapter-item affix "><li class="part-title">经济模型</li><li class="chapter-item affix "><li class="part-title">canister与智能合约</li><li class="chapter-item affix "><li class="part-title">互联网身份</li><li class="chapter-item affix "><li class="part-title">IC里的密码学</li><li class="chapter-item affix "><li class="part-title">开发Dapp</li><li class="spacer"></li><li class="chapter-item affix "><a href="词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南（Constellation Book）</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h1 id="互联网计算机漫游指南"><a class="header" href="#互联网计算机漫游指南">互联网计算机漫游指南</a></h1>
+<p>如果你只听说过 IC ，但一直忙于以太坊、波卡的项目，没有详细了解过 IC ，那你算来对<a href="1.%E4%BA%86%E8%A7%A3IC/1.%E4%BA%86%E8%A7%A3IC.html">地方</a>了！</p>
+<p>如果你还不了解 区块链、比特币、IC ，没关系，从<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E9%80%A0%E6%A2%A6%E5%AE%B6%E7%9A%84%E5%86%92%E9%99%A9%E4%B9%8B%E6%97%85.html">这里</a>开始。听我向你娓娓道来加密发展史，火速入门 Web3 开发！</p>
+<img src="assets/README/0.jpg">
+<p>《互联网计算机漫游指南》的结构：前半部分生动有趣，后半部分言简意赅；前半部分谈 IC 原理，后半部分论开发实战。</p>
+<img src="assets/README/logo.png" alt="DFINITY logo" width="377px">
+<h3 id="为什么写这本书"><a class="header" href="#为什么写这本书">为什么写这本书？</a></h3>
+<p>最初我了解 IC 后，收集整理了 IC 白皮书、medium 、ICPL 论坛、IC Developer Forum 里的资料。给朋友讲了 IC 的架构以后，还跟她说正在整理关于 IC 资料的笔记，整理好就分享出来，没想到这一整理就是一年。在经历了天荒地老、沧海桑田、时过境迁的漫长岁月（拖延）后，加上自己后来学到的东西，终于凑出了笔记的初代版本。又经过一段时间的深入学习，我觉得把这些笔记分享出来比较好。做成一本开源书帮大家学习 IC 。也是为 IC 开发者社区做一点贡献。</p>
+<p>零门槛学习区块链，抹平学习 IC 门槛。</p>
+<img src="assets/README/1.jpg">
+<h3 id="为什么开源"><a class="header" href="#为什么开源">为什么开源？</a></h3>
+<p>我很喜欢 Rust 开源社区，Rust 社区里有很多开源书、开源优质项目，给了我很大帮助。我从 Rust 开源社区学到了很多东西。像比特币、以太坊以及相关的项目也都有浓厚的开源氛围，我希望 IC 社区也涌现出越来越多的开源项目。供大家互相学习。</p>
+<p>另外，IC 的内容更新迭代很快，开源大家一起贡献，内容保持新鲜不过时。</p>
+<br>
+<br>
+<p>加入本书的开发者讨论群，勘误、修改、提出建议、共同为开源书贡献力量！</p>
+<p><a href="https://oc.app/4jwox-pyaaa-aaaar-amjbq-cai/?ref=3bmc2-5aaaa-aaaaf-agfiq-cai&amp;code=1ab38ffae620366f">OpenChat</a> ， <a href="https://discord.gg/5Y8QPHvR">Discord</a> ，<a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese">Github</a> </p>
+<img src="assets/README/2.jpg">
+<div style="break-before: page; page-break-before: always;"></div><br>
+<p>每个极客心中都有一个去中心化<strong>梦</strong>想。</p>
+<p>这是一个关于多米尼克·威廉姆斯（Dominic Williams）的故事。</p>
+<h2 id="来自伦敦的极客"><a class="header" href="#来自伦敦的极客">来自伦敦的极客😎</a></h2>
+<p>他喜欢把自己称作 “ JAHEBIL ” ，即 Just Another Hacker Entrepreneur Based in London 。</p>
+<p>他写代码，创业，在伦敦做 “ 造梦家 ” 。</p>
+<p>他勇敢又乐观，过着 “ 与世隔绝 ” 的生活，不喜社交，只关心他创立的公司品牌，重复两点一线的生活。即使每天工作 18 个小时、当时英国的创业环境也不友好，他也能哼出最快乐的小调。</p>
+<br>
+<p>英国的创业环境相对于硅谷来说，简直是地狱模式。硅谷一大批公司的成功造就了更多大笔的投资，投资又吸引了几乎全球顶尖的创业者去硅谷淘金，走向巅峰或失败。与人才济济的硅谷不同，在英国创业，多米尼克创立的每一个公司都能产生一些有限的回报，然后继续创办下一个公司，陷入循环怪圈：拼命工作，制造梦想，维持梦想，再制造下一个梦想 ...... 既要磨砺自己提升技术，又要使公司保持盈利。</p>
+<br>
+<p>厌倦了怪圈式的生活，无限循环只会耗尽他的热情。希望的嫩芽磨砂着多米尼克的心，2010 年，造梦家跳出怪圈，决定干票大的！</p>
+<p>Fight My Monster ，一款大型多人在线游戏，也是儿童社交网络。他计划让全球各地的孩子都能联机玩这款游戏。玩家拥有自己的怪物，在回合制的战斗中使用不同的技能攻击对方。彼时，地球的另一端也在为洛克王国疯狂。</p>
+<br>
+<p>在比较了 HBase 、Cassandra 和其他数据库之后，多米尼克选择了早期的 Cassandra beta ，第一个分布式 “ 横向扩展 ” 的数据库。多米尼克为 Cassandra 构建了各种工具，包括第一个在可扩展的最终一致存储上运行原子事务的系统。他们是世界上第一个尝试把复杂 Cassandra 系统用于生产实践的团队。</p>
+<p>多米尼克想用分布式系统把全球数百万用户联系起来，这在当时算不小的创新。经过几次试运行后，游戏在 2011 年新年正式推出，在短短两周内获得了 3 万名用户，并在几个月内暴涨到 30 万名用户。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/c84b1d3c76e8d4f51a2189ca557f2e4c-1674887452158-1.jpg" style="zoom:35%;" />
+<p>团队成功以微薄的预算将业务规模不断扩大。不过他低估了一点，这种大型在线游戏需要更多专业人员，例如 flash 网页、数据库、网络、支付系统、运维、复杂性分析、卡通形象、音效音乐、动画特效、广告投放 …… </p>
+<p>这笔庞大的支出比他之前的任何创业项目预算都多。很快用光了多米尼克和他朋友们的投资，不得不开始筹集额外资金。通宵工作换来了近乎完美的增长图表，“ 所以融资应该不会太难吧 ” 。</p>
+<br>
+<p>多米尼克向投资人介绍：“ Fight My Monster 发展迅速，很快将超过 100 万用户。我们认为工程师生活在一个激动人心的时代，互联网的基础设施已经成熟了。很多事情突然之间可以用新方式来实现了。这家公司最初是在非常有限的预算下自力更生的。您可能已经听说，Fight My Monster 正在扩张，现在很多优秀的工程师有机会加入。” </p>
+<p>“ 我向您简述一下我们的架构方案以及我们为什么这么做。如您所见，它并不是一个传统架构。我们选择了一个简单但可扩展的三层架构，我们在云端托管。我希望这个系统工作 ...... ” 多米尼克继续声情并茂。</p>
+<p>“ 既然你们已经有这么多用户了，也许应该尝试让更多用户付费。这样既能证明你们的赚钱能力，也能获得我们的投资。” 对方眉头紧蹙，明显不愿意投钱。面对如此疯狂的用户增长，伦敦的投资人甚至怀疑多米尼克造假数据。</p>
+<br>
+<p>这下，多米尼克的心像饼干一样碎成了片。多米尼克还是低估了融资的难度。</p>
+<p>很快，片又变成了渣。此时竞争对手已经获得了另一些投资公司的资金，还阻止别的投资公司再给 Fight My Monster 投资。</p>
+<p>难道是自己还不够努力？</p>
+<br>
+<p>由于 Cassandra 也处于早期开发中。2011 年底，因为 Cassandra beta 版代码里的 bug ，Fight my monster 的用户数据差点丢失。Cassandra 资深工程师和多米尼克团队经过好几天通宵达旦的工作才保存下来，最终化解了这毛骨悚然的事。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/e2727ae940125d7ce368730cda151745.png" alt="image-20230124210608095" style="zoom:33%;" />
+<br>
+<p>多米尼克太忙了。</p>
+<p>他像一辆上紧发条的玩具车，在公司与住宅之间飞速穿梭：刚改完 bug 还没测试就要去会见投资人；连饭都顾不上吃，便埋头和工程师们开会讨论系统调整方案；从公司出来，马上又奔赴超市给妻子买圣诞节礼物 ...... </p>
+<p>团队在各方面都高度依赖他。他的工作量变得异常繁重，即使在硅谷这样容易获得投资的地方也很难看到。当时的多米尼克每天都工作 12 - 18 小时, 相比现在的创业公司这样的工作模式已经很少见了。他要管理业务、管理系统、写代码之间取得平衡，同时还要留出时间照顾个人生活。没多久，多米尼的妻子也适应了这种生活：白天她当游戏导演、策划，在优化游戏玩法、制定项目流程；晚上回家做饭、打扫房间，和多米尼克无缝配合。</p>
+<br>
+<p>多米尼克头像。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/d5fa82e6a76e2272bcdad16a8cf7692c.jpeg" alt="Image" style="zoom:32%;" />
+<br>
+<p>之后的生活更加努力了。很幸运，他在硅谷偶然遇到了愿意投资的公司。终于有投资人被眼前这个造梦家打动了。Fight My Monster 在筹集到资金后的几周内，用户数量迅速达到了 100 万。几个月后，多米尼克将公司迁至圣马特奥（旧金山附近的一个小镇）。</p>
+<p>他去楼下喝咖啡，回来时备忘录里密密麻麻的记载着 ConcurrentHashMap 的常见问题以及解决方法；听极客们讲创业公司组件团队的经验；结交硅谷的风险投资人 ...... </p>
+<br>
+<p>经过一年的发展，多米尼克在 2012 非常兴奋：</p>
+<p>“ Fight My Monster 今天出现在了 TechCrunch 上，值得大声欢呼，谢谢！！！我们在努力工作，希望我们能够实现愿望。” </p>
+<p>“ 如果您还没有玩过 Fight My Monster，我建议您试一试 – 网上真的没有什么比得上它了。我们正在英国孵化，体验该网站的最佳时间是工作日（放学后）下午 4 点至晚上 8 点或周末的白天。” </p>
+<br>
+<br>
+<p>然而，挫折呼啸而至。在融资后，公司新入职的财务高管在战略上与原来的团队意见不合，分歧进而演变为决策失误。尽管用户依然在增长，但 Fight My Monster 的前进已经阻力重重，无力回天。</p>
+<p>从财务回报来看，Fight My Monster 还是失败了，用户在 2013 年最终扩大到了 300 多万。</p>
+<p>不过这段经历非常宝贵，弥足珍贵的部分是找到一群给力的同事，沉迷于自己热爱的那个分布式系统。多米尼克非常钦佩 Fight My Monster 的设计师 Jon Ball，Jon 总能用团队的设计系统造出一大堆好看的模型，之后又顺利创造了广告收视率最高纪录。还有 Cassandra 的工程师 Aaron Morton  “ We work together，believe each other ” ，他和多米尼克一起打造了游戏背后的 “ 引擎 ” ——分布式数据库。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/c509771324246de22e736b76c24b2343.png" alt="image-20230124164720298" style="zoom:37%;" />
+<p>事后看来，多米尼克的 Flash 游戏当时已经风光不再。那时候人们在逐渐转向手机游戏、平板电脑这类移动端。2010 年，乔布斯宣布苹果手机不再使用 Flash ，原因是影响手机性能。因为 Flash 安全漏洞频发，BBC 发表一篇报道名叫《 Flash 还能活多久？》。BBC 话音刚落， Adobe 就宣布放弃 Flash 项目，改用 Animate 来制作专业动画。</p>
+<p>多米尼克回忆自己那段经历时说：We could have succeeded but needed to move faster: if I had my time again, I would have relocated to The Valley very soon after the company started growing to raise money faster and gain access to a bigger pool of experienced gaming executives. 要是我们动作再快点，就能成功：如果在公司开始快速发展时赶紧融资，然后搬到硅谷，吸纳更多经验丰富的游戏高管。</p>
+<br>
+<h2 id="工程师出身的企业家企业家出身的工程师"><a class="header" href="#工程师出身的企业家企业家出身的工程师">工程师出身的企业家，企业家出身的工程师</a></h2>
+<p>虽说游戏业务日渐萧条，但在硅谷，一种陌生却强大的吸引力击中了他，多米尼克感到脑海中那片灵感的死水泛起了涟漪，很快。涟漪变成了翻滚的波浪。</p>
+<p>时间倒回到 1998 年，多米尼克当时在伦敦的创业公司开发一个在线存储系统时，用 <a href="http://www.weidai.com">Wei Dai</a> 的 Crypto++ 库做了很多事情。在 Wei Dai 的网站里，多米尼克发现了一篇关于 “ B-money ” 的文章，这当然是比特币的先驱之一。</p>
+<p>多米尼克没有想到来自 98 年遇到的那篇文章，点燃了比特币这颗火种，并在多年之后串联起了他往后十年加密生涯的时间线。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/9d3e99b7d9b265f272df6f184b1d467f.png" alt="http://www.weidai.com" style="zoom: 50%;" />
+<p>在 2013 年多米尼克离开 Fight My Monster 之后，因为多年以前尘封心底的 “ B-money ” 迷上了比特币。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/0c0ef2986203947e6d9d9bd7fb29bba4.png" alt="image-20230124132844405" style="zoom:67%;" />
+<p>Wei Dai 在 <a href="http://www.weidai.com/bmoney.txt">B-money</a> 里写道：</p>
+<p>我对 Tim May 的加密无政府主义非常着迷。与传统上 “ 无政府主义 ” 的意思不同。在加密无政府主义中，政府不是暂时 “ 消失 ” 了，而是永远没有必要存在的。这是个人人平等的自治社区，是个没有暴力威胁的社区。因为这里利用密码学，使暴力破解从理论上就是不可能的，社区参与者的身份与他们的真实名字或物理位置没有任何关系 ...... </p>
+<p>还可以在<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E5%8A%A0%E5%AF%86%E6%9C%8B%E5%85%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html">这</a>看看关于加密朋克的更多内容。</p>
+<br>
+<p>B-money 论述了一种协议，用于在匿名社区中提供货币交换和合同执行服务。 Wei Dai 首先介绍了一种不太实用的协议作为铺垫，因为它需要同步的、不可干扰的匿名广播信道。然后提出了一种实用的协议。在所有方案中，Wei Dai 假设存在一个不可追踪的网络，其中发送者和接收者仅能通过数字伪名（即公钥）识别，每条消息由发送者签名并加密给接收者。</p>
+<p>Wei Dai 详细介绍了货币的创造、怎么发送、怎么防止双花、广播交易信息、让服务器们达成一致 ...... </p>
+<p>从 Wei Dai 的网站可以看出，他仍在密码朋克社区活跃。最近更新日期是 2021 年 1 月 10 日。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/cc24110e86f36b5623b94b5bff3b1f9f.png" alt="image-20230124140739990" style="zoom:80%;" />
+<br>
+<p>多米尼克说：“ 我喜欢算法和分布式计算，大学时就在这方面获得了很多奖项。更重要的是，我之前从未遇到过这样一个技术领域，它结合了金融、法律、政治、经济和哲学的思考，同时也有望推动世界做出重大变革。对我来说，这个新兴领域是梦想成真。我做出了一个更大的人生决定，将我的职业生涯重新投入到这个领域。” </p>
+<br>
+<p>多米尼克 2014 年的 “ 比特币 ATM 之吻 ” 。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/83403aa2179a2e9ded1d8f5bc9dc71e2.png" alt="BjMyDsJCYAAPqZv" style="zoom:33%;" />
+<br>
+<p>2014 年，多米尼克开始全职炒币，顺便埋头学习一点共识算法的基础知识🤣😉。</p>
+<p>2 月 7 号，全球最大的比特币交易所门头沟宣布破产。多米尼克发推特表示心爱的比特币跌了，心痛。</p>
+<p>比特币暴跌至 666 美元。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/77ae5916be556e50b88f07b00bf1343f.png" alt="image-20230123222354219" style="zoom:50%;" />
+<p>他沉下心来，深入研究传统的拜占庭容错，再结合之前的经验。多米尼克构思了一种像 Cassandra 那样能横向扩展的去中心化网络 —— 可以让越来越多的服务器加入并保持高性能。没过几天，多米尼克发表了一篇论文，描述了一种可扩展的加密货币，名为 Pebble 。论文悄悄在狭小加密圈里流传开，那是首个描述去中心化分片的系统。在这个系统中，每个分片都使用异步拜占庭共识算法来达成协议。</p>
+<br>
+<p>学习之余，多米尼克不忘炒币。投资比特币给他带来不少安稳觉，现在他能安心设计共识算法了。至少再也不用日夜兼程、手忙脚乱地工作了。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/60f45fe06eb9fa990443162691e7cab8.png" alt="image-20230123222606352" style="zoom:52%;" />
+<br>
+<p>多米尼克的研究重点是在协议和密码学上，这些协议和密码学如同一把干柴，重新燃起造梦家内心的小火苗。多米尼克相信这些协议和加密算法可以改变世界。他取了去中心化（Decentralized）的 “ D ” 和无限（Infinity）的 “ finity ” ，组合在一起成为 “ Dfinity ” 。Dfinity 旨在创造一个具有无限规模的去中心化应用程序基础设施。</p>
+<p>多米尼克从中国回到加州山景城后发推特说：China Loves Blockchain :) 。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/12d2ad4630ef26d1c5988adf7a901d51.png" alt="image-20230123222921586" style="zoom:67%;" />
+<p>和以太坊一样，多米尼克也在中国融到了投资。原因很简单，硅谷很早就把资金投入了比特币，并获得了巨额回报，他们不怎么关心 “ 山寨币 ” （世俗观点认为，除比特币之外的币都是 “ 山寨币 ” ，即基本模仿比特币、稍稍改进过的币）。</p>
+<br>
+<p>接下来我得好好介绍介绍 Dfinity 团队到底是干啥的了。</p>
+<br>
+<h2 id="点-线-面-体"><a class="header" href="#点-线-面-体">点. 线. 面. 体!</a></h2>
+<p>我们知道比特币是区块链的先驱。如果你还不了解什么是区块链，先看看<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8C%BA%E5%9D%97%E9%93%BE%EF%BC%9F.html">这里</a>。</p>
+<p>比特币本身是在 cypherpunk 对去中心化货币项目的长期追求中慢慢出现的。</p>
+<p>它创建了一个开放的记账系统：世界各地的人都可以随时加入或退出、靠共识算法让大家的数据保持一致、一个共创共建共享的去中心化网络。人们只要下载比特币软件（下载源代码并编译也行），然后在自己的机器上启动运行就可以加入比特币网络。比特币会让全球的电脑达成一致，共同记录每一笔转账交易。有大家的记录，便有了传说中区块链 “ 不可篡改 ” 的特性，实际上就是少数服从多数，没法跟所有人耍赖。</p>
+<br>
+<p>在传统网络架构中，不分青红皂白，用户数据被一股脑塞进服务器里。用户不是真正拥有自己的数据，因为谁控制着服务器谁说了算。如果我们可以把这种一对多的关系看成 “ <strong>点</strong> ” ，星罗棋布，分散在世界各地。用户的数据流进一个个点里，乐此不疲。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/875b14eddfa1ace9a7478b5abb3301ac.png" alt="image-20230124222808798" style="zoom:20%;" />
+<p>那么比特币网络就可以看成 “ <strong>线</strong> ” ，它把孤立的点串联成线，使互联网向更公平更开放发展。比特币做的是把世界各地的电脑组合在一起，形成一个庞大的 “ <strong>世界账本</strong> ”  。那如果想换一种功能，记点别的东西怎么办？模仿比特币重新做一个！</p>
+<p>在比特币诞生 6 年后，一个可以在去中心化网络上部署软件的 “ <strong>面</strong> ” 慢慢崭露头角，它叫<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%A5%E5%A4%AA%E5%9D%8A%EF%BC%9F.html">以太坊</a>。以太坊不是模仿比特币的世界账本。以太坊创造了一个共享、通用的虚拟 “ <strong>世界计算机</strong> ” ，每个人的电脑里运行着以太坊的虚拟机。它与比特币账本一样不可破坏、不可篡改。大家都可以编写软件部署在虚拟机里，只要交一点以太币给矿工就行。（现在已经没矿工了）</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/38d3219e513911f18db5c8468841e030.png" alt="image-20230124190858096" style="zoom:27%;" />
+<p>部署上链的软件化身自动售卖机，永久存储在这个分布式去中心化网络中，公平公正的判断每一笔交易是否达到条件。加上区块链永久存储的特性，便有了 “ 代码即法律 ” 一说。在这里，软件有另一个名字： “ 智能合约 ” 。</p>
+<p>不过，咳咳，打断一下。想法很美好，现实也很残酷。早期以太坊社区中确实有实现 “ 世界计算机 ” 的想法，建立一个分布在世界各地的去中心化基础设施。但是以太坊的架构有一些局限性，使得它执行交易的性能较低、ETH 涨价导致高 Gas 费、扩展性不佳、不能大量存储数据等等。</p>
+<br>
+<p>一种解决方法是在原来的基础上改进：把以太坊的共识由 PoW 转为 PoS（Casper）、构建分片链（Shard）或者侧链；另一种解决方法就是推倒重来：重新设计一种可以高速处理信息、大规模存储数据的架构。</p>
+<p>不断改进、扩容、兼容以太坊的老架构，还是设计真正的 “ 世界计算机 ” ？</p>
+<p>多米尼克做了个困难重重的决定，选择后者。</p>
+<br>
+<p>当我们试图解决一个特定问题时，最终常常发现关键在于创建强大的 “ 工具 ” 。有个更先进实用的工具，并不断维护和改进，逐渐变成更加强大的工具，能解决很多有价值的问题。一个普遍的商业现象是，为了实现某个产品或服务，开发了一种工具，后来发现这个工具有更广泛的适用性，然后工具本身演变成了更大、更成功、估值更高的产品。</p>
+<p>亚马逊的云服务最初是为了解决黑色星期五之后的计算资源浪费问题，后来成为全球最早、最大的云服务提供商。同样，SpaceX 解决了火箭发射成本过高的问题。多米尼克为了彻底解决扩展性的问题，决心重新设计共识算法和架构。</p>
+<br>
+<p>机会终于来了。2015 年 11 月，伦敦。</p>
+<p>多米尼克在 devcon one 上讲述了他研究的共识算法。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/93504674b2894befb3c529b248726f50-1674887452159-16.png" alt="93504674b2894befb3c529b248726f50-1674887452159-16" style="zoom:55%;" />
+<p>现在我们可以从多米尼克当年 devcon one 的演讲 PPT 中看到，他将 IC 描述为 Ethereum 3.0 。实际上称为区块链 3.0 也不为过。如果比特币和以太坊叫 “ 区块链 1.0 ” 和 “ 区块链 2.0 ” 的话。他想创造 “ <strong>体</strong> ” ，一个真正的世界计算机，连项目的名字都叫互联网计算机（Internet Computer，简称 IC）。在 “ 面 ” 的基础上承载大规模应用，可以 “ 横向扩展 ” 无限扩容的 “ 世界计算机 ” 。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/d566e01d9397ce368f777127001a237c.png" alt="图片" style="zoom:57%;" />
+<p>不是，放错图了。下面这个是 IC 。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/d600d44cc130bd67f9daad687a0db40c.png" alt="img" style="zoom:80%;" />
+<br>
+<p>交谈中多米尼克发现，之前坚决拥护比特币的顽固派对以太坊的概念非常感兴趣。这使他更坚定地相信可信计算（Trusted Computing）的前景。</p>
+<p>这是比以太坊更宏伟的目标。多米尼克希望做一个由服务器组成的公共网络，提供 “ 去中心化的云 ” —— 一个可信计算平台。软件在去中心化云上部署运行。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/73d313475c9ef0586de3a71b9b05f7c5.png" style="zoom:50%;" />
+<p>多米尼克做的是重塑一个完全去中心化的基础设施，也可以理解为下一代互联网基础设施，还可以理解为结合区块链的去中心化可信计算平台😉。所有能在区块链上跑的都将由区块链来跑，包括 Web 。建立一个以互联网服务为核心的去中心化社会系统。</p>
+<br>
+<p>简单来说，就是：</p>
+<p>传统防御系统：主要由防火墙、入侵检测、病毒防范等组成。传统网络安全的原理是被动防御，往往都是 “ 救治于后 ” ，例如当应用出现病毒，就要借助杀毒软件查杀。而此时企业或多或少已经产生了损失。</p>
+<p>可信计算：基于密码的运算与防护并存的安全技术，保证全程可检测可监控。可信计算的原理是主动出击。由于整个链路从应用、操作系统还是硬件，必须经过验证。这就大大降低了病毒、网络攻击的概率。</p>
+<br>
+<p>区块链都有一个叫共识算法的东西。他负责协调网络中的节点。共识算法可以在网络中让大家的信息达成一致，因为这是一个所有人随时随地都可以加入或退出的网络，而且不知道有哪个节点会故意捣乱。有了共识算法，网络中即使存在三分之一的捣乱节点，其他的节点也照样能正常达成共识。（不同共识算法的抵抗能力不一样）</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/66123e0ee39269d5c51bd0bcb69bf024.png" alt="image-20230124221621784" style="zoom:30%;" />
+<p>而去中心化平台不止涉及代币之间的转账交易，还涉及用共识算法建立起一道屏障，把不怀好意的家伙隔离在外面。然而效率与去中心化不可兼得，很难建立一个完全去中心化的系统：既要保护正常的节点们达成共识，又要在一堆节点之间协调、同步数据。多米尼克需要把可信计算和区块链融合在一起，让世界各地的服务器形成一个无限、开放、高性能、强一致性、可扩展、可以大量储存数据的区块链网络，不再需要防火墙保护。</p>
+<p>对多米尼克来说，未来区块链就是互联网，互联网就是区块链。互联网不再是简单的把机房服务器之间连接到用户，而是先又世界各地的服务器组成一个可信、安全的区块链网络，然后再在上面部署 <a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E5%9C%A8%E8%AF%8D%E6%B1%87%E8%A1%A8%E9%87%8C%E8%A7%A3%E9%87%8A%E8%BF%99%E4%B8%AA%E8%AF%8D">Dapp</a> ，服务用户。多米尼克希望银行金融、共享经济（例如 Uber）、社交网络、电子邮件和搜索引擎之类的东西都能转移到这样的网络上。</p>
+<br>
+<p>2016 年秋天，多米尼克宣布自己以 “ 去中心化冒险家 ” 的身份回归。理论搭建完成，造梦家的冒险之旅，正式开启！</p>
+<br>
+<h2 id="dfinity-"><a class="header" href="#dfinity-">Dfinity !</a></h2>
+<p>IC 为了实现 “ 世界计算机 ” 的想法，重新设计了区块链架构，研发了更高效的共识，并配套创新的密码学组合。目标是解决传统区块链架构中速度、效率和扩展的限制。</p>
+<br>
+<p>多米尼克左手忙着和技术团队搞研究，右手写团队战略规划，嘴巴还得去各种区块链论坛介绍项目。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/6c8f9bf09ec195a77274786675754d79-1674887452159-19.jpg" alt="6c8f9bf09ec195a77274786675754d79-1674887452159-19" style="zoom:17%;" />
+<p>这些年来，多米尼克已经与其他区块链团队分享了许多关键密码学技术，比如 VRF 的应用，现在已经有很多知名项目用了（比如 Chainlink 等等）。💡</p>
+<p>2017 年 2 月，多米尼克和 V 神以及众多大佬的圆桌论坛。Vitalik Buterin （左一），多米尼克（左二），Timo Hanke（右一）。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/99e283e435820e746ca62048059b4909-1674887452159-20.png" alt="99e283e435820e746ca62048059b4909-1674887452159-20" style="zoom:33%;" />
+<br>
+<p>Ben Lynn （左二 / 红色短袖）正在演示一种屌炸天的技术：阈值中继（Threshold Relay)。它可以大幅提升区块链的性能，快速生成区块🪄。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/63cf9b6bfe37c841fae4da90b0004c1a.jpeg" alt="图片" style="zoom: 27%;" />
+<p>顺便提一嘴，工程师 Timo Hanke （左三 / 中间）之前是亚琛工业大学的数学和密码学教授。2013 年创建了 AsicBoost ，将比特币开采的效率提高 20 - 30 ％ ，现在已成为大规模挖矿作业的标准。</p>
+<p>Ben Lynn 是 BLS 签名算法的创造者之一。他的 “ L ” 就是 BLS 中间那个 “ L ” ，BLS 来自三位创造者的名字首字母。从斯坦福博士毕业后他在 Google 工作了 10 年，在 2017 年 5 月加入 Dfinity 。如果你没听说过 BLS 算法，那你一定读过早些年 Ben Lynn 火遍全网的 《Git 魔法》。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/8f95eb0c3287e02f4f0b28464c7c8153.png" style="zoom:57%;" />
+<p><br><br></p>
+<p>2021 不是平凡的一年。</p>
+<p>5 月 10 日，IC 主网上线。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/df5b4b83d7b278dd3fdb923135947a16.jpeg" alt="Image" style="zoom:37%;" />
+<p>上图展示了对比其他区块链的性能、存储数据费用和能耗。</p>
+<br>
+<p>IC 主网上线时，已经有超过 4000 名活跃的开发者了。下图是对比其他区块链的开发者增长图。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/fabf7f6e50771c50912dc419e9284f16.jpeg" alt="图片" style="zoom:37%;" />
+<br>
+<p>IC 有许多创新，比如可以无限横向扩展，通过 Chain Key 赋予了 IC 网络可以无限扩容的能力。由一个 DAO —— <strong>网络神经元系统（Network Nervous System，NNS）<strong>管理网络的拆分和组合。所以这就需要一个不同寻常的共识算法了， IC 的共识只对消息排序，让副本按照相同的顺序执行消息。依靠 BLS 阈值签名算法和非交互分布式密钥生成（DKG）产生的随机数选择谁出块，<strong>共识速度很快</strong>。也就使得 IC 有了</strong>更高的 TPS</strong> ，做到了毫秒级查询、秒级更新数据，Dapp 的使用体验相对其他公链丝滑不少。</p>
+<p>IC 的目标是去中心化的云服务，为了能让 <strong>Dapp 全栈部署上链</strong>，所有 Dapp 都安装在一个虚拟化容器里。IC 上的 “ Canister ” 相当于以太坊的智能合约，Canister 里可以存储数据，部署代码。并且开发者可以通过后端虚拟容器自动生成的 <strong>Candid UI</strong> 进行测试，不用一行代码。客户端直接通过 https 访问部署在 IC 上的前端页面以及智能合约。虚拟容器就像小型服务器一样，给每个 Dapp 提供了自己的<strong>链上存储空间</strong>，还能支持从智能合约<strong>直接调用外部的 https 服务器</strong>，无需预言机。这是区块链历史上第一次实现了智能合约能够直接与外部的 https 服务器进行通信，并在智能合约进一步处理消息后做出响应。以太坊和特币一样，也接受了 “ 代码即法律 ” 的范式。这也就意味着没有任何治理来规范平台的使用或底层网络本身，IC 的 “ 智能合约 ” Canister 不是不变的，它可以保存数据并更新代码。</p>
+<br>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/image-20230614155150128.png" alt="image-20230614155150128" style="zoom:50%;" />
+<p>也是历史上第一次在底层通过密码学直接集成了比特币和以太坊（不是跨链桥）：IC 在协议层面与比特币直接集成。IC 上的 Canister 能直接在比特币网络上接收、持有和发送比特币。也就是说，Canister 可以像用户的钱包一样持有比特币。Canister 能够通过阈值 ECDSA 的 Chain Key 签名协议安全持有和使用 ECDSA 密钥。相当于赋予了比特币智能合约的功能！</p>
+<p>苏黎世办公室演算集成比特币的白板。👇</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/6d6fa714d370a66d05a6c0d443c585b2.jpeg" style="zoom:90%;" />
+<br>
+<p>既然数据都存在链上，那就要有<strong>足够低的 Gas 费</strong>：1 G 1 年 5 美元！Gas 光低还不够，为了用户能无门槛使用 Dapp ，IC 使用了<strong>反向 Gas 费模型</strong>，Gas 由开发团队支付。Dfinity 团队还把 Gas 锚定 SDR ，变成了不随币价波动的 <strong>稳定的 Gas</strong> 。IC 有一个统一的去中心化匿名身份：<strong>互联网身份（Internet Identity，ii）</strong>，作为 Dapp 的登录入口，加入网络神经系统参与治理 ...... </p>
+<br>
+<p>IC 架构和共识也是独领风骚。IC 理论上有无限高的计算和存储，只要不断加服务器节点进来就行。经过改良的共识有点像实用拜占庭，又更复杂，因为和目前已有的共识都不太一样，多米尼克给它起了个名字叫 “ PoUW ” 共识，Proof of Uesful Work 。BLS 阈值签名方案的 VRF ，产生真正不可预测的随机数，而且可以让大家都来验证这个随机数不是别人伪造的。抗女巫攻击的边缘节点，分层的架构，随机指定的出块，无需多言，就一个字，妙。</p>
+<br>
+<br>
+<p>根据 GitHub 和 Electric Capital 的统计（2023），IC 拥有最活跃的开发者社区。🔝💥并且还在快速增长。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/616e010d7ec8b2eb236d023004f8ead4.jpeg" alt="图片" style="zoom:67%;" />
+<br>
+<p>主网上线三个星期，IC 快要达到 3000 万个区块时，办公室墙上的照片。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/f78783b11cb609cfb3545381525ee787.jpeg" alt="图片" style="zoom:50%;" />
+<br>
+<p>2021 年 7 月，有许多新的 Dfinity 成员在新冠大流行期间通过视频会议面试加入团队，还从未见过面。这天一小群人来到位于苏黎世的办公室 face to face 。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/3adc64294313d748a0fe347ee81007b3-1674887452159-28.jpeg" alt="3adc64294313d748a0fe347ee81007b3-1674887452159-28" style="zoom:17%;" />
+<br>
+<p>多米尼克的博客里写过 Dfinity 的两方面愿景：</p>
+<p>一方面，许多传统的垄断性技术中介，如 Uber 、eBay 、社交网络、即时通信甚至搜索引擎，可能会被重新设计为 “ 开源企业 ” ，使用自主软件，使用自己的去中心化治理系统来更新自己。</p>
+<p>另一方面，我们希望看到企业 IT 系统的大规模重新设计，以利用区块链计算机提供的特殊属性，并大幅削减成本。最后一点是不明显的，因为区块链计算机上的计算要比亚马逊网络服务等传统云计算昂贵得多。但大幅节省成本是可能的，因为运行企业 IT 系统所涉及的绝大多数成本来自于支持人力资本，而不是计算本身，而 IC 将使创建涉及人力资本少得多的系统成为可能。</p>
+<br>
+<p>图片来自 2021 年 10 月，上海。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/2cea7849c09de6aadd133bf5337ec7fa-1674887452159-29.jpeg" alt="2cea7849c09de6aadd133bf5337ec7fa-1674887452159-29" style="zoom:57%;" />
+<br>
+<p>关于 IC 数据的<a href="https://dashboard.internetcomputer.org/">实时统计</a> 。</p>
+<p>2022 年 7 月 14 日，在苏黎世的街头咖啡馆。多米尼克和他的小伙伴正在等待 IC 的第 1,000,000,000 个区块打包。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/6de3ff8a4d75d9964afa8252433562c7.jpeg" alt="图片" style="zoom:37%;" />
+<br>
+<p>Dfinty 位于瑞士总部的新办公楼。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/03c4efa5b588d05bc594c6c98b5ef081-1674887452159-31.png" alt="03c4efa5b588d05bc594c6c98b5ef081-1674887452159-31" style="zoom:33%;" />
+<br>
+<p>多米尼克离开办公室时，拍了几张食堂墙上的壁画，由才华横溢的 IC NFT 艺术家创作。</p>
+<p><img src="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/assets/%E9%80%A0%E6%A2%A6%E5%AE%B6%E7%9A%84%E5%86%92%E9%99%A9%E4%B9%8B%E6%97%85/c6d9dff3c942e4c7c6a0dba0e1f4d040-1674887452159-32.jpg" alt="c6d9dff3c942e4c7c6a0dba0e1f4d040-1674887452159-32" /></p>
+<p>多米尼克吃着蛋糕，唱着歌，一不小心又写了几百行代码的小项目。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/f9803e7660dbfa51bc918b50e92a3e91.jpeg" alt="图片" style="zoom:33%;" />
+<p>工作之余，吹拉弹唱一样不能少。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/88fefffafff481e6a74b511e629f2fc5-1674887452159-34.png" style="zoom:67%;" />
+<p><br><br></p>
+<p>说了这么半天，IC 到底解决了什么问题呢？总的来说，它解决了传统区块链的 TPS 太低、扩展性太差、Dapp 仍然依赖一部分中心化服务。</p>
+<p>比特币是一个去中心化记账本。</p>
+<p>以太坊创造了去中心化计算机。</p>
+<p>Cosmos、Polkadot 实现了区块链的可组合性和可扩展性。</p>
+<p>Internet Computer 正在打造一个高度可扩展、超高 TPS 的去中心化云服务。</p>
+<br>
+<p>扩展性的关键在于接近于零的边际成本。Polkadot 的可扩展是建立在软件工程师的开发上的，而 IC 的扩展性是在底层自动完成的。使得上层做应用的团队在 IC 上开发成本降低不少。</p>
+<p>想做出高扩展性、高性能的公链：</p>
+<ul>
+<li>
+<p>第一要在规划上就要重视扩展性和性能，方方面面的设计布局上都是以尽快实现扩展性和 TPS 为重。</p>
+</li>
+<li>
+<p>第二是需要有信心和实力，坚持自己的路线，直到生态爆发的那一天。在此之前，需要忍受短期内其他竞争对手的打压，需要熬过长时间的现金流的压力，需要无视世俗的不理解。</p>
+</li>
+</ul>
+<p>专注底层基础设施的研发，直到各种各样有创意的应用出现，使生态圈的参与者数量增加。数量的增加导致新的创意和应用进一步涌现。这样就形成正反馈循环，使生态圈不断自发的更加繁荣更加复杂化：</p>
+<p>扩展性 / 零边际成本 / 开放系统 → 应用数量增加 → 各种连接指数倍出现 → 有价值的创意涌现 → 形成应用 → 系统复杂化 → 数量继续指数倍增加 → 正反馈循环 → 生态大繁荣。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/image-20230612161409296.png" alt="image-20230612161409296" style="zoom:45%;" />
+<p>所有的技术开发的选择都有优缺点。根据局部片面的技术优缺点，来断定谁最终会胜出，是幼稚的和危险的。最终的区块链上的赢家，将是生态系统最丰富的，开发者，软件应用，和终端用户数量最多的。</p>
+<p>未来区块链的关键词是：零延迟，零边际成本，开放的生态，和它带来的巨大规模效应，极低的单位成本，极复杂丰富的生态。</p>
+<p>技术革命带来的产业巨变，对于大多数普通人来说，是突然的。但在这突然的背后，是几年，甚至十几年的渐进的演变。</p>
+<p>一旦影响产业格局的几个关键参数越过了临界点，生态进入大繁荣时期，变革是极其迅速的。其影响之深远，大多数人完全措手不及。变革结束之后，产业又进入一个长时间的新的平衡。这之后的一段时间内几乎没有竞争者能追上行业里的领导者了。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/d906dc0876066d58bf33d4a2c619bc20-1674887452159-35.png" alt="d906dc0876066d58bf33d4a2c619bc20-1674887452159-35" style="zoom:33%;" />
+<p>经过 2 年的发展，IC 生态系统已经涌现出许多优秀的应用。前后端全部上链，完全不依赖中心化服务的 Dapp 。</p>
+<p>在社交类 Dapp （SocialFi）方面，有 <strong><a href="https://h5aet-waaaa-aaaab-qaamq-cai.icp0.io/">DSCVR</a></strong> 、<strong><a href="https://az5sd-cqaaa-aaaae-aaarq-cai.ic0.app">Distrikt</a></strong> 、<strong><a href="https://mora.app">Mora</a></strong> 、<strong><a href="https://oc.app">Openchat</a></strong> 等。<strong>DSCVR</strong>  是一个端到端的去中心化 Web3 社交媒体平台。<strong>Distrikt</strong> 是一个 Web3 微博客平台，使大家可以在去中心化网络中分享内容或参与讨论。<strong>Mora</strong> 可以给每个用户部署自己的智能合约，来存储用户的博客数据。Mora 使用户在区块链上发布博客，永久存储自己的数据。<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/Mora.html">这里</a>有关于 Mora 的更多内容。<strong>Openchat</strong> 提供了去中心化的即时通讯服务，是个去中心化的聊天 Dapp 。</p>
+<p>在去中心化金融（DeFi）领域，IC 生态也有一些体验很好的 Dapp ： <strong><a href="https://avjzx-pyaaa-aaaaj-aadmq-cai.raw.ic0.app/ICDex">ICLightHouse</a></strong> 、<strong><a href="https://app.infinityswap.one/swap">InfinitySwap</a></strong> 和 <strong><a href="https://app.icpswap.com">ICPSwap</a></strong> 等应用。2022年是中心化机构信任倒塌的一年。3AC 、Celsius 、Voyager Digital 、BlockFi 、Babel Finance 、FTX 等头部对冲基金、借贷平台和交易所，在这一年纷纷战败破产。不仅如此，DCG 灰度、Binance 币安和 Huobi 火必等巨头也深受不同程度的 <a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E5%9C%A8%E8%AF%8D%E6%B1%87%E8%A1%A8%E8%A7%A3%E9%87%8Afud%E6%84%8F%E6%80%9D">FUD</a> 之苦。中心化机构没法做到彻底透明，它们的信任依赖于创始人的声誉和公司的品牌等外在形象。而去中心化则以 &quot;code is law.&quot; （法则即代码）和 &quot;Don't trust, verify!&quot;（不要相信，请验证！）为基石。不破不立。在这个革命性的理念下，中心化的神话彻底被打破，为去中心化的未来铺平了道路。去中心化的金融服务，让用户可以进行无需中间人的借贷、交易和资产管理等操作，增强了金融系统的透明度和可访问性。</p>
+<p><strong><a href="https://astrox.me">AstroX ME</a></strong> 钱包是一款备受关注的钱包应用。ME 钱包可以安全可靠的存储和管理数字资产，让用户能够方便地管理他们的 IC 代币和各种数字资产。</p>
+<p>还有去中心化的 NFT 市场 <strong><a href="https://tppkg-ziaaa-aaaal-qatrq-cai.raw.ic0.app">Yumi</a></strong> 。用户可以创建、购买和交易数字艺术品，为艺术家和收藏家提供了全新的机会和市场。</p>
+<p>IC 生态系统已经涌现出许多令人印象深刻的 Dapp ，涵盖了社交、金融、NFT 市场、元宇宙和钱包等不同领域，提供了丰富多样的体验和服务。随着 IC 生态系统的不断壮大和创新，我们期待更多优秀的应用出现。还有更多有趣的项目在<a href="https://internetcomputer.org/ecosystem">官网</a>等你发现。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/image-20230704224645360.png" style="zoom:35%;" />
+<br>
+<p>瑞士现在是响当当的 “ 加密谷 ” 了，世界上很多知名区块链项目都在瑞士诞生。Dfinity 是这里第一个完全非营利性的基金会。</p>
+<p>多米尼克组建了一支非常强大的区块链研发团队，包括密码学、计算机科学和数学教授、博士和博士后、加密货币专家、高级工程师和专业的管理人员。</p>
+<p>我认为未来 10 年区块链仍将是最有趣、最有影响力和发展最快的技术领域之一。🚀🚀🚀 </p>
+<br>
+<br>
+<p>这就是我要讲的关于多米尼克的故事了，不过，多米尼克自己的故事远未结束，甚至才刚刚开始 ...... </p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/WeCha(1)@1.5x.jpg" style="zoom:25%;" />
+<p>谁能想到，一篇来自遥远的 1998 的博客，激起了世界往后二十年波澜壮阔的 “ 加密运动 ” ，贯穿了多米尼克心中追求无限分布式的热情 ......</p>
+<p>那，是一片新天地了。</p>
+<br>
+<br>
+<br>
+<h3 id="后记"><a class="header" href="#后记">后记</a></h3>
+<p>写完结尾，我察觉隐隐有些响动。簌簌簌，簌簌簌，由远及近，这时整间房变得无声无息。那声音若有若无，不知从什么地方响起，方向也搞不清楚，也许是电脑风扇，也许是窗外树枝，也许只是脑子里的幻觉。</p>
+<p>那声音越来越清楚。那声音，听起来似乎是电脑里传来的？</p>
+<p>我赶忙把耳朵贴到电脑主板上。不是。我又看向窗外，难道是？窗外一切正常。</p>
+<p>那声音又来了，更清楚了，是嗞啦、嗞啦、嗞啦！没错！</p>
+<p>忽然，时间暂停了。周围的一切都暂停了。神经元膨胀、崩裂，释放出的信息素又催化了其他的神经元，我的头不受控制的抖动起来，又突然膨胀，眼珠子大的像鼠标，耳朵拧成了麻花 ...... 那声音似乎伴随着玻璃破碎的声音，鞋底敲地的声音，鸟鸣犬吠的声音 ...... </p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/cfc9f9909024db41734c7a23eb881472.jpeg" alt="123" style="zoom:33%;" />
+<p>脑子闪过一道白光，很快，白光扩散成一白茫茫片。周围是蓝色的，下面有密密麻麻的方块和线条；一个点亮光突然闪耀、扩大，吞没了一切；周围还是蓝色的，下面是白色的。</p>
+<br>
+<p>现在，我什么都不记得了。</p>
+<p>也许是<strong>梦</strong>吧。</p>
+<p>也许是一种改变世界的东西。</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/image-20230705214715102.png" style="zoom:67%;" />
+<br>
+<br>
+<br>
+<p>就写到这里吧，该睡觉了，晚安。</p>
+<p>对了，文章的结构是这样的：</p>
+<img src="0.去中心化之旅/assets/造梦家的冒险之旅/image-20230617130309378.png" style="zoom:35%;" />
+<p>如果有不了解的地方可以跳出故事主线看看。</p>
+<br>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="未来已来"><a class="header" href="#未来已来">未来已来</a></h1>
+<p>我读了很多网上关于区块链的看法，然后总结成了这篇文章。客观讲述了我阅读了大量博客之后对区块链的看法以及对未来互联网技术的想法。</p>
+<h2 id="农场里的火鸡"><a class="header" href="#农场里的火鸡">农场里的火鸡</a></h2>
+<p>现在的区块链很火。好像所有人都在买加密货币。</p>
+<p>四年一度的牛市，数字黄金比特币，火爆的 ICO ，涨幅百倍的 meme 币 ... </p>
+<p>等等，让我看看日历，现在是 2023 年 3 月 ... 似乎又快到牛市了，如果牛市依然如期而至的话。上次是 2020 年，这次也许是 2024 年。</p>
+<br>
+<p>但是先别高兴，让我来讲个故事：</p>
+<p>一个农场里有一群火鸡，农场主每天上午 11 点来给它们喂食。火鸡中的一名科学家观察这个现象，一直观察了近一年都没有出现意外。 </p>
+<p>于是，它也宣布了自己发现的伟大定律：每天早上 11 点，就有食物降临。第二天上午 11 点，农场主又来了，火鸡们又得到了食物。于是纷纷认同了科学家的定律。</p>
+<p>但到了感恩节这天上午没有食物降临，农场主进来把它们都抓出去杀了。</p>
+<p>最初是英国哲学家罗素提出的，用来讽刺不科学的归纳推理，滥用归纳法。</p>
+<br>
+<p>我们希望牛市能如期而至，但不妨先放下牛市会不会来这个问题，从历史中找找类似的情况看看是什么结局：</p>
+<p>九十年代末互联网泡沫时，市场出现过多次的大跌大涨。96 年，97 年，98 年都有过若干次反复。最后一次也是最大一波的上涨，从 98 年 10 月到 2000 年 3 月，纳指从 2000 多点一路涨到 4900 点左右。这会慢慢给市场内的投机者心理上一个极为坚定的信念：不管跌多惨，最后都会涨回来的。</p>
+<img src="0.去中心化之旅/assets/未来已来/1.png" style="zoom:65%;" />
+<p>当人们经历过几个牛熊周期，更加强化了这种坚定的信念，等真正的漫长的熊市开始时，他们继续按照自己总结的经验继续加仓抄底 ... </p>
+<img src="0.去中心化之旅/assets/未来已来/2.png" style="zoom:65%;" />
+<p>当泡沫破裂时，股价在几天内暴跌超过 50％ ，大部分股票最终跌去 99％ 直接归零。许多人靠加杠杆而迅速暴富，在熊市中押注全部的身价抄底，最终输得一干二净。</p>
+<br>
+<p>互联网的本质是把信息搜索和交互的成本降到接近于零，并在此基础上催生了很多扩展性极高，利润极高，垄断性极强的传统经济人无法理解的新模式。但九十年代很多项目和创意，在硬件软件基础设施还没有到位，个人电脑和宽带互联网还未普及时就强行推出，过于超前，因此悲催地失败。比如 1996 年创立，2001 年破产，累计融资约八亿美元的 webvan 。</p>
+<p>2001 年互联网泡沫破灭后，随着基础设施的成熟和各种成本的下降，后来涌现出来的新应用（ taobao， youtube， netflix， facebook， amazon， aws， iphone，uber，tiktok 等等）。其发展势头之猛，规模之大， 又远远超越悲观者的想象。</p>
+<img src="0.去中心化之旅/assets/未来已来/3.png" alt="image-20230603211039212" style="zoom:60%;" />
+<p>同理，大量过于超前于基础设施、无法对终端用户直接产生价值的区块链项目，最终会凋零，催生各种悲观负面情绪。</p>
+<p>但基础设施成熟后，许多当年吹的牛，做的梦，最终会被在正确时间正确地点出现的创业者实现。</p>
+<br>
+<p>区块链就站在现代社会三大主题的交汇点上：技术、金融和民主。区块链是利用加密和计算的进步，将金钱和我们日常生活的许多方面 “ 民主化 ” 的一种技术。它的目的就是要改善我们的经济运行方式，让我们更容易控制自己的信息、数据，最终掌控我们的生活。在现在这个科技时代，这就是民主该有的样子。<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E6%88%91%E7%9A%84%E7%BD%91%E7%BB%9C%E9%9A%90%E7%A7%81%E5%91%A2%EF%BC%9F.html">我们时常听人们抱怨科技巨头（像苹果、谷歌和 Facebook）对我们隐私数据的窥窃。</a>解决这个问题，把权力还给人民是最好的办法。</p>
+<br>
+<p>区块链技术的本质是把全球个体经济人和机器之间的价值交换的壁垒和成本降到几乎为零。</p>
+<p>但是以太坊目前达不到这个愿景，最终还是需要各种基础设施的成熟和普及。</p>
+<p>想象一下，如果有区块链技术成功解决了可扩展性、安全性和易用性等问题后，将会呈现怎样的面貌。最终可能只有寥寥几个公链能代表未来，走向世界，承载全球各地的去中心化梦想。</p>
+<br>
+<p>2014 年比特币被视为互联网支付领域时，实际上比特币的吞吐量根本不支持在超市买菜时付款。以太坊的早期叫称自己为 “ 一个世界计算机 ” 。起初有许多人认为以太坊可以取代比特币，因为它有可编程的特性。但这其实是一种错误的假设，这也很容易导致另外一个错误的观点：某某某下一代智能合约平台是以太坊杀手，只是因为它提供了更多的可扩展性。</p>
+<p>同理，就像以太坊没法取代比特币一样。接下来的 “ 云服务 ” 区块链也不太可能杀死以太坊，而是扩展相邻的可能性并承载不同的应用程序，利用它们独特的特性。这不代表比特币和以太坊已经永久确立了它们的地位。比特币和以太坊也有它们各自存在的问题。只是更先进的技术并不一定会替代原有的技术，而更可能是创造一个复杂的、专业化的技术栈。</p>
+<p>以太坊今天的用途不是计算，而是作为一个经过战斗考验的、缓慢而安全的计算机，用于基于代币的应用程序，如众筹、借贷、数字公司和投票的世界会计系统。即使以太坊网络有些拥堵、Gas 费有亿点贵、还要等待几分钟的时间才能完成交易，可这些 Dapp 也依然能与银行、股东投票、证券公司抗衡。</p>
+<p>因为这些智能合约能让陌生人之间可以完全不通过中心化机构来自由交易，并让中心化机构的庞大人员编制变得多余。以太坊上的自动做市商， Uniswap 只有二十多名员工，目前市值约两百亿美元。与之相比，纽约证券交易所的母公司 Intercontinental ，将近九千名员工，市值六百多亿美元。著名区块链投资者 Raoul Pal 估算，区块链的全球用户数，目前每年增长 110% 以上， 而 1997 年全球互联网用户数增长只有 63%。即使按照 1997年以后的互联网发展的轨迹，区块链全球用户数，也会从现在的大约两亿，增长到 2030 年的四十三亿左右。</p>
+<br>
+<h2 id="马车夫与司机"><a class="header" href="#马车夫与司机">马车夫与司机</a></h2>
+<p>历史是不断轮回螺旋上升的：</p>
+<p>现在人人都可以开车，只要有钱买车就行。🚗</p>
+<p>以前人人都可以骑马，只要有钱买马就行。🐎</p>
+<p>所以车只是这个时代的代步工具，以后可能就很少有人会开车了。类似于现在人们骑马，只能在马场和一些景区骑到。自动驾驶技术成熟之后完全不需要人们开车，会开车的人也就越来越少。想开车得去赛道上体验驾驶的快乐。</p>
+<p>古代有普通马、汗血宝马、战马、赛马场。</p>
+<p>现在有普通车、超级跑车、坦克、赛车场。</p>
+<p>马并没有消失，只是换成了车。</p>
+<br>
+<p>汽车出现之初，因为噪音大，速度慢，容易出车祸，经常熄火抛锚，缺少加油站，缺乏泊油马路等等而长期被鄙视憎恶。后来等到马路修多了，加油站多了，车的质量提高了，交通规则推广了，马车早就被淘汰了。</p>
+<p>现在的特斯拉也是同样的道理：耗电快；着火；自动驾驶开进海里，开上树；没充电桩；刹车失灵被媒体渲染成笑话，啊不是，现在成笑柄和梗了。等电池续航提升、自动驾驶算法完善进步、充电桩慢慢普及、充电时间越来越短的时候，还有油车什么事😄。而且电能还会随着技术进步越来越便宜的，光伏、风电、地热，直到未来实现可控核聚变，用之不竭。</p>
+<br>
+<p>另外，媒体为了吸引眼球的负面报导也是阻碍人们客观认识新事物的障碍之一。为了吸引人们关注，媒体选择性报道负面消息的次数远远大于正面报道，对新生事物尤其如此。iphone 出来后，媒体开始是嘲笑果粉脑残，然后是卖肾换手机，又攻击手机信号不好，之后而又渲染因为 iphone 抢劫、谋财害命的孤立事件。每次特斯拉着火、刹车故障、出车祸，总有人像打了鸡血一样开心，而没有客观的和别的汽车的事故率进行横向比较。人们诅咒共享单车的各种问题时，却没注意共享单车正在改变都市人的出行习惯，减少汽油消费，甚至影响房地产价格。</p>
+<p>负面消息的长期轰炸，使大部分人根本不可能去真正钻进去，研究新事物背后的整套逻辑。因为某个技术的现在的缺点局限，断定它没有前途，就像因为害怕触电的危险，而继续烧煤油灯一样。可是煤油灯也有着火的风险啊喂！实际上这不是怕触电，只是害怕陌生未知的新技术罢了。如果我们能保持客观和好奇心，会对世界产生很多不一样的看法。尤其是在现在技术发展日新月异的时候。</p>
+<br>
+<p>同样的，很多人不了解 IC 的底层运行原理，不知道 Chain Key 密码学的创新，不知道 IC 解决了扩展性的问题，不知道 BLS 阈值签名，不知道 IC 的共识算法。很难真正理解 IC 的概念，因为这是一个全新的，没有先例可以类比的复杂系统。即使是有计算机背景的人，要全面深入理解所有的概念，也得花几个月的时间深入各种论坛讨论、收集资料。而且每天还有新的发展，要想掌握，没有捷径。如果只是图一时之利，盲目跟风，追逐热点。在 ICP 价格高点投资了 ICP ，然后因为亏损过大和不理解本质而给这个东西贴上一个标签 “ 骗子 ” 、“ 垃圾 ” 等等是一个很自然的事。所有亏钱的散户都很伤心，逐渐变成失望，并在社交媒体上加入 FUD 大军，导致更多不了解 IC 的人产生偏见。更重要的是，很多时候人们都不知道那些因为无知而错过的信息。个体偏见普遍存在，每个人学习生活经历不同，思维模型不同，会自动忽略掉自己不感兴趣或者不理解的东西。</p>
+<p>更多相关内容延申阅读：<a href="https://mora.app/planet/ljlzk-viaaa-aaaan-qdpkq-cai/7XX5TVR413QFAH4917425QE3G8">Were attacks on ICP initiated by a master attack — multi-billion dollar price manipulation on FTX?</a> 、<a href="https://mora.app/planet/ljlzk-viaaa-aaaan-qdpkq-cai/7XXA1V7TGHV3WGGRQQ9ZGGMHPM">How The New York Times promoted a corrupt attack on ICP by Arkham Intelligence</a> 、<a href="https://mora.app/planet/5mpju-nyaaa-aaaan-qdmrq-cai/7XX4638VYN7R860MBS042715T7">专访DFINITY：ICP是SBF资本运作的受害者；Web3的很多未来都在亚洲</a> 。</p>
+<br>
+<br>
+<p>人类社会的生产力在循环中前进：</p>
+<p>一个新技术产生 → 少数人先接触试用 → 雇佣更多人研发维护这项技术 → 组织（公司 或者 DAO）发展壮大 → 越来越多的人开始尝试使用它，提高生产力 → 直到另一项新技术萌芽，尝试使用更先进更前沿的方法解决问题，便利生活 → 旧组织逐渐走向衰败死亡（变了死的更快，不变只是等死，也有少数组织能成功改革） → 大批雇员失业，并加入到新工作中 → 新组织继续发展壮大 ...... 直到有一天！人真的什么都不用干了，完全自动化、物资充足 ...... 人生只剩下享受 ~ </p>
+<br>
+<p>区块链技术的精髓在于，创新可由人人开展，无需权威机构的审核和批准。任何人都可以通过区块链技术保护自己的权益，免受强者的侵犯。在密码学面前人人平等。只要妥善保管好私钥，个人资产就可完全由自己掌控，不依赖任何人托管。</p>
+<p>Visa 卡的 TPS 是 2400 ，比特币是 7 。即使是比特币这么慢的速度，依然受到了全球各地爱好者、组织、一些国家政府的支持。如果能把以前的中心化应用，比如 Telegram 和 Dropbox ，转移到去中心化的区块链上，那得是啥样的情景？生产力肯定得提升一个档次。</p>
+<br>
+<p>尽管区块链技术在过去几年中得到了广泛应用和发展，但它们仍然存在一些明显的缺点。其中一个主要的问题是可扩展性。随着区块链技术的广泛应用，如数字货币、智能合约、供应链追溯等，区块链网络中的交易量和数据量迅速增长，这给区块链的可扩展性带来了严峻挑战。当前的区块链架构面临着吞吐量低、延迟高等问题，难以支持大规模的应用场景。这是因为，传统的区块链技术采用了分布式共识算法，需要所有节点都参与到区块验证和生成的过程中，从而导致网络的吞吐量和延迟受到了限制。此外，由于区块链数据存储在每个节点上，数据同步和传输也会成为可扩展性的瓶颈。</p>
+<img src="0.去中心化之旅/assets/未来已来/image-20230705184046350.png" style="zoom:30%;" />
+<p>因此，解决区块链可扩展性问题已成为当前区块链技术发展的重要方向之一。研究者们提出了许多解决方案来提高区块链网络的吞吐量和延迟性能，比如分片技术、侧链技术、Lightning Network 等。这些技术都旨在将区块链网络分解为更小的部分，方便分别处理交易和数据，并且可以通过跨链通信协议进行互操作。通过这些创新技术，可以提高区块链的可扩展性，更好地满足实际应用场景的需求。</p>
+<br>
+<p>区块链一旦解决了扩展性、吞吐量的问题，实现底层技术突破，就可能成为互联网的新基础设施，重塑未来互联网格局。</p>
+<p><img src="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/assets/%E6%9C%AA%E6%9D%A5%E5%B7%B2%E6%9D%A5/image-20230511122130389.png" alt="img" /></p>
+<p>Dfinity 就是选择了重构区块链底层技术，创新研发更优秀的去中心化网络服务，并孕育更多 Dapp，从而形成全新的去中心化互联网生态。</p>
+<p>这个领域是如此之新，涉及的知识面要求是如此之广，没有谁是真正的权威。成功来自全方位的观察，不断的学习研究。这样才能看到大多数人看不到，理解不了的东西。</p>
+<br>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><p>要是说起这个，那得从比特币之前说起。</p>
+<p>如果你还不了解比特币，可以先看看<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E6%AF%94%E7%89%B9%E5%B8%81.html">这个</a>。</p>
+<br>
+<p>比特币是完全虚拟的。没有任何实际价值，亦不能创造任何价值，只是一种虚拟币，人们为什么疯狂送钱购买比特币？不妨再深入一下，为什么会有比特币这种东西？</p>
+<p>比特币是在 2008 年金融危机的背景下诞生的。金融危机波及全球，哪个国家都不能独善其身，法币变得不再可靠。想象一下这背后的关系，政府以国家信誉为背书，发行法定货币。但世界并不总是安宁稳定的，战争、自然灾害、金融危机都会对社会造成影响，这又会影响经济。</p>
+<br>
+<p>关于战争：社会依赖政府，政府掌握军队，军队维护社会，经过循环，组成国家。国家哪来的钱支持军队，纳税。而国家之间的冲突，如果收益大于成本，那就可能发生战争。全民纳税出钱支持军队发起战争。大炮一响，黄金万两。有国获利，有国赔钱。</p>
+<p>关于金融：这世界上大部分国家：欧洲、北美等等，都有经济周期。小周期组成大周期，像正弦函数一样。周期性的金融危机是一把剑，悬在头顶，只能祈祷：达摩克里斯饶了我吧。</p>
+<p>关于自然：自然灾害难以预测。虽然随着科技的发展，天灾对人类的冲击越来越小。病毒、洪水、火山。但未来几十年仍有不少威胁。这时经济自然要受连累。</p>
+<br>
+<p>既然怎么都要影响经济，那能不能找一种不影响经济的东西呢。害，经济不就是钱嘛！只要找到一种不贬值的钱就行了。不用抵抗所有危机，直到人类毁灭这钱还在；只要这种钱能抵御一部分天灾人祸就 ok 的。钱呀，求求你，别让地球一端的金融危机影响到地球另一端人们的正常生活。</p>
+<br>
+<p>我靠。还真有这种神奇东西。</p>
+<p>这种钱源自一种 “ 无政府主义 ” 思想。前面的 b-money 就体现了这种思想。</p>
+<p>“ 无政府主义 ” 的基本立场是反对包括政府在内的一切统治和权威，提倡个体之间的自助关系，关注个体的自由和平等。对无政府主义者而言，“ 无政府 ” 一词并不代表混乱、虚无、或道德沦丧的无政府状态，而是一种由自由的个体自愿结合，以建立互助、自治、反独裁主义的和谐社会，是无政府而有权威的自治体系。他们认为根源在于 “ 政府 ” ，在于现在这种自上而下的金字塔结构。层层管理的模式不仅有不作为、贪腐、浪费的问题，更重要的是，总有一个组织在上面管理大家、维护秩序，容易因大的利益争端引发战乱。</p>
+<br>
+<ul>
+<li>
+<p>进一步分析，你看原始社会就很和平呀，人们自发以大家庭的形式聚居，一起打猎、合作。没有所谓政府和国家，只有小规模的财富积累和劳动分工，也没有法律和警察。因为原始社会没有私人财富，大家都是一块会跑会跳的肉，光溜溜的。</p>
+</li>
+<li>
+<p>后来，有了私人财富便有了暴力。原因很简单，因为可以获利嘛 ~ 通过暴力掠夺财富，有利可图就有 “ 勇夫 ” 干。</p>
+</li>
+<li>
+<p>之后，当出现大量 “ 获利 ” 组织时，就会有人站出来保护大家。出现防止暴力的暴力组织 —— 军队。大家每人交一点钱（纳税）就可以获得保护。人们为了更高效的提供保护服务，形成了政府。大家把钱存进银行，因为银行可以提供保护：金库、保险箱、保安、警察等等。这个体系依赖政府运作，银行、警察，要么接受政府监管，要么是政府组建的。我的钱不带在身上，在银行里，嘿嘿你抢不着。</p>
+</li>
+<li>
+<p>这样一来，两个大组织（政府）就会因集体利益的冲突，展开更大规模的战争，如果收益大于发动战争的成本。再招募更多军队来保护集体财产 ...... 暴力冲突越来越大，和平在哪里？核威慑。</p>
+</li>
+</ul>
+<img src="0.去中心化之旅/assets/加密朋克的那些事/image-20230128211825532.png" alt="image-20230128211825532" style="zoom:25%;" />
+<p>到了 21 世纪，人们的财产，包括社交、娱乐逐步转移到互联网。所以保护人们财产的保护组织也迁移到了网上：网上银行、支付宝。</p>
+<p>没事，钱放我们这，嘿嘿。交点手续费就行，嘿嘿。又是保护组织帮大家保管，丢了钱找平台解决！战争也变为网络攻防战，保护组织和黑客打的有来有回，拼命保住大家的钱。</p>
+<p>以前保护组织只提供物理保护，并不会在你家里驻军把守。可是在网上就不一样了，你的数据被一股脑的传进服务器里。我的数据也是我的资产啊！数据里包含隐私、财产，你今天买了什么东西，喜欢和谁聊天，喜欢看什么，晚上想吃什么 ...... 对能通过数据分析出来。这相当于 “ 网络军队 ” 在你家里驻扎了，天天监视你的一举一动。而且数据怎么处理，人家说了算。因为保护组织控制着服务器，人家觉得不好、对某人不利就直接删掉，不用你同意。</p>
+<br>
+<p>可不可以把 “ 金字塔 ” 压扁，构建一种完全不依赖保护组织的 “ 个人主权 ” 体系，每个人代表平等、独立的个体？</p>
+<p>可以的。有一种方法可以让你自己安全的持有自己私人财产。不需要银行保护你的财富、不需要保险箱保护、不需要保护组织，你自己保管即可。</p>
+<p>那自己一个人怎么保护财产呢？答案是用现代密码学通过数学保护！</p>
+<p><strong>炸弹可以炸开保险箱，但是不可能炸开密码学！</strong></p>
+<p>比特币就是这种钱！自己生成一个私钥，只要私钥不泄露，别人谁都没法抢走你的比特币。收发比特币都是脱离第三方中心化平台（银行）进行点对点转账。当然，如果私钥丢了，比特币也就永远找不回来了。</p>
+<p>自己的私钥，掌握自己的数据，不依赖第三方，完美。</p>
+<br>
+<p>当然，加密货币并不是中本聪自己的想法。</p>
+<p>戴维（Wei Dai）所说的 Tim May 就是 Timothy May ，那个在 1992 年的加州湾区和 Eric Hughes 以及 John Gilmore 共同发起成立密码学研究小组的三人之一。在第一次聚会上，加密朋克（Cypherpunk）这个单词诞生了，取了密码学（cipher）和赛博朋克（cyberpunk）的词根拼合而成。</p>
+<p>他们在密码学和算法中发现了解决互联网太过中心化的潜在解决方案。密码学家们认为，如果要减少政府和公司的权力，得需要新技术、更好的计算机和更多的密码学机制。然而他们的计划遇到了一道似乎不可逾越的障碍：到最后，他们所有的项目都需要资金支持，而政府和银行控制着这些钱。如果他们要实现自己的计划，就需要一种不受政府控制的货币形式。于是，加密货币的大竞赛开始了。但是结果适得其反。最初的各种努力都失败了，包括传奇密码学家大卫 · 乔姆的 ECash ，还有比如 Hashcash 和 Bit Gold 各种各样的加密货币。</p>
+<br>
+<img src="0.去中心化之旅/assets/加密朋克的那些事/1.jpeg" />
+<p>戴伟是一位华裔计算机工程师，华盛顿大学的校友，他 20 世纪 90 年代末和 21 世纪初曾在微软的密码学研究组工作。在微软工作期间，他参与研究，设计和实现密码学系统。之前他是马萨诸塞州 TerraSciences 的程序员。</p>
+<p>1998 年，他在个人网站 weidai.com 上发布了一篇名为 “ B-money ，一个匿名的分布式电子现金系统 ” 的非正式白皮书。他因对密码学和加密货币的贡献而闻名，他开发了 Crypto++ 密码库，创建了 B-Money 加密货币系统，并共同提出了 VMAC 消息认证码算法。戴伟在区块链和数字货币领域的开拓性工作，为后来的比特币技术奠定了基石，具有里程碑意义。</p>
+<br>
+<p>1998 年 11 月，刚刚大学毕业的他在社区提出 B-money 想法：“ 有效的合作需要一种交换媒介（金钱）和一种确保合同执行的方法。本文中，我描述了一种协议，通过这些协议使得不可追踪的匿名参与者可以更高效的彼此合作 … ，我希望这个协议能够推动加密学无政府主义在理论上以及时间上向前迈进。” B-money 的设计目标是是一个匿名，分布式电子现金系统。</p>
+<p>在 Cyberpunks 社区看来，这种方式的问题在于政府能够通过政策管理来控制金钱的流动，同时要使用这些机构服务（银行或支付宝）需要暴露身份，于是 Dai 提供了两个替代方案（工作量证明和分布式记账）。</p>
+<blockquote>
+<p>1.工作量证明创造金钱，任何人都可以通过计算一些数学难题，算出答案的人可以广播到全网，每个网络节点验证之后，都在自己的账本上给这个人的账户上添加或销毁工作量等价值的加密货币。</p>
+<p>2.分布式记账追踪交易，发送方和接收方都没有真实姓名，都只是公钥。发送方用私钥签名，然后广播交易到全网。每一笔新的交易产生，每个人都更新他们手里的账本，使得没有任何人能够阻止交易，保证所有用户的隐私安全。</p>
+<p>3.交易通过合约来执行，在 B-money 中，交易是通过合约（Contract）来实现的，每一个合约都需要有仲裁人（第三方）参与，Dai 为此设计了复杂的奖惩机制以防止作弊。</p>
+</blockquote>
+<p>我们可以看到与比特币之间的关联，通过 POW 工作量证明来创造金钱，并把记账的工作分配到一个点对点的网络上，所有交易必须通过合约来执行。但是 Dai 认为他第一个版本的方案无法真正应用到实践中来，“ 因为它需要一个很大的即时同步、防干扰的匿名广播通道。” 换句话说，第一个方案并不能解决双重花费（双花）的问题，而比特币是通过激励解决拜占庭将军问题的。</p>
+<p>Dai 随后在 Cyberpunks 社区中解释：“ B-money 还不是一个完整的可行的方案，我认为 B-money 最多可以为那些不想或者不能用政府发行的货币或者合约强制执行机制的人提供一个替代解决方案。” B-money 的许多问题一直未得到解决，或者至少是没有被指出。也许最重要的是，它的共识模型并不非常稳健，Dai 在提出 B-money 之后并没有再继续试图解决这些问题，他去了 TerraSciences 和微软工作。</p>
+<br>
+<p>但他的提案并没有被人忘记，比特币白皮书的第一条参考文献就是 B-money，在比特币白皮书发表前不久，Hashcash 的 Adam Back 建议中本聪去读一读 B-money ，Dai 是为数不多中本聪亲自联系过的人之一。但是 Dai 并没有回复中本聪的邮件，后来回想起时他表示很后悔。</p>
+<p>他在 LessWrong 上写道 “ 这可能有一部分是我的错，因为中本聪给我发邮件询问我对他的稿件的看法时，我没有回复他。不然我可能能够成功劝说他不要用固定货币发行量这个想法。” </p>
+<p>B-money 是加密朋克社区对研发数字世界中的独立自主的货币的又一次探索。为纪念他，有两种加密货币分别命名为 “ Dai ” 和 “ Wei ” ，其中 Wei 是 2013 年 V神 命名的以太坊最小单位。</p>
+<br>
+<p>不过随着每次新的尝试和每次新的失败，“ 加密朋克 ” 都对他们所面临的困难有了更多了解。也因此，有了前人大量的尝试探索，中本聪借鉴改进了先辈们遇到的问题，并在 2008 年 10 月 31 日推出了比特币。</p>
+<p>正如中本聪在他关于这个问题的第一封电子邮件中所说的那样，“ 我一直在研究一个新的电子现金系统，这完全是点对点的，不需要任何可信的第三方 ” 。他认为自己的核心贡献在于：创造了一种由用户管理和维护的虚拟货币；政府和企业对货币的运行几乎没有发言权；这将是一个完全去中心化的系统，由用户来运行。</p>
+<br>
+<p>中本聪非常清楚加密货币不光彩的历史。在 2009 年 2 月发布比特币后不久的一篇文章中，中本聪提到了乔姆的工作，但将比特币与乔姆的工作进行区分。很多人想当然地把电子货币当成了一个失败的事业，因为自 20 世纪 90 年代以来，所有的公司都失败了。在我看来，那些数字货币的失败因其系统仍未去中心化。我认为，比特币是我们首次尝试搭建一个去中心化的、不以信任为基础的虚拟货币系统。</p>
+<p>为了确保参与者之间的信任，中本聪设计了一种公链，允许人们进入并检查以确保他们的钱仍然存在。为了保护隐私，比特币使用了一种加密的私钥系统，该系统允许用户在不公开身份的情况下告诉其他人自己的账户。为了激励用户维护系统，比特币引入了挖矿的概念，在该概念中，用户可以创建新的交易区块，并通过使用新铸造的比特币获得回报。为了防止黑客入侵，区块与之前的区块进行了加密链接，使得交易的历史记录实际上是不可更改的。比特币真正的创新，都在于这一货币系统是完全去中心化的，也就是没有最终决策者或权威机构来决定争端或决定货币的发展方向，而是用户作为一个集体共同决定比特币的未来。</p>
+<br>
+<p>加密朋克对这些威胁保持警惕，他们试图通过创建一套确保隐私的程序和方法来削弱政府和企业的监控能力，这些手段包括强大的密码学、安全的电子邮件和加密货币。他们的最终目标是在互联网上分散决策。加密朋克并没有将权力集中在少数人手中，而是寻求将权力分配给大众，让大家一起决定整个系统应该如何运行。</p>
+<p>在加密朋克们看来，互联网时代的主要问题是，政府和公司变得过于强大，以至于对个人的隐私权构成了严重威胁。此外，美国政府和企业滥用它们的权力和地位，向消费者收取过多的费用和沉重的税收。答案在于权力去中心化 —— 将权力和决策权从少数人分散到多数人手中。但在比特币出现之前，人们并不清楚如何才能做到这一点，而中本聪提供了解决方案。</p>
+<img src="0.去中心化之旅/assets/加密朋克的那些事/OIG.jpeg" alt="密码学、个人主权、加密货币、加密朋克" style="zoom:30%;" />
+<p>难道比特币是绝对安全的吗？当然不是，如果你想抢某个人的比特币，把刀架他脖子上，让他交出私钥即可。谁有私钥就是谁的比特币，加密算法只认私钥。这就是去中心化的魅力。<strong>我们为什么相信比特币，不是因为中本聪不会抛售他的巨量比特币，而是因为我们相信个人主权和密码学。</strong></p>
+<br>
+<p>人们会说，中本聪发明比特币的时候,根本预料不到后果会这么惊人。当然，在某种程度上，他确实不可能预料到 “ 比特币披萨 ” 、“ 丝绸之路 ” 、Mt.Gox 或者 2017 年疯狂的牛市。</p>
+<p>不过，中本聪对这项技术的发展方向有着惊人的眼光。比如，他写道，虽然区块链技术解决不了互联网上的隐私问题，但如果成功的话，用户将 “ 在军备竞赛中赢得一场重大战役，并在未来几年里获得新的自由领域 ” 。他也预见到区块链技术很难被关掉。就像他写的，“ 政府擅长砍掉像 Napster 这样的中央控制网络的脑袋，但像 Gnutella 和 Tor 这样的纯点对点网络似乎保持着自己的优势 ” 他还看出区块链本身是个灵活的技术，可以被用户开发出无限的应用，“ 一旦启动，只要你不费力气地向网站支付几分钱，就像在自动售货机中投币一样容易，立刻会出现许多应用程序。” </p>
+<p>同时，中本聪也对自己给世界带来的后果感到担忧。他担心政府会如何对付他的虚拟货币。当区块链用户推动维基解密使用比特币躲避政府制裁后，中本聪强烈反对，他说：“ 你们的做法很可能会在现阶段摧毁我们。 ” 他还担心超级矿工的出现，他写道：“ 我们应该有一个君子协定，为了网络的利益，尽可能地推迟 GPU 军备竞赛。” 他最担心的可能是网络安全。在详细说明对虚拟货币的改进后，他在最后的公开信息中总结道：“ 攻击的方式仍然比我能计算的还要多。” </p>
+<br>
+<p>围绕中本聪的神秘感只会增加人们对他和他的技术的好奇心。虽然记者们千方百计想揭开他的神秘面纱，但我们可能永远也不知道他是谁。中本聪就像半夜的星辰，永远闪烁在我们的视线里，却可望不可及。 <strong>这很朋克，也很有诗意。比特币的发明人拒绝成为他发明的中心。</strong> 区块链技术是一种把可信的中间人从我们生活中移除，把权力下放给每个人的技术。他拒绝成为人们关注的焦点。区块链的成败必须依靠它自己的优点 —— 依靠技术本身的特征，以及用户为使其发挥作用所付出的努力。</p>
+<br>
+<p>中本聪的点子也许挺新颖，但比特币的崛起也并非必然。比特币是在 2008 年金融危机的背景下诞生的。金融危机波及全球，哪个国家都不能独善其身，法币变得不再可靠。中本聪和他的支持者在早期经常一而再再而三地求来求去，才说服别人信比特币。他们经常说的一句话是：你想象一下，如果比特币成为世界货币，会发生什么。想象一下，到时候每个比特币会值多少钱！而你只要下载软件并在家里的电脑上运行，就能赚到几百枚。当然，大多数人都在中本聪孜孜不倦的努力下，相信了这是传销骗局。</p>
+<p>但也不影响最终还是有一些技术极客对比特币产生了兴趣，中本聪的努力得到了回报，人们开始在现实世界中使用和接受比特币。然后在 2010 年 5 月 22 日，程序员拉斯洛 · 汉耶克花 1 万个比特币买了 2 盒披萨。</p>
+<img src="0.去中心化之旅/assets/加密朋克的那些事/v2-78c9d1428dbc9b7dd0ea56ad20ab40f0_1440w.webp" alt="img" style="zoom:50%;" />
+<p>于是，整个互联网世界开始发生的根本性的变化：一旦人们开始在现实世界中使用比特币，一个围绕比特币的生态系统就出现了。比如 Mt.Gox 、Binance 、Coinbase 这样的加密货币交易所应运而生，让人们更容易购买和出售这种货币。为了处理货币背后困难的数学问题，专业矿工开始在世界各地建立矿场。芯片制造商开始制造专门的芯片。</p>
+<p>人们对比特币的兴趣激增刺激了比特币和加密货币市场的发展。比特币价值开始的狂飙。在 2010 年，比特币还不到 1 美分。到 2021 年年中就涨到 60000 美元了。这种疯狂的飙升让很多外行人将它与历史上的泡沫相提并论，比如 17 世纪的郁金香热和 18 世纪的南海泡沫。人们对比特币价格崩溃的担忧开始蔓延。其次，竞争性加密货币的出现。</p>
+<img src="0.去中心化之旅/assets/加密朋克的那些事/3.jpg" alt="3" style="zoom:30%;" />
+<p>看到了比特币的成功，一些有计算机知识的企业家先后推出了基于区块链的加密货币。例如莱特币、狗狗币（Doge Coin）、以太坊。以太坊在比特币的基础上建立了新型计算机，运行在世界各地的去中心化虚拟计算机。无法篡改，无法被政府关掉，亦不受政府控制，全球各个地区、各个种族、生活习惯不同的人们，一起组成的网络。除非联合国停掉地球上的互联网，只要互联网不停，这种去中心化组织就会一直存在。2017 年，首次代币发行（ICO，即个人或团体通过出售加密货币或 “ 代币 ” 来筹集资金）迅速走红。但是，其中大部分都惨遭失败。大约有一半的首次代币发行在一年内倒闭了。尽管虚拟货币引起媒体广泛的关注。</p>
+<br>
+<p>但是几乎所有的电子设备都能加入的网络速度实在太慢。你想想，早期随便一台电脑就能加入比特币网络挖矿，但是现在随着挖比特币的人越来越多、哈希难度上升，人们不得不购买更高算力的显卡，组合更多的电脑去挖矿，这就相当于一种去中心化的服务器机房了。</p>
+<p>多米尼克想，那就直接让数据中心的机房来做节点吧，这样还能提升性能呢！</p>
+<p>于是 IC 就变成 “ 机房链 ” 了，一个由世界各地的机房组成的去中心化网络。以太坊更擅长金融类 dapp ，而 IC 擅长通用 dapp 。这样一来就形成了各种互联网应用的 “ 个人主权 ” 革命：畅想<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E5%86%9C%E5%9C%BA%E4%B8%AD%E7%81%AB%E9%B8%A1%E7%9A%84%E6%95%85%E4%BA%8B.html">区块链的未来</a>。</p>
+<br>
+<br>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><p>区块链是啥？</p>
+<p>区块链是通过密码学组成的一个去中心化分布式系统。</p>
+<p>等等，那去中心化又是啥意思？</p>
+<p>别急，听我一个一个慢慢讲。</p>
+<br>
+<br>
+<p>假如几个中子星人想建一套网上银行系统，名叫 “ 中子星银行 ” 。他们买了一个服务器用来处理所有的请求。所有用户的余额和交易信息都存在这一个服务器上。中子星银行就这样开业了。</p>
+<img src="0.去中心化之旅/assets/什么是区块链？/image-20230512185621148.png" alt="image-20230512185621148" style="zoom:30%;" />
+<p>随着在线支付的日益普及，用户和使用场景越来越多，交易数据呈指数级增长。</p>
+<p>一台服务器承载能力不断受到挑战，开始有些吃不消了：</p>
+<img src="0.去中心化之旅/assets/什么是区块链？/image-20230512162525366.png" alt="image-20230512162525366" style="zoom:30%;" />
+<p>一方面，存储容量难以满足海量交易数据的储存需求；另一方面，每到双十一、618 之类的购物狂欢节，系统访问量飙升，CPU 负载不断攀升，过载情况时有发生。更为严峻的是，有时服务器还会发生故障，导致整个系统瘫痪，丢失交易数据。</p>
+<br>
+<p>业务增长使系统不堪重负，也为了避免系统瘫痪的情况发生，中子星人对系统进行了扩容优化：</p>
+<p>买一台服务器作为 “ 管理员 ” ，再买几台服务器专门存数据。管理员服务器收到交易数据就转发给负责储存数据的服务器里。存满一台服务器就存进另一台服务器。</p>
+<img src="0.去中心化之旅/assets/什么是区块链？/image-20230512205913545.png" alt="image-20230512205913545" style="zoom:25%;" />
+<p>如果管理员也忙不过来了，就继续加管理员服务器。这样终于把系统扩展完了。</p>
+<p>可这时有一群黑客盯上了中子星银行。反正钱就是一串数字，只要潜入银行数据库偷偷改掉账户余额和交易记录就能财富自由。</p>
+<img src="0.去中心化之旅/assets/什么是区块链？/image-20230512211201410.png" alt="image-20230512211201410" style="zoom:27%;" />
+<p>银行的系统一开始没有做好保护措施，很容易受到攻击。</p>
+<p>在付出惨痛代价后，银行意识到了问题的严重性，并开始采取了一系列措施来保护银行系统：他们先买几台服务器用作数据备份，每 3 小时备份一次数据。然后在系统上部署了独立的哨兵监控系统，专门保护整个系统安全。</p>
+<br>
+<p>现在有了安保力量，系统的安全性大大提高，黑客们再也无法使用以往的攻击手段。</p>
+<br>
+<p>由于这些服务器都放在中子星银行的大楼里，黑客们心想：既然不能攻进系统，不如就从物理上攻击吧~ 😎 先从银行借一大笔钱，然后炸坏银行的服务器，唉，服务器死，死无对证。</p>
+<p>还好银行门口的安检不是吃素的，谁会带着炸弹去银行呢。安检拦截了炸弹，成功阻止了黑客通过物理方式黑掉服务器。</p>
+<br>
+<p>这下可把银行吓坏了，服务器放在银行里不安全呀，怎么办呢？</p>
+<p>必须得想出一个万全之策，确保服务器的本体安全！</p>
+<br>
+<p>于是中子星银行决定：建立专门放服务器的数据中心，并对数据中心的路由器、交换机、接口等网络设备全部独立保护。</p>
+<p>建设数据中心的位置非常苛刻，旁边不能有铁路、公路、机场、化工厂、垃圾填埋场、核电站、军火厂、加油站等有安全隐患的设施。也不能设置在洪水、地震多发的地方，并且犯罪率较高的地方也不行。但银行还是怕有突发自然灾害，给数据中心仍然做了抗洪防护和 8 级抗震。</p>
+<p>除了位置要合适之外，机房还要符合很多严格的建设标准，建筑材料，内部的暖通系统，空调系统，照明系统，灭火系统、防雷接地措施、内部恒温恒湿等等设备一应俱全。</p>
+<br>
+<p>万一黑客们切断了数据中心的供电，整个系统都会瘫痪，再安全的设备也不能没有电。</p>
+<p>既然怕断电那就在数据中心附近安排两个发电厂同时供电，每个发电厂都能满足数据中心的全部电力需求，还有一个备份电力供应，以备两个发电厂同时断电的情况。每个发电厂配备独立的配电室。</p>
+<img src="0.去中心化之旅/assets/什么是区块链？/image-20230513131334135.png" alt="image-20230513131334135" style="zoom:33%;" />
+<p>不行，还是不放心，万一城市电网中断后，2 个发电厂也都出现意外不能发电了呢？</p>
+<p>没事，数据中心还配备了 UPS 室。就是在房间里放一堆电池，能够支持数据中心满载运行 15 分钟以上。</p>
+<br>
+<p>即使黑客切断了数据中心的供电，数据中心仍然可以通过 UPS 不间断电源保持一段时间的运行。</p>
+<p>那 15 分钟能恢复供电吗？不用赶着恢复。因为数据中心还配备了发电机和储油罐，能够支持数据中心满载 12 小时以上。</p>
+<p>而且银行还跟附近至少两个加油站签订协议，保证 4 个小时之内供应柴油。虽然运油不是长久之计，但支撑一周还是轻轻松松的。</p>
+<br>
+<p>储油罐失火了怎么办，那可全是油。</p>
+<p>数据中心检测火情有温感系统，视频系统，还有值班人员盯着。发现火情后，灭火系统抽出一部分气体，然后释放七氟丙烷。这种东西无色无味，杀人于无形之中，额，不是，这东西是无色、无味、低毒性、不导电、不污染、无腐蚀性。</p>
+<br>
+<p>那里面的人不都憋死了么。</p>
+<p>数据中心灭火时，有警铃报警，门禁系统自动断电，人可以撤离灭火区域。就算无法及时离开，数据中心内也配备足够量的氧气面罩。</p>
+<br>
+<p>可是一个数据中心再怎么做安全措施也不能确保系统万无一失。</p>
+<p>2001 年 911 事件时，摩根士丹利位于世贸大厦的数据中心全部被摧毁，但因为有成熟的容灾系统，第二天就恢复了全部业务。摩根士丹利在世贸大厦25层办公场所全毁，3000 多员工被迫紧急疏散的情况下，半小时内就在灾备中心建立了第二办公室，第二天就恢复全部业务。有些公司却因为备用灾备系统，最终不得不申请破产。</p>
+<br>
+<p>你看，这时候有另一座数据中心就很有用了。</p>
+<p>这就是所谓的 “ 双活数据中心 ” ，两个数据中心同时工作。炸了一个，还有一个，系统几乎没有影响 ~ </p>
+<img src="0.去中心化之旅/assets/什么是区块链？/image-20230513112824167.png" alt="image-20230513112824167" style="zoom:40%;" />
+<p>可万一小行星正好撞到数据中心在的那块区域，那不都被一锅端了？</p>
+<p>没关系，还有异地容灾数据中心，两个主数据中心都挂了还可以切换到异地容灾数据中心。和主数据中心一样的配置，超级安全。</p>
+<br>
+<p>异地容灾数据中心也被破坏了怎么办？</p>
+<p>这下系统还真被整挂了，不过数据还在。因为有冷备份，备份不运行在系统里，独立运行。备份系统每 2 个小时做一次增量备份。安置在另几座城市里。</p>
+<br>
+<p>发现了没？做了这么多，其实目的只有一个，<strong>就是确保系统顺利运行，尽可能的提升系统可靠性。</strong></p>
+<br>
+<p>分布式系统虽然系统在地理上分布在不同的地方的，有多个数据中心承担业务。但所有服务器都需要银行来保护。这是一种中心化的方式，而许多人的诉求是对于现有网络的可见性、选择权和对数据的合理控制。用户需要知情权，知道谁可以访问用户数据，知道自己的数据是如何被使用的，如果用户不愿意共享某些数据，我们也有权拒绝。或许，最重要的是，用户希望自身的数据要用于自身利益。如果你对这方面的历史感兴趣，可以先看看<a href="0.%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B9%8B%E6%97%85/%E5%8A%A0%E5%AF%86%E6%9C%8B%E5%85%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B.html">这里</a>。</p>
+<br>
+<p>那区块链的本质是什么？</p>
+<p>一个遍布全球的分布式网络，一个 “ 去中心化 ” 系统，一个 “ 共享的分布式 ” 系统，一个 “ 容错、容灾 ” 系统。</p>
+<br>
+<p>区块链的概念分为两部分：“ 区块 ” 和 “ 链 ” 。我们先来讲讲 “ 区块 ” 。区块就像是账本的一页，里面记录着一些信息。在区块链的世界里，这些信息通常是一些交易记录。比如，A 给 B 转了 10 个比特币，这就是一笔交易。把一定数量的交易打包在一起，就形成了一个区块。</p>
+<p>现在我们来看看 “ 链 ” 。链的概念很简单，就是把这些区块按照一定的顺序连接起来。有了链，我们就可以追踪到每个区块之间的联系。每个新产生的区块都会连接到前一个区块，形成一个链条。</p>
+<br>
+<p>那么，区块链的全貌就是：一系列按照时间顺序排列的区块，它们通过特定的算法连接在一起。这样的结构能够确保数据的安全性和完整性。</p>
+<p>接下来，我们要了解一个重要的概念 —— 加密。在区块链中，每个区块都有一个独一无二的数字串，这个数字串叫做 “ 哈希值 ” 。哈希值是通过一个叫做 “ 哈希函数 ” 的算法生成的。这个算法非常神奇，即使只改动一个小小的信息，哈希值也会发生巨大的变化。这就保证了区块链的安全性，因为篡改任何一个区块的信息都会改变哈希值，同时影响到后面的所有区块。</p>
+<br>
+<p>另外一个关键的概念是 “ 去中心化 ” 。在传统的数据库中，数据是由一个中心化的机构控制的。这就意味着，如果这个机构出了问题，整个系统的安全性就会受到影响。而区块链却不同，它是由全球各地的成千上万台计算机共同维护的。这些计算机被称为 “ 节点 ” 。</p>
+<p>区块链的去中心化特性意味着，它不依赖于单一的中心化实体来维护数据。传统的数据库是由一个中心化的机构控制的，这样的话，如果这个机构出了问题，整个系统的安全性就会受到影响。而区块链呢，是分布在全球各地的成千上万台计算机共同维护的。这些计算机被称为 “ 节点 ” 。一笔交易要被记录到区块链上，必须得到大部分节点的共识。这带来了很多优势，比如更高的安全性、更好的隐私保护、更低的运营成本等。在区块链中，一笔交易要被记录到区块链上，必须得到大部分节点的共识。这种共识机制保证了区块链的透明性和安全性。</p>
+<br>
+<p>那么，如何达成共识呢？这里我们以比特币为例。比特币采用了一种叫做 “ 工作量证明 ”（Proof of Work，简称 PoW）的共识机制。工作量证明的核心思想是，让节点参与竞争，通过解决一个复杂的数学问题来争夺记账权。谁先解决出这个问题，谁就有权将交易打包成一个新区块，并添加到区块链上。同时，其他节点会验证这个区块，确认无误后将其接受。这个过程就是所谓的 “ 挖矿 ” 。</p>
+<br>
+<p>挖矿的过程确保了区块链的安全性和去中心化特性。然而，这种方法也有一些问题。例如，它需要大量的计算能力和电力消耗。为了解决这个问题，出现了其他共识机制，如 “ 权益证明 ”（Proof of Stake，简称 PoS）和 “ 委托权益证明 ”（Delegated Proof of Stake，简称 DPoS）等。</p>
+<p>权益证明（PoS）是一种更为环保的共识机制。在 PoS 系统中，节点的记账权取决于它们持有的货币数量。持有更多货币的节点有更高的概率获得记账权。这种方法减少了能源消耗，但可能导致货币分布不均的问题。</p>
+<p>委托权益证明（DPoS）则是 PoS 的一种变体。在 DPoS 系统中，持币者可以将自己的货币权益委托给其他节点，让它们代表自己进行记账。这样可以进一步降低能源消耗，同时提高系统的效率和安全性。</p>
+<br>
+<p>区块链就像是一个公共的、安全的、分布式的账本。它可以用来记录交易、存储数据等等。目前，区块链技术已经应用到很多领域，比如金融、物联网、医疗等。未来的区块链技术还有很多可能性。其他的科技都是提升生产力，比如 AI 、VR 。而区块链改变的是生产关系。</p>
+<p>重点在 2 点：</p>
+<p>第一是用技术解决 “ 信任 ” 问题。</p>
+<p>第二是在技术基础上 “ 自治 ” 。</p>
+<br>
+<p>比如类似《头号玩家》里面的若干年后的世界服游戏，角色和装备资产，必然要放在区块链存储，不然游戏公司或黑客就可以任意篡改数据了。</p>
+<br>
+<p>在区块链的世界里，你只要用一个区块链账户身份，就可以无需许可地加入任何网络，不用再为了使用某项服务而牺牲隐私或付出代价。跟 Web2 时代商业价值完全掌握在资本家的大平台不同，Web3 建立在去中心化的网络。应用开发者负责开发并部署到区块链平台，部署在区块链上之后就不能独占和使用用户数据。这将彻底改变商业逻辑和商业价值归属，打造一个更加公平的互联网商业环境，打破行业巨头的垄断。</p>
+<p>区块链更加地强调平等、公正、民主、自治，这与共产主义社会的思想完全是一脉相承的。在区块链网络里，利益共享、民主自治的机制会抑制一切垄断巨头的产生，通过剥削用户和内容创作者剩余价值来积累财富的方式被彻底颠覆。</p>
+<br>
+<p>区块链的应用场景非常广泛，从日常生活、医疗保健到能源慈善、选举金融，覆盖方方面面：</p>
+<p>数字货币：区块链最著名的应用就是数字货币了，比如比特币和以太坊。数字货币是一种基于区块链技术的虚拟货币，它可以用来进行点对点的交易，无需通过中心化的金融机构。</p>
+<p>智能合约：智能合约是一种基于区块链的、自动执行的合同。它可以在满足特定条件时自动触发相应的操作，从而降低合同执行的成本和风险。以太坊等平台支持智能合约，使得开发者可以在区块链上构建各种去中心化应用（DApps）。</p>
+<p>供应链管理：区块链可以用来追踪物品在供应链中的流转。这样可以提高供应链的透明度，防止假冒伪劣产品，降低成本。</p>
+<p>身份认证：区块链可以作为一个去中心化的身份认证系统，帮助用户在网络中验证自己的身份。这可以减少依赖中心化机构，提高隐私保护。</p>
+<p>版权保护：区块链可以用来存储和验证知识产权信息，防止盗版和伪造。这对于创作者和知识产权所有者来说是非常有价值的。</p>
+<p>跨境支付：数字货币可以用来进行跨境支付，这样可以降低汇款的手续费和时间成本。</p>
+<p>物联网：区块链可以用来记录和验证物联网设备的数据，保证数据的安全和完整性。</p>
+<p>医疗保健：区块链可以用来存储和共享医疗数据，提高数据的安全性和可用性。这有助于提高医疗水平和降低医疗成本。</p>
+<p>能源交易：区块链可以用来记录和验证能源交易，如太阳能、风能等可再生能源。这有助于实现能源市场的去中心化和提高能源利用效率。</p>
+<p>选举投票：区块链可以用来构建透明、安全的选举投票系统。这可以防止选举舞弊，提高民主参与度 </p>
+<p>慈善公益：区块链可以用来追踪慈善捐款的流向，确保捐款真正用于有需要的人群。这有助于提高慈善透明度，增强公众对慈善组织的信任。</p>
+<p>金融服务：区块链可以用于构建去中心化的金融服务平台，如借贷、保险、证券等。这可以降低金融服务的成本，提高金融体系的效率和安全性。</p>
+<p>汽车产业：区块链可以用于记录汽车的生命周期信息，如生产、销售、维修等。这有助于提高汽车产业的透明度，防止二手车市场中的欺诈行为。</p>
+<p>房地产：区块链可以用于记录房地产交易信息，简化房地产交易流程，降低交易成本。此外，通过智能合约，可以实现自动化的房地产交易。</p>
+<p>教育：区块链可以用于存储和验证学历、证书等教育信息。这有助于防止学历造假，提高教育体系的公信力。</p>
+<p>社交媒体：区块链可以用于构建去中心化的社交媒体平台，保护用户的隐私和数据安全。此外，区块链还可以用于激励内容创作者，实现公平的收益分配。</p>
+<p>游戏产业：区块链可以用于游戏产业的虚拟资产交易、版权保护等方面。通过区块链技术，玩家可以在游戏中拥有真正的数字资产，实现跨游戏的资产流通。</p>
+<p>人力资源：区块链可以用于人力资源管理，如记录员工的工作经历、技能、绩效等。这有助于简化招聘流程，提高招聘效率和准确性。</p>
+<p>法律服务：区块链可以用于存储和验证法律文件，如合同、遗嘱等。这有助于提高法律服务的效率，降低法律服务的成本。</p>
+<p>食品安全：区块链可以用于追踪食品在供应链中的流转过程，确保食品的安全和质量。这有助于防止食品安全问题，提高消费者的信心。</p>
+<br>
+<p>以上只是区块链技术在各个领域的部分应用。随着技术的发展和创新，区块链将会在更多领域发挥巨大的潜力。同时，我们也要关注区块链技术带来的挑战，如能源消耗、网络拥堵、隐私保护等问题。持续探讨和改进区块链技术，将有助于创造一个更加安全、透明和高效的数字世界。</p>
+<p><br><br></p>
+<div style="break-before: page; page-break-before: always;"></div><p>以太坊是一种去中心化的平台，允许开发者在其上构建各种应用。你可以把它想象成一个无须依赖中心服务器的全球计算机。这个计算机运行着智能合约——一种自动执行预定任务的程序。</p>
+<br>
+<p>首先，你可以把它想象成一个巨大的计算机，这个计算机可以运行各种各样的应用程序。但这个计算机不是一个实体的东西，而是一个由许多人共同维护的虚拟网络。这些人，我们称之为 “ 节点 ” ，它们分布在世界各地，共同维护着以太坊这个网络。</p>
+<p>那么，以太坊与我们平常用的计算机有什么区别呢？最大的区别就是：以太坊是去中心化的。也就是说，数据不是存储在一个中心服务器上，而是分散在许多不同的节点上。这样一来，数据就不容易被篡改，也不容易被攻击，因为攻击者需要同时攻击成千上万个节点才能达到目的。</p>
+<p>现在，我们知道了以太坊是一个去中心化的、巨大的计算机。那么，我们如何在这个计算机上运行应用程序呢？在以太坊上运行的应用程序，我们称之为智能合约。智能合约其实就是一段自动执行的程序代码。当某些条件满足时，智能合约就会自动执行相应的操作。这种自动执行的特性，让智能合约在金融、游戏、投票等许多领域都有广泛的应用。</p>
+<p>举个简单的例子，我们可以用智能合约来实现一个自动支付的系统。比如说，你需要付款给一个人，但你希望在对方完成某项任务后再支付。你可以把钱存入智能合约，然后设定一个触发条件，当对方完成任务后，智能合约就会自动把钱转给对方。这样，你就不用担心对方拿了钱不干活，或者是自己忘记付款了。</p>
+<p>为了在以太坊上运行智能合约，我们需要一种数字货币作为燃料。这种货币叫做 “ 以太币 ”（Ether），简称 ETH 。每当我们在以太坊上执行一个操作，都需要消耗一定数量的以太币。这些以太币会作为奖励，分给那些维护以太坊网络的节点。这个过程被称为“挖矿”。</p>
+<p>要知道，以太坊上的智能合约不仅仅可以进行简单的转账操作。它们还可以用来创建一种全新的数字货币，这种货币我们称之为代币（Token）。代币可以代表任何东西，比如股票、积分、财产等。通过智能合约，我们可以轻松地在以太坊上发行自己的代币，然后用这些代币来进行交易。</p>
+<p>以太坊上的代币有许多种类，其中最常见的是 ERC-20 代币。ERC-20 代币是一种遵循统一标准的代币，这个标准规定了代币的创建和交易方式。有了这个标准，不同的代币就可以互相兑换和交易了。这就像现实生活中的货币，虽然美元和欧元来自不同的国家，但它们之间仍然可以进行兑换。</p>
+<p>除了 ERC-20 代币，还有一种叫做 ERC-721 代币的标准。这种代币非常特殊，因为它代表的是独一无二的、非同质化的资产。这些资产可以是艺术品、收藏品、房产等。有了 ERC-721 代币，我们可以在以太坊上进行独特资产的交易，而不用担心伪造或者复制。这也是为什么许多加密艺术品、收藏品等在以太坊上进行交易的原因。</p>
+<br>
+<p>那么，以太坊有什么实际应用呢？事实上，以太坊已经在很多领域产生了影响。比如我举几个例子：</p>
+<p>以太坊可以用来进行金融业务。通过智能合约，我们可以创建去中心化的金融产品，比如借贷、保险、衍生品等。这些金融产品不需要中介机构，因此可以降低成本，提高效率。同时，智能合约的透明性也可以降低欺诈的风险。</p>
+<p>以太坊可以用来进行供应链管理。通过智能合约，我们可以实时追踪商品的来源、流通路径等信息。这样一来，消费者可以确保购买的商品是真实可靠的，而企业可以更好地监控供应链，提高效率。</p>
+<p>以太坊还可以用来进行身份认证。通过智能合约，我们可以创建一个去中心化的身份系统，让用户在不同的平台之间共享认证信息。这样，用户就不用每次都重新提交自己的个人资料，同时还能保护自己的隐私。</p>
+<br>
+<p>虽然以太坊具有很多优势，但它也有一些局限性。比如，以太坊目前的交易速度和扩展性还有待提升。为了解决这些问题，以太坊团队正在进行一系列的升级，以太坊 2.0 旨在解决以太坊 1.0 中存在的性能瓶颈和可扩展性问题。这次升级将会对以太坊的性能产生以下几个方面的影响：</p>
+<ol>
+<li>
+<p>更高的吞吐量：以太坊 1.0 目前的交易处理速度受到限制，每秒只能处理大约 30 笔交易。以太坊 2.0 通过引入分片技术，将网络分成多个独立的子链，这可以大大提高整个网络的交易处理能力。预计以太坊 2.0 的吞吐量将能达到每秒数千笔交易。</p>
+</li>
+<li>
+<p>更低的延迟：以太坊 1.0 中，每个区块的出块时间约为 15 秒。这意味着用户需要等待一段时间才能确认自己的交易。以太坊 2.0 将采用新的共识机制，降低出块时间，从而减少用户在交易确认上的等待时间。</p>
+</li>
+<li>
+<p>更环保的共识机制：以太坊 1.0 采用的是能源密集型的工作量证明（Proof of Work，PoW）共识机制。以太坊 2.0 将会逐步过渡到权益证明（Proof of Stake，PoS）共识机制，这是一种更为环保、高效的共识方式。权益证明机制下，验证节点（验证者）需要锁定一定数量的以太币作为抵押，根据抵押的金额获得出块权。这样可以降低能源消耗，提高网络的安全性。</p>
+</li>
+<li>
+<p>更高的安全性：以太坊 2.0 引入了一种名为“验证者”的新角色，取代了以太坊 1.0 中的矿工。通过权益证明机制，验证者需要抵押一定数量的以太币才能参与共识过程。这样的设计使得攻击以太坊 2.0 网络的成本变得更高，从而提高了网络的安全性。</p>
+</li>
+<li>
+<p>更好的可扩展性：以太坊 2.0 的分片技术和其他优化措施可以提高网络的可扩展性。</p>
+</li>
+</ol>
+<br>
+<p>尽管以太坊为区块链世界带来了很多创新，但它仍然存在一些缺点，主要包括以下几点：</p>
+<ol>
+<li><strong>扩展性问题</strong>：以太坊虽然对扩展性做了升级，但这并不意味着永久解决了扩展性的问题。这不是一劳永逸的工程，如果用户持续增加，工程师们还需要继续扩展改进以太坊。</li>
+<li><strong>交易费用仍然比较高</strong>：因为以太坊的处理能力有限，所以用户为了让自己的交易更快地被处理，通常需要支付更高的手续费。这导致了以太坊上的交易费用变得昂贵，使得一些用户和开发者难以承受。在网络拥堵时，交易确认可能需要很长时间，同时还可能导致交易费用上升。</li>
+<li><strong>中心化问题</strong>：尽管区块链的初衷是去中心化，但是传统的区块链技术存在着部分中心化的问题，这使得某些节点对整个网络的控制力过大，带来了安全风险和操纵风险。</li>
+<li><strong>隐私保护问题</strong>：传统的区块链技术存在隐私保护方面的问题，一旦交易数据被记录在区块链上，将永久保存，这会带来很大的隐私泄露风险。</li>
+<li><strong>开发和维护成本</strong>：构建和维护区块链应用程序可能需要高昂的开发和运维成本。此外，区块链技术的不断发展，使得开发者需要不断更新和优化现有应用。</li>
+</ol>
+<br>
+<p>对比来看 IC 具有以下特点，可以解决以太坊的一部分问题：</p>
+<ol>
+<li><strong>无限的扩展性</strong>：IC 使用了一种名为 “ Chain Key ” 的技术，它能够让网络更高效地运行。IC 还将网络分成许多子网，每个子网络负责处理一部分消息。这样，整个网络的处理能力就大大提高了，可以更好地应对高交易量。</li>
+<li><strong>更低的交易费用</strong>：由于 IC 的扩展性更好，网络可以处理更多的交易，这意味着用户不再需要支付高昂的手续费来加快交易速度。因此，Dfinity 的交易费用会相对较低。</li>
+<li><strong>共识算法</strong>：IC 采用了一种名为 PoUW 的共识算法，这是一种基于 BLS 阈值签名的随机共识算法。与其他权益证明 (PoS) 或工作量证明 (PoW) 系统相比，PoUW 旨在提供更高的安全性和性能。</li>
+<li><strong>可扩展性和性能</strong>：IC 的设计使其具有高度的可扩展性和性能。通过采用分层体系结构、子网 (Subnet) 和并行处理等技术，IC 的互联网计算机能够支持大量并发交易和智能合约执行。与其他公链相比，IC 的目标是实现更高的吞吐量和低延迟。</li>
+<li><strong>互操作性</strong>：IC 的互联网计算机构想是支持各种去中心化应用和服务的平台。尽管互操作性并非其主要关注点，但 IC 的设计允许开发人员轻松地在互联网计算机上构建和部署各种应用程序，从而实现跨应用程序的协同作用。</li>
+<li><strong>更简单的开发过程和更容易维护</strong>：IC 旨在降低开发者的学习成本和开发难度。它允许开发者使用更多种熟悉的编程语言编写智能合约。这使得开发者可以更容易地上手和开发去中心化应用。</li>
+<li><strong>更强大的安全性</strong>：IC 还提供了一种网络自治机制，网络可以自我修复和升级，这有助于提高整个网络的安全性和稳定性。</li>
+<li><strong>安全性和去中心化</strong>：IC 的共识算法和网络设计旨在实现高度的安全性和去中心化。与其他公链相比，IC 采用了一些创新的技术，如阈值中继和分布式密钥生成，以提高网络的抗攻击能力。</li>
+<li><strong>开发者体验</strong>：IC 提供了一组友好的开发工具和资源，包括 Motoko 编程语言和 SDK。还可以在本地环境完成代码调试，不需要测试网。这使得开发者能够轻松地为互联网计算机构建和部署应用程序。与其他公链相比，IC 致力于简化去中心化应用程序的开发过程。</li>
+</ol>
+<p>IC 试图解决以太坊等现有区块链平台所面临的诸多问题，如扩展性、交易费用、能源消耗和开发复杂性等。通过采用创新的技术和设计，IC 为开发者和用户提供了一个更高效、更安全、更易用的去中心化计算平台。当然，IC 也不是没有挑战，它仍然需要在实际应用中证明自己的价值，但它的目标是成为一种可行的区块链技术解决方案，以满足未来去中心化应用的需求。</p>
+<p>IC 旨在成为一个无限可扩展的、去中心化的全球计算基础设施。<strong>IC 的目标和愿景</strong>：IC 的目标是创建一种新型的互联网基础设施，这种基础设施可以支持各种去中心化应用，同时具备高可扩展性、安全性和性能。与其他公链类似，IC 致力于解决传统区块链技术的局限性；但它的愿景是创建一个更大的互联网生态系统，而不仅仅是一个区块链平台。</p>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><br>
+<p>这是个比较严重的问题，虽然互联网可以存你的数据，但你的数据不一定会被互联网<strong>永久</strong>保存。因为现在大多数应用的后台是 “ 独立 ” 的。每个公司都有自己维护的服务器，要么自建机房要么用云服务。所有用户都通过访问他们的服务器来传输网络信息，和其他用户交互。一旦公司宣布停服，你的数据也就都没了。</p>
+<p>比如抖音是这样的：</p>
+<img src="0.去中心化之旅/assets/我的网络隐私呢？/QmdntMWgDMfqHCyCzZWfDDrcvwHQoCLempCAk3rCdh3CkH.png" alt="img" style="zoom:25%;" />
+<p>每个公司的服务器为用户提供自家的网络服务：</p>
+<img src="0.去中心化之旅/assets/我的网络隐私呢？/QmRbMqtLf8Y7eYWeUdmRxeswrmRRUHLnc5UPMTuaCnBnPH.png" alt="img" style="zoom:21%;" />
+<br>
+<p>数据在带来信息时代便利的同时亦会引发数据滥用、个人隐私泄露、企业商业秘密受侵犯等诸多问题。你的数据被一股脑地传进了他们的服务器里。他们控制着服务器，怎么处理服务器里的数据，人家说了算。虽然工程师们负责只研究 AI 推荐算法，不偷看你的数据。你喜欢什么只有 AI 知道，存储在服务器中，而且那么多用户的数据也看不过来。但是当他们想要查找某个人的时候，管理层还是可看到各种数据的。</p>
+<br>
+<p>数据包含你的隐私，<strong>你今天买了什么东西，聊天说了什么，喜欢看什么，晚上想吃什么，口味偏好，买衣服的身高体重，地图定位 ......</strong> 都能通过数据分析出来。他们完全可以监视你在网络中的一举一动。</p>
+<p>你可能会说：谁让他们看我数据啦？非礼呀！救命啊！有没有人管？</p>
+<br>
+<p>但我还是得说句公道话。其实在刚安装 App 的时候，他们都会让你勾选一个《用户协议》，或者好听一点叫《用户体验改善计划》。虽然几乎没人会完整看一遍《用户协议》，但已经跟你 “ 约定 ” 好了，你要把自己的使用数据交给他们。不然就不能用！😡</p>
+<p>虽然表面上是你先同意了《用户协议》，然后他们才 “ 用 ” 你的数据改善体验。</p>
+<p>至于他们拿数据去做了什么，没人知道。</p>
+<p>我们已经知道的有棱镜计划，2018 年 Facebook 上亿用户数据泄露事件，2020 年 7 月 Amazon 因违反欧盟《一般数据保护条例》被欧盟隐私监管机构处以 7.46 亿欧元罚款，这也是欧盟有史以来最大的数据隐私泄露罚款。国内的美团、饿了么等外卖平台也曾被爆出用户资料遭泄露、倒卖，精确到了订餐内容、地址等私密信息；李彦宏：中国人对数据隐私可以更开放，愿用隐私换效率 ...... </p>
+<img src="0.去中心化之旅/assets/我的网络隐私呢？/QmakePKSRkDQSQx79BT7PzgqSJzekQ7nz63nG9Sr2coHw5.png" alt="img" style="zoom:67%;" />
+<br>
+<p>而且他们觉得不好的内容、对他们不利就可以直接删掉，不用你同意。（当然，非法内容肯定要删掉的）</p>
+<br>
+<p>鲁迅先生在《秋夜》的开篇写道：“在我的后园，可以看见墙外有两株树，一株是枣树，还有一株也是枣树。” 当下互联网面临的情况，也可以说是： <strong>当我打开手机，一个 App 要读取我的隐私，另一个 App 也要读取我的隐私。</strong> 不然就不能用。</p>
+<p>大数据时代个人隐私数据泄露已成为全球重大的社会问题。互联网平台大规模采集用户数据，并将用户的个人信息长期集中化储存，数据一旦泄露就是大规模的群体事件，不仅侵犯用户的隐私权、侵害公民生命财产安全，还将对互联网企业自身造成不可预估的经济损失，数据泄露后对企业声誉的负面影响也很难消除。</p>
+<p>就在上周，2023 年 3 月 21 日，拼多多被谷歌强制下架，并提示已安装拼多多的用户尽快将其卸载。这还是谷歌第一次提示用户卸载一个 App 。随后著名反病毒软件实验室卡巴斯基证实了拼多多利用安卓系统漏洞肆意收集用户信息、破解系统屏蔽机制、篡改手机系统记录、隐匿自己行踪、常驻系统后台运行监控手机、逃避系统清理进程、读取手机输入法信息的情况。</p>
+<img src="0.去中心化之旅/assets/我的网络隐私呢？/QmTLR4GV6fiZFQb9DEj7MpAC1NRJ2eT4Y9VZ7LbPQf2Joa.png" alt="img" style="zoom:30%;" />
+<img src="0.去中心化之旅/assets/我的网络隐私呢？/QmQ3RstyXP52LdWbDLdmrLyTKLbz8kkaKeEN3mbsBpRKxV.png" alt="img" style="zoom:63%;" />
+<br>
+<p>靠！想存个信息这么难，还不如刻在石头上呢！</p>
+<br>
+<p>这种现象的本质在于用户没有自己的数据权。自己的数据，居然自己没有数据权！</p>
+<p>用户本应该有权了解自己的个人信息被收集、使用、分享的情况，有权决定自己的个人信息被如何使用、分享，以及有权控制自己的个人信息被如何收集、存储和使用。那如果我想删除一些隐私数据呢，嘿嘿，你想删掉的内容，你还不知道他们会不会真的删掉，他们甚至可以把信息隐藏起来，自己偷偷保存着。</p>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><p>不同于传统的货币，比特币是完全虚拟的。</p>
+<p>比特币隐匿于发送者和接收者间价值传递的交易中。比特币用户拥有能够使他们在比特币网络中证明自己交易权的密钥，解密后可使用比特币，也可以将它购买、，出售，以及与其他币种进行兑换。由于比特币快捷、安全以及无国界的特性，在某种意义上，比特币就是互联网货币的完美形态。</p>
+<p>比特币是一个分布式的点对点网络系统。因此，没有 “ 中央 ” 服务器，也没有中央控制点。</p>
+<p>比特币开创性的提出了一个分布式计算问题的解决方案。</p>
+<p>中本聪的此项发明，对 “ 拜占庭将军 ” 问题也是一个可行的解决方案，这是一个在分布式计算中未曾解决的问题。简单来说，这个问题包括了试图通过在一个不可靠、具有潜在威胁的网络中，通过信息交流来达成一个行动协议共识。中本聪的解决方案是使用工作量证明的概念在没有中央信任机构下达成共识，这代表了分布式计算的科学突破，并已经超越了货币广泛的适用性。</p>
+<p>关于比特币的资料网上很多，这里就不展开详细介绍了。</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="概述"><a class="header" href="#概述">概述</a></h2>
+<img src="1.了解IC/assets/1.了解IC/image-20230705223657965.png" alt="image-20230705223657965" style="zoom:30%;" />
+<p>什么是 IC 和 ICP ？</p>
+<ul>
+<li>
+<p>IC 的全称是互联网计算机（Internet Computer），是专门为去中心化应用设计的高速区块链网络。</p>
+</li>
+<li>
+<p>ICP 是互联网计算机协议（Internet Computer Protocol），也是代币的名称。</p>
+</li>
+</ul>
+<p>互联网计算机（IC）的出现为软件开发带来了革命性的变化。它让开发者能够直接在去中心化云上构建应用，摆脱了对传统中心化云服务的依赖，降低了开发和运维的成本。IC 的安全性和高性能使得应用和服务的安全性得到极大的提高。</p>
+<p>IC 的愿景是成为一个提供无限扩展性、安全性和去中心化治理的全球性计算平台。</p>
+<br>
+<p>IC 是通过结合分片、VRF 随机数、BLS 阈值签名、DKG 、嵌入 DAO 治理模型等技术构建的高性能去中心化云服务。</p>
+<p>那它性能到底有多高呢？</p>
+<p>子网们的目前确认区块速度为一秒 36 个区块。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230218171608203.png" alt="image-20230218171608203" style="zoom:70%;" />
+<p>目前每秒可以处理 6355 笔交易。</p>
+<p><img src="1.%E4%BA%86%E8%A7%A3IC/assets/1.%E4%BA%86%E8%A7%A3IC/image-20230218171944539.png" alt="image-20230218171944539" /></p>
+<p>这里可以查到 IC 网络上的<a href="https://dashboard.internetcomputer.org/">实时数据</a>。随着子网越来越多，这个数据在未来也会越来越高。（TPS 无上限😎）</p>
+<br>
+<h3 id="软件开发的新时代"><a class="header" href="#软件开发的新时代">软件开发的新时代</a></h3>
+<p>互联网计算机（IC）是基于互联网计算机协议构建的一种全新的区块链设计。它的核心部分分为 4 层，运行在各个子网的节点上。通过运行核心协议，一个子网的节点实现了一个基于区块链的复制状态机，该状态机独立于其他子网取得进展（但与它们异步通信）。IC 采用多子网分片结构，在保持去中心化的同时，克服了传统区块链的性能瓶颈。这种架构可以使 IC 无限生成子网（<a href="1.%E4%BA%86%E8%A7%A3IC/">分片</a>），使 IC 几乎不受限制地扩展。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230705215357597.png" style="zoom:33%;" />
+<p>IC 通过创建新子网来横向扩展其容量，就像传统的云基础设施通过添加新机器来扩展一样。一旦 IC 的<a href="1.%E4%BA%86%E8%A7%A3IC/">网络神经系统</a>（NNS)决定创建一个新子网，它就会选择一组尚未分配到任何子网的备用节点，并创建新子网的初始配置。然后，选定的节点组成一个新的子网区块链。</p>
+<img src="1.了解IC/assets/1.了解IC/gc5YGvUU_400x400.jpg" alt="Image" style="zoom:50%;" />
+<p>IC 摆脱了智能合约在传统区块链上的速度、存储成本和计算能力方面的限制。使智能合约实现完全的去中心化，前端到后端都能被托管在区块链上。IC 的智能合约叫 <a href="1.%E4%BA%86%E8%A7%A3IC/">Canister</a> （罐子、容器）。Canister 可以存储数据，对数据进行通用计算，并提供完整的技术栈，直接为终端用户提供网络访问服务。</p>
+<p>计算和存储开销采用 “ 反向 Gas 模型 ” ，<a href="1.%E4%BA%86%E8%A7%A3IC/">Gas 费</a>由部署 Canister 的开发人员将原生代币 ICP 兑换成 Cycles 支付。ICP 代币同时也用于治理：IC 由去中心化自治组织（以下简称 <a href="1.%E4%BA%86%E8%A7%A3IC/">DAO</a> ）进行管理。IC 底层直接嵌入了 DAO ：<a href="1.%E4%BA%86%E8%A7%A3IC/">Network Nervous System</a> 。DAO 可以决定变更 IC 的网络拓扑结构和升级 IC 协议。</p>
+<p>IC 还可以与其他区块链互操作。IC 的链密钥密码学技术使其能够与其他区块链进行交互，集成其他加密货币。</p>
+<br>
+<p>IC 使用 <a href="1.%E4%BA%86%E8%A7%A3IC/">WebAssembly</a>（wasm）作为代码执行的标准，所以开发者可以使用多种流行的编程语言（如 Rust、Motoko、Java 等）编写智能合约。</p>
+<p>传统 IT 开发者面临许多问题：必须通过众多商业云服务、云工具、操作系统的专有和开源变体、数据库和防火墙等组件、虚拟化技术，软件开发平台等等一系列的关卡，要去解决组装系统的高度自定义、维护它们所需的特殊开发人员的人工成本，以及相关的供应商关系，使得随着需求的变化、迁移和调整旧系统变得昂贵且困难的问题。随之而来的便是高昂的开发运维成本，以及中心化存储数据的安全问题。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230705124029401.png" alt="image-20230705124029401" style="zoom:35%;" />
+<p>IC 可以让开发者在一个开放世界中构建应用、企业系统和互联网服务类 APP ，在基于区块链去中心化理念下，保证它可以安全运行并且可以经受住时间的考验。IC 可以自动扩展、抵抗攻击、从不宕机。这种新颖的设计使开发者能专注于创造新应用和服务，而不用担心底层基础设施的安全性、成本和可扩展性。这对于软件开发的新时代具有深远的影响。</p>
+<br>
+<h2 id="架构"><a class="header" href="#架构">架构</a></h2>
+<p>IC 的架构特立独行：</p>
+<p>各个<strong>数据中心</strong>的<strong>节点（Node）<strong>通过节点软件 IC-OS 虚拟化为很多个</strong>副本（Replica）</strong>，再随机选取一些副本组成一个<strong>子网（Subnet）</strong>。</p>
+<img src="1.了解IC/assets/1.了解IC/Data Center.jpg" style="zoom:37%;" />
+<p>一个子网由多个数据中心的节点组成。每个节点都用 IPv6 建立 TCP 会话，与 NNS 节点、同一子网里的其他节点连接。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230612165423635.png" style="zoom:50%;" />
+<p><strong>NNS（Network Nervous System）</strong> 是嵌入 IC 的治理系统，一个 DAO ，持有 ICP 的任何人可以对 NNS 上的提案投票表决。</p>
+<p>比特币网络的节点随时随地想加入就加入，可这样带来的问题是确认交易的速度太慢了；联盟链是先确定了网络中的几个节点，然后由这几个固定的节点达成共识，那速度嗖嗖的。而 IC 结合了他俩的优点，像联盟链一样由几个固定节点组成子网，节点（副本）之间达成共识的速度非常快，并由一个 DAO：NNS，来控制子网和节点们（副本们）。一举两得。</p>
+<p>IC 在区块链协议底层集成了一个 DAO ：<strong>DAO控制网络（DAO-controlled network）</strong>。由这个 DAO 来控制每个子网，配置网络的拓扑结构，创建子网 公钥，并且升级副本的协议版本。因此所有 NNS 的决策都由社区成员决定，社区成员的投票权重由其在 NNS 中质押的 IC 原生治理代币数量决定。</p>
+<p>如果大家投票通过了提案，NNS 里的 Canister 会自动执行决策。比如，如果一个提议改变网络的拓扑结构的提案被通过，NNS 将自动使用新配置来更新注册表 Canister 。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230611150906743.png" style="zoom:25%;" />
+<p>NNS 也是帮助 IC 网络实现自我进化的去中心化治理系统。NNS 的目的是让互联网计算机网络以一种开放、去中心化和安全的方式进行管理。它是 IC 的系统子网，控制着 IC 的子网。它还可以对节点升级协议；调节 Gas 代币 Cycles 与 ICP 的兑换比例；在极端情况下，它甚至可以冻结恶意的 Canister ，以保护网络。</p>
+<p>副本可以理解为是子网里虚拟化出来的 “ 虚拟节点 ” 。在以下内容中，我们就把 IC 的 “ 节点 ” 叫做副本了。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230705215524900.png" style="zoom:67%;" />
+<p>IC 的子网类似分片（Sharding）思想。分片技术是一种区块链扩容方案。拿比特币举例，全世界的节点都在抢一个区块的记账权，相当于是一个覆盖整个地球的网络。如果所有亚洲的节点组成一个 “ 比特币子网 ” ，欧洲、非洲、美洲、大洋洲也都组成自己的子网。那么交易在子网里达成共识，这样节点相对少一点、通信距离更短，可以提升一些性能了。</p>
+<p>IC 由许多个子网组成，没有母网、主链、侧链、信标链这种概念，每个子网之间是平等的（除了 NNS）。每个子网独立运行，子网内部达成共识出块，没有比特币那样的 “ 全局共识 ” ，不同的子网同步并行出块。可以理解为每个子网都是一条区块链，许多链共同组成了 IC 。跨子网的通信在 IC 底层靠 <strong>ChainKey</strong> 解决。开发者和用户都不用在意智能合约被部署在哪个子网里、怎么跨子网通信等等问题。</p>
+<p>ChainKey 是互联网计算机背后的核心技术，它解决了 IC 的子网之间互相通信的问题。ChainKey 使每个子网根据 <strong>root key</strong> 生成自己唯一的<strong>子网公钥</strong> ( Subnet Key ) 。这是 IC 无限扩展性能的基础技术。</p>
+<p>每个子网都有一个只有 48kb 的公钥。任何人都能验证自己收到的消息是不是 IC 网络发过来的、有没有被篡改，当然各种物联网设备和其他区块链也能验证来自 IC 的信息。相比之下，去验证 ETH 这类传统区块链时，因为每次出块都由不同的节点签名，设备需要同步几百 GB 的签名数据。而在 IC ，所有副本一起签名一个区块。因此设备只需要保存 48kb 的唯一公钥即可验证每个区块。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230705215752208.png" style="zoom:35%;" />
+<p>子网可以随着网络的资源使用情况动态地增加、删减、合并、拆分。子网的数量没有上限，所以理论上支持 “ 无限扩容 ” ，在世界各地新增子网。</p>
+<p>可是由谁来决定子网们的拆分重组呢？NNS！</p>
+<p>NNS 是一种特殊子网，也和别的子网一样由一些节点组成， <strong>NNS 可以管理其他子网</strong>。不过 NNS 子网的节点比较多，安全性自然也比其他的子网高一些。数据中心成为节点、某个节点加入哪个子网、某个子网由哪些节点组成、选几个节点创建新子网、把一个子网拆分成几个子网等等，这些操作都需要获得 NNS 的许可。</p>
+<p>许多子网的这种架构使 IC 可以无限扩展。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230705220013965.png" alt="image-20230705220013965" style="zoom:33%;" />
+<p>IC 协议的核心部分分为 4 层，运行在各个子网的节点上。现在我们把视角转入子网内部，看一看 IC 的核心协议。为了方便理解，我把子网的俯视图转为侧视视角；紫色格子方块代表子网，蓝色小球代表子网里的副本。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230705220944481.png" style="zoom:37%;" />
+<p>IC 核心协议总共有 4 层，每个副本都有这 4 层结构。从下到上依次是 P2P 层、共识层、消息路由层、执行层：</p>
+<ul>
+<li>
+<p><strong>P2P层</strong>，收集和发送来自用户、子网中的其他副本和其他子网的消息。保障消息能传递到到子网中的所有节点，以确保安全性、可靠性和弹性。</p>
+</li>
+<li>
+<p><strong>共识层</strong>，子网内部对处理各种消息的顺序达成共识。然后这些区块被传递到消息路由层。</p>
+</li>
+<li>
+<p><strong>消息路由层</strong>，转发消息。共识层将区块敲定后，相应的荷载会被传递给消息路由层。由消息路由输入执行层。</p>
+</li>
+<li>
+<p><strong>执行层</strong>，运行 Canister 的地方。执行层更新复制状态机中相应 Canister 的状态，完成智能合约的计算任务并将输出交给消息路由层处理。</p>
+</li>
+</ul>
+<br>
+<h3 id="p2p层"><a class="header" href="#p2p层">P2P层</a></h3>
+<p>P2P 网络就像一个大型的聚会，参加聚会的人都是子网里的副本。在这个聚会上，人们想要分享最新的消息，并且希望尽可能多的人都听到这些消息。但是让每个人都大声喊出完整消息很费劲（占用网络资源），我们可以采取一种更高效的方法。</p>
+<p>这个方法就是<strong>公告-请求-传递</strong>机制。就像在聚会上，有人（副本）大声宣布：“ 嘿，我有个大新闻要分享！” 这个宣布就是一个小<strong>公告</strong>。其他人（其他副本）听到这个公告后，如果他们觉得这个消息很重要，就会走过去（<strong>请求</strong>）并要求那个人告诉他们具体的消息内容（<strong>传递</strong>）。这个过程可能会牺牲一些时间（延迟），但是它能够节省体力（降低带宽使用）。</p>
+<p>如果这个聚会非常大，比如一个巨大的音乐节现场。在这样一个庞大的场合下，公告-请求-传递机制会在一个**覆盖网络（Overlay network）**上运行。这个覆盖网络就像一个大型朋友圈，每个人都只和他们的好友（<strong>对等点/Peers</strong>）分享消息。 </p>
+<img src="1.了解IC/assets/1.了解IC/1577.png" alt="1577" style="zoom:20%;" />
+<p>当某个人想要广播一个消息时，他会先告诉自己的好友这个消息的公告。那些好友在收到公告后，可能会请求消息的传递，并在满足特定条件的情况下，把这个消息的公告告诉自己的好友。这就像一个<strong>八卦网络（Gossip network）</strong>。</p>
+<p>P2P 层通过公告-请求-传递机制以及在覆盖网络上运行，能够在牺牲一定延迟的情况下，有效降低带宽使用，从而实现高吞吐量的目标。</p>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>了解 IC P2P 层的更多运行机制。</p>
+<br>
+<h3 id="共识"><a class="header" href="#共识">共识</a></h3>
+<p>共识由子网内部的副本们达成。</p>
+<p>IC 共识层的任务是对输入消息进行排序，以确保所有的副本按照相同的顺序处理输入消息。这些消息是用户与 Canister 之间的通信、Canister 之间的通信以及这些通信的顺序。</p>
+<p>通过不可预测的随机数给副本们排序，选择谁先出块。如果被选中的副本诚实且没有故障问题，它就会出块，并广播给大家验证。大家觉得没问题，给出自己的公证片段。公证片段达到三分之二后，形成对这个区块的公证。如果大多数副本只对这一个块做过公证，大家会用敲定作为对区块的最终确认。</p>
+<img src="1.了解IC/assets/1.了解IC/1.webp" alt="1" style="zoom:77%;" />
+<p>IC 的共识协议满足：低延迟（几乎即时最终确认性）；高吞吐量；鲁棒性（在副本或网络故障时，延迟和吞吐量会稳定下降一点，而不是直接卡住宕机）</p>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>了解 IC 共识层的更多运行机制。</p>
+<br>
+<h3 id="消息路由"><a class="header" href="#消息路由">消息路由</a></h3>
+<p>在 IC 的每个轮次中，共识层把输入打包进区块的荷载中，在共识层最终确认之后，相应的荷载会被传递给消息路由层。消息路由组件从共识接收一个要处理的消息。消息路由把消息路由到对应 Canister 输入队列里。然后它触发执行，执行完成后，Canister 把结果放进输出队列。最后将输出交给消息路由层发送出去。</p>
+<br>
+<p>消息路由层还可以进行子网之间的通信。这个叫跨子网消息或简称为 XNet 消息。</p>
+<p>消息路由层实现的另一个关键功能是状态认证。子网在每个轮次里，会对子网在这一轮次改变的状态进行 BLS 阈值签名。这种认证可以用于子网验证一个子网到另一个子网数据流的真实性，也可以让用户在读取之前提交的消息的响应。状态认证和安全的 XNet 协议使得 Canister 能够在子网之间安全透明地通信，这是任何具有多个分片的区块链都面临的挑战。</p>
+<br>
+<p>注意，共识层和消息路由层是独立的。传入荷载之前，共识中的分叉都已经被解决了。而且共识层可以提前进入下一轮次运行，并不需要和消息路由层保持完全一致的进度。</p>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>了解 IC 消息路由层的更多运行机制。</p>
+<br>
+<h3 id="执行"><a class="header" href="#执行">执行</a></h3>
+<p>IC 中的基本计算单元叫做容器或罐子（Canister）。IC 提供了运行环境，使得 Canister 中可以执行程序，并可以（通过消息）与其他容器 Canister 和外部用户通信。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230705222651132.png" style="zoom:45%;" />
+<p>执行层有许多其他区块链没有的功能：</p>
+<ul>
+<li>
+<p><strong>确定性时间分片（DTS）</strong>：需要执行数十亿条 wasm 指令的大消息时，可以拆开，在之后的几次共识中逐步完成。这种拆分在几次共识中执行消息的能力是 IC 独有的。</p>
+</li>
+<li>
+<p><strong>并发</strong>：在多个 CPU 内核上同时执行多个 Canister 。因为每个 Canister 都有自己的隔离状态。</p>
+</li>
+<li>
+<p><strong>伪随机数生成器</strong>：执行层可以访问不可预测且无偏的伪随机数生成器。现在 Canister 可以执行需要随机性的算法。</p>
+</li>
+</ul>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>了解 IC 执行层的更多运行机制。</p>
+<br>
+<h3 id="边缘节点boundary-node"><a class="header" href="#边缘节点boundary-node">边缘节点（Boundary node）</a></h3>
+<p>先面说过，IC 就是去中心化的云，可以给用户直接提供完整的网络服务，而不依赖任何中心化服务。</p>
+<p>那么用户的请求是怎么发给某个子网里的副本（节点）的？ IC 是怎么防护 DDoS 攻击的？有防火墙吗？有 CDN 缓存吗？ 😏 You know what I mean. </p>
+<img src="1.了解IC/assets/1.了解IC/image-20230707233030143.png" style="zoom:39%;" />
+<p>这些服务就是 IC 的边缘节点提供的。</p>
+<p>边缘节点负责把请求转发到对应的子网，保护子网，提供缓存。</p>
+<p>当用户通过浏览器访问 IC 时，我们会通过 ic0.app 域名上的 URL 链接找到容器。首先，浏览器会查找 URL 链接对应的 DNS 记录，得到边缘节点的 IP 地址。然后向边缘节点发送一个 HTTPS 请求。边缘节点返回一个 JS 库 “ 服务助手 ”（或网络服务助手，Service worker），在浏览器上运行。</p>
+<p>这个服务助手的一个主要任务就是用链钥密码学来验证 IC 发过来的响应。为了实现这个功能，NNS 的公共验证密钥被硬编码在服务助手里面。</p>
+<p>边缘节点负责把我们的请求路由到目标 Canister 的子网副本。它从 NNS 获取所需的路由信息，并在一个实时响应的副本列表中随机选择一个。用户和边缘节点之间，以及边缘节点和副本之间的通信安全都是由 TLS 保证的。</p>
+<p>除了和主网通信，边缘节点还提供了缓存、负载均衡、速率限制、防火墙和验证 IC 响应消息的能力，让用户体验更好。</p>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>可以看到更多关于边缘节点的内容。</p>
+<br>
+<h2 id="请求消息流程"><a class="header" href="#请求消息流程">请求消息流程</a></h2>
+<p>有了这 4 层核心协议，再来看看 IC 上一个用户请求的流程：</p>
+<p>用户请求分为查询调用和更新调用。</p>
+<br>
+<p>查询调用：</p>
+<p>客户端向边缘节点发送一个请求消息，想要访问某个容器。边缘节点把这个消息传送给托管目标容器的子网中的副本。副本收到消息后，返回响应，再通过边缘节点发给用户。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230706102850601.png" alt="image-20230706102850601" style="zoom:37%;" />
+<br>
+<p>更新调用：</p>
+<p>客户端向边缘节点发送一个请求消息 M ，目标是 Canister C 。边缘节点把消息 M 传送给托管 Canister C 的子网副本。</p>
+<p>副本收到消息 M 后，通过 P2P 层向子网中的所有副本广播消息 M 。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230706103959529.png" style="zoom:39%;" />
+<p>收到消息 M 的主节点会把消息 M 和其他输入打包进一个区块 B 。</p>
+<p>一段时间后，区块 B 被确认，里面的内容被发送到消息路由层处理。</p>
+<p>消息路由层把消息放进 Canister C 的输入消息队列。</p>
+<p>执行层处理消息 M ，并更新 Canister C 的内部状态。</p>
+<p>随后消息路由取出响应 R 交给边缘节点，返回给用户。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230706103539318.png" alt="image-20230706103539318" style="zoom:37%;" />
+<br>
+<p>有时候，处理请求消息 M 需要调用其他子网的 Canister 。比如，Canister C 需要向另一个子网的 Canister C' 发起请求 M' 。请求 M' 会被放在 Canister C 的输出队列里，然后执行以下几步：</p>
+<ul>
+<li>消息路由层把调用请求 M' 移到对应的跨子网数据流，最后传输到托管 Canister C' 的子网。</li>
+<li>第二个子网收到请求 M' ，通过共识层和消息路由层，最后由执行层处理。执行层更新 Canister C' 的状态，生成请求 M' 的响应 R' 。响应 R' 会进入 Canister C' 的输出队列，最后被传回第一个子网。</li>
+<li>回到第一个子网，收到来自第二个子网的响应 R' 后，经过共识层、消息路由层和执行层的处理。执行层会更新 Canister C 的状态，生成原始请求 M 的响应 R 。这个响应 R 会被记录在入口历史的数据结构中。</li>
+</ul>
+<img src="1.了解IC/assets/1.了解IC/image-20230706114004742.png" style="zoom:35%;" />
+<br>
+<h2 id="链钥密码学chain-key"><a class="header" href="#链钥密码学chain-key">链钥密码学（Chain Key）</a></h2>
+<p>IC 使用了一种高级加密机制工具箱，统称为链密钥密码学。这种技术让 IC 实现了其他区块链无法实现的功能和可扩展性。</p>
+<p>它的一个关键组成部分是阈值签名方案，这类似于普通的数字签名方案，但它有个不同之处，就是秘密签名密钥分布在子网的副本中，这样密钥就不会被轻易泄露或窃取。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230706154712633.png" style="zoom:33%;" />
+<p>链密钥带来了很多好处。比如：</p>
+<ul>
+<li>
+<p>任何人（手机、平板电脑、笔记本电脑）都可以简单地验证签名，以验证从 IC 接收到的内容，而无需同步整个区块链。</p>
+</li>
+<li>
+<p>它能让 IC 的拓扑结构可以自主演化，比如添加新的副本和子网，恢复故障副本，以及自主升级协议。</p>
+</li>
+<li>
+<p>它还能提供不可预测和无偏的伪随机数，让 Canister 可以安全地运行需要随机性的算法。</p>
+</li>
+</ul>
+<br>
+<p>IC 的关键创新在于子网实际上是共识的孤岛。有了链密钥，它们可以安全地互相通信，并在不下载其他区块链数据的情况下验证对方的消息。这使得 IC 能够实现高度的可扩展性和安全性，同时保持轻量级和易于验证的特性。</p>
+<p>这种独特的链密钥技术为构建下一代分布式应用提供了强大的基础。</p>
+<br>
+<h2 id="网络神经系统nns"><a class="header" href="#网络神经系统nns">网络神经系统（NNS）</a></h2>
+<p>IC 跟比特币和以太坊的去中心化方式有点不一样。它的节点不是随时随地、想加入就加入，而是你要加入或退出，都不需要受任何第三方中心化机构约束。节点加入 IC 网络之前，需要经过 NNS 的投票同意。IC 的底层协议里是直接嵌入了 DAO 来进行治理。</p>
+<p>详细解释一下：</p>
+<p>最早的共识协议，比如 PBFT ，是有许可的。也就是说网络的拓扑结构和节点是固定的，不是谁想加入就加入的。虽然这样的协议效率更高，但是它们违背了去中心化的精神。所以，现在有了像比特币、以太坊这样的无许可共识协议，它们使用工作量证明（PoW）或权益证明机制（PoS）。这些协议虽然完全去中心化，但效率相对较低。</p>
+<p>IC 结合了他俩的优点，它既有有许可协议的效率，又有无许可 PoS 协议的好处。你可以叫它 <strong>DAO 控制网络</strong>（DAO-controlled network）（半许可网络）。</p>
+<br>
+<p>每个子网都运行一个有许可的共识协议，子网里的副本（节点）是固定的。在需要调整网络拓扑结构的时候，由一个叫做**网络神经系统（Network Nervous System）**的 DAO 决定哪些节点可以加入某个子网，配置网络的拓扑结构，配置公钥，以及控制副本部署的协议版本。<strong>NNS 的决策都是由社区成员投票决定的，投票权跟他们在 NNS 中质押的 ICP 有关。质押的数量越多、时间越长、参与投票越多，权重越大。</strong></p>
+<br>
+<p>通过这个治理系统，IC 可以在现有子网中增加或移除副本；可以部署软件更新；可以对副本进行升级；可以创建新的区块链子网，实现扩容；可以拆分子网，来均衡网络负载；它可以配置经济参数，如调节 Gas 代币 Cycle 与 ICP 的兑换比例，Cycles 燃烧比率；在极端情况下，它可以冻结恶意的 Canister ，保护网络，等等。NNS 运行在特定的子网上，和其他子网差不多。只是副本数量更多，更安全，NNS 的子网是系统子网，只部署着几个最重要的 Canister 。</p>
+<p>系统子网中的容器不收取 Cycles 费用，因为只部署了几个 IC 系统自己的 Canister 。普通开发者不能在系统子网上部署 Canister 。所以 IC 是由一个 DAO 来管理所有子网的。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230706213758608.png" style="zoom:33%;" />
+<p>NNS 维护着一个叫做<strong>注册表</strong>的数据库，用来跟踪 IC 的网络拓扑结构，比如哪些副本属于哪个子网，副本的公钥是啥等等。</p>
+<br>
+<p>IC 的 DAO 控制网络既让 IC 享受到有许可网络在效率方面的好处，又保留了去中心化网络在 DAO 治理下的优势。而且，运行 IC 协议的副本都托管在地理上分布式的、独立运行的数据中心上，这样也增强了 IC 的安全性和去中心化性。</p>
+<br>
+<h2 id="智能合约canister"><a class="header" href="#智能合约canister">智能合约（Canister）</a></h2>
+<p>当我了解 IC 之后，第一次见到能直接部署网页的区块链。( ఠൠఠ )ﾉ </p>
+<p>IC 是唯一可以托管完整 dapp（前端、后端和数据）的区块链。IC 可以安全地提供 HTTP 请求。</p>
+<br>
+<p>Canister 就是 IC 的智能合约，可以存储代码逻辑、数据状态、前端资源。开发者无需关心底层通信，只要把代码部署到 Canister 里，用户就可以直接通过网址访问到应用。</p>
+<p>比如项目里有一个专门放前端页面的 Canister 和一个后端 Canister 。客户端发请求，浏览器发出请求后，浏览器需要先从边缘节点下载一个 Service Woker 检查浏览器是否支持 wasm 、网络环境是否安全等等。Service Woker 可以验证前端页面是否来自 IC ，是否经过篡改。请求消息经过 IC 协议定位到某个前端 Canister ，前端 Canister 直接发送 HTML 网页到客户端。之后通过官方的 JS 代理库与后端 Canister 交互。Canister 之间也可以互相调用交互。</p>
+<p>ETH 是一台同步的状态更新机器，由交易触发智能合约，然后达成共识；IC 是一台异步状态更新机。只要客户端发出消息传到 IC ，就会返回一个结果：成功或者失败。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230225112056541.png" alt="image-20230225112056541" style="zoom:27%;" />
+<p>IC 对以太坊 Dapp 开发和传统 Web 开发做了简化。开发 Dapp 无需第三方钱包，也不用开发者考虑负载均衡、防火墙，这些都由 IC 协议层解决。</p>
+<p>上面说的只是最简单的 Dapp 项目实例，实际开发中，一个 Dapp 一般都有很多个 Canister 。</p>
+<br>
+<p>Canister 英语原意为罐子、容器，是一种轻量级 WASM（WebAssembly）容器。</p>
+<p>Canister 自动持久化数据于内存中，无需数据库服务器和存储管理，提升了计算效率并简化了软件开发。所有可以编译为 wasm 字节码的语言理论上都可以用来写 IC 的智能合约：Motoko 、Rust 、C 、C++ 、Go 、JavaScript 等等。（现在 Motoko 和 Rust 的 cdk 比较成熟，别的语言的 sdk 正在开发）因此，前后端都可以编译为 wasm 并安装进容器里上链。当然也只有支持 wasm 的浏览器才能打开 Dapp ，不过支持 wasm 的浏览器以后会越来越多。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230221180533333.png" alt="image-20230221180533333" style="zoom:25%;" />
+<p>还有 HTTP 集成，可以让 Canister 读取 IC 外部的任意网页，不用预言机！</p>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>可以看到更多关于 Canister 的内容。</p>
+<br>
+<h2 id="互联网身份internet-identity"><a class="header" href="#互联网身份internet-identity">互联网身份（Internet Identity）</a></h2>
+<p>在网络上我们通常用用户名和密码来识别和验证身份，但这些方法很难管理，而且安全漏洞很多。为了解决这些问题，IC 做了一种更先进、更安全的加密身份验证方法，它叫做<strong>互联网身份</strong>（Internet Identity），可以在 IC 生态的 Dapp 上使用。登录 Dapp 时不需要输入任何密码，也不用记下复杂的私钥或者助记词，就可以轻松的控制自己的去中心化身份。</p>
+<p>用户<a href="1.%E4%BA%86%E8%A7%A3IC/%5Bhttps://https://identity.ic0.app">使用互联网身份</a>时，网站就收集不到关于用户在线活动的信息了。因为它会帮你在每个网站上创建和管理匿名、独立的帐户，让你可以在不用担心管理这些帐户的情况下，享受到拥有许多不同帐户的隐私保护。它不仅让你摆脱了复杂的用户名和密码管理，还能让你在使用网络服务时更加安全、更加隐私。</p>
+<br>
+<p>用户可以用设备进行面部扫描、指纹识别、Ledger 或者 <a href="https://en.wikipedia.org/wiki/YubiKey">Yubikey</a> 硬件钱包，创建一个去中心化身份。用这个身份可以登录 / 注册各种 Dapp 。</p>
+<p>用这个身份登录不同的 Dapp 会有不同的账户。也就是说，它是隔离的，身份不互通（和 ETH 不一样），这个身份在不同的 Dapp 里是完全隔离的账户。在每个 Dapp 里相当于从主身份里衍生出的一个分身，用一个 <a href="1.%E4%BA%86%E8%A7%A3IC/">DID</a> 身份控制所有的 Dapp 。</p>
+<br>
+<p>我们喜欢叫它 “ ii ” 。</p>
+<p>ii 是一种身份认证机制，底层原理还是私钥、公钥那些的。</p>
+<p>用户的手机、电脑里有一个 TPM 安全芯片，可以生成一对密钥。公钥上传到 ii 的 Canister 里存储下来；私钥有设备的 TPM 芯片保存，任何人都拿不到（包括用户本人）。</p>
+<p>在 IC 上用户与 Dapp 每次交互都需要签名鉴权，而且私钥存在安全芯片里，当然不能让用户每次交互发一个请求都用指纹签名。所以 ii 使用了委托密钥（Delegation key）形成一条委托密钥链。给委托密钥设置过期时间，然后用委托密钥的私钥做签名。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230708231831579.png" style="zoom:35%;" />
+<p>那这个委托密钥到底是啥意思呢？</p>
+<p>你看，设备安全芯片生成一对密钥，再让浏览器生成一对密钥（Session key）。让安全芯片生成的私钥对浏览器生成的公钥和过期时间等信息签名。生成的这个签名就是委托（Delegation）。有了这个委托，就可以用浏览器的私钥对请求签名了。然后把委托、浅蓝色的公钥、Session key 私钥签名的内容、浅粉色的公钥发出去。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230707230114370.png" style="zoom:37%;" />
+<p>如上图所示。接收方拿到蓝色公钥、Delegation 、粉色私钥签名过的内容、粉色公钥。用蓝色公钥解锁 Delegation ，发现里面有粉色公钥，说明蓝色私钥对粉色公钥签过名。也就是蓝色私钥授过权，就像大将军拿着皇上的虎符调兵遣将一样，虎符代表皇帝授权。</p>
+<p>为了方便理解，上面这张图做了简化，实际上 Dapp 看不到用户的 User number ，User number 和 Dapp 域名都会经过哈希，生成一个 <a href="1.%E4%BA%86%E8%A7%A3IC/%E8%AF%8D%E6%B1%87%E8%A1%A8">pid（Principal id）</a>。</p>
+<p>因为每个 Dapp 的域名不一样，所以生成的 pid 也不一样。pid 是一个 Dapp 里用户的身份标识，这个以后再详细说。</p>
+<br>
+<p>Anchor 就相当于用户名，就是上图的 User number 。用户在 ii 里保存的每个设备都是一个私钥，用户可以增加、删除设备，也就是用户可以增加删除私钥。所以假如用户手机丢了，相当于丢了一个私钥，只要用 Anchor 在其他设备上登录就可以删除手机这个设备了。</p>
+<p>ii 干的一件事就是把用户不同的设备添加进来，通过 ii 的 Anchor 对应的 Master key 绑定，这个 Master key 是托管到 Canister 上的，这样只要有一个设备能添加进来，就能更改 ii 里保存的设备，用户就不用接触私钥了。这个 Master key 可以理解为一个总的私钥，只要有设备绑定在这个总私钥上，就不用担心 ii 身份丢失，如果都丢了，就只能靠助记词恢复了。助记词也丢了就没得恢复了，都丢了 😝 。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230708003645233.png" style="zoom:42%;" />
+<p>所以 ii 就是一种身份认证机制，ii 里没有保存用户信息，只有用户的一个 ii 身份，用户相关信息都是由 Dapp 自己保存的。</p>
+<p>Canister 里存的是 Anchor 和对应的 Master key ，Anchor 是从 10000 开始递增。</p>
+<p>这使得 ii 有了以下两点特性：</p>
+<ul>
+<li>
+<p>当一个 Anchor 登录不同 dapp 时，身份是不一样的。至于这个身份对应的用户信息是什么：用户名之类的，ii 不保存。</p>
+</li>
+<li>
+<p>在一个 Anchor 不同的设备上登录 dapp ，身份是一样的。</p>
+</li>
+</ul>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>可以看到更多关于 ii 的内容。</p>
+<br>
+<h2 id="icp的经济模型"><a class="header" href="#icp的经济模型">ICP的经济模型</a></h2>
+<p>IC 网络通过 Network Nervous System（NNS ，网络神经系统）治理，治理代币叫 ICP 。另外还有一个代币叫 Cycles ，Cycles 用于支付在 IC 网络上 Canister 的存储数据、收发数据、计算费用，类似于以太坊的 Gas 费。</p>
+<p>Cycles 是用来供 Canister （智能合约）运行的费用。 ICP 只能单向燃烧成 Cycles ，没法再变回 ICP ，ICP 与 Cycles 的汇率根据 ICP 价格动态调整，永远保持稳定的兑换一定数量的 Cycles ，以保证 Cycles 价格相对稳定，防止造成 Gas 费用大幅波动的情况。；这样 ICP 就会越来越少，随着 IC 网络使用者不断增加，更多的人会购买 ICP 来运行智能合约， IC 网络的价值也会不断增加。</p>
+<p>数据中心想成为节点要买大量 ICP 当押金，如果数据中心做恶，就罚 ICP 。</p>
+<p>当 IC 上的生态越来越繁荣，越来越多的企业、组织在 IC 上部署去中心化应用 Dapp 时，就需要把 ICP 燃烧成 Cycles 交部署应用的费用。</p>
+<p>持有 ICP 的用户可以把 ICP 质押在 NNS 中，创建 Neuron（神经元），然后进行投票，投票之后会收到 ICP 奖励，这是 ICP 的通胀机制之一；但 NNS 的作用是投票治理，并不是赚利息。</p>
+<br>
+<p>另外，NNS 会给数据中心提供者每个月发送 ICP 代币激励，这种另一种通胀机制。</p>
+<p>在那些数据中心的 Canister 里消耗的 Cycles 和这个数据中心获得的 ICP 的数量是动态平衡的。激励多少 ICP 是根据数据中心对 IC 网络做出的贡献决定的，在数据中心部署的 Canister 越多提供算力、储存数据就越多，激励的 ICP 也多。</p>
+<br>
+<p>加密资产用户在使用以太坊智能合约进行签名、转账、交易的过程中都需要向网络支付一笔 Gas 费，而 Gas 费会随着网络拥堵导致上涨。尤其是在 DeFi 行情火爆时，高昂的 Gas 费成为了阻挡广大普通用户参与的门槛。</p>
+<img src="1.了解IC/assets/1.了解IC/1688483328530.jpg" style="zoom:77%;" />
+<br>
+<h2 id="未来已来-1"><a class="header" href="#未来已来-1">未来已来</a></h2>
+<p>由于跨链桥的存在，跨链存在本质的 51% 攻击安全问题。</p>
+<p>但是 IC 解决了跨链桥问题，IC 直接抛弃了跨链桥。IC 本身就是一个云服务，IC 可以直接集成其他链。</p>
+<br>
+<p>目前 IC 已经集成了比特币和以太坊。Canister 可以直接接收、持有、发送比特币。Canister 可以做 ECDSA 签名。IC 实现了 ECDSA 阈值签名。</p>
+<p>这项技术允许 Canister 控制 ECDSA 私钥片段，私钥片段分布在比特币子网的副本中，用法和 BLS 阈值签名差不多。</p>
+<p>这样一来，跨链不再需要桥，也不用把资产包装，比如 BTC 包装成 WBTC 。</p>
+<p>开发者只需要在 Canister 中编写业务逻辑，就可以实现比特币的 DeFi，比如交易和借贷，而且速度很快，只需要几秒钟，成本很低。</p>
+<br>
+<p>所以说了这么多，IC 能干什么不用我多说什么了吧 😏 。下面内容来自 IC 白皮书：</p>
+<p>IC 设计上是一个完整的技术栈，可以构建完全在 IC 上运行的系统和服务。特别的是，IC 上的智能合约可以处理终端用户的 HTTP 请求，因此智能合约可以直接提供交互式的网络体验。这意味着，构建系统和服务不需要依赖于公司的云托管服务或者私人服务器，从而以一种真正的端到端的方式提供智能合约的所有优势。</p>
+<p>对于终端用户而言，访问基于 IC 的服务在很大程度上是透明的。他们的个人数据比在访问公有云或私有云的应用时更安全，但是与应用程序的交互体验是一样的。</p>
+<p>然而，对于创建和管理基于 IC 的服务的人来说，IC 消除了许多在开发和部署当前的应用程序和微服务时的成本、风险和复杂性。例如，在当前垄断互联网的科技巨头们所推动的整合下，IC 平台提供了另一种选择。此外，IC 安全的协议可以确保消息的可靠传递、透明可追溯，以及不需要依赖于防火墙、备份设施、负载均衡服务器和故障编排就可以实现的网络弹性。</p>
+<br>
+<p>这也是我为什么相信 IC 能开启互联网的新时代。</p>
+<p>多米尼克 2021 年 1 月 6 号在博客上很激动：</p>
+<p>水星（阶段）代表惊人的技术成就，以及与众不同的区块链愿景的实现，但即使在这个阶段，网络也无法在大量独立各方的努力下建立。在幕后,尽管 COVID-19 疫情造成了困难，几家制造商一直在制造用于创建物理网络的第一代标准化互联网计算机节点机器，数十个独立的融资合作伙伴也提供资金和控制节点机器部署到第一批数据中心。正如我所写，数百台新的节点机器已被部署到数据中心，这需要付出巨大努力，许多机器已经在运行，可以让网络神经系统将它们编织进网络，以扩展互联网计算机的容量 —— 世界上第一个能无限扩展容量、以 Web 速度运行的公共区块链，这将很快产生巨大影响，未来数年内，该网络预计将扩展到数百万个节点，运行在成千上万个数据中心。我们预期历史将证明这是一个区块链和互联网双方的重要时刻。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230704200917524.png" style="zoom:70%;" />
+<p>“ 区块链奇点将会出现，因为智能合约实际上是一种全新形式的软件系统，它比传统 IT 具有巨大的优势。这意味着在线系统和服务的未来是区块链，您可以成为其中的一部分。” </p>
+<img src="1.了解IC/assets/1.了解IC/image-20230704201553626.png" style="zoom:70%;" />
+<br>
+<p>这是本片文章的结构：了解 IC 的每个部分都可以对应到后面的章节。</p>
+<img src="1.了解IC/assets/1.了解IC/image-20230707094537509.png" style="zoom:30%;" />
+<p>WAGMI! </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="p2p层简述"><a class="header" href="#p2p层简述">P2P层简述</a></h1>
+<p>P2P 层主要负责在子网里的副本之间传送协议消息。这些消息有达成共识所需的消息，比如区块提案和公证等，还有来自消息路由层的入口消息。当边缘节点发送消息时，副本的 P2P 层就会接收和广播这些消息。</p>
+<br>
+<p>这些消息主要有两类：一类是用于达成共识的签名消息，另一类是用户客户端发送的输入消息。对于用户发出的输入消息，P2P 层会把它们排好顺序，这样共识层就可以按照顺序把数据打包成荷载，并生成区块了。</p>
+<img src="2.核心协议/assets/1.P2P层/image-20230622170946212.png" style="zoom:40%;" />
+<h2 id="工件"><a class="header" href="#工件">工件</a></h2>
+<p>比如我们有一家中子星快递公司（IC），而 P2P 层就是快递公司的配送网络，负责在各个地区（子网）内的配送点（副本）之间传输包裹（信息）。</p>
+<p>P2P 层就是个广播通道。P2P 层的设计能确保如果一个诚实的配送点（副本）广播了一条消息，那么这条消息最终将会被子网中的所有诚实副本所接收。即使有人试图恶意干扰，部分网络偶尔中断的情况下，包裹仍然能够高效地送到收件人手中。即使有副本出现故障也不能影响到诚实副本之间的相互通信。</p>
+<img src="2.核心协议/assets/1.P2P层/image-20230622184950322.png" alt="image-20230622184950322" style="zoom:53%;" />
+<p>每个配送点（副本）里面有一些包裹，这些包裹就是 “ 工件 ”（Artifacts）。所以每个配送点（副本）都有一个 “ 工件池 ” ，存放自己的信息。工件是配送点之间用来创建、验证和达成共识的信息。这些信息可以是共识区块提案、用户的入口信息或用于 https 外调功能的响应签名。配送点会把这些包裹分发给其他配送点，让它们都知道子网的状态。</p>
+<img src="2.核心协议/assets/1.P2P层/image-20230622183845786.png" alt="image-20230622183845786" style="zoom:50%;" />
+<p>当需要把包裹（工件）发送给其他配送点时，P2P 层会被调用。这就像是快递公司经理（比如共识层的组件）通知配送员，他们需要把一个新包裹送出去。比如现在某个配送点（副本）创建了新的区块提案，需要发送给子网里的其他配送点。再比如配送点（副本）收到了另一个配送点发来的包裹，然后要把它转发给其他地方。</p>
+<h2 id="公告-请求-传递"><a class="header" href="#公告-请求-传递">公告-请求-传递</a></h2>
+<blockquote>
+<p>P2P 层要负责保障高吞吐量，高吞吐量比低延迟更重要。</p>
+<p>但是在共识协议中，一些消息，尤其是区块提案非常大。而且根据共识协议，为了安全，这些消息会被所有副本反复广播。</p>
+</blockquote>
+<p>他们希望尽可能快地传递大量的包裹（高吞吐量），但同时也要考虑运输成本（带宽）。</p>
+<img src="2.核心协议/assets/1.P2P层/image-20230622174846403.png" style="zoom:50%;" />
+<p>快递公司采用<strong>公告-请求-传递</strong>机制来提高效率。当一个配送点（副本）有一个重要的包裹（大消息）要发送时，他们不会直接发送包裹。相反，他们会发送一个包裹清单（<strong>公告 / Adverts</strong>），告知其他配送点有一个重要的包裹。当其他配送点收到这个清单时，确认了这就是他们需要的包裹，他们会主动联系发件配送点（<strong>请求</strong>）并要求传递这个包裹（<strong>传递</strong>）。这个过程可能会牺牲一些时间（延迟），但它能够节省运输成本（降低带宽使用）。对于小包裹（消息）而言，不值得牺牲延迟追求带宽。可以省去公告，直接发送消息。</p>
+<blockquote>
+<p>为了节省带宽，P2P 层会创建一种叫做公告的简短消息，它非常小巧，只包含工件的哈希值和一些元数据，然后将这些消息广播给其他副本。当其他副本收到公告时，它们会判断是否想要下载相关的工件。如果答案是肯定的，它们就会向发布公告的副本发送一个明确的请求消息。</p>
+</blockquote>
+<img src="2.核心协议/assets/1.P2P层/image-20230622182359087.png" alt="image-20230622182359087" style="zoom:50%;" />
+<p>如果这个快递公司经营有方，发展到非常庞大时，包含了很多配送点。这时，<strong>公告-请求-传递</strong>机制可以在一个 <strong>覆盖网络（Overlay network）</strong> 上运行。在这个覆盖网络中，每个配送点只和它们的合作伙伴（<strong>对等节点 / Peers</strong>）互相发送包裹。当某个配送点想要广播一个包裹时，他会先把包裹的清单告诉自己的合作伙伴。那些合作伙伴在收到清单后，可能会请求包裹的传递，并在满足特定条件的情况下，把这个包裹的清单告诉自己的合作伙伴。这就像一个[八卦网络（gossip network）](../assets/gossip protocol.pdf)，一传十，十传百。如果子网的副本数量比较少，会将公告发送给子网中的所有副本。</p>
+<p>快递公司（P2P 网络）可以在牺牲一定的延迟的情况下，有效地降低运输成本（带宽使用），实现高吞吐量的目标。这对于一个高效的快递公司（分布式网络系统）来说非常重要。</p>
+<img src="2.核心协议/assets/1.P2P层/image-20230622191625809.png" alt="image-20230622191625809" style="zoom:50%;" />
+<p>但是可不要大意了，为了确保每个包裹完整、安全、高效送达，每个公告都包含了一个完整性哈希值，就像包裹的条形码。在完成包裹下载后，配送点会检查下载的内容，确保它和公告中的哈希值匹配，这样才能确保包裹的完整性。</p>
+<p>当然只靠哈希还不够安全。恶意配送点可能会发送一个公告，然后发一个伪造的包裹，这个包裹的哈希值与公告中的哈希值匹配。这时候，配送点需要检查包裹是否符合要求（比如看包裹有没有正确的签名），在进一步处理或转发给其他配送点之前，要确保包裹是安全的。</p>
+<p>当发现收到的公告有问题或者加入新子网时，配送点会向其他配送点发送重新传输请求。这个请求可以发送给一个特定的配送点，也可以发送给所有的配送点。请求中包含了关于当前状态的信息，其他配送点可以通过发送公告来帮助这个配送点更新自己的状态。在<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D/P2P%E5%B1%82%E6%98%AF%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E6%81%B6%E6%84%8F%E6%94%BB%E5%87%BB%E7%9A%84%EF%BC%9F.html">这里</a>了解更多。</p>
+<h2 id="分块"><a class="header" href="#分块">分块</a></h2>
+<p>有时候，某些包裹（比如状态同步工件）太大了，没法整体发送。我们可以把它们切成若干个小数据块（Chunks），然后用一个公告代表这些数据块。</p>
+<img src="2.核心协议/assets/1.P2P层/image-20230622190057801.png" alt="image-20230622190057801" style="zoom:50%;" />
+<p>下载这些数据块的时候，配送点会尝试从多个曾经发过公告的配送点那里下载相应的数据块。这样可以加快下载速度，更好的利用带宽。分块的包裹会进行单个块和整体的验证，由相应的配送点负责单个块的验证。</p>
+<h2 id="重传请求"><a class="header" href="#重传请求">重传请求</a></h2>
+<p>快递公司需要确保包裹能准时送达。有时候，因为某些原因，包裹清单（公告）可能会在途中出现问题，比如快递员忘记扫描包裹的条形码、运送超时了或者包裹清单丢了。或者有新的配送点加入子网时。</p>
+<p>这时配送点就得发送一个 “ 重传请求 ” 了，类似于询问：“ 嘿，我有没有遗漏什么包裹？我有没有错过什么信息？请重新给我发一遍。” </p>
+<p>其他配送点就可以将他错过的信息发送给他。虽然重传请求主要是为了帮助配送点同步错过的包裹，但为了确保包裹准确投递，配送点之间会定期发送这样的请求。</p>
+<h2 id="传输"><a class="header" href="#传输">传输</a></h2>
+<p>快递公司的核心业务是在各个地点之间传递包裹。P2P 层底层的传输组件，就是快递公司的运输工具（卡车、飞机等），负责把包裹从一个地方送到另一个地方。这些传输工具在配送点之间创建基于 TLS 的 TCP 连接，双方都用自己的私钥验证身份。传输层协议会根据网络状况、包裹大小等因素来选择合适的方式。为了确保包裹可以顺利传输（Transport），协议具备一定的容错能力和对网络故障的处理能力。</p>
+<p>为了让配送点之间知道他们应该与哪个配送点建立联系，快递公司需要维护一个包含所有配送点信息的 “ 名册 ”（网络神经系统（NNS）注册 Canister ）。这个名册会包含配送点的地址以及用于身份验证的特殊标识。</p>
+<blockquote>
+<p>每个副本都有自己的公钥，存储在一个叫做 “ 网络神经系统 ”（NNS）的地方。为了防止 DOS 攻击，副本只和同一子网中的其他副本联系。副本之间的连接会根据 NNS 的记录进行调整。</p>
+<p>NNS 注册表还包含最新的子网成员信息（哪些副本属于哪个子网）以及历史信息。副本通过查询 NNS 的注册表来了解其自身的成员资格、副本、IP 地址和公钥。副本在建立 TLS 连接时，就可以确保只连接到同一子网内的其他副本，实现双向身份验证。</p>
+</blockquote>
+<img src="2.核心协议/assets/1.P2P层/image-20230622192102981.png" style="zoom:37%;" />
+<p>随着时间的推移，快递公司可能会开设新的配送点或关闭一些旧的配送点。因此，传输组件需要不断跟踪这些变化并相应地调整与配送点之间的联系。</p>
+<p>此外，传输组件还需要确保通信线路畅通无阻，并在出现问题时自动重新建立联系。传输组件提供了一种保持连接稳定的机制，能够迅速检测到连接问题（通过心跳机制），并在连接断开时自动重新建立连接。当一个 TCP 连接空闲超过 200 毫秒时，系统会发送一个心跳消息。在接收端，如果 5 秒内没有收到任何数据（包括心跳消息），连接将会中断并尝试重新连接。这种做法避免了等待 TCP 协议可能非常漫长的超时时间，这种情况有时会在互联网路由发生变更时出现。在成功重新建立连接之后，将会发送重传请求至相应的副本。</p>
+<p>有时候，传输组件也会与被注册表刚刚删除的配送点（副本）连接，直到共识层不需要这样的连接。</p>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>P2P 层通过公告-请求-传递机制高效传输包裹，同时使用完整性哈希值和其他检查手段来确保包裹的正确性。传输组件负责在快递员和分拣中心之间传递包裹信息。它使用一种名为重传请求的方法来确保没有错过任何关键信息，并在需要时进行身份验证和重连。通过多种机制为信息传输提供高效、安全、稳定的通信基础。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="共识层简述"><a class="header" href="#共识层简述">共识层简述</a></h1>
+<br>
+<h2 id="啥pouw不是pow吗"><a class="header" href="#啥pouw不是pow吗">啥？PoUW？不是PoW吗？</a></h2>
+<p>说起 IC 的共识，你看这个名字：PoUW，Proof of Useful Work 。有效工作证明。</p>
+<p>是不是似曾相识？</p>
+<img src="2.核心协议/assets/2.共识层/image-20230131200036914.png" alt="image-20230131200036914" style="zoom:20%;" />
+<p>PoW！哈哈哈哈 :) </p>
+<p>PoW （Proof of Work）是比特币的共识算法，从现在的角度看非常低效，好在还比较安全。工作量证明就像学校组织了一场考试，只有考满分的同学有资格把名字挂在教育局的荣誉墙上并奖励一枚比特币。而且学校是随时随地开放的，谁都可以随时来参加考试，答完所有题后自动出成绩。有一个同学满分之后，所有同学的试卷立即作废。因为已经有答案了诞生了（满分试卷），其他人还必须把满分试卷抄下来，然后开始下一次考试。</p>
+<p>PoUW 这所学校把考生随机分成了几个班级，考试在每个班里进行。而且不是谁都可以进入学校的，只有老师可以加入。每个班级大家共同完成一份试题。因为大家都是经验丰富的老司机，所以用摇骰子的方式决定谁做第一题、谁做第二题 ...... 答完题后大家还要讨论一下，对各方意见达成统一，然后交卷。奖励班里每个人平分。</p>
+<p>看看，多高效 ~ 😉😎 </p>
+<p>PoUW 比 PoW 多了一个 U ，主要特性是提高了不少性能，让节点机器少做无用功。PoUW 不会人为制造困难的哈希计算，它将算力尽可能的放在为用户服务上。大部分资源（CPU、内存）用于实际 canister 中代码的执行上。</p>
+<br>
+<h2 id="怎样达成共识"><a class="header" href="#怎样达成共识">怎样达成共识</a></h2>
+<p>但不管怎么说，人家比特币是区块链的祖师爷。虽然共识低效，但也好歹是一种分布式问题的解决方案。</p>
+<p>中本聪的比特币对 “ 拜占庭将军 ” 问题是一个可行的解决方案。</p>
+<p>简单来说，这个问题包括了试图通过在一个不可靠、具有潜在威胁的网络中，通过信息交流来达成一个行动协议共识。中本聪的解决方案是使用工作量证明的概念在没有中央信任机构下达成共识，这代表了分布式计算的科学突破，并已经超越了货币广泛的适用性。</p>
+<p>但是共识只能这样达成吗？有没有一种安全性不低，还更节能高效的方式呢？</p>
+<br>
+<p>那我们先得了解共识的本质是什么？</p>
+<p>为了在一个全球范围内的分布式网络中，保持数据一致性。</p>
+<p>比特币的做法是所有人靠算力竞争谁打包的区块有效，然后大家都复制他的区块。这样比特币交易账本有了多份副本，也达到保持所有节点数据一致的目的。但是效率非常低。</p>
+<br>
+<p>我们不妨看一下这里保持一致的逻辑：</p>
+<p>目的：保持所有节点上数据的一致性。</p>
+<p>方法：靠某种手段选一个节点出块，其他节点复制那个节点出的区块。不能一直选同一个节点，选谁出块是毫无规律可言的。</p>
+<br>
+<p>我们忽略方法只分析目的。既然目的是保持节点们的数据一致，那只要让节点们同时收到消息，不就解决了嘛。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230226122241692.png" alt="image-20230226122241692" style="zoom:21%;" />
+<p>但实际网络环境可不允许，信息传输总有长短不一的延迟，何况节点们本来就不在同一地点，客户端的位置也有远有近，传输距离都不一样。简直乱成一锅粥。根本不可能保证所有节点在同时收到消息。那怎么办呢？</p>
+<img src="2.核心协议/assets/2.共识层/image-20230226125016557.png" alt="image-20230226125016557" style="zoom:33%;" />
+<p>答案很简单，建一个 “ 中转站 ” 就能解决这个问题。不管是从哪发过来的消息，先进中转站里排好队，然后由中转站把消息和执行顺序发给节点们。节点们只要按照中转站给的顺序依次执行操作就能保证数据一致了！</p>
+<br>
+<p>但先别笑，因为还有一个大问题：中心化。所有节点都得听中转站的命令，中转站说按 ABDC 的顺序执行消息，节点就得 ABDC 。兜兜转转一大圈，结果回到原点了。那怎么才能以去中心化的方式给消息排序呢。</p>
+<br>
+<p>去中心化的方式其实很简单，就是做一件事完全不依赖某一个人。没有 “ 上司、管理者 ” ，很民主，大家一起选出一个共识。这活谁来了都能干，谁走了也不影响系统继续运行。（除非都走光，不过有经济激励就总有人来）</p>
+<p>所以怎么设计好呢？让节点们对执行消息的顺序达成共识，把中转站的职能改为去中心化的方式进行。</p>
+<br>
+<p><strong>IC 是这样设计的</strong>：（IC 把节点抽象成子网里的副本 Replica）</p>
+<p>肯定不能依赖中转站。虽然消息到达每个副本的时间可能不一样（即执行消息的顺序不一样），但是所有副本必须按相同顺序执行消息。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230226151334415.png" alt="image-20230226151334415" style="zoom:27%;" />
+<p>那如果大家的顺序都不一样，到底按谁的顺序来执行呢？用随机数选！（IC 的随机信标）</p>
+<p>IC 底层使用了一种可验证的随机数（Verifiable Random Function, VRF）。它能产生不可预测的随机数，而且大家都可以验证随机数不是伪造的。</p>
+<br>
+<p>VRF 用了 BLS 阈值签名方案。BLS 阈值签名算法使用 DKG 给副本们分发私钥片段，这是一种非交互式的分布式密钥生成协议。DKG 可以在成员之间分发私钥片段。不需要可信方，不依赖某一个成员分发私钥片段，避免了单点故障。大家拿着私钥片段去签名信息，签名达到阈值后就可以聚合形成完整的签名。签名过程是非交互的，任何第三方都可以在收到足够多的份额后执行聚合。任何人都可以用唯一的公钥验证签名，公钥也记录在 NNS 的注册表里。</p>
+<br>
+<p>如果消息是确定的，无论哪些私钥片段参与了签名，只要达到阈值数量（生成随机信标的阈值是三分之一），最终都能聚合成唯一的签名信息。比如下图的阈值是 6 。16 个副本为了生成本轮的随机信标签名，只要签名大于 6 就可以聚合。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230303104523514.png" alt="image-20230303104523514" style="zoom:25%;" />
+<p>只要敌人拿到的私钥片段小于三分之一，就无法干扰到 BLS 阈值签名。也无法预测签名结果，因为私钥片段不够嘛，也就是说任何人不知道签名结果。</p>
+<blockquote>
+<p>子网的共识最多对抗小于三分之一的恶意副本；如果恶意副本小于三分之一，那它能做的也只有签名或者不签名，没法干扰阈值签名的最终结果，也没法阻止签名产生；如果恶意副本大于等于三分之一，子网已经被破坏，随机数也就无所谓了。所以随机信标的阈值比较低，是三分之一。产生随机数的速度能快一点。</p>
+</blockquote>
+<ul>
+<li>传统的 RSA 或者 ECDSA 算法中，自己掌握私钥，消息又是公开的，相当于自己知道签名结果。私钥泄露之后别人也可以提前知道签名结果。</li>
+<li>而在 BLS 阈值签名算法中，由一群人掌管私钥片段。签名的人他自己没有完整私钥，所以也不知道签名结果。只有大家签完聚合之后才知道签名。在整个过程中，全局私钥没有任何人知道，但签名的结果是大多数人认可的结果。由一群人产生签名，任何个人都无法预测签名的结果，单个人无法阻止签名发布。</li>
+</ul>
+<p>这就可以作为随机信标，为哪个副本出块提供参考。这个随机数也是一个共识的结果，而且无法被单个人篡改。而且，这个是可以持续安全地产生随机数，只要每轮用出不同的信息来签名。这个不同的信息当然就是上一轮的随机信标和一些区块的 dkg_id ，这样一来每轮签名的信息都不一样。</p>
+<p>IC 的随机信标、公证、敲定、随机磁带、认证复制状态都用了 BLS 阈值签名。</p>
+<br>
+<h2 id="解决方案"><a class="header" href="#解决方案">解决方案</a></h2>
+<p>我们来仔细看看 IC 的共识协议怎么出块：</p>
+<h3 id="首先是出块前的准备"><a class="header" href="#首先是出块前的准备">首先是出块前的准备</a></h3>
+<p>共识协议按照轮次进行出块。比如第 1 轮对创世区块达成了共识，第 6 轮就负责第 6 个区块。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230227223208655.png" alt="image-20230227223208655" style="zoom:25%;" />
+<p>在开始之前，子网先根据副本的数量，随机选择一些副本组成一个 “ 共识委员会 ” 。如果副本数量太少，所有副本都会加入委员会。委员会内的成员负责打包出块，所以子网里副本数量非常多也不会影响性能。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230227231451557.png" alt="image-20230227231451557" style="zoom:20%;" />
+<p>子网里还有个 “ <strong>时期</strong> ” （Epoch）的概念。一个时期大约是几百个轮次。NNS 可以对每个子网的时期进行调整。</p>
+<p>每个子网在包含多轮（通常大约是几百轮）的时期内运行。每个时期有不同的副本组成委员会。</p>
+<p><img src="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/assets/2.%E5%85%B1%E8%AF%86%E5%B1%82/image-20230227232831136.png" alt="image-20230227232831136" /></p>
+<p>每个时期结束时，通过随机信标选出下个时期的共识委员会成员，而现在的共识委员会成员将会在下个时期全部转为随机信标委员会成员。</p>
+<p>新时期的第一个块里包含有这个时期的共识委员会名单、随机信标委员会名单。</p>
+<br>
+<p>并且新时期开始时会重新给成员们分发一次私钥片段，这个过程叫<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">主动秘密再共享</a>。这样做的原因有二：</p>
+<ul>
+<li>
+<p>当子网的成员发生变动时，再共享可以确保任何新成员都有新的私钥片段，而任何退出子网的成员就没有新的私钥片段了。</p>
+</li>
+<li>
+<p>即使每个时期有少量的私钥片段泄露给攻击者，也不能使攻击者对共识产生威胁。</p>
+</li>
+</ul>
+<br>
+<p>共识委员会数量和子网中副本成员总数有关。为了提高可扩展性，在小规模网络中，委员会成员可以是所有副本；在大规模网络中，委员会成员是所有副本中的一部分，并在每一个时期不断变化。</p>
+<p>共识委员会成员的数量不能太多也不能太少。太少了不安全，太多了又影响共识速度。</p>
+<p>所以委员会数量和成员总数的关系有一个数学模型描述：当子网里的成员总数趋近无限大时，超几何分布趋于二项分布，即不放回随机抽样的方式趋向于放回的随机抽样。因为副本成员总数无限大嘛，那放回和不放回就没有区别了。关于如何确定共识委员会的数量，这里就不展开讨论了，感兴趣可以看<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D/%E5%85%B1%E8%AF%86%E5%A7%94%E5%91%98%E4%BC%9A%E6%95%B0%E9%87%8F%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%EF%BC%9F.html">这里</a>的介绍。</p>
+<br>
+<p>完成准备工作就可以出块了。</p>
+<br>
+<h3 id="开始出块block-maker"><a class="header" href="#开始出块block-maker">开始出块（Block maker）</a></h3>
+<p>每一轮开始，都由上一轮产生的随机信标生成一个排名，排名决定了成员出块的权重。权重最高的老大优先出块。（如下图，排名为 5 个共识委员会成员分配一个 0 ~ 4 的数字，0 的权重最高）</p>
+<p>正常情况下，老大诚实而且网络连接正常，老大负责出块。其他人都等着公证老大的区块，这时候即使收到老二的区块也不公证，非得等着老大的区块。</p>
+<p>与此同时，随机信标委员会也将上一轮信标的哈希和这轮的 NiDKG 记录打包、签名、广播。在签名达到阈值时，产生本轮的随机信标，也就决定了下一轮的出块权重。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230531104931802.png" alt="image-20230531104931802" style="zoom:25%;" />
+<br>
+<p>一个非创世区块里一般包含：</p>
+<ul>
+<li>上一个区块公证之后到打包这个区块时，这一段时间内收到的消息，我们叫它 “ <strong>荷载</strong> ” （payload）。</li>
+<li>上一个区块的哈希。</li>
+<li>出块副本的排名。</li>
+<li>区块的高度。</li>
+</ul>
+<p>当组成区块后，负责出块的副本会生成一份<strong>区块提案</strong>，包括：</p>
+<ul>
+<li>区块本身。</li>
+<li>自己的身份标识。</li>
+<li>自己对这个区块的签名。</li>
+</ul>
+<img src="2.核心协议/assets/2.共识层/image-20230302124528188.png" alt="image-20230302124528188" style="zoom:25%;" />
+<p>然后将其区块提案广播给其他成员。</p>
+<br>
+<p>老大出块，广播给大家，公证完成，因为只有老大的一个块被公证所以不用敲定，直接进入下一轮，这是最快的情况，也是最普通的情况。大约 1 秒敲定一个块。（乐观响应：协议会以实际网络延迟而不是网络延迟上限继续执行）</p>
+<p>如果等了一段时间，一直没收到老大的区块，可能是老大网络不太好，也可能是机器出现了故障；这时大家才认可老二或者老三的区块，给他们的区块做公证。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230531104728709.png" alt="image-20230531104728709" style="zoom:80%;" />
+<p>系统有一个约定好的等待时间，如果在一段时间之内没有收到老大的区块，就在第二段时间期待老二的区块了。然后是在第三个时间段期待老三的区块，假如老三是自己，那就自己出块 ...... </p>
+<br>
+<h3 id="公证notarization"><a class="header" href="#公证notarization">公证（Notarization）</a></h3>
+<p><strong>公证只验证区块的合理性</strong>，公证过的区块不代表已经达成共识。这保证了当前轮次中的多个区块里，至少有一个区块能得到公证。</p>
+<p>因此，公证并不意味着共识，也不需要共识。如果多个区块具有相同的权重，那么这些区块都会被签名。</p>
+<br>
+<p>公证时，共识委员会的成员验证以下三方面的信息：</p>
+<ul>
+<li>区块里应该有上一轮已经公证过的区块的哈希。</li>
+<li>区块的荷载必须满足一些特定条件，比如要考虑这轮验证后的状态等等（是对荷载内容的具体规定，这些条件是独立于共识协议的）。</li>
+<li>负责出这个块的副本的排名必须对应随机信标里的排名（比如排名第二的副本说自己排第一，那这个块就得不到公证）。 </li>
+</ul>
+<br>
+<p>如果区块的信息没问题，负责验证的副本先对区块高度和区块的哈希签名，然后把刚才的签名连同哈希、高度和自己的身份标识组成 “ <strong>公证片段</strong> ” 。把自己公证过的公证片段广播出去。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230302153935674.png" alt="image-20230302153935674" style="zoom:20%;" />
+<p>公证也用了 BLS 阈值签名。当有副本收到足够多（阈值是三分之二）的公证片段时，聚合签名片段形成对这个区块的公证。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230302165334450.png" alt="image-20230302165334450" style="zoom:14%;" />
+<p>聚合之后的公证信息包括区块哈希、区块高度、聚合签名和三分之二以上的身份标识。副本要么发现收集到了足够的公证片段，自己聚合为公证；要么从别人那里收到已经聚合好的公证。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230316125350561.png" alt="image-20230316125350561" style="zoom:25%;" />
+<br>
+<p>形成公证之后依然是广播出去。当其他成员收到已经公证过的区块后，转发广播一遍公证过的区块，并且不再给其他区块生成公证片段。</p>
+<p>比如下图拿手机的女孩和小蓝帽进入了下一轮共识。而女孩发给另外 3 个人时网络中断了 700 毫秒，由小蓝帽转发的消息起了关键作用，不然五缺三也没法玩了。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230302163949099.png" alt="image-20230302163949099" style="zoom:21%;" />
+<br>
+<p>如果老大的块有问题，公证失败，老二的出块权重就是现在最大的。如果老二老三的块都经过了公证，下一轮的老大会选择在权重大的区块后面出块。就像下面图中的第 5 轮、第 6 轮那样，老二的区块权重大于老三的区块权重。把所有区块的权重加起来，黄色和紫色的区块组成的链是权重最大的链。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230302111740043.png" alt="image-20230302111740043" style="zoom:23%;" />
+<br>
+<p>为了能让效率最大化，每个副本都有个 “ 最长的等待时间 ” （Delay functions），是接受新区块或对区块投票之前的最长等待时间，过了这个时间就不等了。这个等待时间的长短是因人而异的，每个副本都不一样。</p>
+<p>如果有的副本因为网络延迟，连续好几轮都没收到消息，那就是因为它等待的时间太短了。消息还没发过来，它就不等了。如果最终确认失败，所有诚实副本都会多等一会，直到收到最终确认。</p>
+<p>这时副本可以适当增加延迟，多等一会。这样在下一轮更有可能收到消息。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230702192709878.png" style="zoom:50%;" />
+<br>
+<h3 id="敲定finalization"><a class="header" href="#敲定finalization">敲定（Finalization）</a></h3>
+<p>因为有时候会产生不止一个区块（老大没响应时，老二老三为了赶时间都可能出块）。这就需要有个敲定环节了，敲定将确定下来大家都公证过的唯一区块。那么大家都认同的这个区块之前的区块也得到了隐性敲定，其他分支便会失效。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230228204613513.png" alt="image-20230228204613513" style="zoom:20%;" />
+<p>敲定的过程具体为：</p>
+<p>在副本发现一个经过公证的区块之后，就会开始检查自己在这一轮里有没有给别的区块公证过。如果没有给别的区块公证过，那么它会为区块广播一个 “ <strong>敲定片段</strong> ” 。用来证明自己只为这一个区块发布过公证片段。</p>
+<br>
+<p>要实现一个区块的敲定，需要三分之二个不同的副本发布敲定片段，然后聚合为某个区块的敲定。敲定片段和公证片段的格式完全相同（但是通过特定方式标注以防止混淆）。收到敲定后的区块之后，和公证环节一样，都会向其他成员广播一遍。</p>
+<br>
+<p>注意：副本不刻意等待敲定片段聚合为最终的敲定，才进入下一轮。副本只是收到某个高度的敲定片段后检查一下自己有没有公证除了那个块之外的块，然后广播出去自己签名的敲定片段；或者原封不动转发敲定片段。</p>
+<br>
+<p>例如，一个副本在第 11 轮收到了第 10 轮的<strong>敲定片段</strong>。这时候它就检查一下自己当时的行为，然后广播出答复。</p>
+<p>如果过了一会儿，收到了第 10 轮的区块的<strong>敲定</strong>，也就可以敲定第 10 轮。那从第 1 轮到第 10 轮敲定的区块，这一条路上的所有区块对可以视为敲定了。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230302195311269.png" alt="image-20230302195311269" style="zoom:21%;" />
+<p>这些已经敲定的区块可以被认为是大家都确认过安全的，意味着所有的副本都认同了敲定的区块所在的分支。在区块 10 这个区块高度，有且仅有这个区块通过了公证。那么副本在这个高度就达成了共识。</p>
+<br>
+<p>比如：</p>
+<p>如果某个副本在第 5 轮只给一个区块生成过公证片段，副本还会发一个敲定片段，然后进入第 6 轮共识。如果之后收到了最终的敲定，就认为包含敲定的分支是有效的。敲定之后的区块如果没有分叉的话，就一直没问题，不用敲定也行。</p>
+<p>可能第 4 轮有二分之一的副本为老大、老二的区块都生成了公证片段，另外二分之一的副本只为老大生成过公证片段。那么敲定片段由只为老大公证过的副本提出，最终达不到阈值，而没法获得敲定。只有二分之一的副本生成过老二区块的公证片段，所以老二的区块没有获得公证。</p>
+<p>而在第 3 轮，老二、老三的区块都得到了公证。因为网络故障，大部分副本给老二、老三都公证过，所以没法完成敲定。但诚实的副本们都会选择在老二的区块后面继续共识。等后面第 5 轮敲定了，就代表第 3 轮老二的区块得到了敲定。</p>
+<img src="2.核心协议/assets/2.共识层/image-20230302212147233.png" alt="image-20230302212147233" style="zoom:23%;" />
+<p>相比许多其他区块链，IC 共识协议的优势在于采用了异步敲定。在其他区块链中，节点通常需要找到最长链。如果链出现分叉后，节点需要等待一段时间找到最长链。如果因为网络故障错过一些区块，也就找不到最长链了，这时还需要去找其他节点同步数据。</p>
+<p>IC 协议不依赖找到 “ 最长链 ” 的方式来最终确认区块。IC 的最终确认方法只依赖于密码学签名，而不依赖于整个链的确认。只需少量签名即可观察到共识形成的一个块，而不需要等待整个链的确认过程。在短时间内就能消除分叉，敲定的速度可以在不到一秒的时间内实现。</p>
+<br>
+<p><strong>共识的过程到这里就讲完啦！</strong></p>
+<br>
+<p><strong>总结一下</strong>，共识委员会的成员进入新的轮次里，要做 3 件事：</p>
+<p>（1）看看自己排第几，然后决定自己是否出块</p>
+<p>（2）公证区块</p>
+<p>（3）观察区块，找到主链，忽略失效的分支</p>
+<p>共识委员会在下一个时期变成随机信标委员会，负责产生每轮的随机信标。</p>
+<br>
+<p>共识过程为老大出块，大家验证之后给出公证片段，公证片段数量达到阈值聚合为公证，进入下一轮次。敲定不是每轮必须要做完的。</p>
+<p>IC 共识协议确保了当存在个别恶意攻击时，IC 的性能会柔性下降，而不是直接卡死。共识协议目前倾向于在没有故障的 “ 乐观情况 ” 时尽可能提升性能。</p>
+<br>
+<p>随着协议一轮轮推进，以<strong>创世区块（genesis block）<strong>为起点的区块连接成链，不断延长。每个区块都包含一个</strong>荷载 (payload)</strong>，由一系列输入和父区块的哈希组成。</p>
+<p>诚实的副本对区块链的路径有一致的视角，区块里记录着已经排好序的消息，由消息路由层发往执行层处理。</p>
+<br>
+<p>附录：</p>
+<p>两类共识机制对比</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center"></th><th style="text-align: center">经典公链共识机制</th><th style="text-align: center">联盟链共识机制</th><th style="text-align: center">互联网计算机共识机制</th></tr></thead><tbody>
+<tr><td style="text-align: center">写入顺序</td><td style="text-align: center">先写入后共识</td><td style="text-align: center">先共识后写入</td><td style="text-align: center">先写入后共识</td></tr>
+<tr><td style="text-align: center">典型算法</td><td style="text-align: center">PoW、PoS、DPos</td><td style="text-align: center">PBFT、BFT</td><td style="text-align: center">PoUW</td></tr>
+<tr><td style="text-align: center">共识流程</td><td style="text-align: center">大概率一致就确认</td><td style="text-align: center">确认一致后再P2P广播沟通投票</td><td style="text-align: center">通过随机数选择出块节点</td></tr>
+<tr><td style="text-align: center">复杂性</td><td style="text-align: center">计算复杂度高</td><td style="text-align: center">网络复杂度高</td><td style="text-align: center">网络复杂度高</td></tr>
+<tr><td style="text-align: center">是否分叉</td><td style="text-align: center">是</td><td style="text-align: center">否</td><td style="text-align: center">否</td></tr>
+<tr><td style="text-align: center">安全阈值</td><td style="text-align: center">二分之一</td><td style="text-align: center">三分之一</td><td style="text-align: center">三分之一</td></tr>
+<tr><td style="text-align: center">节点数量</td><td style="text-align: center">节点数量可随时随意变动</td><td style="text-align: center">节点数量不能随意变动，数量越多性能越低</td><td style="text-align: center">节点数量不能随意变动，数量多对性能影响不大</td></tr>
+<tr><td style="text-align: center">应用场景</td><td style="text-align: center">非许可链</td><td style="text-align: center">许可链</td><td style="text-align: center">半许可链，靠DAO投票决定节点是否加入</td></tr>
+</tbody></table>
+</div><br>
+<p>几种共识算法对比</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: center">共识算法</th><th style="text-align: center">PoW</th><th style="text-align: center">PoS</th><th style="text-align: center">DPoS</th><th style="text-align: center">PBFT</th><th style="text-align: center">VRF</th><th style="text-align: center">PoUW</th></tr></thead><tbody>
+<tr><td style="text-align: center">节点管理</td><td style="text-align: center">无许可</td><td style="text-align: center">无许可</td><td style="text-align: center">无许可</td><td style="text-align: center">有许可</td><td style="text-align: center">有许可</td><td style="text-align: center">DAO投票许可</td></tr>
+<tr><td style="text-align: center">共识延时</td><td style="text-align: center">高</td><td style="text-align: center">低</td><td style="text-align: center">低</td><td style="text-align: center">低</td><td style="text-align: center">低</td><td style="text-align: center">超低</td></tr>
+<tr><td style="text-align: center">吞吐量</td><td style="text-align: center">低</td><td style="text-align: center">高</td><td style="text-align: center">高</td><td style="text-align: center">高</td><td style="text-align: center">高</td><td style="text-align: center">高</td></tr>
+<tr><td style="text-align: center">节能</td><td style="text-align: center">否</td><td style="text-align: center">是</td><td style="text-align: center">是</td><td style="text-align: center">是</td><td style="text-align: center">是</td><td style="text-align: center">是</td></tr>
+<tr><td style="text-align: center">安全边界</td><td style="text-align: center">1/2</td><td style="text-align: center">1/2</td><td style="text-align: center">1/2</td><td style="text-align: center">1/3</td><td style="text-align: center">1/3</td><td style="text-align: center">1/3</td></tr>
+<tr><td style="text-align: center">代表应用</td><td style="text-align: center">Bitcoin</td><td style="text-align: center">Ethereum</td><td style="text-align: center">BitShare</td><td style="text-align: center">Fabric</td><td style="text-align: center">Algorand</td><td style="text-align: center">Internet Computer</td></tr>
+<tr><td style="text-align: center">扩展性</td><td style="text-align: center">好</td><td style="text-align: center">好</td><td style="text-align: center">好</td><td style="text-align: center">差</td><td style="text-align: center">差</td><td style="text-align: center">无限</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="消息路由层"><a class="header" href="#消息路由层">消息路由层</a></h1>
+<h2 id="副本内的消息收发站"><a class="header" href="#副本内的消息收发站">副本内的消息收发站</a></h2>
+<p>消息路由层顾名思义，负责一个副本内部的消息传递，承上启下。</p>
+<h3 id="简介"><a class="header" href="#简介">简介</a></h3>
+<p>共识层将消息打包进区块的<strong>荷载</strong>（Payload）中，区块敲定之后，由共识层触发消息路由层。子网里的每个副本都会解析区块中的荷载，并由消息路由层将消息传递给执行层里对应的 Canister 。Canister 执行完消息后，更新其内部状态，然后把消息响应交给消息路由层。</p>
+<p>消息路由层要确保只要是经过共识的消息，都得交给执行层对应的 Canister 。以及把跨子网消息转移到对应的子网。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230705221646101.png" style="zoom:39%;" />
+<p>消息路由层<strong>收到</strong>的消息分两种：</p>
+<p>一种是用户发来的消息，叫<strong>入口消息</strong>。另一种是其他子网的 Canister 发的消息，叫<strong>跨子网消息</strong>。</p>
+<p>消息路由层<strong>发出</strong>的消息也分两种：</p>
+<p>一种是对用户消息的响应，叫<strong>入口消息响应</strong>。另一种还是<strong>跨子网消息</strong>，是自己子网的 Canister 发送给其他子网里 Canister 的消息。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230705221940166.png" style="zoom:40%;" />
+<h3 id="消息队列"><a class="header" href="#消息队列">消息队列</a></h3>
+<p>执行层的每个 Canister 都有输入队列和输出队列。消息路由会把区块中的荷载路由到目标 Canister 的输入队列中。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230315212538792.png" alt="image-20230315212538792" style="zoom:25%;" />
+<p>每个 Canister 有自己一些<strong>输入队列</strong>和<strong>输出队列</strong>。</p>
+<ul>
+<li>
+<p><strong>输入队列</strong>：</p>
+<p>输入队列里有：来自用户的消息、其他子网里 Canister 发的跨子网消息、子网内其他 Canister 的消息。</p>
+<p>Canister 每轮都会执行一些输入队列中的消息，然后把消息响应放进 Canister 的<strong>输出队列</strong>。</p>
+</li>
+<li>
+<p><strong>输出队列</strong>：</p>
+<p>输出队列里有：对用户消息的响应、发给其他子网里 canister 的消息、发给子网内其他 Canister 的消息。</p>
+<p>当消息路由层从消息队列中拿到消息后，把消息放进<strong>子网间数据流</strong>（Subnet-to-subnet streams），然后由<strong>跨子网传输协议</strong>（Crossnet transfer protocol）来负责将这些消息实际传输到其他子网中。</p>
+</li>
+</ul>
+<p>除了输出队列，还有一种<strong>入口历史</strong>（Ingress history）的数据结构。它记录在一个叫 “ 每轮认证状态 ” 的<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/ToDo%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E5%93%88%E5%B8%8C%E6%A0%91%E3%80%81%E9%BB%98%E5%85%8B%E5%B0%94%E6%A0%91%EF%BC%8C%E8%AF%8D%E6%B1%87%E8%A1%A8%E9%87%8C%E5%86%99">哈希树</a>里。入口历史只记录 Canister 执行消息之后的响应。以便用户能获取自己消息的响应。</p>
+<blockquote>
+<p>注意：入口历史并不保留所有入口消息的完整历史。只保留更新调用之后响应的消息。</p>
+<p>查询调用的响应不记录在入口历史中（入口历史只记录更新调用的响应），所以也不能用每轮认证状态验证。但 IC 提供了另一种验证机制，就是<strong>认证变量</strong>（Certied variables）。我们可以把一些重要内容用认证变量存储。</p>
+<p>如果查询调用的内容是认证变量，那么查询调用就是安全的、可验证的。因为 Canister 的认证变量是被哈希之后也记录在每轮认证状态里了。而每轮认证状态是经过共识的，也就是说，这些内容在子网里所有副本里都一样。</p>
+</blockquote>
+<p>我们把消息路由和执行层单独拿出来看，就是这样：</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230316155533653.png" alt="image-20230316155533653" style="zoom:25%;" />
+<p><strong>跨子网的消息</strong>：当 Canister 向其他子网的 Canister 发送信息时，这个信息会被放入跨子网络队列，并在本轮结束时由子网络核实。接收到信息的子网可以通过验证签名来确认信息是经过发送方的授权。这些消息需要经过共识。IC 用 Xnet 协议实现跨子网通信，<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">后面</a>有详细介绍。</p>
+<h3 id="子网内跨-canister-调用"><a class="header" href="#子网内跨-canister-调用">子网内跨 Canister 调用</a></h3>
+<p>除了跨子网的消息外，也有 Canister 调用同一子网内的另一个 Canister 的消息，叫<strong>子网内消息</strong>（Intra-subnet messages）。消息路由层会将这些消息从输出队列直接转到对应 Canister 的输入队列中，不需要经过额外一轮的共识。</p>
+<p>那为什么 Canister 发给其他子网的消息要经过共识，而 Canister 给子网内的消息不用经过额外的共识？</p>
+<p>因为这种改变状态的操作都在子网内。</p>
+<p>你想想，副本们里的数据状态都是一样的，共识也是为了保障副本们数据的一致性。那么副本们达成共识之后，各副本就会进行同样的操作。每个诚实的副本都会执行子网内的跨 Canister 调用，大家一起执行跨 Canister 的调用，这不还是保持一致的操作嘛。</p>
+<p>共识是在大家面对各不相同的选择时，用来让大家统一执行操作的。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230315112900500.png" alt="image-20230315112900500" style="zoom:25%;" />
+<p>所以子网里的一个 Canister 调用了另一个 Canister 。也就是每个副本都会进行相同的跨 Canister 调用。每个副本里存的数据都是这个子网里的全部数据。副本们都执行跨 Canister 的调用，子网里任然保持着数据的一致性。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230315113615265.png" alt="image-20230315113615265" style="zoom:15%;" />
+<p><strong>消息路由层提供的保证</strong> </p>
+<ol>
+<li>跨子网消息必须得一次性传递到目标 Canister 所在子网的执行层。</li>
+<li>如果遇到无法传递消息，就必须生成一个拒绝响应。</li>
+<li>如果一个 Canister A 向 Canister B 发送两个消息 m1 和 m2 ，如果没被拒绝的话，就必须保证它们按照先后顺序放入 Canister B 的输入队列中。</li>
+</ol>
+<h3 id="总结-1"><a class="header" href="#总结-1">总结</a></h3>
+<p>这时候我们来总结一下，一个副本（子网的）的状态包括 Canister 的状态和 “ 系统状态 ” 。 “ 系统状态 ” 包括了 Canister 的输入输出队列、跨子网的数据流和入口历史的数据结构。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230316155804081.png" alt="image-20230316155804081" style="zoom:25%;" />
+<p>也就是说，消息路由层和执行层一起维护着一个副本的状态。而且副本的状态是在完全确定的情况下更新的，这样子网里所有的副本都保持着完全相同的状态。并且共识层不需要和消息路由层保持完全一致的进度。</p>
+<h2 id="每轮认证状态"><a class="header" href="#每轮认证状态">每轮认证状态</a></h2>
+<p>每一轮次中，子网里每个副本的状态都会变更。</p>
+<p>在每一轮变更的部分当然也需要单独记录。因为 IC 的共识只保证诚实的副本按照相同的顺序处理消息。共识只在消息进入执行层之前把关，但是消息处理之后的出口还缺少一个 “ 守卫 ” ：消息响应因为网络问题没有发送成功怎么办？客户端收到消息后，怎么验证消息真伪？万一消息响应是黑客伪造就麻烦了。万一服务器系统出现奇怪的 bug 导致消息没有执行 ...... </p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230316161120474.png" style="zoom:22%;" />
+<p>副本之间需要在处理消息后，再最后核对一次状态。<strong>每轮认证状态</strong>（Per-round certified state，也叫系统状态树 The system state tree）就这个守卫，是一个完整轮次中的最后一环。每轮认证状态可以记录这一个轮次中副本改变的状态，并用再广播给大家做一次阈值签名，同样是要经过三分之二的副本确认。</p>
+<p>输入和输出都必须经过共识认证，否则就有出现分歧的风险。</p>
+<p>所以为了确保每个副本对消息的处理没有问题，在 Canister 执行消息之后，还得把已经执行完的消息记录下来，让副本们之间再核对一下。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230304212907324.png" alt="image-20230304212907324" style="zoom:25%;" />
+<p>在每个轮次执行消息后，每个副本把自己生成的每轮认证状态哈希一下，打包为<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E8%AF%8D%E6%B1%87%E8%A1%A8">默克尔树</a>（Merkle Tree），并用私钥片段签名。收集够三分之二的签名片段，聚合为完整的签名。状态树和认证过的签名称为每轮认证状态。</p>
+<p>因为执行层会以相同的方式处理消息，所以理论上子网中的每个副本都会独立创建出相同的树。</p>
+<p>每轮状态树只有一些每轮执行后变动过的数据信息。副本整体的状态不在每轮认证状态里。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230630093902871.png" style="zoom:50%;" />
+<p>每轮认证状态包含这一轮次里的：</p>
+<ul>
+<li>多种关于每一个 Canister 的元数据（比如 wasm 的哈希等等，不是 Canister 的完整状态）</li>
+<li>上一轮每轮认证状态默克尔树的根节点哈希</li>
+<li>加入子网间数据流的跨子网消息</li>
+<li>入口历史，对消息的各种响应</li>
+<li>各个子网的 id 和公钥</li>
+<li>当前时间</li>
+<li>元数据</li>
+</ul>
+<p>而 IC 的共识层和执行层是分开的，是两个独立的部分。共识层和执行层也都可以调整自己的节奏速度。如果出现共识太快，执行层堆积的消息太多，跟不上共识时，就需要消息路由通知共识层减速。（可能是因为执行层出现了一些 bug 等等）在<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E9%93%BE%E6%8E%A5%E5%88%B0%E5%85%B1%E8%AF%86%E5%B1%82%E5%BB%B6%E8%BF%9F%E5%87%BD%E6%95%B0">这里</a>看共识是如何减速的。</p>
+<p>那怎么知道执行层慢了呢？通过每轮认证状态。每个副本都会观察每轮认证阈值签名的轮次和达成共识的轮次，如果差太多了就得降速了。</p>
+<img src="2.核心协议/assets/3.消息路由层/z.gif" alt="z" style="zoom:80%;" />
+<p>就像传统工厂里的流水线一样，有一部分零件慢了，整个生产线都得慢下来。不然待处理的消息堆积越来越多。</p>
+<h2 id="xnet-协议"><a class="header" href="#xnet-协议">XNet 协议</a></h2>
+<p>IC 通过 XNet 协议实现子网之间的通信。为了降低消息传输的延迟，副本倾向于选择离自己更近的副本通信。</p>
+<p>简单来说，跨子网消息是这样传输的：</p>
+<p>当执行层的 Canister 处理完消息之后，把跨子网消息放进输出队列。消息路由层有一个组件叫<strong>流构建器</strong>（Stream builder），流构建器负责把跨子网消息组成一个个数据流。经过<strong>每轮状态认证</strong>阈值签名后，由副本的 <strong>XNet 端点</strong>执行发送。XNet 端点发送消息给子网 B 最近的副本。子网 B 的副本的 <strong>XNet 荷载构建器</strong>收到消息后，把荷载广播出去。再打包出块达成共识。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230704175104583.png" style="zoom:43%;" />
+<p><strong>流构建器</strong>从 Canister 的输出队列中提取消息，给消息们排好队。它需要满足确定性、顺序性和公平性：</p>
+<ol>
+<li>确定性：所有副本必须对流的内容达成一致。（副本们对每轮状态认证进行阈值签名）</li>
+<li>顺序性：如果 Canister A 先发送请求 R1 给 Canister B ，然后再发送请求 R2 ，那 R1 在数据流中排在 R2 前面。</li>
+<li>公平性：我们不希望某个 Canister 占用过多的带宽。流构建器会尽量让每个 Canister 有相同的带宽。</li>
+</ol>
+<p>流构建器根据目标子网对这些消息排序，并组成一个个消息流（每个目标子网一个消息流）。每个消息流中的消息都有一个唯一递增的索引。</p>
+<p>之后每轮状态认证会对已提交的状态进行认证。完成认证后，认证过的数据流就可以发送给其他子网了。</p>
+<p><strong>XNet 端点</strong>负责把认证过的消息发送到其他子网。XNet 端点是一个为其他子网提供消息的组件，它通过安全的 TLS 连接提供服务，仅接受来自其他副本的连接。XNet 端点从注册表中获取节点的完整列表、子网分配、IP 地址和公钥（用于建立 TLS 连接）。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230703190731465.png" alt="image-20230703190731465" style="zoom:37%;" />
+<p>如果子网 B 的副本想从子网 A 获取新消息，它会选一个最近的子网 A 副本，然后通过 XNet 协议向这个副本发送请求。XNet 通过 Https 协议传输信息。</p>
+<p><strong>XNet 荷载构建器</strong>负责接收跨子网消息。顾名思义，接收之后就会把这些消息作为荷载打包进区块里，达成共识，执行 ...... </p>
+<p>除了跨子网消息，还有用户入口消息、比特币交易（对于启用了比特币集成的子网）也会作为荷载打包进区块里。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230704143120472.png" style="zoom:50%;" />
+<p>将这些荷载组合并打包到一个区块中后，共识协议将对整个区块进行验证并达成共识。完成共识后，荷载中的消息将得到处理。</p>
+<p>这就是消息从一个子网传递到另一个子网的过程。如下图所示。</p>
+<img src="2.核心协议/assets/3.消息路由层/image-20230704142004752.png" style="zoom:37%;" />
+<p>垃圾回收（Garbage collection）：发送消息之后还需要告诉子网 A 哪些消息已经被子网 B 处理过了，这样子网 A 就可以清除这些不再需要的消息。</p>
+<p>这些组件确保了跨子网消息能正确传递，并实现了安全、可扩展的区块链通信。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="执行层"><a class="header" href="#执行层">执行层</a></h1>
+<p>执行层负责执行智能合约。在 IC 上，<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E8%AF%8D%E6%B1%87%E8%A1%A8">智能合约</a>是一个虚拟化容器：Canister 。</p>
+<h2 id="简介-1"><a class="header" href="#简介-1">简介</a></h2>
+<p>IC 按轮次进行工作，每个轮次都是由共识层对一组消息块达成一致来触发的。</p>
+<p>每轮开始时，消息会按照它们的目的地分配给合约的输入队列。子网的消息分配到子网输入队列。调度器会对这些消息进行排序以进行执行。每轮处理子网状态时，一达到限制，执行就会结束。</p>
+<img src="2.核心协议/assets/4.执行层/image-20230626192552025.png" style="zoom:37%;" />
+<p>调度器可以在 Canister 之间公平地分配工作负载，优先处理需要优化吞吐量的 Canister 。当一个 Canister 被调度执行时，它会分配一个可用的 CPU 内核，并逐个执行输入队列中的消息，直到所有消息处理完毕。然后，调度器选择下一个 Canister 进行执行，直到达到指令轮次限制，或者没有 Canister 需要调度了。</p>
+<p>执行环境会监控资源使用情况，并从 Canister 的余额中扣除相应的 Gas 费。</p>
+<p>为了安全和可靠性，每个 Canister 都在一个隔离的沙盒环境中执行。执行每条单独的消息时，调度器启动托管 Canister 的沙盒进程，并在提供的消息上执行。每条消息执行可能会向其他 Canister 发送新消息、修改 Canister 状态的内存页面或生成响应。执行环境会根据 Canister 消耗的指令数量进行记账。</p>
+<img src="2.核心协议/assets/4.执行层/image-20230626172541627.png" style="zoom:50%;" />
+<p>如上图，更多关于 Canister 的内容请看<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">第四章</a>。</p>
+<p>为了管理 Canister 的执行时间，IC 对每个 Canister 执行的指令数量做了限制。每个 Canister 在每轮都有固定的指令数量。在一轮执行结束时，Canister 的执行会暂停，并在下一轮继续。为了防止 Canister 占用过多资源，对每个 Canister 的单次调用所能执行的最大指令数量有限制。若超过限制，执行将被终止，Canister 的状态回滚，同时会扣除消耗的 Cycles 。</p>
+<p>执行环境还对 Canister 在每一轮可以修改的堆页数做了限制。不过 Canister 超过限制后，仍会保存执行结果，只是不会执行后续操作了。Canister 计划修改的堆内存页数低于限制时，才会执行后续操作。</p>
+<h2 id="调度器"><a class="header" href="#调度器">调度器</a></h2>
+<p>调度器（Scheduler）就像大脑，它负责安排执行层上运行的 Canister 的执行顺序。调度器要做到以下几点：</p>
+<ol>
+<li>它必须是确定性的，也就是说，在相同条件下，它每次的决策都要一样。</li>
+<li>它需要公平地在各个 Canister 之间分配工作任务。</li>
+<li>它应该优先考虑整体的处理速度，而不是单个任务的执行速度。</li>
+</ol>
+<p>为了让 Canister 在系统繁忙的时候依然能够快速响应，它们可以选择预先支付一定的计算资源。每个 Canister 都有自己的计算资源分配，这个分配就像是一个 CPU 内核的一小部分。只有一部分子网的计算能力可以被分配，这样可以确保那些没有预先分配计算资源的 Canister 也能得到执行。</p>
+<p>公平性是指要保证每个 Canister 都能获得它们的计算资源分配，并在剩余的计算资源中平均分配。调度器会选取若干个 Canister 来执行一个完整的轮次。在一个轮次中， Canister 要么完成执行它们所有的任务，要么达到指令限制。</p>
+<p>调度器会根据每个 Canister 在多个轮次中累积的积分作为优先级。在每个轮次开始时，每个 Canister 都会获得一定的积分，包括它们的计算资源分配以及剩余计算资源的平均份额。调度器会按照轮询方式将 Canister 分配到 CPU 内核上执行，并从执行了一个完整轮次的 Canister 中扣除 100 积分。</p>
+<p><strong>举个例子</strong>：</p>
+<p>假设有三个 Canister ，分别为 A 、B 和 C 。而每个副本有 2 个 CPU 内核。每个 Canister 都有输入队列，用于接收待处理的消息。调度器处理这些 Canister 的执行。</p>
+<ol>
+<li>
+<p>在轮次开始时， Canister A、B 和 C 的输入队列分别有 5 条、3 条和 10 条消息。调度器会评估这些消息并对它们进行排序以进行执行。</p>
+</li>
+<li>
+<p>假设调度器首先选择 Canister A 进行处理。它会给 Canister A 分配一个空闲的 CPU 内核，并逐个执行 Canister A 输入队列中的消息。等 Canister A 的所有消息（5 条）都处理完后，调度器会把 Canister A 标记为完成。</p>
+</li>
+<li>
+<p>不用等 Canister A 完成，调度器给 A 分配完内核之后就可以给 Canister B 分配内核了。它给 Canister B 分配另一个内核，逐个执行 Canister B 输入队列里的消息。当 Canister B 的所有消息（3 条）都处理完之后，调度器把 Canister B 标记为完成。再把 CPU 内核分配给 Canister C 。</p>
+</li>
+</ol>
+<img src="2.核心协议/assets/4.执行层/image-20230626200920284.png" style="zoom:37%;" />
+<ol start="4">
+<li>最后调度器根据它自己的规则选择了 Canister C 处理。它会分配一个空闲的 CPU 内核给 Canister C ，并开始逐个执行 Canister C 输入队列中的消息。这时，在处理了 6 条消息后， Canister C 达到了该轮次的指令限制。调度器会将 Canister C 标记为未完成，暂停执行，等下一个轮次继续。</li>
+</ol>
+<img src="2.核心协议/assets/4.执行层/image-20230626200740392.png" alt="image-20230626200740392" style="zoom:37%;" />
+<ol start="5">
+<li>在下一个轮次开始时，调度器会评估所有 Canister 的输入队列，包括 Canister C 未处理完的消息。然后它根据优先级、累积的短缺和其他因素进行调度，确保公平、高效地分配任务。</li>
+</ol>
+<p>Canister 是单线程的，多个 Canister 可以多核并行运行。假如有 300 个 CPU 内核，那调度器会尽可能在这些内核上运行不同的 Canister 。在每个 CPU 内核上，Canister 会被一个接一个地执行。直到达到限制。</p>
+<p>每个 Canister 都有独立的状态，且 Canister 之间的通信是异步的。这样 IC 就有了像传统云服务一样的可扩展能力。通过增加子网络数量，IC 可以实现水平扩展。</p>
+<h2 id="cycles-计费"><a class="header" href="#cycles-计费">Cycles 计费</a></h2>
+<p>Canister 执行任务时需要消耗资源，例如 CPU 、网络带宽和内存使用等。这些资源的消耗是通过 “ Cycles ” 来衡量的。</p>
+<p>技术上，在智能合约中运行的 Wasm 字节码在向 IC 安装或更新 Wasm 字节码时会进行检测，用于统计执行智能合约消息的指令数量。这可以计算出为执行消息需要的 Cycles 量。使用 Wasm 作为智能合约的字节码格式在很大程度上帮助实现了确定性，因为 Wasm 本身在执行中基本上是确定的。最重要的是， Cycles 计费必须完全确定，使得每个副本为给定操作计费的 Cycles 数量完全相同，并保持子网的复制状态机属性。</p>
+<p>智能合约使用的内存，无论是 Wasm 字节码还是智能合约状态，都需要通过 Cycles 进行支付。接收入口消息、发送 XNet 消息和向 Web 2.0 服务器发出 HTTPS 呼叫等网络活动也由智能合约通过 Cycles 进行支付。</p>
+<p>与其他区块链相比，IC 存储数据的成本算很低的了（当然比便宜肯定比不过 Arweave ，Ar 是专门做存储的，和别的比是很低了）。</p>
+<p>Cycles 是一种价格稳定的代币，它与 <a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E8%AF%8D%E6%B1%87%E8%A1%A8%E8%A7%A3%E9%87%8A%E6%88%96%E8%80%85%E6%94%BE%E7%99%BE%E5%BA%A6%E9%93%BE%E6%8E%A5">SDR</a> 锚定。1 SDR = 1Trillion Cycles = $10^{12}$ Cycles </p>
+<h3 id="canister-的资源消耗"><a class="header" href="#canister-的资源消耗">Canister 的资源消耗</a></h3>
+<p>每个 Canister 都有一个 Cycles 账户，Canister 可以持有、发送、接收 Cycles 。计费标准由 NNS 控制，可以通过发提案投票调整。消耗 Cycles 的包括以下几种：</p>
+<ol>
+<li>
+<p><strong>执行收费</strong>：Canister 处理请求时（调用 Canister 函数），根据执行的指令次数收取相应的费用。</p>
+</li>
+<li>
+<p><strong>调用收费</strong>：Canister 之间发送消息时会产生费用，费用与消息大小成正比。Canister 向其他 Canister 发消息时要支付消耗带宽的费用。消息传输的成本与消息的大小成正比，而且 IC 上的消息大小有上限，所以费用也是有上限的。</p>
+<p>当 Canister 向另一个 Canister 发起调用时，执行环境会从发起调用的 Canister 账户中扣除 Cycles ，支付传出调用消息的成本和被调用者将发送回复消息的成本。由于不知道回复消息的大小，所以先按最大的消息扣除，回复短的话，再返回多余的 Cycles 给调用者。</p>
+</li>
+<li>
+<p><strong>存储收费</strong>：Canister 存储数据需要支付费用（包括 Wasm 字节码和状态），系统每经过一轮共识都会对 “ 当前 ” 时间达成一致，然后根据轮次计费。了解更多请参见<a href="https://github.com/dfinity/ic/blob/master/rs/cycles_account_manager/src/lib.rs#L568">源代码</a>。</p>
+</li>
+<li>
+<p><strong>创建 Canister</strong>：在第一次线上部署 Canister 时，需要充值一些 Cycles 给 Canister 。默认是 3T cycles，最少充值 0.01T 。</p>
+</li>
+</ol>
+<h3 id="cycles-计费模式"><a class="header" href="#cycles-计费模式">Cycles 计费模式</a></h3>
+<p>IC 采用 “ 反向 Gas 模型 ” 。也就是说，Canister 的维护人需要为执行计算提供 Gas 费（Cycles），用户不用为发送消息付费。</p>
+<p>在 Canister 的执行过程中，IC 的执行层会采用合约级调度和批量消息处理来优化系统的吞吐量和延迟。同时，为了确保安全和可靠性，Canister 在隔离的沙盒环境中运行。执行环境会记录 Canister 的使用情况，如 CPU 时间、内存、磁盘空间和网络带宽，然后从 Canister 的 Cycles 余额中扣除相应的费用。</p>
+<img src="2.核心协议/assets/4.执行层/1688483328530.jpg" style="zoom:70%;" />
+<p>在一个子网里消耗了多少 Cycles ，相应的，这个子网对应的数据中心就会得到一部分 ICP 。这部分增发的 ICP 和消耗的 Cycles 是成正比的。所以如果一个子网里的副本越多（数据中心越多），那 Gas 费也就越高，因为最终要付给数据中心 ICP 的嘛。同理，（假如）如果一个子网里没有部署 Canister ，也就没有 Cycles 消耗，数据中心也就没有 ICP （亏损）。不过 Dapp 开发者不能选择自己的 Canister 部署在哪个子网，这个是随机分配的，所以每个子网都会被公平分配部署 Canister 。</p>
+<p>如果子网的 Canister 比较多，</p>
+<p>既然是反向 Gas 模型，由 Canister 支付自己运行的 Gas 费，那 IC 如何防止恶意消耗 Cycles 的调用攻击呢？</p>
+<ul>
+<li>
+<p>在执行来自用户的消息之前，容器可以检查用户的消息，这个消息叫入口消息。当接收到用户的更新调用时，系统会用 canister_inspect_message 方法检查是否要接受消息。如果容器为空（没有 Wasm 模块），就会拒绝入口消息。如果容器不为空且没有被 canister_inspect_message 方法拦截，Canister 就执行这个入口消息。</p>
+<p>在 canister_inspect_message 方法里，Canister 可以调用 ic0.accept_message : () → () 接受该消息。如果 Canister 调用过太多次这个接收消息的 ic0.accept_message 函数，就会被 canister_inspect_message 方法拒绝。或者 Canister 没调用 ic0.accept_message 方法，也等于是拒绝了。如果 Canister 拒绝该消息，就不用支付任何费用。</p>
+<p>另外，查询调用、跨 Canister 调用和管理 Canister 的调用，系统不调用 canister_inspect_message 方法检查。</p>
+</li>
+<li>
+<p>当 Canister 向另一个 Canister 发送消息，叫跨 Canister 消息。发送方 Canister 必须为请求的传输和最终响应的传输支付费用。在<a href="https://github.com/dfinity/ic/blob/master/rs/config/src/subnet_config.rs#L120">这里</a>查看操作费用。</p>
+</li>
+</ul>
+<h3 id="冻结阈值"><a class="header" href="#冻结阈值">冻结阈值</a></h3>
+<p>为了防止 Canister 突然耗尽周期，导致数据丢失，系统里有一个冻结阈值。如果 Cycles 不足以维持 Canister 接下来 30 天的存储费用时，Canister 就会被冻结。</p>
+<p>冻结之后 Canister 不会再接收和发送消息，停止计算，直接拒绝所有请求。这时 Canister 只消耗存储数据的 Cycles 。Canister 被冻结之后充值一些 Cycles ，让余额高于阈值就可以解冻了。如果 30 天之后还没有充值 Cycles ，那 Cycles 耗尽时 Canister 会被子网删掉。</p>
+<p>并且，如果执行某个操作扣除了 Cycles 之后会低于冻结阈值， Canister 也无法执行这个操作。</p>
+<p>接下来，一起看看调度器的<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/4.%E6%89%A7%E8%A1%8C%E5%B1%82%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90/scheduler.html">代码</a>吧。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="代码分析"><a class="header" href="#代码分析">代码分析</a></h1>
+<ul>
+<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">P2P层代码分析</a></li>
+<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">共识层代码分析</a></li>
+<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">消息路由层代码分析</a></li>
+<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">执行层代码分析</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="相关概念介绍"><a class="header" href="#相关概念介绍">相关概念介绍</a></h1>
+<ul>
+<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D/%E5%85%B1%E8%AF%86%E5%A7%94%E5%91%98%E4%BC%9A%E6%95%B0%E9%87%8F%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%EF%BC%9F.html">共识委员会数量如何确定？</a> </li>
+<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D/P2P%E5%B1%82%E6%98%AF%E5%A6%82%E4%BD%95%E9%99%8D%E4%BD%8E%E6%81%B6%E6%84%8F%E6%94%BB%E5%87%BB%E7%9A%84%EF%BC%9F.html">P2P层是如何降低恶意攻击的？</a> </li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="共识委员会数量如何确定"><a class="header" href="#共识委员会数量如何确定">共识委员会数量如何确定？</a></h1>
+<p>首先，我们有一个很大的群体（我们称之为 U ），里面有诚实的人和不诚实的人。</p>
+<p>现在，我们想要从这个群体中随机抽取一小部分人（称之为 G ），并计算这个小组中诚实人的概率。我们希望抽中的人都是诚实的人。但显然，不可能保证全部抽到诚实的人，那就让抽到诚实人的概率最大吧！</p>
+<p>那么如何计算这个概率呢？</p>
+<p>我们使用了<strong>超几何累积分布函数</strong>（CDFhg）和<strong>二项累积分布函数</strong>（CDFbinom）公式来确定最小的小组大小，以确保诚实人的概率高于我们可以接受的阈值。</p>
+<p>我们用一个叫做<strong>超几何累积分布函数</strong>（CDFhg）的数学公式。简单来说，这个公式帮助我们根据群体 U 的总人数、诚实人数以及我们想要抽取的小组 G 的大小来计算诚实人的概率。</p>
+<p>但我们想要确定一个最小的小组大小（称之为 n ），使得诚实人的概率高于一个我们可以接受的阈值（1 - ρ）。这样，我们可以在实际应用中使用这个小组大小。</p>
+<p>如果我们的群体 U 变得非常大时，我们使用另一个<strong>二项累积分布函数</strong>（CDFbinom），它基于二项分布。这个公式与之前的类似，但它适用于更大的群体 U 。</p>
+<p>最后，我们通过比较不同的阈值（ρ）和不诚实人所占比例（β），找到适用于不同场景的最小小组大小。这些大小可以应用于实际的协议，以确保我们抽取的小组 G 中诚实人的概率足够高。</p>
+<p>我们来详细解释一下这两个数学公式：CDFhg 和 CDFbinom 。</p>
+<h3 id="超几何累积分布函数cdfhg"><a class="header" href="#超几何累积分布函数cdfhg">超几何累积分布函数（CDFhg）</a></h3>
+<p>在这个公式中，我们使用 CDFhg(x, n, M, N) 来表示超几何分布的累积分布函数。</p>
+<p>这里：</p>
+<ul>
+<li>N：群体 U 的总人数</li>
+<li>M：群体 U 中诚实人的数量</li>
+<li>n：我们要抽取的小组 G 的大小</li>
+<li>x：小组 G 中允许的最大诚实人数</li>
+</ul>
+<p>然后，我们可以通过以下公式计算随机抽样的小组 G 中诚实人的概率：</p>
+<p>$Prob[G honest] = CDFhg(⌈n/2⌉ − 1, n, ⌊|U|/β⌋, |U|)$ </p>
+<p>这个公式告诉我们，给定群体 U 中诚实人和不诚实人的数量，我们可以计算出抽取特定大小的小组 G 时，诚实人的概率。</p>
+<h3 id="二项累积分布函数cdfbinom"><a class="header" href="#二项累积分布函数cdfbinom">二项累积分布函数（CDFbinom）</a></h3>
+<p>当群体U的大小趋于无穷大时，我们可以使用二项分布来替代超几何分布。二项累积分布函数表示为 CDFbinom(x, n, p) 。</p>
+<p>这里：</p>
+<ul>
+<li>p：每次抽取的成功（诚实人）概率</li>
+<li>n：我们要抽取的小组 G 的大小</li>
+<li>x：小组 G 中允许的最大诚实人数</li>
+</ul>
+<p>我们可以通过以下公式计算随机抽样的小组G中诚实人的概率：</p>
+<p>$Prob[G honest] ≥ CDFbinom(⌈n/2⌉ − 1, n, 1/β)$ </p>
+<p>这个公式告诉我们，在一个非常大的群体中，我们可以计算出抽取特定大小的小组 G 时，诚实人的概率。</p>
+<p>这两个数学公式都用于计算随机抽样的小组 G 中诚实人的概率。CDFhg 适用于有限大小的群体 U ，而 CDFbinom 适用于无穷大的群体 U 。这些公式帮助我们找到适当的小组大小，以确保诚实人的概率高于我们可以接受的阈值。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="p2p层是如何降低恶意攻击的"><a class="header" href="#p2p层是如何降低恶意攻击的">P2P层是如何降低恶意攻击的？</a></h1>
+<p>P2P 层用多种方法来降低恶意行为的影响，确保子网中的副本能够高效且安全地进行通信。以下是 P2P 层如何处理潜在恶意行为的几个关键点：</p>
+<p><strong>利用加密哈希确保完整性</strong>：当副本收到一个工件的通知时，通知中会包含工件的加密哈希。副本下载工件后，会对下载内容应用相同的加密哈希函数。如果生成的哈希与通知中的哈希匹配，工件才被认为是有效的并继续处理。这样可以防止有恶意的副本发送被篡改的工件内容。</p>
+<p><strong>客户端验证</strong>：即使有恶意副本发送了一个哈希匹配的工件，客户端组件（如共识层组件）在处理或转发工件给其他副本之前，还需进行验证。这包括验证签名或检查工件是否符合预期的格式和规则。</p>
+<p><strong>选择性下载工件</strong>：P2P 层收到通知时不会立即下载工件。相反，副本会根据通知内容和自身状态来决定是否下载工件。这可以减少恶意副本通过不必要或恶意工件淹没网络的影响。</p>
+<p><strong>冗余和容错</strong>：下载可分为多个数据块的大型工件时，P2P 层会尝试从发布了工件的多个副本下载数据块。这提高了下载速度和带宽利用率。同时，在副本出现恶意行为或故障时，它还具有容错功能。</p>
+<p><strong>经过验证的连接</strong>：P2P 层的底层传输组件在子网中的副本之间建立基于 TLS 和 TCP 的安全连接。副本使用私钥进行相互认证，确保只有同一子网的副本才能通信。这减少了未授权副本将恶意流量注入子网的风险。</p>
+<p><strong>监控和重新发送请求</strong>：P2P 层持续监测连接质量和收到的工件。如果副本遇到工件问题，比如丢失或无效的数据，它可以向对方副本请求重新发送工件。这个机制有助于从恶意副本可能引发的问题中恢复。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="web3领域"><a class="header" href="#web3领域">Web3领域</a></h1>
+<h2 id="web3"><a class="header" href="#web3">Web3</a></h2>
+<p>Web3 是互联网的下一代版本，它旨在为我们的在线世界带来更多的去中心化、安全和透明度。想象一下，现在的互联网（我们称之为 Web2 ）主要由一些大公司控制，而 Web3 则试图将权力和控制分散到用户手中。这意味着，在 Web3 世界里，用户对自己的数据和身份有更大的控制权，而不是将它们完全交给像谷歌、脸书这样的公司。</p>
+<p>Web3 的核心技术是区块链，这是一种去中心化、安全的分布式数据库。你可以把区块链想象成一个公共账本，它能记录所有人的交易和活动，而且一旦记录就无法篡改。基于区块链技术的应用程序，如智能合约、去中心化金融（DeFi）和去中心化应用（Dapp），都是Web3的重要组成部分。</p>
+<p>让我们用一个例子来说明 Web3 是如何改变现有互联网的。在 Web2 ，艺术家想要在网上出售自己的作品，通常需要依赖一些中心化的平台（如 eBay 、亚马逊等）。这些平台往往会收取高昂的手续费，并控制用户的交易过程。而在 Web3 的世界里，艺术家可以使用去中心化的市场（如OpenSea）出售他们的作品。在这里，艺术家可以将自己的作品制作成非同质化代币（NFT），并将其直接出售给购买者，无需第三方的干预。这样，艺术家可以获得更大的收益，而且对交易有更多的控制权。</p>
+<p>Web3 还为在线隐私提供了更好的保护。在目前的互联网上，用户的数据和隐私往往容易受到侵犯。在 Web3 中，用户可以通过加密和自主管理的身份来确保他们的数据安全。这使得整个网络更加安全、可靠。</p>
+<p>Web3 是基于区块链技术的互联网新时代，它将权力和控制重新分配给用户，提高安全性和透明度。通过去中心化的应用和服务，Web3有望改变我们与互联网的互动方式，创造出更加公平、自由的在线世界。</p>
+<h2 id="智能合约smart-contract"><a class="header" href="#智能合约smart-contract">智能合约（Smart Contract）</a></h2>
+<p>智能合约就像一个自动执行的数字合同，它定义了一组事先编写好的规则。一旦这些规则被满足，智能合约就会自动执行相应的操作。它是基于区块链技术的，这意味着它是去中心化的、安全的，而且一旦部署就无法修改。简单来说，智能合约就是一段自动执行的计算机程序，它确保双方在没有第三方的情况下，也能完成交易、签订合同等操作。</p>
+<p>它就像一个自动售货机，你投 5 块钱，它就吐 5 块钱的饮料。</p>
+<p>想象一下，你和朋友打赌，赌哪个足球队会赢得比赛。在现实生活中，你们可能需要找一个可靠的第三方来保管赌注。但在智能合约的情况下，你们可以创建一个程序来代替这个第三方。这个程序会接收你们的赌注，并在比赛结束后，根据比赛结果自动将赌金发给胜利者。这样一来，就不需要让一个真人参与其中，而且你们也不用担心对方不守信用。</p>
+<p>智能合约的应用范围十分广泛，如金融、房地产、保险等领域。举个例子，想象一个保险公司。如果你购买了一份航班延误保险，当你的航班确实延误时，通常你需要提交一些材料并等待保险公司的审批。但是，如果有一个基于智能合约的保险系统，只要你的航班信息被确认为延误，智能合约就会自动执行，立即为你支付赔偿金。这样一来，整个过程变得更加简单、高效和透明。</p>
+<p>智能合约是一种自动执行、基于区块链技术的数字合同。它可以在各种场景下简化流程，提高效率，确保交易安全。</p>
+<h2 id="dapp"><a class="header" href="#dapp">Dapp</a></h2>
+<p>DApp（去中心化应用）是一种运行在区块链网络上的应用程序，它不受任何中心化实体的控制，这意味着没有一个公司或个体可以完全控制它。DApp 的设计使其更加安全、透明和可靠，因为它们的数据和操作是基于区块链技术的，这是一种去中心化、不可篡改的分布式数据库。</p>
+<p>想象一下，你正在使用一个中心化的社交媒体平台（如 Facebook 或 Twitter ）。这些平台掌握着你的数据和隐私，它们可以随意更改规则、审查内容或甚至出售你的信息。而 DApp 则为你提供了一个去中心化的社交媒体平台，它不受任何中心化实体的控制，使你能够自主管理自己的数据和隐私。</p>
+<p>DApp 的一个很好的例子是加密货币交易所。在传统的中心化交易所（如 Coinbase 或 Binance ）中，用户的资金和交易信息都被存储在交易所的服务器上。然而，去中心化交易所（DEX ，如 Uniswap ）是基于区块链技术的 DApp ，它允许用户在不涉及第三方的情况下直接进行数字货币交易。这样，用户可以在保持资金安全的同时，享受更高的隐私和自主权。</p>
+<p>除了交易所以外，DApp 还有许多其他应用场景，如去中心化金融（DeFi）平台、游戏、市场等。这些去中心化应用程序为用户提供了一个更加自由、安全和透明的互联网环境。</p>
+<p>DApp 是一种基于区块链技术的去中心化应用程序，它摆脱了中心化实体的控制。通过使用 DApp ，用户可以更好地保护自己的数据和隐私，同时享受更高的安全性和透明度。DApp 是 Web3 时代的关键组成部分，它们共同助力构建一个更加公平、安全的互联网未来。</p>
+<h2 id="大饼"><a class="header" href="#大饼">大饼</a></h2>
+<p>BTC。比特币的别称。</p>
+<h2 id="all-in--梭哈"><a class="header" href="#all-in--梭哈">All in / 梭哈</a></h2>
+<p>拿所有家当买某个东西。全押。“梭哈”或“All in”是一种扑克术语，通常在德州扑克（Texas Hold'em）中使用。当玩家将所有筹码押上时，就表示他们决定“全押”或“梭哈”。这是一种高风险、高回报的策略，因为玩家可能一下子赢得所有对手的筹码，也有可能输掉手中所有筹码。</p>
+<p>想象一下，你正在参加一场德州扑克比赛，玩家们围坐在一张桌子旁，手里拿着筹码。在游戏的每一轮中，你需要根据手中的牌和桌面上的公共牌来判断自己的胜算。如果你认为自己的牌型非常好，胜算很高，那么你可能会选择“梭哈”，把所有筹码押上。这样，你可能会赢得这一轮的底池，也可能让其他玩家畏惧不敢跟注。</p>
+<p>然而，“梭哈”也有很大的风险。如果对手手中的牌型更好，你可能会输掉所有筹码，被淘汰出局。因此，“梭哈”是一种需要玩家谨慎考虑的策略。在决定“梭哈”之前，你需要权衡胜算、底池大小、对手的行为模式等多种因素。</p>
+<p>此外，“梭哈”这个概念在现实生活中也经常被用来形容一种豁出去、孤注一掷的态度。当一个人在某个决定性时刻，为了追求成功或实现梦想而全力以赴，我们也可以说他（她）“梭哈”了。比如，一个创业者决定把所有的积蓄和精力投入到自己的创业项目中，这就是一种“梭哈”的精神。</p>
+<p>“梭哈”或“All in”是一个源自扑克游戏的术语，表示玩家将所有筹码押上的行为。它既是一种高风险、高回报的策略，也是一种敢于冒险、勇往直前的态度。在现实生活中，“梭哈”精神鼓励我们在关键时刻勇敢追求目标，不畏艰难，全力以赴。</p>
+<h2 id="ecdsa"><a class="header" href="#ecdsa">ECDSA</a></h2>
+<p>ECDSA（椭圆曲线数字签名算法）是一种加密技术，它用于确保数据的安全和完整性。它的原理是通过椭圆曲线密码学生成一对密钥：公钥和私钥。公钥是公开的，可以与其他人分享；而私钥是保密的，仅由密钥拥有者知道。这种加密方法可以帮助我们在网络中安全地发送信息和验证数据的来源。</p>
+<p>想象一下，你正在给一个朋友寄信。为了确保信件的安全，你需要把它放在一个锁着的箱子里。在这个例子中，ECDSA 就像是一个特殊的锁：用你的私钥锁上箱子，而这把锁只能用你的公钥打开。这样，当你的朋友收到信件时，他们可以用你的公钥打开箱子，确定信件是从你那里发送的，而且没有被篡改。</p>
+<p>ECDSA 在加密货币和区块链技术中有着广泛的应用。比特币和以太坊等加密货币就使用了 ECDSA 作为其加密和数字签名标准。在这些系统中，用户的私钥用于对交易进行签名，而公钥用于验证交易。这样可以确保交易的安全和完整性，防止他人伪造或篡改交易。</p>
+<p>ECDSA 的一个重要特点是它提供了高度的安全性，同时需要较低的计算资源和存储空间。这使得它在加密货币和其他安全敏感应用中非常有用。然而，ECDSA 也有一些局限性，例如它不能抵抗量子计算攻击。因此，随着技术的发展，未来可能需要采用新的加密方法来保护我们的数据安全。</p>
+<p>ECDSA 是一种基于椭圆曲线密码学的加密技术，它通过生成一对公钥和私钥来确保数据的安全和完整性。在网络通信和加密货币领域，ECDSA 发挥着重要作用，帮助我们保护信息和验证数据的来源。尽管它具有一定的局限性，但 ECDSA 仍然是当前许多应用的关键加密技术。</p>
+<h2 id="bls"><a class="header" href="#bls">BLS</a></h2>
+<p>BLS（Boneh-Lynn-Shacham）签名是一种加密技术，它的主要优势在于能够实现非常高效的聚合签名。这意味着，可以将多个签名聚合成一个单独的签名，从而大大减小了存储和传输的开销。BLS 签名在区块链、分布式系统和密码学研究中得到了广泛的应用。</p>
+<p>假设有一群人在一起合作完成一个项目，每个人都需要在项目报告上签名。在传统的签名方法中，每个人都需要在报告上单独签名，这会占用很多空间。然而，使用 BLS 签名的话，这群人可以将他们的签名聚合成一个紧凑的签名，大大减小了报告的体积。这样，验证者只需检查这个聚合签名，就能确保所有参与者都已签名。</p>
+<p>BLS 签名在区块链领域具有重要应用，尤其是在一些去中心化的共识算法中，如以太坊 2.0 的共识协议。在这些系统中，节点需要对交易或区块进行签名以表达他们的共识。通过使用 BLS 签名，可以将多个节点的签名聚合成一个签名，从而降低了网络传输和存储的开销。这有助于提高区块链的可扩展性和性能。</p>
+<p>BLS 签名是一种高效的加密技术，它可以将多个签名聚合成一个紧凑的签名。这种方法节省了存储空间和传输带宽，提高了系统的性能。在区块链和分布式系统领域，BLS 签名发挥着重要作用，帮助实现更高效、可扩展的共识机制。</p>
+<h2 id="默克尔树"><a class="header" href="#默克尔树">默克尔树</a></h2>
+<p>默克尔树（Merkle Tree）是一种树形数据结构，用于存储和验证数据的完整性。你可以把它想象成一棵树，树上的每个节点都有一个哈希值，而这个哈希值是由它的子节点的哈希值计算而来。树的底层（叶子节点）存储的是实际数据的哈希值。</p>
+<p>举个例子，假设我们有四个文件：A、B、C 和 D。我们首先对这四个文件分别计算哈希值，得到哈希值 HA、HB、HC 和 HD。然后我们把这些哈希值两两组合，计算它们的哈希值：比如将 HA 和 HB 组合，计算得到新的哈希值 HAB；同理，将 HC 和 HD 组合，得到哈希值 HCD。最后，我们再将 HAB 和 HCD 组合，得到树的根节点哈希值 HABCD。这样，整棵默克尔树就构建完成了。</p>
+<p>那么，默克尔树的优势在哪里呢？首先，它可以快速验证数据的完整性。假设我们要检查文件 A 是否被篡改，我们只需要计算 A 的哈希值，然后通过树的其他节点（比如 HB、HCD）来验证根节点哈希值是否正确。这样，我们就可以在不获取完整数据的情况下检查数据的完整性。这对于分布式系统和区块链技术非常有用。</p>
+<p>其次，默克尔树还可以有效地提高数据存储效率。因为每个节点都保存了它的子节点的哈希值，我们可以通过逐层计算哈希值，来找到某个数据。这样，就避免了遍历整个数据集的时间消耗。</p>
+<p>总的来说，默克尔树是一种非常实用的数据结构，它能高效地验证和存储数据，特别适合分布式系统和区块链技术。像树一样，根节点包含着整棵树的信息，通过简单地计算哈希值，我们就可以轻松地确保数据的完整性。</p>
+<h2 id="gas-fee"><a class="header" href="#gas-fee">Gas fee</a></h2>
+<p>在区块链网络上，当你想要完成一笔交易或执行一个智能合约时，需要支付一定的费用。这个费用就是 Gas fee 。</p>
+<p>那么为什么需要支付这个费用呢？这是为了给那些为区块链网络提供计算能力的 “ 矿工 ” 们一些激励。矿工们负责验证交易，确保交易的合法性，并把交易记录打包到一个区块中。为了激励他们工作，用户需要支付 Gas fee 给他们。</p>
+<p>以太坊的 Gas fee 的价格会波动，这取决于网络上的交易量。当很多人都在使用区块链网络时，Gas fee 会上涨，就像在交通拥堵时期，打车费会变得更贵一样。你可以自己设定 Gas fee 的价格，但要注意，如果你设定的价格太低，矿工们可能不愿意优先处理你的交易，导致交易延迟甚至失败。</p>
+<p>在 IC 上，Gas 费是固定的，而且不受网络影响随意波动。普通用户一般可以直接忽略 Gas 费。在<a href="/2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/4.%E6%89%A7%E8%A1%8C%E5%B1%82.html#cycles-%E8%AE%A1%E8%B4%B9">这里</a>了解关于 Gas 费的更多内容。</p>
+<h2 id="defi"><a class="header" href="#defi">DeFi</a></h2>
+<p>DeFi（去中心化金融）是一种基于区块链技术的金融服务模式，它旨在消除传统金融系统中的中心化机构，如银行、交易所和保险公司。通过利用智能合约和加密货币，DeFi 为用户提供了一种更加透明、开放和可靠的金融服务方式。</p>
+<p>假如你需要贷款购买一辆新汽车。在传统金融体系中，你需要去银行提交申请，银行会根据你的信用评分和收入情况决定是否批准你的贷款。这个过程可能既费时又复杂，而且对于没有信用记录或无法提供足够担保的人来说，获得贷款可能更加困难。</p>
+<p>然而，在 DeFi 体系中，你可以通过一个去中心化的借贷平台来申请贷款。这个平台不是由一个中心化机构运营的，而是基于区块链技术的智能合约。你只需将一定数量的加密货币作为抵押品，就可以立即获得贷款，无需经过繁琐的审核过程。此外，DeFi 平台还可以让你随时查看贷款的状态和利息，提供更高的透明度。</p>
+<p>DeFi 不仅限于借贷服务，它还包括了一系列金融产品和服务，如去中心化交易所（DEX）、稳定币、资产管理、预测市场等。这些服务可以让用户直接在区块链上进行交易和投资，无需依赖传统金融机构。</p>
+<p>DeFi 是一种基于区块链技术的金融服务模式，它旨在消除金融系统中的中心化机构，提供更加透明、开放和可靠的金融服务。无论是借贷、交易还是投资，DeFi 都有望改变我们对金融服务的认知，让金融市场变得更加包容和高效。</p>
+<h2 id="流动性提供者liquidity-provider与流动资金池子liquidity-pools"><a class="header" href="#流动性提供者liquidity-provider与流动资金池子liquidity-pools">流动性提供者（Liquidity Provider）与流动资金池子（Liquidity Pools）</a></h2>
+<p>流动性提供者（Liquidity Provider，简称LP）是在去中心化金融（DeFi，Decentralized Finance）市场中的一个重要角色。他们通过向交易所或去中心化平台注入资产，帮助提高市场的流动性。简单来说，流动性提供者就像是金融市场中的“水管工”，他们确保资金在市场中顺畅流动，以便参与者能够轻松地进行交易。</p>
+<p>假如市场里有很多水果摊。顾客可以在这些摊位之间自由购买水果。然而，为了确保顾客能够找到他们想要的水果，摊主需要保持足够的库存。这就是流动性提供者的作用：他们为市场提供货物（金融市场中的资产），以满足交易需求。</p>
+<p>在去中心化金融市场，流动性提供者通常将自己的资产注入一个名为 “ <strong>流动性池</strong> ” 的智能合约中。这些资产可以是加密货币、代币等。通过向流动性池注入资产，流动性提供者帮助平台用户进行交易，例如代币兑换、借贷等。</p>
+<p>作为回报，流动性提供者可以从交易手续费中获得收益。这就像水果摊主通过出售水果赚取利润一样。此外，一些去中心化金融平台还会向流动性提供者发放奖励代币，以激励他们参与并提高市场的流动性。</p>
+<p>然而，流动性提供者也要面临一定的风险，如“无常损失”（Impermanent Loss）。这种风险源于流动性池中资产价格的波动，可能导致流动性提供者在赎回资产时损失价值。因此，在成为流动性提供者之前，需要仔细评估潜在的风险和收益。</p>
+<p>流动性提供者在去中心化金融市场中扮演着重要角色，他们通过向市场注入资产，提高交易流动性，以便参与者能够顺畅地进行交易。作为回报，流动性提供者可以从交易手续费和奖励代币中获得收益。但同时，他们也需要关注潜在的风险，如无常损失。</p>
+<h2 id="自动做市商amm"><a class="header" href="#自动做市商amm">自动做市商（AMM）</a></h2>
+<p>自动做市商（Automated Market Maker，简称 AMM）是一种在去中心化金融（DeFi）交易所中使用的算法，它用于确保市场上的交易流动性。与传统的交易所不同，AMM 不需要买家和卖家之间进行交易配对。相反，AMM 通过一个预先设置的数学公式，自动计算资产的交易价格。</p>
+<p>AMM 通过智能合约和流动性池来实现。流动性池是由流动性提供者注入的资产组成的，用户可以在这些池子里进行资产交换。当用户想要交换两种资产时，AMM 会根据预设的数学公式计算交换比例。这个比例会随着交易发生而实时调整，以保持市场的平衡。</p>
+<p>Uniswap 是一个典型的采用 AMM 算法的去中心化交易所。它使用了一个名为 $x * y = k$ 的公式来确定交易价格。在这个公式中，x 和 y 分别表示流动性池中两种资产的数量，而k是一个恒定值。当用户在池中进行交易时，x 和 y 的数量会发生变化，但 k 值保持不变。这样可以确保交易价格自动调整，以维持市场的平衡。</p>
+<p>假设我们有一个去中心化交易所，其中有一个基于 AMM 的流动性池，允许用户在两种代币（代币 A 和代币 B）之间进行交换。我们用 Uniswap 的 $x * y = k$ 公式作为 AMM 算法。</p>
+<p>首先，流动性提供者将代币 A 和代币 B 注入流动性池。假设初始状态下，流动性池中有 1000 个代币 A 和 1000 个代币 B 。根据 AMM 公式，我们有：</p>
+<p>$$
+x * y = k
+$$</p>
+<p>$$
+1000 * 1000 = 1,000,000
+$$</p>
+<p>在这种情况下，恒定值 k 为 1,000,000 。</p>
+<p>现在，假设用户想用 100 个代币 A 来购买代币 B 。他们将会把 100 个代币 A 注入到流动性池中，使得池中的代币 A 数量变为 1100 个。为了保持恒定值 k 不变，我们需要重新计算代币B的数量。根据 AMM 公式：</p>
+<p>$$
+1100 * y = 1,000,000
+$$</p>
+<p>$$
+y ≈ 909.09
+$$</p>
+<p>因此，流动性池中现在剩余约 909.09 个代币 B 。用户用 100 个代币 A 换得了约 90.91 个代币 B（1000 - 909.09）。此外，交易手续费（如果有的话）将被分配给流动性提供者。</p>
+<p>在这个过程中，AMM 根据预设的公式自动调整了代币 A 和代币 B 的交换比例。随着交易的发生，代币价格会实时调整，以保持市场的平衡。这就是 AMM 的基本工作原理。</p>
+<p>需要注意的是，这个例子是一个简化版本，实际操作中可能会涉及到额外的细节，如手续费、滑点等。不过这个例子应该足以帮助你理解 AMM 的核心概念和工作原理。</p>
+<p>AMM 带来了一些优势，如简化交易过程、提高市场流动性以及降低交易延迟。然而，它也存在一些缺点，如可能产生的无常损失（Impermanent Loss）和潜在的价格滑点。</p>
+<p>自动做市商（AMM）是一种在去中心化金融交易所中使用的算法，用于确保市场交易流动性。通过智能合约和流动性池，AMM 可以自动计算资产的交易价格，简化交易过程并降低延迟。虽然 AMM 具有一定的优势，但在使用时也需关注潜在的风险。</p>
+<h2 id="gamefi"><a class="header" href="#gamefi">GameFi</a></h2>
+<p>GameFi 是 “ Game Finance ” 的缩写，它是指将去中心化金融（DeFi）和区块链技术应用于游戏领域的一种新兴趋势。简而言之，GameFi 是一种将游戏和金融相结合的创新方式，使玩家在玩游戏的同时，也能在虚拟世界中赚取收益。</p>
+<p>想象一下，你在玩一个冒险游戏，通过完成任务、打怪等方式，获得了一些游戏内的虚拟物品和货币。通常情况下，这些物品和货币只能在游戏内使用。然而，在 GameFi 的世界里，这些虚拟物品和货币可以转化为现实世界的价值。这是因为游戏内的物品和货币往往采用加密代币（如 NFT ，非同质化代币）来表示，它们具有独特性和稀缺性，可以在区块链上进行交易。</p>
+<p>让我们用一个简单的类比来说明GameFi的概念。想象一下，你在玩一个 “ 宠物养成 ” 游戏，游戏中的每个宠物都是一个独特的 NFT 。通过照顾和培养宠物，你可以提高宠物的属性和技能，从而提高宠物的价值。在 GameFi 的环境中，你可以将这些宠物在游戏内或游戏外的市场上出售，换取其他玩家的加密货币。这些加密货币可以在区块链上进行交易，甚至可以兑换成法定货币。这样一来，你就能在享受游戏乐趣的同时，还能赚取收益。</p>
+<p>此外，GameFi 还鼓励玩家参与游戏的治理和生态建设。例如，通过持有游戏内的治理代币，玩家可以参与决策游戏的未来发展方向、规则设定等。这有助于建立一个去中心化、共享的游戏世界，让玩家成为真正的利益相关者。</p>
+<p>GameFi 是将去中心化金融和区块链技术应用于游戏领域的新兴趋势。它将游戏和金融相结合，使玩家在虚拟世界中赚取收益，并参与游戏的治理和生态建设。这种模式为游戏行业带来了新的商业模式和收益机会，同时也为玩家提供了更多的参与度和价值体现。</p>
+<h2 id="socialfi"><a class="header" href="#socialfi">SocialFi</a></h2>
+<p>SocialFi 是一个将社交媒体和去中心化金融（DeFi）相结合的新兴领域。它通过整合社交网络和金融工具，为用户提供更加便捷、有趣和个性化的金融服务。SocialFi 的目标是让金融服务变得更加社交化，同时利用区块链技术带来的去中心化、安全和透明的优势。</p>
+<p>为了让你更好地理解 SocialFi，我们可以将其比喻为一场金融领域的社交派对。在这个派对上，你不仅可以与朋友和家人交流互动，还可以一起参与各种金融活动，如投资、借贷和交易。这样，金融服务变得更加亲切和有趣。</p>
+<p>SocialFi 的一个典型应用是社交型代币。社交型代币是由社区或个人发行的加密货币，它们代表了社区成员之间的价值和信任。用户可以通过购买、持有和交易这些代币来参与社区的活动，例如参与投票、获取特权或分享利润。比如，一个音乐人可以发行自己的社交型代币，粉丝购买这些代币来支持音乐人，并获得音乐专辑、演唱会门票等特权。</p>
+<p>此外，SocialFi 还包括了一系列基于社交网络的金融工具和服务，如去中心化预测市场、社交投资组合以及社区治理等。这些工具和服务使得金融市场变得更加透明、公平和包容，让更多人能够参与和受益。</p>
+<p>SocialFi 是一种将社交媒体和去中心化金融相结合的新兴领域。通过整合社交网络和金融工具，SocialFi 为用户提供了更加便捷、有趣和个性化的金融服务。它有望改变我们对金融服务的认知，让金融市场变得更加社交化、公平和包容。</p>
+<h2 id="多方安全计算mpc"><a class="header" href="#多方安全计算mpc">多方安全计算（MPC）</a></h2>
+<h2 id="wallet"><a class="header" href="#wallet">Wallet</a></h2>
+<h2 id="token"><a class="header" href="#token">Token</a></h2>
+<p>Token（代币）是一种基于区块链技术的数字资产，通常用于表示某种价值或权益。在加密货币世界中，代币可以用于交换商品、服务或作为投资工具。与加密货币（如比特币、以太坊等）不同，代币通常是基于现有区块链平台（如以太坊）创建的，而非拥有独立的区块链网络。</p>
+<p>Token 的应用场景很广泛，包括：实用型代币（Utility Token）用于访问特定服务或应用；治理型代币（Governance Token）用于参与项目的决策制定；以及安全型代币（Security Token）代表实际资产（如股票、房地产等）的所有权。因此，在投资代币时，了解其背后的项目和价值是非常重要的。</p>
+<h2 id="whale"><a class="header" href="#whale">Whale</a></h2>
+<p>Whale（鲸鱼）是指拥有大量数字货币或代币的投资者。这些投资者的资产规模很大，因此他们的交易行为可能对市场价格产生显著影响。当鲸鱼买入或卖出大量代币时，市场价格可能会迅速上涨或下跌，引发其他投资者的关注和跟随。</p>
+<h2 id="did-去中心化身份"><a class="header" href="#did-去中心化身份">DID （去中心化身份）</a></h2>
+<p>当谈到区块链中的 DID（去中心化身份）时，可以将其想象为一种数字身份证明，它可以帮助我们在互联网上安全地验证和管理个人身份信息。传统的身份验证方式通常需要信任第三方机构，比如银行或政府，但 DID 利用区块链技术，使得身份验证过程更加去中心化和透明。</p>
+<p>DID 是由一长串数字和字母组成的唯一标识符，类似于你在现实生活中的身份证号码。但与身份证不同的是，DID 不由中央机构颁发，而是由个人自主创建和控制。这意味着你可以在没有中间人的情况下管理和掌握自己的身份信息。</p>
+<p>举个例子，想象一下你想在一个网上社交平台上注册一个账号。通常情况下，你需要提供大量的个人信息，包括姓名、地址、电话号码等，然后将这些信息交给平台进行验证和保存。然而，这种方式存在着隐私和安全的风险，因为你无法完全掌控你的数据。</p>
+<p>而使用 DID，你可以创建一个自己的数字身份，并将需要验证的信息存储在区块链上。平台只需验证你的 DID 是否有效，而无需直接访问你的个人信息。这样一来，你的身份信息不会集中存储在一个地方，而是分散存储在区块链的不同节点上，大大减少了数据被黑客攻击或滥用的风险。</p>
+<p>另外，DID 还可以让你在不同的场景中重复使用你的身份信息。想象一下你要去租一辆汽车，通常情况下你需要提供驾照、信用卡等身份信息。但有了 DID，你只需通过一个验证过程，然后使用你的数字身份在多个场景中进行身份认证，从租车公司到酒店再到航空公司，避免了重复填写和验证个人信息的麻烦。</p>
+<p>综上所述，DID 是一种创新的数字身份验证方式，通过区块链技术实现去中心化和安全管理个人身份信息。它给互联网带来了更高的隐私保护和便捷性，让个人能够更好地掌控自己的身份数据。</p>
+<h2 id="kyc"><a class="header" href="#kyc">KYC</a></h2>
+<p>Know Your Customer</p>
+<h2 id="fork"><a class="header" href="#fork">Fork</a></h2>
+<p>分叉</p>
+<h2 id="ama"><a class="header" href="#ama">AMA</a></h2>
+<p>Ask me Anything。</p>
+<h2 id="roadmap"><a class="header" href="#roadmap">Roadmap</a></h2>
+<h2 id="whitepaper"><a class="header" href="#whitepaper">Whitepaper</a></h2>
+<p>白皮书</p>
+<h2 id="public-chain"><a class="header" href="#public-chain">Public Chain</a></h2>
+<p>公链</p>
+<h2 id="seed-phrase"><a class="header" href="#seed-phrase">Seed Phrase</a></h2>
+<p>Seed Phrase（助记词）是一组由 12 到 24 个单词组成的短语，用于恢复加密货币钱包的访问权限。当你创建一个新的数字钱包时，系统会生成一个独特的助记词，由私钥转化而来。所以和私钥一样重要。这些词就像是钥匙，可以让你控制和访问钱包中的资产。</p>
+<p>注意，助记词非常重要！务必妥善保管，避免泄露给他人。一旦他人获取了你的助记词，他们就可以轻易地控制你的资产。为了安全起见，建议将助记词抄写在纸上，保存在安全的地方。</p>
+<h2 id="ido"><a class="header" href="#ido">IDO</a></h2>
+<p>IDO（Initial DEX Offering）是一种加密货币项目筹资的方式，它类似于传统股票市场中的 IPO（首次公开募股），但发生在去中心化交易所（DEX）上。IDO 的目的是为新项目筹集资金，并为项目的代币提供流动性和初步定价。</p>
+<p>让我们用一个简单的类比来理解 IDO 。想象一下，有一家初创公司（如某个创新的加密货币项目）想要筹集资金来支持它的业务发展。在传统的股票市场中，这家公司可以选择进行 IPO ，向公众出售它的股票。而在加密货币市场中，这家公司可以选择进行 IDO ，通过去中心化交易所向公众发售它的代币。</p>
+<p>进行 IDO 的一般流程是这样的：</p>
+<ol>
+<li>
+<p>项目方选择在某个去中心化交易所进行 IDO 。这个交易所需要提供发起IDO的平台，如 PancakeSwap 、Uniswap 等。</p>
+</li>
+<li>
+<p>项目方确定 IDO 的条件，包括代币价格、总发行量、筹资目标等。这些信息需要公开透明，让投资者了解项目的基本情况。</p>
+</li>
+<li>
+<p>在 IDO 开始时，投资者可以购买项目方发行的代币。这个过程通常是先到先得的，有时还会设置购买上限，以避免单个投资者独占大量代币。</p>
+</li>
+<li>
+<p>IDO 结束后，项目方会将筹集到的资金用于项目开发、营销等方面。与此同时，投资者持有的代币可以在去中心化交易所上进行交易。这样，代币价格就由市场供需关系决定，形成一个自由的市场价格。</p>
+</li>
+</ol>
+<p>IDO 是一种发生在去中心化交易所上的加密货币项目筹资方式。通过 IDO ，新项目可以筹集资金、分发代币，并为代币提供流动性和初步定价。这种方式相对于传统的 IPO ，具有更低的门槛、更高的透明度和更快的交易速度等优点。然而 IDO 也可能带来更高的风险，因为加密货币市场相对较新，监管和市场稳定性方面可能存在不足。投资者在参与 IDO 时，需要谨慎评估项目的潜在价值和风险。</p>
+<h2 id="ico"><a class="header" href="#ico">ICO</a></h2>
+<p>ICO（Initial Coin Offering）是一种加密货币项目筹资的方式，类似于传统股票市场中的IPO（首次公开募股）。通过 ICO ，新项目可以筹集资金来支持它的发展，并向投资者发行代币。这些代币往往具有某种实用性，如在项目的生态系统中使用，或用作治理权益等。</p>
+<p>假如有一家初创公司（如某个加密货币项目）想要筹集资金来支持它的业务发展。在传统的股票市场中，这家公司可以选择进行 IPO ，向公众出售它的股票。而在加密货币市场中，这家公司可以选择进行 ICO ，向公众发售它的代币。</p>
+<p>进行 ICO 的一般流程是这样的：</p>
+<ol>
+<li>
+<p>项目方发布白皮书，详细介绍项目的背景、目标、技术架构等信息。白皮书的目的是让投资者了解项目的基本情况，并评估其潜在价值。</p>
+</li>
+<li>
+<p>项目方确定 ICO 的条件，包括代币价格、总发行量、筹资目标等。这些信息需要公开透明，让投资者了解项目的基本情况。</p>
+</li>
+<li>
+<p>在 ICO 开始时，投资者可以购买项目方发行的代币。这个过程通常是先到先得的，有时还会设置购买上限，以避免单个投资者独占大量代币。</p>
+</li>
+<li>
+<p>ICO 结束后，项目方会将筹集到的资金用于项目开发、营销等方面。与此同时，投资者持有的代币可以在加密货币交易所上进行交易。这样，代币价格就由市场供需关系决定，形成一个自由的市场价格。</p>
+</li>
+</ol>
+<p>ICO 是一种加密货币项目筹资的方式，通过 ICO ，新项目可以筹集资金、分发代币，并为代币提供流动性。这种方式相对于传统的 IPO ，具有更低的门槛、更高的透明度和更快的交易速度等优点。然而，与此同时，ICO 也可能带来更高的风险，因为加密货币市场相对较新，监管和市场稳定性方面可能存在不足。投资者在参与 ICO 时，需要谨慎评估项目的潜在价值和风险。</p>
+<h2 id="ipo"><a class="header" href="#ipo">IPO</a></h2>
+<p>IPO（Initial Public Offering，首次公开募股）是一家公司在股票市场上首次向公众出售其股票的过程。通过 IPO ，公司可以筹集资金以支持其业务发展，同时为投资者提供一个投资机会。IPO 是一种将公司从私有变为公开上市公司的重要途径。</p>
+<p>让我们用一个简单的类比来理解 IPO 。想象一下，你和你的朋友们创建了一家公司，开始时这家公司只属于你们几个创始人。随着时间的推移，公司取得了成功，业务不断扩张，你们决定筹集更多资金来支持公司的持续发展。一种可行的方法就是通过 IPO ，在股票市场上向公众出售公司的股票。这样一来，公司能够筹集到资金，而投资者则有机会分享公司未来的收益。</p>
+<p>进行 IPO 的一般流程是这样的：</p>
+<ol>
+<li>
+<p>公司决定进行 IPO ，并聘请投资银行等专业机构，为IPO做准备。这包括撰写招股说明书、审计财务报表等。</p>
+</li>
+<li>
+<p>公司提交招股说明书和相关文件给监管部门，如美国的证券交易委员会（SEC）。监管部门会对提交的文件进行审查，确保其符合法规要求。</p>
+</li>
+<li>
+<p>审查通过后，公司确定IPO的细节，包括股票发行价格、发行量、上市交易所等。</p>
+</li>
+<li>
+<p>IPO 开始时，投资者可以购买公司发行的股票。通常，股票的初始价格是由投资银行和公司共同确定的，而后续的股票价格则由市场供求关系决定。</p>
+</li>
+<li>
+<p>IPO 结束后，公司成功上市，其股票在交易所上公开交易。投资者可以买卖公司的股票，分享公司的成长和盈利。</p>
+</li>
+</ol>
+<p>总的来说，IPO 是一家公司在股票市场上首次向公众出售股票的过程。通过 IPO ，公司可以筹集资金支持业务发展，而投资者则有机会分享公司的收益。进行 IPO 的公司需要遵循严格的法规要求和审查流程，以确保投资者的权益得到保障。</p>
+<h2 id="otc"><a class="header" href="#otc">OTC</a></h2>
+<p>OTC（Over-The-Counter，场外交易）是指在交易所之外进行的交易。与在交易所进行的交易不同，OTC 交易通常是双方直接进行，而不经过中央交易所。这种交易方式在股票、债券、衍生品等金融产品中都有应用。</p>
+<p>如果你想要购买一辆二手汽车。在交易所购买的类似于去一个有组织的二手车市场，那里有很多卖家、买家和中介（如交易所）参与其中，价格和交易规则都是标准化和公开的。而进行 OTC 交易就像是通过个人渠道购买二手车，你可以直接与车主沟通，商定价格和交易条件。</p>
+<p>OTC 交易的特点如下：</p>
+<ol>
+<li>
+<p>灵活性：OTC 交易允许双方根据自己的需求自由协商交易条件，如价格、数量、结算方式等。这种灵活性使得 OTC 交易在某些情况下更具吸引力。</p>
+</li>
+<li>
+<p>隐私性：OTC 交易不像在交易所进行的交易那样公开透明，双方可以保持交易的隐私。这在某些情况下可能是有益的，如大宗交易、敏感信息交易等。</p>
+</li>
+<li>
+<p>风险性：由于 OTC 交易不经过中央交易所，双方的信用风险可能较高。为了降低风险，参与者可能需要进行额外的信用调查或使用第三方担保机构。</p>
+</li>
+<li>
+<p>监管难度：OTC 交易的去中心化特性使得监管较为困难。因此，在某些情况下，OTC 交易可能容易受到操纵、欺诈等不良行为的影响。</p>
+</li>
+</ol>
+<p>OTC 是一种在交易所之外进行的交易方式，具有灵活性、隐私性等特点。然而，与此同时，OTC 交易也可能带来较高的风险和监管难度。在参与 OTC 交易时，投资者需要充分了解交易对手、评估信用风险，并确保遵守相关法律法规。</p>
+<h2 id="c2c"><a class="header" href="#c2c">C2C</a></h2>
+<p>C2C（Consumer-to-Consumer，消费者对消费者）是一种消费者之间直接进行交易的模式，通常通过在线平台进行。C2C 平台充当了买卖双方之间的中介，帮助消费者在互联网上找到、评估和联系其他消费者，以便完成交易。</p>
+<p>如果，你想要出售你的旧自行车。在 C2C 模式下，你可以在网上发布一个广告，描述自行车的状况和价格。其他消费者看到你的广告后，可以与你联系，协商交易细节。在这个过程中，你和买家直接交易，不需要通过商家或其他中间人。（咸鱼、跳蚤市场）</p>
+<p>C2C 交易的特点如下：</p>
+<ol>
+<li>
+<p>去中心化：C2C 交易直接在消费者之间进行，不需要通过商家等中间人。这有助于降低交易成本，让买卖双方可以获取更好的价格。</p>
+</li>
+<li>
+<p>便捷性：C2C 平台通常采用在线操作，让消费者可以随时随地进行购买和出售。这种便捷性使得 C2C 交易在某些情况下更具吸引力。</p>
+</li>
+<li>
+<p>多样性：C2C平台上的商品和服务种类繁多，消费者可以在同一个平台上购买各种不同类型的产品。这种多样性使得 C2C 交易更加丰富有趣。</p>
+</li>
+<li>
+<p>风险性：由于 C2C 交易不经过商家，交易安全性可能较低。为了降低风险，消费者需要对交易对手进行评估，并采用安全的支付方式。同时，平台方也需要采取一定的措施，如实名制、信用评级等，以保障交易安全。</p>
+</li>
+</ol>
+<p>C2C 是一种消费者之间直接进行交易的模式，通常通过在线平台进行。C2C 交易具有去中心化、便捷性、多样性等特点，可以让买卖双方获取更好的价格。然而，与此同时，C2C 交易也可能带来较高的风险。在参与 C2C 交易时，消费者需要充分了解交易对手、评估交易安全，并确保遵守相关法律法规。</p>
+<h2 id="dex"><a class="header" href="#dex">DEX</a></h2>
+<p>DEX（Decentralized Exchange，去中心化交易所）是一种基于区块链技术的交易平台，允许用户在没有中心化中介的情况下直接进行加密货币的交易。与传统的中心化交易所不同，DEX不托管用户的资产，而是直接在用户的加密钱包之间完成交易。</p>
+<p>DEX 交易的特点如下：</p>
+<ol>
+<li>
+<p>去中心化：DEX 不托管用户的资产，交易直接在用户的加密钱包之间完成。这有助于降低信任风险，提高资产安全性。</p>
+</li>
+<li>
+<p>透明性：由于基于区块链技术，DEX 的交易记录是公开的，可以随时查询。这种透明性使得 DEX 交易更加公正、公平。</p>
+</li>
+<li>
+<p>隐私性：DEX 允许用户在不透露身份的情况下进行交易，提高了交易隐私。然而这也可能导致一定的监管难度。</p>
+</li>
+<li>
+<p>速度与效率：由于去中心化的特点，DEX 交易可能在速度和效率上不如中心化交易所。为了提高交易速度，DEX 需要采用一些技术优化，如链下扩容、跨链互操作等。</p>
+</li>
+</ol>
+<p>DEX 是一种基于区块链技术的去中心化交易所，可以让用户在没有中心化中介的情况下直接进行加密货币的交易。DEX 具有去中心化、透明性、隐私性等特点，可以提高资产安全性。与此同时，DEX 交易在速度和效率方面可能存在一定的挑战。在使用 DEX 进行交易时，用户需要充分了解平台特点、评估交易风险，并确保遵守相关法律法规。</p>
+<h2 id="cex"><a class="header" href="#cex">CEX</a></h2>
+<p>CEX（Centralized Exchange，中心化交易所）是一种加密货币交易平台，用户可以在这里买卖不同的加密货币。与去中心化交易所（DEX）不同，CEX 是由一个中心化的公司或组织运营的，用户的资产会被托管在交易所的账户中。</p>
+<p>CEX 交易的特点是：</p>
+<ol>
+<li>中心化：CEX 由一个中心化的公司或组织运营，托管用户的资产。这使得交易过程更加简便，但也可能带来一定的信任风险和资产安全问题。</li>
+<li>速度与效率：CEX 通常采用高性能的服务器和技术架构，可以提供较高的交易速度和效率。然而，这也可能导致交易所成为攻击的目标，增加安全风险。</li>
+<li>交易对与流动性：CEX 通常提供多种加密货币的交易对，以及较高的交易流动性。这使得用户可以更容易地买卖不同的加密货币，以实现投资目标。</li>
+</ol>
+<p>CEX 是一种中心化的加密货币交易所，可以让用户在一个有组织的平台上买卖不同的加密货币。CEX 具有速度、效率、监管与合规等优点，但也可能面临信任风险和资产安全问题。在使用 CEX 进行交易时，用户需要充分了解平台特点、评估交易风险，并确保遵守相关法律法规。</p>
+<h2 id="wagmi"><a class="header" href="#wagmi">WAGMI</a></h2>
+<p>WAGMI 是 &quot; We're All Gonna Make It &quot; 的缩写，中文意思是 “ 我们都会成功 ” 。这是一种常用于加密货币和投资社区的口头禅，用来表示对市场和投资者的乐观态度。当市场上涨或某个投资项目取得成功时，人们会使用 WAGMI 来表达信心和鼓舞士气。</p>
+<h2 id="buidl"><a class="header" href="#buidl">Buidl</a></h2>
+<p>构建产品。</p>
+<h2 id="buidler"><a class="header" href="#buidler">Buidler</a></h2>
+<p>建设者。</p>
+<h2 id="airdrop"><a class="header" href="#airdrop">Airdrop</a></h2>
+<p>Airdrop（空投）是一种加密货币的分发方式，通常用于推广新的数字货币或代币。在空投活动中，项目方会免费分发一定数量的代币给满足特定条件的用户，比如关注社交媒体、参加社区活动或持有某种特定资产。</p>
+<p>空投就像一个公司发放免费样品，以吸引更多的人关注和尝试他们的产品。在加密货币市场，空投可以帮助项目方扩大知名度、吸引用户，并提高市场流动性。然而，需要注意的是，参与空投的投资者应仔细了解项目背景和代币价值，以避免潜在风险。</p>
+<h2 id="cz"><a class="header" href="#cz">CZ</a></h2>
+<p><a href="https://zh.wikipedia.org/wiki/%E8%B5%B5%E9%95%BF%E9%B9%8F">Changpeng Zhao 赵长鹏</a>。CZ 是<strong>赵长鹏</strong>的简称，他是一位华裔加拿大籍企业家，也是加密货币领域的知名人物。他是币安（Binance）的创始人，这是目前全球最大的加密货币交易所。他曾在东京证券交易所、彭博有限合伙企业、Blockchain.info 和 OKCoin 等公司工作过。</p>
+<h2 id="sbf"><a class="header" href="#sbf">SBF</a></h2>
+<p>SBF 是 <strong>Sam Bankman-Fried</strong> 的简称，他是一位美国的企业家，也是加密货币领域的知名人物。 他是 Alameda Research 的创始人和首席执行官，这是一家专注于量化交易和流动性提供的公司。他还是 FTX 交易所的联合创始人和前首席执行官，这是一家提供各种数字资产衍生品的平台。</p>
+<p>SBF 出生于 1992 年 3 月 6 日，他的父母都是斯坦福大学法学院的教授。他于 2010 年至 2014 年在麻省理工学院学习物理学，并获得了学位。SBF 的职业生涯开始于简街资本，这是一家自营交易公司，主要交易国际 ETFs 。2017 年，他创立了 Alameda Research ，并在 2019 年创立了 FTX 。他凭借其创新的产品和对市场需求的敏锐嗅觉，使 FTX 成为全球第二大的加密货币交易所。</p>
+<h2 id="ftx"><a class="header" href="#ftx">FTX</a></h2>
+<p>FTX 是一家<strong>数字资产衍生品交易所</strong>，成立于 2019 年 5 月，由 SBF 创立。 用户可以在其中交易比特币、以太币和其他加密货币，以及相关的衍生品。 FTX 在 2021 年 7 月完成了 9 亿美元 B 轮融资，估值达 180 亿美元，是加密行业历史规模最大的融资。</p>
+<p>FTX 倒闭的原因是其陷入了<strong>流动性危机</strong>，导致无法满足客户的提现需求。 有消息称，FTX 的关联公司 Alameda Research 将大部分资产用于抵押FTX 自行发行的 FTT 代币，而这些代币在市场上大幅下跌，造成资金链断裂。</p>
+<p>FTX 于 2022 年 11 月 11 日宣布在美国申请破产，并暂停了加密货币提取业务。SBF 辞去了首席执行官一职，但表示将继续协助公司有序过渡。 FTX 的倒闭引发了加密货币市场的恐慌，比特币等主流货币价格出现大幅下跌。</p>
+<p>FTX 是一家曾经辉煌的加密货币交易所，但由于资金管理不善和市场波动而导致破产。这对加密货币行业和投资者都是一个沉重的打击。</p>
+<h2 id="孙割"><a class="header" href="#孙割">孙割</a></h2>
+<p>孙宇晨</p>
+<h2 id="og"><a class="header" href="#og">OG</a></h2>
+<p>元老。OG（Original Gangster）原本是一个源自美国嘻哈文化的词汇，用来形容在某个领域、社群或行业中具有资深经验和地位的人。OG 表示这个人在他们所在领域具有丰富的知识、经验和影响力，通常受到周围人的尊敬和敬仰。在加密货币和区块链领域中，OG 同样可以用来形容一些早期参与者、创新者和领导者。</p>
+<p>OG 通常在他们的领域积累了大量的经验和知识。由于 OG 在行业中的资深地位和丰富经验，他们的观点和建议通常具有较高的权威性，容易受到周围人的关注和尊重。</p>
+<p>OG 是一种用来形容在某个领域、社群或行业中具有资深经验和地位的人的词汇。在加密货币和区块链领域，OG 可以表示那些早期参与者、创新者和领导者，他们凭借丰富的经验、影响力和创新精神，为整个行业的发展做出了重要贡献。</p>
+<h2 id="白名单白"><a class="header" href="#白名单白">白名单，白</a></h2>
+<h2 id="dm"><a class="header" href="#dm">DM</a></h2>
+<p>私信。</p>
+<h2 id="to-the-moon"><a class="header" href="#to-the-moon">To the Moon</a></h2>
+<p>&quot;To the Moon&quot;（去月球）是一个在加密货币和投资领域广泛使用的俚语，用来表示某种资产（通常是加密货币）的价格预期将会急剧上涨。这个短语往往在社交媒体、论坛和聊天群组中使用，以表达投资者对未来市场表现的乐观预期。</p>
+<p>加密货币市场是一个巨大的火箭发射场，火箭代表着各种加密货币。当市场预期某种货币的价格将要猛涨时，人们会说这个货币 &quot;To the Moon&quot;，好像火箭即将发射到月球一样。</p>
+<p>这个短语反映了投资者对某种资产未来表现的乐观预期，他们认为资产的价格将会急剧上涨。&quot;To the Moon&quot; 通常在社交媒体和网络社群中流行，人们用这个短语来表达他们对某个投资的热情和信心。&quot;To the Moon&quot; 很大程度上受到市场情绪的影响，当市场对某种资产持有强烈的乐观情绪时，这个短语的使用频率就会上升。</p>
+<h2 id="bull"><a class="header" href="#bull">Bull</a></h2>
+<h2 id="bear"><a class="header" href="#bear">Bear</a></h2>
+<h2 id="gm"><a class="header" href="#gm">GM</a></h2>
+<h2 id="gn"><a class="header" href="#gn">GN</a></h2>
+<h2 id="lol"><a class="header" href="#lol">Lol</a></h2>
+<h2 id="lamo"><a class="header" href="#lamo">LAMO</a></h2>
+<h2 id="fomo"><a class="header" href="#fomo">FOMO</a></h2>
+<p>FOMO（Fear of Missing Out，错失恐惧症）是一种心理现象，指的是人们担心自己会错过某个重要的事件、机会或趋势，从而产生的紧迫感和不安。在投资领域，尤其是加密货币市场，FOMO 是一种常见的情绪反应，当市场表现出强烈的上涨趋势时，人们可能会因为担心错过机会而盲目跟风投资。</p>
+<p>加密货币市场是一个热闹的派对，所有人都在尽情地跳舞、欢呼，享受着市场上涨带来的快感。这时，站在派对门外的你，看着大家的欢乐，开始担心自己会错过这个难得的机会，于是决定加入其中，尽管你可能并不了解加密货币投资的风险。</p>
+<ul>
+<li>情绪驱动：FOMO 是一种基于情绪的反应，当人们看到周围的人获得成功或享受某种乐趣时，很容易产生想要加入其中的冲动。</li>
+<li>后知后觉：FOMO 往往发生在市场或趋势已经出现一段时间后，人们在看到别人已经获得收益时，才开始考虑加入。</li>
+<li>盲目跟风：由于 FOMO 产生的心理压力，人们可能在没有充分了解风险的情况下，盲目跟风投资，从而导致损失。</li>
+<li>高风险：在加密货币市场中，FOMO 可能导致投资者在市场高峰时买入，而在价格回落时出现恐慌性抛售，从而蒙受损失。</li>
+</ul>
+<p>FOMO 是一种心理现象，表示人们担心错过重要的事件、机会或趋势。在投资领域，特别是加密货币市场，FOMO 可能导致盲目跟风和高风险的投资行为。要避免 FOMO，投资者应保持冷静，对市场和投资标的进行充分的了解和分析，遵循自己的投资策略和风险承受能力。</p>
+<h2 id="fud"><a class="header" href="#fud">FUD</a></h2>
+<p>FUD（Fear, Uncertainty, and Doubt，恐惧、不确定和怀疑）是一种心理现象，指的是在某个领域，特别是投资市场中，人们因为对未来充满恐惧、不确定和怀疑而产生的负面情绪。</p>
+<p>FUD 是一种基于情绪的反应，人们在面对未来的恐惧、不确定和怀疑时，容易感到焦虑和担忧。FUD 通常伴随着负面消息的传播，这些消息可能来源于媒体报道、网络论坛或社交媒体，容易引发市场恐慌。在某种程度上，FUD 可能成为一种自我实现的预言，恐慌情绪的传播和投资者的抛售行为可能导致市场价格进一步下跌。对于有经验的投资者来说，FUD 也可能带来投资机会。在市场恐慌时，他们可能会寻找被低估的优质资产，实施逆市操作。</p>
+<p>在加密货币市场，FUD 可能导致市场恐慌、投资者抛售和价格下跌。要避免受到 FUD 的影响，投资者应保持理性，对市场和投资标的进行充分的了解和分析，做出明智的投资决策。</p>
+<h2 id="mint"><a class="header" href="#mint">Mint</a></h2>
+<p>铸造 NFT</p>
+<h1 id="交易"><a class="header" href="#交易">交易</a></h1>
+<h2 id="做多"><a class="header" href="#做多">做多</a></h2>
+<h2 id="做空"><a class="header" href="#做空">做空</a></h2>
+<h2 id="割肉"><a class="header" href="#割肉">割肉</a></h2>
+<h2 id="拉盘"><a class="header" href="#拉盘">拉盘</a></h2>
+<h2 id="砸盘"><a class="header" href="#砸盘">砸盘</a></h2>
+<h1 id="社区"><a class="header" href="#社区">社区</a></h1>
+<h2 id="大裁缝"><a class="header" href="#大裁缝">大裁缝</a></h2>
+<p>指 Dfinity 的创始人多米尼克·威廉姆斯（Dominic Williams）。因为经常在社区活动中送 Dfinity 周边衣服，中文社区给他起了外号 “ 大裁缝 ” 。</p>
+<h2 id="icu"><a class="header" href="#icu">ICU</a></h2>
+<p>ICP 的别称。早期 IC 社区选择投资 ICP 的人对 ICP 的调侃，意为 “ 买了 ICP 住进 ICU ” 。</p>
+<h1 id="开发"><a class="header" href="#开发">开发</a></h1>
+<h2 id="pow"><a class="header" href="#pow">PoW</a></h2>
+<p>PoW（Proof of Work，工作量证明）是一种用于加密货币和区块链网络的共识算法。它的核心思想是让网络中的参与者通过解决复杂数学问题来证明自己的工作量。这种方式既能确保网络安全，又能激励参与者维护网络。</p>
+<p>PoW 就像是一场数学竞赛，参与者需要尽快找到一个符合条件的数字，这个数字结合区块的信息，经过特定的计算方法，得到的结果是一个以若干个零开头的哈希值。这个过程就像在破解密码，因为找到正确答案需要大量的计算尝试，而验证答案却非常简单。</p>
+<p>为了让你更好地理解 PoW ，我们可以用挖矿作比喻。在比特币等加密货币的网络中，挖矿就是参与者通过不断尝试不同的数字，找到一个合适的答案来解锁新的区块。一旦解锁成功，参与者就会获得一定数量的比特币作为奖励，这就像是在挖矿过程中发现了金矿。</p>
+<p>然而，PoW 机制也存在一定的问题。首先，大量的计算过程会消耗大量的能源，对环境造成影响。其次，随着加密货币价格的上涨，越来越多的人投入挖矿，导致挖矿难度不断增加，使得普通用户难以参与。这可能导致网络的中心化，违背了区块链去中心化的初衷。</p>
+<p>PoW 是一种用于加密货币和区块链网络的共识算法，它通过让参与者解决复杂数学问题来证明自己的工作量。虽然PoW机制在一定程度上确保了网络的安全和激励参与者，但它也存在能源消耗和中心化的问题。为了解决这些问题，研究人员和开发者们提出了其他共识算法，如 Proof of Stake （权益证明）等，以减轻能源消耗和提高去中心化程度。</p>
+<h2 id="pos"><a class="header" href="#pos">PoS</a></h2>
+<p>PoS（Proof of Stake，权益证明）是一种用于加密货币和区块链网络的共识算法。与 PoW（工作量证明）不同，PoS 不是通过解决复杂数学问题来证明参与者的工作量，而是根据参与者持有的加密货币数量和时间来选择区块验证者。这样的设计旨在降低能源消耗，增加网络的去中心化程度，以及提高网络安全性。</p>
+<p>为了帮助你理解 PoS ，我们可以把它想象成一个加密货币的储蓄计划。在 PoS 网络中，你可以把自己持有的加密货币 “ 抵押 ” 或 “ 锁定 ” 在一个特定的地址上，这个过程称为 “ 权益抵押 ” 。抵押的加密货币越多，你被选为验证者（矿工）的几率就越大。验证者负责创建新区块并验证交易，完成这些操作后，验证者将获得一定数量的奖励。</p>
+<p>我们可以用一个抽奖活动来类比 PoS 。参与者需要购买彩票来参加抽奖，购买的彩票越多，中奖的几率就越大。在 PoS 网络中，持有和抵押的加密货币就相当于彩票，增加了你成为验证者的机会。</p>
+<p>PoS 机制相较于 PoW 具有一些优势。首先，PoS 减少了大量计算过程，从而降低了能源消耗和减轻了对环境的影响。其次，PoS鼓励参与者长期持有加密货币，有助于稳定价格。此外，PoS降低了网络中心化的风险，因为验证者的选择不再依赖计算能力，使得普通用户更容易参与。</p>
+<p>当然，PoS 也存在一定的缺点。如何确保验证者不作恶、防止少数人控制大量权益等问题需要解决。尽管如此，PoS 仍被认为是一种有效的区块链共识机制，许多新兴的加密货币和区块链项目已经采用了 PoS 算法，如以太坊 2.0 、Cardano 等。</p>
+<p>PoS 是一种用于加密货币和区块链网络的共识算法，它根据参与者持有的加密货币数量和时间来选择区块验证者。PoS 相较于 PoW 具有能源消耗低、去中心化程度高等优势，被认为是一种有前景的区块链共识机制。</p>
+<h2 id="子网subnet"><a class="header" href="#子网subnet">子网（Subnet）</a></h2>
+<p>A <strong>subnet</strong> (subnetwork) is a collection of <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">nodes</a> that run their own instance of the <a href="https://wiki.internetcomputer.org/wiki/Glossary#consensus">consensus</a> algorithm to produce a subnet blockchain that interacts with other subnets of the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer_.28IC.29">IC</a> using <a href="https://wiki.internetcomputer.org/wiki/Glossary#chain_key">chain key</a> cryptography. </p>
+<p>子网（Subnet）是由一组节点组成的集合，这些节点运行自己的共识算法实例，以生成一个子网区块链，并使用链密钥密码术与 IC 的其他子网交互。</p>
+<h2 id="chain-key"><a class="header" href="#chain-key">Chain Key</a></h2>
+<h2 id="dfx"><a class="header" href="#dfx">dfx</a></h2>
+<h2 id="actor"><a class="header" href="#actor">actor</a></h2>
+<h2 id="balance"><a class="header" href="#balance">balance</a></h2>
+<p>边缘节点（boundary node）</p>
+<h2 id="candid"><a class="header" href="#candid">Candid</a></h2>
+<h2 id="motoko"><a class="header" href="#motoko">Motoko</a></h2>
+<h2 id="canister"><a class="header" href="#canister">canister</a></h2>
+<p>A <strong>canister</strong> is a type of smart contract that bundles <em>code</em> and <em>state</em>. A canister can be deployed as a <a href="https://wiki.internetcomputer.org/wiki/Glossary#smart_contract">smart contract</a> on the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a> and accessed over the Internet.</p>
+<h2 id="canister-account"><a class="header" href="#canister-account">canister account</a></h2>
+<p>A <strong>canister account</strong> is a ledger account owned by a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> (i.e. whose <a href="https://wiki.internetcomputer.org/wiki/Glossary#fiduciary">fiduciary</a> is a canister). A non-canister account is a ledger account whose fiduciary is a non-canister <a href="https://wiki.internetcomputer.org/wiki/Glossary#principal">principal</a>.</p>
+<p>Canister 帐户是 Canister 拥有的分类帐帐户，这意味着 Canister 的委托人是该帐户的所有者。容器账户可以持有ICP，ICP可以用来支付计算和存储资源，也可以持有周期，周期是互联网计算机上的计算单位。另一方面，非罐账户是分类账户，其所有者是非罐委托人，例如个人或组织，也可以持有 ICP。</p>
+<p>一个canister账户是由一个canister拥有的账户，即其受托人是一个canister。一个非canister账户是其受托人是非canister原则的账户。</p>
+<h2 id="canister-identifier"><a class="header" href="#canister-identifier">canister identifier</a></h2>
+<p>The <strong>canister identifier</strong> or <strong>canister ID</strong> is a globally-unique identifier that identifies a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> and can be used to interact with it.</p>
+<p>canister标识符或canister ID是一种全局唯一的标识符，用于标识canister并与之交互。</p>
+<h2 id="canister-signature"><a class="header" href="#canister-signature">canister signature</a></h2>
+<p>A <strong>canister signature</strong> uses a signature scheme based on <a href="https://wiki.internetcomputer.org/wiki/Glossary#certified_variables">certified variables</a>. Public “keys” include a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister_identifier">canister id</a> plus a seed (so that every <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> has many public keys); signatures are certificates that prove that the canister has put the signed message at a specific place in its state tree. Details in the <a href="https://smartcontracts.org/docs/interface-spec/#canister-signatures">The Internet Computer Interface Specification</a>.</p>
+<p>容器签名是一种加密签名，用于验证消息是否已由特定容器签名。使用的签名方案基于经过认证的变量，其中公钥由容器 ID 和种子组成，允许每个容器拥有多个公钥。当容器对消息进行签名时，生成的签名是一个证书，证明容器已将已签名的消息放在其状态树中的特定位置。有关容器签名的更多信息，请参阅互联网计算机接口规范。</p>
+<p>一个 canister 签名使用基于认证变量的签名方案。公钥包括 canister ID 和种子(seed)（这样每个 canister 就有了多个公钥）; 签名是证书，证明 canister 已将签名消息放在其状态树的特定位置。详情请参见 《The Internet Computer Interface Specification》。</p>
+<p>一个canister signature使用基于认证变量的签名方案。公钥包括一个canister id和一个seed（因此每个canister都有很多公钥）；签名是证书，证明canister已将签名的消息放置在其状态树的特定位置。</p>
+<h2 id="canister-state"><a class="header" href="#canister-state">canister state</a></h2>
+<p>A <strong>canister state</strong> is the entire state of a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> at a given point in time. A canister’s state is divided into <em>user state</em> and <em>system state</em>. The user state is a <a href="https://wiki.internetcomputer.org/wiki/Glossary#WebAssembly">WebAssembly</a> module instance and the system state is the auxiliary state maintained by the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a> on behalf of the canister, such as its compute allocation, balance of <a href="https://wiki.internetcomputer.org/wiki/Glossary#cycles">cycles</a>, input and output queues, and other metadata. A canister interacts with its own system state either implicitly, such as when consuming cycles, or through the System API, such as when sending messages.</p>
+<p>一个 canister 的状态是在某个时间点上的整个状态。一个 canister 的状态分为用户状态和系统状态。用户状态是一个 WebAssembly 模块实例，系统状态是由 Internet Computer 代表该 canister 维护的辅助状态，例如计算分配、周期余额、输入和输出队列以及其他元数据。一个 canister 隐式地与其自身的系统状态交互，例如在消耗 cycles 时，或通过 System API 发送消息。</p>
+<h2 id="catch-up-package-cup"><a class="header" href="#catch-up-package-cup">catch-up package (CUP)</a></h2>
+<p>A <strong>catch-up package</strong> is a data bundle that contains everything needed to bootstrap a <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a> <a href="https://wiki.internetcomputer.org/wiki/Glossary#replica">replica</a>.</p>
+<p>&quot;catch-up package&quot; 指的是包含启动子网副本所需的所有数据的数据包。</p>
+<h2 id="certified-query"><a class="header" href="#certified-query">certified query</a></h2>
+<p>A <strong>certified query</strong> is a query call for which the response is certified.</p>
+<p>&quot;Certified query&quot; 指的是响应经过认证的查询调用。</p>
+<h2 id="certified-variable"><a class="header" href="#certified-variable">certified variable</a></h2>
+<p>A piece of data that a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> can store in its <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a>’s canonical state in the processing of an update call (or inter-canister call), so that during the handling of a <a href="https://wiki.internetcomputer.org/wiki/Glossary#query">query</a> call, the canister can return a certificate to the user that proves that it really committed to that value.</p>
+<p>在进行更新调用（或 canister 之间的调用）的过程中，canister 可以将一条数据存储在其子网的规范状态中，以便在处理查询调用时，神经元可以向用户返回一个证书，证明它确实承诺了该值。这条数据称为 “ 可认证状态数据 ”（certificate state data）。</p>
+<p>一个 canister 可以在更新调用（或者canister 之间调用）的处理过程中将一段数据存储在其子网的规范状态中，以便在处理查询调用时，该 canister 可以向用户返回一个证书，证明它确实承诺了该值。</p>
+<p><strong>Chain key</strong> cryptography consists of a set of cryptographic protocols that orchestrate the <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">nodes</a> that make up the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a>. The most visible innovation of chain key cryptography is that the Internet Computer has a single public key. This is a huge advantage as it allows any device, including smart watches and mobile phones, to verify the authenticity of artifacts from the Internet Computer.</p>
+<p>链键加密（Chain key cryptography）是一组协议，用于编排组成Internet Computer的节点之间的加密。链键加密最显著的创新是Internet Computer只有一个公钥。这是一个巨大的优势，因为它允许任何设备，包括智能手表和手机，验证来自Internet Computer的工件的真实性。</p>
+<h2 id="consensus"><a class="header" href="#consensus">consensus</a></h2>
+<p>In distributed computing, <strong>consensus</strong> is a fault tolerant mechanism by means of which a number of <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">nodes</a> can reach agreement about a value or state.</p>
+<p>Consensus is a core component of the <a href="https://wiki.internetcomputer.org/wiki/Glossary#replica">replica</a> software. The consensus layer selects <a href="https://wiki.internetcomputer.org/wiki/Glossary#messages">messages</a> from the peer-to-peer artifact pool and pulls messages from the cross-network streams of other <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnets</a> and organizes them into a <a href="https://wiki.internetcomputer.org/wiki/Glossary#batch">batch</a>, which is delivered to the <a href="https://wiki.internetcomputer.org/wiki/Glossary#message_routing">message routing</a> layer.</p>
+<p>在分布式计算中，共识（consensus）是一种容错机制，通过该机制一组节点可以就一个值或状态达成一致。</p>
+<p>共识是复制软件的核心组件。共识层从点对点工件池中选择消息，并从其他子网的跨网络流中拉取消息并将其组织成一批，然后将其传递到消息路由层。</p>
+<h2 id="controller"><a class="header" href="#controller">controller</a></h2>
+<p>A <strong>controller</strong> of a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> is a person, organization, or other canister that has administrative rights over the canister. Controllers are identified by their <a href="https://wiki.internetcomputer.org/wiki/Glossary#principal">principals</a>. For example, a controller of a canister can upgrade the <a href="https://wiki.internetcomputer.org/wiki/Glossary#WebAssembly">WebAssembly</a> code of the canister or delete the canister.</p>
+<p>一个 canister 的控制器是一个具有对该 canister 管理权限的人、组织或其他 canister 。控制器由其负责人来标识。例如， canister 的控制器可以升级 canister 的 WebAssembly 代码或删除 canister 。</p>
+<h2 id="cycle"><a class="header" href="#cycle">cycle</a></h2>
+<p>On the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a>, a <strong>cycle</strong> is the unit of measurement for resources consumed in the form of processing, memory, storage, and network bandwidth. Every canister has a cycles account to which resources consumed by the canister are charged. The Internet Computer’s utility token (<a href="https://wiki.internetcomputer.org/wiki/Glossary#ICP">ICP</a>) can be converted to cycles and transferred to a canister. Cycles can also be transferred between canisters by attaching them to an [inter-canister] message.</p>
+<p>ICP can always be converted to cycles using the current price of ICP measured in [SDR] using the convention that one trillion cycles correspond to one SDR.</p>
+<p>在Internet Computer上，一个“cycle”（周期）是衡量处理、内存、存储和网络带宽消耗资源的计量单位。每个 “ canister ” 都有一个 “ cycles account ”（周期账户）， canister 消耗的资源会计入该账户。Internet Computer的实用代币ICP可以转换为“cycles”，并转移到 canister 上。“Cycles”也可以通过将它们附加到一个 canister 间的消息上，在 canister 之间进行转移。</p>
+<p>ICP可以根据当前以SDR计价的ICP价格，按照一万亿个“cycles”对应一个SDR的约定进行转换。</p>
+<p>ICP</p>
+<p>节点（node）</p>
+<p>principal</p>
+<p>A <strong>principal</strong> is an entity that can be authenticated by the <a href="https://wiki.internetcomputer.org/wiki/Glossary#Internet_Computer">Internet Computer</a>. This is the same sense of the word principal as the <a href="https://en.wikipedia.org/wiki/Principal_(computer_security)">Wikipedia definition</a>. Principals that interact with the Internet Computer do so using a certain <a href="https://wiki.internetcomputer.org/wiki/Glossary#identity">identity</a>. </p>
+<p>在Internet Computer中，Principal是指可以通过身份验证访问网络的实体，可以是人、组织、设备等。Principal在Internet Computer上的身份验证是基于公钥加密的，每个Principal都有一个与其关联的公钥，私钥由Principal自己控制。这些公钥通常以Ed25519格式表示。Principal可以使用其公钥签署和验证消息，从而确保消息的完整性和身份认证。在Internet Computer中，每个Canister和Subnet都与一个特定的Principal关联。</p>
+<p>query call</p>
+<p>A <strong>query</strong> is an optimised way to execute operations on a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> where the state changes are not preserved. Queries are synchronous and can be made to any <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">node</a> that hosts the canister. Queries do not require <a href="https://wiki.internetcomputer.org/wiki/Glossary#consensus">consensus</a> to verify the result.</p>
+<h2 id="replica"><a class="header" href="#replica">replica</a></h2>
+<p>The <strong>replica</strong> is a collection of protocol components that are necessary for a <a href="https://wiki.internetcomputer.org/wiki/Glossary#node">node</a> to participate in a <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a>.</p>
+<p>&quot;Replica&quot; 是一个由多个协议组件组成的集合，这些组件是一个节点（node）参与子网（subnet）的必要条件。</p>
+<h2 id="registry"><a class="header" href="#registry">registry</a></h2>
+<p>The IC <strong>registry</strong> manages the system meta-data maintained on the network nervous system (<a href="https://wiki.internetcomputer.org/wiki/Glossary#network_nervous_system_.28NNS.29">NNS</a>) and accessed by all <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a> blockchains.</p>
+<p>IC注册表（IC registry）管理着维护在网络神经系统（NNS）上的系统元数据，并被所有子网区块链所访问。</p>
+<h2 id="service-worker"><a class="header" href="#service-worker">service worker</a></h2>
+<p>A <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API"><strong>service worker</strong></a>, which implements the <a href="https://wiki.internetcomputer.org/wiki/Glossary#HTTP_gateway_protocol">HTTP gateway protocol</a> and translates browser asset requests to the IC into API canister calls and verifies the asset certification.</p>
+<p>当浏览器向互联网计算机（Internet Computer，IC）请求资源时，这些资源可能存储在一个名为 API canister 的特殊神经元上。为了使这些资源可用，需要一个服务工作者来实现 HTTP 网关协议，将浏览器的请求转换为 API canister 调用，并验证这些资源的真实性。因此，这个服务工作者将作为一个中介，将浏览器和 API canister 连接起来，从而使浏览器可以访问存储在 IC 上的资源。</p>
+<p>它的作用是实现 HTTP 网关协议，将浏览器请求的静态资源转换为与 IC 通信的 API  canister 调用，并验证资源的认证。简单来说，就是它可以帮助浏览器请求静态资源并将其转换为与 IC（Internet Computer）通信的 API canister 调用，并且还可以确保这些资源是可信的。</p>
+<p>其中，HTTP 网关协议是指浏览器和服务工作者之间的通信协议，API canister 调用是指服务工作者向 IC 发送请求的方式，资产认证则是指在请求过程中确保资产的真实性和安全性。</p>
+<h2 id="node"><a class="header" href="#node">Node</a></h2>
+<p>Node 是承载 IC 的物理机节点。</p>
+<h2 id="replica-1"><a class="header" href="#replica-1">Replica</a></h2>
+<p>在 IC 中，副本是指在</p>
+<h2 id="webassembly"><a class="header" href="#webassembly">WebAssembly</a></h2>
+<p>WebAssembly ( Wasm) 是一种二进制指令格式，它可以提供一个虚拟机层面抽象的运行环境，具有安全、可移植、高效率，轻量化等特点，可以轻松实现毫秒级冷启动时间和极低的资源消耗。</p>
+<p>WebAssembly 最早应用于浏览器，目前逐渐向后端发展，可以把 C/C++，Rust、Motoko 等语言代码编译成为 WebAssembly 字节码，运行在沙箱环境中。</p>
+<p>目前主流公链都在支持 WebAssembly，IC 就是典型的支持 WebAssembly 的公链，可以通过 Motoko 或 Rust 编写 DApp，然后部署在 IC 中。</p>
+<p>除了 IC，还有 Dot、Near 等公链支持 WebAssembly。</p>
+<h2 id="canister-1"><a class="header" href="#canister-1">Canister</a></h2>
+<p>Canister 可以理解为一种特殊的容器，可以类比为 Kubernetes 中的 Container。</p>
+<p>Canister 中运行着 WebAssembly 代码，这些代码就是所谓的智能合约。</p>
+<p>Canister 有如下特点：</p>
+<ul>
+<li>Canister 基于 Actor 编程模型，<strong>目前每个 Canister 只包含一个 Actor</strong>（业界的编程模型还有 Golang 的 CSP 模型、Java 和 Python 的多进程模型）</li>
+<li>基于 Actor 编程模型，IC 上可以编写通用 DApp（以太坊上只能编写金融类应用）</li>
+<li>Canister 具有全局唯一 ID</li>
+<li>Canister 封装了所有编程逻辑、公共入口方法、所提供消息类型的接口描述以及它所描述的 DApp 的状态信息</li>
+</ul>
+<h2 id="actor-1"><a class="header" href="#actor-1">Actor</a></h2>
+<p>Actor 是编程语言中很早的概念，比如 Erlang 中就有 Actor。</p>
+<p>Actor 是一种特殊对象，每个 Actor 中的数据和其他 Actor 是隔离的，Actor 之间只能通过消息传递（函数）来改变 Actor 内部的数据。</p>
+<p>而且 Actor 之间的消息处理是异步的，内置了 Future 机制，如果想等待返回结果，使用 await 即可。</p>
+<p>一个 Actor 只能同时处理一个消息，是顺序执行的，没有锁的问题。</p>
+<p><strong>目前一个 Actor 就是一个 Canister。</strong></p>
+<p>在 IC 上，可以使用 IC 自己开发的 Motoko 编程语言进行 Actor 编程，当然使用 Rust 也可以。</p>
+<h2 id="ledger"><a class="header" href="#ledger">Ledger</a></h2>
+<p>IC 将所有涉及 ICP 代币的交易记录在一个专门的管理容器智能合约中，称为账本容器，即 Ledger Canister。</p>
+<p>Ledger Canister 实现了一个智能合约，该合约维护账户和余额，并保留影响账户和余额的交易历史。</p>
+<p>它提供了下面的能力：</p>
+<ul>
+<li>为帐户铸造 ICP 代币</li>
+<li>将 ICP 代币从一个账户转移到另一个账户</li>
+<li>烧掉 ICP 代币以消除它们的存在</li>
+</ul>
+<p>Ledger Canister 要归属于某个身份。</p>
+<h2 id="wallet-1"><a class="header" href="#wallet-1">Wallet</a></h2>
+<p>Wallet 是允许存储和管理 Cycle 的专用智能合约（Canister）。</p>
+<p>Cycle 用于支付 IC 的计算和资源消耗。</p>
+<p>Cycle 可以通过 ICP 转换获得。</p>
+<p>Wallet 要归属于某个身份。</p>
+<h2 id="principal-id"><a class="header" href="#principal-id">Principal id</a></h2>
+<p>Principal 本质是一种标识符，可以用于标识身份和 Canister（未来可能还有其他）。</p>
+<p>比如可以使用 Principal ID 标识一个身份，当你第一次使用 Dfinity Canister SDK 时，dfx 命令行工具会为你创建 default 开发者身份（和一对公钥私钥），default 这个开发者身份就是由 Principal ID 标识。</p>
+<p><em>注意，开发者身份还可用于派生 Account ID（类似于以太坊地址），以代表「身份」将 ICP 代币保存在 Ledger Canister 中。</em></p>
+<p>同样，Canister ID 也是一种 Principal。</p>
+<p>所以当说起 Principal 时，它可能会同时代表某个身份或者某个 Canister，比如 Wallet Canister。</p>
+<h2 id="controller-1"><a class="header" href="#controller-1">Controller</a></h2>
+<p>Controller 是具有安装、升级、删除 Canister 权限的 Principal。</p>
+<p>一般情况下，一个 Canister 的 Controller 可以指定为某个身份、或者某个身份对应的 Wallet Canister。</p>
+<p>在 dfx 0.9 之后，默认「身份」是 Canister 的 Controller 了，Wallet Canister 不再是默认 Controller（相当于 dfx 指定了 --no-wallet）。</p>
+<h2 id="分片sharding"><a class="header" href="#分片sharding">分片（sharding）</a></h2>
+<p>在传统不分片的区块链中，通常在一段时间里只产生一个块，全网所有的矿工竞争唯一的挖矿权，或者针对一个块达成共识。为了提高吞吐量和延迟，通常只能通过提高区块生产速度或者增加区块的大小来完成扩容。然而我在之前的文章也提到过，这两种方式都存在缺点（频繁分叉或者网络延迟）。随后开发者开始把视线集中在了分片上。分片是通过改变网络中验证块的方式来增加吞吐量的。</p>
+<p>分片思想：分而治之</p>
+<p>区块链分片是受传统数据库分片概念的启发，数据库分割为多个部分并放置在不同的服务器上。在分片网络中，节点被分到不同的分片中，网络中的交易也会被分到不同的分片中。因此，每个节点只处理一小部分传入交易，并且它将与网络上的其他节点并行执行。这样将网络分成碎片将导致更多事务被同时处理和验证，原本只能验证一个区块的时间内，可以同时验证多个区块，从而完成对吞吐量的扩展。分片的最大优势在于它可以真正做到线性扩展。吞吐量的大小同分片的数量线性相关。
+我们可以想象现有的区块链就像一条只有一个收费站的繁忙的高速公路。这样一定会导致交通堵塞，因为人们排长队等待并通过收费站。引入分片的区块链就像在高速公路上增加15或20个收费站。它将大大提高车辆通过的速度。分片会对交易的处理速度有非常大的提升。</p>
+<p>分片策略（分类）</p>
+<p>分片只是一个基本的概念。在实际的实现过程中可能有很多种方式。目前主流的分片实现方式可以分为以下三类：网络分片（network sharding），交易分片（transaction sharding）和状态分片（state sharding）。网络分片和交易分片更早被提出，网络中的节点被分到不同的分片中，每个分片针对不同的交易子集进行处理、验证并达成共识。这样不同的交易子集可以被并行处理，各个分片之间也不必进行频繁的通讯。
+另一方面，在如今的公共区块链系统中，节点为了可以验证交易的有效性，需要存储系统所有的历史交易区块和UTXOs（Unspent Transaction Outputs）。如果我们把区块链的吞吐量扩展到了Visa级别，简单的计算可以算出每年增长的存储消耗会高达21.5 TB，如下图。</p>
+<div style="break-before: page; page-break-before: always;"></div><p>贡献者名单：</p>
+<p><a href="https://github.com/NeutronStarPRO">NeutronStarPRO</a> 、<a href="https://github.com/RyanLee0396">Wow</a> 、<a href="https://github.com/Tuostarfish">拓</a>、<a href="https://github.com/Infinityltr">LTR</a> 、<a href="https://github.com/xiaoyuanxun">小元勋</a>、你，对，没看错，下一个就是你 🫵 快来<a href="https://github.com/NeutronStarDAO">加入贡献</a>吧！</p>
+<h2 id="致谢"><a class="header" href="#致谢">致谢</a></h2>
+<p>感谢 Nash 、Ryan-Wow 、拓-Tuo 、LTR 、小元勋-Xun 参与了早期制作。</p>
+<p>感谢 Dfinity 官方、 ICPL 、DoraHacks 、TinTinLand 社区，一部分视频和资料是参考自这些社区举办的 WorkShop 。</p>
+<p>特别感谢 苏玮-Neeboo 、赵杲-Elie 、九瓜、笨鸡翟、昆哥、wuhu 、Anna Lai 、Ray 、时维九月-CoCo 、小马哥-LastMelody 、贝德 的支持与帮助。（正式发布之前问一下：要不要放上他们名字）</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="参考资料"><a class="header" href="#参考资料">参考资料</a></h1>
+<p>B-money https://en.bitcoin.it/wiki/B-money </p>
+<p>History of Blockchain Part 3: Wei Dai (1998) https://medium.com/the-capital/history-of-blockchain-part-3-wei-dai-1998-1195ab5a4e08 </p>
+<p>密码学邮件列表的档案可在 https://www.metzdowd.com/pipermail/cryptography 中找到。中本聪在列表上发送的第一条信息，就是他向世界宣布的第一条消息。 </p>
+<p>B-Money，比特币早期雏形 https://zhuanlan.zhihu.com/p/159129624 </p>
+<p>Satoshi Nakamoto, Bitcoin P2P E-cash Paper （Oct. 31， 2008） http://www.metzdowd.com/pipermail/cryptography/2008-October/014810.html </p>
+<p>James A. Donald, Bitcoin P2P E-cash Paper（Nov. 2， 2008） http://www.metzdowd.com/pipermail/cryptography/2008-November/014814.html </p>
+<p>Ray Dillinger, Bitcoin P2P E-cash Paper（Nov. 6， 2008） http://www.metzdowd.com/pipermail/cryptography/2008-November/014822.html </p>
+<p>程序员花 1 万个比特币买了 2 盒披萨 https://en.wikipedia.org/wiki/Bitcoin#Creation </p>
+<p>《区块链与大众之治》【美】威廉 · 马格努森（Blockchain Democracy: Technogy, Law and the Rule of the Crowd） </p>
+<p>《主权个人》（The Sovereign Individual） </p>
+<p>https://jessewalden.com</p>
+<p>https://chuan.us/archives/322</p>
+<p>https://chuan.us/archives/293</p>
+<p>https://twitter.com/dominic_w</p>
+<p>https://eprint.iacr.org/2016/199.pdf</p>
+<p>https://zhuanlan.zhihu.com/p/22228902</p>
+<p>https://zhuanlan.zhihu.com/p/23243289</p>
+<p>https://zhuanlan.zhihu.com/p/353784975</p>
+<p>https://zhuanlan.zhihu.com/p/142667401</p>
+<p>https://internetcomputer.org/whitepaper.pdf</p>
+<p>https://mmapped.blog/posts/08-ic-xnet.html</p>
+<p>https://internetcomputer.org/how-it-works/peer-to-peer-p2p</p>
+<p>https://internetcomputer.org/how-it-works#Core-IC-Protocol</p>
+<p>https://wiki.internetcomputer.org/wiki/Internet_Computer_wiki</p>
+<p>https://internetcomputer.org/docs/current/developer-docs/ic-overview</p>
+<p>https://medium.com/dfinity/disentangling-dfinity-and-ethereum-dfa2151ad419</p>
+<p>https://medium.com/@dominic-w/helo-world-im-back-blogging-ae6ceacbc1d7</p>
+<p>https://medium.com/dfinity/the-dfinity-blockchain-nervous-system-a5dd1783288e</p>
+<p>https://medium.com/dfinity/dfinity-in-a-nutshell-a-non-technical-introduction-ec45ec5967c1</p>
+<p>https://medium.com/dfinity/the-decentralized-cloud-vision-of-the-dfinity-blockchain-f68449c49be2</p>
+<p>https://medium.com/dfinity/secure-scalability-the-internet-computers-peer-to-peer-layer-6662d451f2cc</p>
+<p>https://medium.com/dfinity/chain-key-technology-one-public-key-for-the-internet-computer-6a3644901e28</p>
+<p>https://mirror.xyz/0xFd007bb46C47D8600C139E34Df9DfceC86F0B319/epZ0vLkKaB-qkt9nBbgfs-bmJ6d8O-fax4HavHkWPI8</p>
+<br>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "print.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="assets/custom.js"></script>
+        <script type="text/javascript" src="assets/bigPicture.js"></script>
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+    </body>
+</html>
