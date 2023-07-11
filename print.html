@@ -183,7 +183,7 @@
 <p>《互联网计算机漫游指南》的结构：前半部分生动有趣，后半部分言简意赅；前半部分谈 IC 原理，后半部分论开发实战。</p>
 <img src="assets/README/logo.png" alt="DFINITY logo" width="377px">
 <h3 id="为什么写这本书"><a class="header" href="#为什么写这本书">为什么写这本书？</a></h3>
-<p>最初我了解 IC 后，收集整理了 IC 白皮书、medium 、ICPL 论坛、IC Developer Forum 里的资料。给朋友讲了 IC 的架构以后，还跟她说正在整理关于 IC 资料的笔记，整理好就分享出来，没想到这一整理就是一年。在经历了天荒地老、沧海桑田、时过境迁的漫长岁月（拖延）后，加上自己后来学到的东西，终于凑出了笔记的初代版本。又经过一段时间的深入学习，我觉得把这些笔记分享出来比较好。做成一本开源书帮大家学习 IC 。也是为 IC 开发者社区做一点贡献。</p>
+<p>最初我了解 IC 后，收集整理了 IC 白皮书、Medium 、ICPL 论坛、IC Developer Forum 里的资料。给朋友讲了 IC 的架构以后，还跟她说正在整理关于 IC 资料的笔记，整理好就分享出来，没想到这一整理就是一年。在经历了天荒地老、沧海桑田、时过境迁的漫长岁月（拖延）后，加上自己后来学到的东西，终于凑出了笔记的初代版本。又经过一段时间的深入学习，我觉得把这些笔记分享出来比较好。做成一本开源书帮大家学习 IC 。也是为 IC 开发者社区做一点贡献。</p>
 <p>零门槛学习区块链，抹平学习 IC 门槛。</p>
 <img src="assets/README/1.jpg">
 <h3 id="为什么开源"><a class="header" href="#为什么开源">为什么开源？</a></h3>
@@ -192,7 +192,7 @@
 <br>
 <br>
 <p>加入本书的开发者讨论群，勘误、修改、提出建议、共同为开源书贡献力量！</p>
-<p><a href="https://oc.app/4jwox-pyaaa-aaaar-amjbq-cai/?ref=3bmc2-5aaaa-aaaaf-agfiq-cai&amp;code=1ab38ffae620366f">OpenChat</a> ， <a href="https://discord.gg/5Y8QPHvR">Discord</a> ，<a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese">Github</a> </p>
+<p><a href="https://oc.app/4jwox-pyaaa-aaaar-amjbq-cai/?ref=3bmc2-5aaaa-aaaaf-agfiq-cai&amp;code=1ab38ffae620366f">OpenChat</a>, <a href="https://t.me/neutronstardaoic">Telegram</a>, <a href="https://discord.gg/5Y8QPHvR">Discord</a>, <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese">Github</a> </p>
 <img src="assets/README/2.jpg">
 <div style="break-before: page; page-break-before: always;"></div><br>
 <p>每个极客心中都有一个去中心化<strong>梦</strong>想。</p>
@@ -925,7 +925,7 @@
 <img src="1.了解IC/assets/1.了解IC/1577.png" alt="1577" style="zoom:20%;" />
 <p>当某个人想要广播一个消息时，他会先告诉自己的好友这个消息的公告。那些好友在收到公告后，可能会请求消息的传递，并在满足特定条件的情况下，把这个消息的公告告诉自己的好友。这就像一个<strong>八卦网络（Gossip network）</strong>。</p>
 <p>P2P 层通过公告-请求-传递机制以及在覆盖网络上运行，能够在牺牲一定延迟的情况下，有效降低带宽使用，从而实现高吞吐量的目标。</p>
-<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>了解 IC P2P 层的更多运行机制。</p>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/../2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/1.P2P%E5%B1%82.html">这里</a>了解 IC P2P 层的更多运行机制。</p>
 <br>
 <h3 id="共识"><a class="header" href="#共识">共识</a></h3>
 <p>共识由子网内部的副本们达成。</p>
@@ -933,7 +933,7 @@
 <p>通过不可预测的随机数给副本们排序，选择谁先出块。如果被选中的副本诚实且没有故障问题，它就会出块，并广播给大家验证。大家觉得没问题，给出自己的公证片段。公证片段达到三分之二后，形成对这个区块的公证。如果大多数副本只对这一个块做过公证，大家会用敲定作为对区块的最终确认。</p>
 <img src="1.了解IC/assets/1.了解IC/1.webp" alt="1" style="zoom:77%;" />
 <p>IC 的共识协议满足：低延迟（几乎即时最终确认性）；高吞吐量；鲁棒性（在副本或网络故障时，延迟和吞吐量会稳定下降一点，而不是直接卡住宕机）</p>
-<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/">这里</a>了解 IC 共识层的更多运行机制。</p>
+<p>在<a href="1.%E4%BA%86%E8%A7%A3IC/../2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/1.P2P%E5%B1%82.html">这里</a>了解 IC 共识层的更多运行机制。</p>
 <br>
 <h3 id="消息路由"><a class="header" href="#消息路由">消息路由</a></h3>
 <p>在 IC 的每个轮次中，共识层把输入打包进区块的荷载中，在共识层最终确认之后，相应的荷载会被传递给消息路由层。消息路由组件从共识接收一个要处理的消息。消息路由把消息路由到对应 Canister 输入队列里。然后它触发执行，执行完成后，Canister 把结果放进输出队列。最后将输出交给消息路由层发送出去。</p>
@@ -1577,12 +1577,15 @@
 <p>并且，如果执行某个操作扣除了 Cycles 之后会低于冻结阈值， Canister 也无法执行这个操作。</p>
 <p>接下来，一起看看调度器的<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/4.%E6%89%A7%E8%A1%8C%E5%B1%82%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90/scheduler.html">代码</a>吧。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="代码分析"><a class="header" href="#代码分析">代码分析</a></h1>
-<ul>
-<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">P2P层代码分析</a></li>
-<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">共识层代码分析</a></li>
-<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">消息路由层代码分析</a></li>
-<li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">执行层代码分析</a></li>
-</ul>
+<p>IC 项目的代码非常庞大且冗长，为了使大家更高效地学习和理解 Rust 代码，这里采用了着重分析一部分代码的策略。</p>
+<p>为了集中精力研究最关键的部分，在这里确定了项目中的一些关键模块。这些模块在整个项目中发挥着核心作用，对实现项目的目标至关重要。通过聚焦于这些关键模块，我能够更深入地理解它们的实现细节和相互之间的关系。</p>
+<p>我们确定了项目中的关键模块或功能点，并将重点放在这些部分进行分析。我们意识到，深入分析整个代码库的每一行代码是不现实的。因此，我们集中精力研究最关键的部分，以更好地理解和评估项目的核心功能。</p>
+<p>以下是目录导览：</p>
+<p><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">P2P层代码分析</a></p>
+<p><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">共识层代码分析</a></p>
+<p><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">消息路由层代码分析</a></p>
+<p><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">执行层代码分析</a></p>
+<p>请做高级工程师或技术指导老师，对以下代码进行详细的分析和讲解，用尽可能通俗易懂的、口语化的方式给Rust初学者讲解以下代码，重点讲解它们的Rust基础语法、算法、数据结构、核心逻辑。分析代码时，请列出源代码的部分片段，然后再后面写下对这段代码的分析，然后再列出下一段代码。涉及基础Rust的知识要介绍一下。如果源代码片段太长，可以省略里面的具体内容，只写出片段。代码：</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="相关概念介绍"><a class="header" href="#相关概念介绍">相关概念介绍</a></h1>
 <ul>
 <li><a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E4%BB%8B%E7%BB%8D/%E5%85%B1%E8%AF%86%E5%A7%94%E5%91%98%E4%BC%9A%E6%95%B0%E9%87%8F%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%EF%BC%9F.html">共识委员会数量如何确定？</a> </li>
