@@ -310,10 +310,7 @@
 <p>分别计算 C1 = g2^t ， C2 = s ⊕ H3(e(H1(id), mpk)^t) = s ⊕ H3(e(h, mpk)^t) ， C3 = M ⊕ H4(s) 。密文为 C = (C1, C2, C3) 。</p>
 <p>有了 vetKD ，现在每个子网都是一个 “ 去中心化的 PKG ” 啦。</p>
 </blockquote>
-<p>vetkeys 就是这些密钥：</p>
-<div class="center-image">
-    <img src="assets/VetKeys/image-20230723190352661.png" style="zoom:43%;" />
-</div>
+<p>我们将派生的密钥称为vetKeys。</p>
 <br>
 <p>所以在 vetIBE 中，用户没有固定的公钥，而是根据需要临时生成传输公钥 tpk 。然后通过副本们的协作来获得用户私钥。用户 id 和 tpk 一起作为解密密钥派生的 “ 身份 ” ，但用户并没有固定的公私钥对。</p>
 <p>传输公钥顾名思义，就是用来加密传输签名片段的嘛 ~ </p>
