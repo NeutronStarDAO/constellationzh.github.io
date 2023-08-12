@@ -177,6 +177,7 @@ img:hover {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    color: #000;
 }
 
 .home-box .box {
@@ -227,12 +228,15 @@ img:hover {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    color: #000;
 }
 
 .hover-win1 {
     display: inline;
     text-decoration: underline;
     background-color: rgb(237, 254, 255);
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .hover-win2 {
