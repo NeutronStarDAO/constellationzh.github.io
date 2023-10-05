@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>SNS - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">vetkeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/2.Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.什么是DAO.html">DAO</a></li><li class="chapter-item expanded "><a href="../5.网络神经系统(NNS)/3.经济模型.html" class="active">SNS</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><div>认证变量</div></li><li class="chapter-item "><div>http外调</div></li><li class="chapter-item "><div>边缘节点</div></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><div>公私钥加密</div></li><li class="chapter-item "><div>ECC</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>ECDSA</div></li></ol></li><li class="chapter-item "><div>BLS</div></li><li class="chapter-item "><div>zk</div></li><li class="chapter-item affix "><li class="part-title">开发Dapp🌟</li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="经济模型介绍"><a class="header" href="#经济模型介绍">经济模型介绍</a></h2>
+<p>ICP 代币经济模型包含代币供给、分配、使用场景以及维持网络稳定和促进 DAO 参与的机制等方面。</p>
+<p>通过设计合理的代币经济模型，IC 的目标是创建一个可持续发展的生态系统，鼓励开发者、DAO 参与者、节点提供商和 Dapp 用户的参与、增长和对网络的信任。</p>
+<br>
+<h3 id="设计意图"><a class="header" href="#设计意图">设计意图</a></h3>
+<p>ICP 代币经济模型在设计时要平衡以下目标和限制：</p>
+<ul>
+<li>
+<p>开发者支付极低廉和稳定的存储和计算费用。</p>
+</li>
+<li>
+<p>节点提供商的报酬要足够高，才能激励他们加入并服务于这个网络。</p>
+</li>
+<li>
+<p>治理投票的奖励需要平衡，既要鼓励用户抵押 ICP 并参与治理，又要控制通胀在合理范围内。</p>
+</li>
+<li>
+<p>这是一个动态系统，社区需要密切关注系统状况，并通过提交 NNS 提案的方式，相应调整 ICP 经济模型的各个参数，使其不断进化和优化。</p>
+</li>
+</ul>
+<br>
+<h3 id="icp-的使用场景"><a class="header" href="#icp-的使用场景">ICP 的使用场景</a></h3>
+<p>要理解 IC 的经济模型，必须先了解 ICP 的各种使用场景。ICP 是 ICP 区块链的核心实用代币，主要具有以下用途：</p>
+<ol>
+<li>节点提供商的奖励</li>
+</ol>
+<p>为 ICP 区块链提供计算和存储基础设施的节点提供商可以获得 ICP 奖励。每个节点每月可以获得一个固定数额的奖励，该奖励以法定货币进行计算，但以 ICP 的形式支付。这种模型确保了区块链运行每个节点的成本在法定货币单位上保持稳定。奖励金额会略有不同，这是为了鼓励节点在全球范围更广泛分布。只要节点提供商保证提供优质服务，就可以持续获得该奖励。奖励通过新增发行 ICP 支付，这会导致一定的通胀压力。</p>
+<ol start="2">
+<li>质押在 NNS</li>
+</ol>
+<p>ICP 持有者可以通过抵押（锁定）代币来创建治理神经元。持有神经元让他们能够通过 IC 的链上开放治理系统 NNS 获取投票权。NNS 让抵押了 ICP 的神经元持有者可以对升级区块链协议、节点软件、接纳新节点提供商等提案进行投票。NNS 实现了流动式民主：神经元可以选择追随其他权威神经元进行投票。参与治理投票的神经元持有者可以从区块链协议获得 ICP 奖励。奖励以成熟度的形式获得，可以转换为 ICP 。这个转换受 NNS 调节，以控制通胀。</p>
+<ol start="3">
+<li>计算资源的燃料</li>
+</ol>
+<p>在 ICP 区块链上运行的 Canister 智能合约所消耗的计算和存储资源，需要通过燃烧 ICP 生成的 “ Cycles ” 来支付。这个 “ Cycles ” 在一定程度上类似以太坊中的 “ gas ” 。但是 ICP 使用了 “ 合约支付 ” 模型，即合约自己预先充值 Cycles ，而非让用户为合约支付费用。 Cycles 是通过燃烧 ICP 生成的，这会造成通缩效应。</p>
+<ol start="4">
+<li>交易和提案手续费</li>
+</ol>
+<p>当用户从一个钱包向另一个钱包转移 ICP 时，需要支付一小部分 ICP 链上交易手续费。用户向治理系统提交提案时，也需要以 ICP 支付手续费。这些手续费通过销毁 ICP 的方式取得，因而产生了通缩效应。</p>
+<br>
+<h3 id="代币总量"><a class="header" href="#代币总量">代币总量</a></h3>
+<p>ICP 的总量并不固定，其供给会根据预设的通胀和通缩机制而浮动。</p>
+<br>
+<p>在 2021 年 5 月 10 日主网上线时，总发行量为 4.69 亿 ICP ，流通量是 1.23 亿 ICP 。</p>
+<p>现在（截至 2023 年 9 月 14 日）的总发行量时 5.058 亿 ICP ，流通量是 4.446 亿 ICP （占总发行量的 87.5% ）。</p>
+<ul>
+<li>
+<p>质押的 ICP 为 2.518 亿 ICP （占总发行量的 49.8% ）。</p>
+<ul>
+<li>81.8% 的质押 ICP 选择了 1 年以上的解锁延迟期。</li>
+<li>52.8% 的质押 ICP 选择了 8 年的解锁延迟期。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>流通量指的是曾经流通的 ICP 。其中有一部分被锁定在神经元中作为抵押 ICP 。</p>
+</blockquote>
+<br>
+<h3 id="icp-的增发与销毁"><a class="header" href="#icp-的增发与销毁">ICP 的增发与销毁</a></h3>
+<p>NNS 通过以下两种方式增发 ICP ：</p>
+<ul>
+<li>
+<p>质押 ICP ，参与治理网络。</p>
+</li>
+<li>
+<p>作为节点提供商，每月获得 ICP 奖励。</p>
+</li>
+</ul>
+<br>
+<p>NNS 通过以下三种方式销毁 ICP ：</p>
+<ul>
+<li>燃烧 ICP 铸造 Cycles ，用于支付智能合约计算和存储费用。</li>
+<li>用于 ICP 交易费用。在 IC 网络中每次交易 ICP 都需要固定的 0.0001 ICP 。</li>
+<li>NNS 提案被拒绝之后，扣掉发起提案的 ICP 。</li>
+</ul>
+<br>
+<p>当前流通的 ICP 以及增发和已销毁的 ICP 可以在<a href="https://dashboard.internetcomputer.org/circulation">这里</a>看到。还有一篇<a href="https://forum.dfinity.org/t/tokenomics-series-projecting-the-total-supply-of-icp/20205">帖子</a>是关于 Dfinity 基金会专家对 ICP 总量的预测，感兴趣可以看看。</p>
+<br>
+<h3 id="治理经济模型"><a class="header" href="#治理经济模型">治理经济模型</a></h3>
+<p>在治理方面，防止单一方获取 51% 的投票权是关键。即使获取不到 51% ，只要能左右投票结果，也会损害网络发展。要获得如此大量的 ICP 需要巨资，而一旦网络受到破坏，这些锁定资产也会贬值。所以这种攻击行为是非常不合算的。即使是资金雄厚的恶意行为者，也很难从交易所快速获取如此多 ICP ，因为大部分 ICP 都被锁定在神经元中赚收益。这会迫使他们只能通过时间较长的累积才能获取这种程度的投票权，而购买压力本身也会推高价格，使后续购买越来越艰难。</p>
+<br>
+<p>想要在不获取锁定 ICP 的情况下获得 51% 的投票权是极不现实的。这也是为什么 ICP 网络不允许神经元在市场上流通的重要考量。因为一旦出现市场恐慌，恶意行为者就能迫使持有者以低价抛售神经元，从而快速聚集投票权。当然，这种攻击难度极大，但也反映了不应让神经元自由交易的重要性。</p>
+<p>ICP 设计了独特的经济激励模式，通过奖励机制吸引更多用户锁定资产参与治理，不同的锁定期限又对应不同的投票权重，这样可以平衡网络的安全性和活力。这种模式对中国用户来说可能还不太熟悉，但其背后的经济学激励机制值得我们深入思考和理解。</p>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../5.网络神经系统(NNS)/2.什么是DAO.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../7.互联网身份/1.ii.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../5.网络神经系统(NNS)/2.什么是DAO.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../7.互联网身份/1.ii.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "5.网络神经系统(NNS)/3.经济模型.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

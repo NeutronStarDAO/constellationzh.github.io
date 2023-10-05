@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Motoko - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">vetkeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item expanded "><a href="../4.容器(Canister)/2.Motoko.html" class="active">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.什么是DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/3.经济模型.html">SNS</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><div>认证变量</div></li><li class="chapter-item "><div>http外调</div></li><li class="chapter-item "><div>边缘节点</div></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><div>公私钥加密</div></li><li class="chapter-item "><div>ECC</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div>ECDSA</div></li></ol></li><li class="chapter-item "><div>BLS</div></li><li class="chapter-item "><div>zk</div></li><li class="chapter-item affix "><li class="part-title">开发Dapp🌟</li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <p>Motoko 的设计精巧，目标明确，旨在建立一门易学易用且功能强大的编程语言，专门用于互联网计算机的应用开发。它可以安全编译为 Wasm 字节码部署到 Canister 里。</p>
+<p>它借鉴了 Java 、C# 、JavaScript 、Swift 、Pony 、ML 、Haskell 等语言的设计的优点，为程序员提供了一个易于上手和使用的开发工具。它的语法风格像 JavaScript / TypeScript ，不过比 JavaScript 还简洁。</p>
+<br>
+<p>Motoko 蕴含着设计者对未来的远见和理想。深入了解之后你说不定会对它简洁优雅的语法设计赞叹不已。</p>
+<p>Motoko 追求简单，采用易懂的语法，让普通开发者也能轻松上手。它完美支持 Actor 模型，是编写分布式程序的绝佳选择。它与 WebAssembly 和 IC 的执行模型高度契合，可以充分发挥硬件性能。它对未来的扩展需求也做了考虑，预留了兼容性。</p>
+<p>Motoko 是基于类的面向对象语言，对象即闭包。类可以是 Actor 模型。</p>
+<p>还有一些特点：</p>
+<ul>
+<li>Async 构造用于直接风格的异步消息编程。</li>
+<li>结构化类型系统，简单的泛型和子类型。</li>
+<li>溢出检查的数字类型，显式转换。</li>
+</ul>
+<div class="center-image">
+    <img src="assets/2.Motoko/image-20230916203428940.png" style="zoom: 40%;" />
+</div>
+<p>所以赶紧来看看 Motoko 的<a href="https://github.com/dfinity/motoko">源代码</a>和<a href="https://github.com/dfinity/motoko-base">基础库</a>吧！你可以继续深入了解 <a href="https://internetcomputer.org/docs/current/motoko/main/overview">Motoko 使用文档</a>。</p>
+<p>你还可以通过 <a href="https://m7sm4-2iaaa-aaaab-qabra-cai.ic0.app/">Motoko Playground</a> 直接部署和测试 Motoko 代码，只要打开浏览器的一个网页就可以！极大地降低了使用 Motoko 和 IC 的门槛。Dfinity 的 Motoko 团队也经常使用 Playground 来测验各种简单的 Motoko 代码。</p>
+<p>还有 Motoko 的<a href="https://github.com/dfinity/vessel">包管理器 Vessel</a> 也是 Motoko 生态很重要的一部分。仅需几行配置代码，就可以帮开发者把第三方库拉到自己的项目，或发布自己的库给其他开发者使用。</p>
+<p>不止上面这些，社区里还有<a href="https://github.com/motoko-unofficial/awesome-motoko">更多关于 Motoko 的内容</a>。</p>
+<br>
+<h2 id="互联网计算机的愿景"><a class="header" href="#互联网计算机的愿景">互联网计算机的愿景</a></h2>
+<p>要充分理解 Motoko 的设计理念和目标，我们首先需要简要地了解一下背后驱动其诞生的互联网计算机项目。Dfinity 基金会正在积极推进这个雄心勃勃的项目，其终极目标是构建一个 “ 世界计算机 ” ，也就是一个足够强大且对所有人开放的分布式计算平台，它将为人类进入一个更加自由和开放的数字文明时代提供基础。</p>
+<p>概括来说，互联网计算机项目试图打造一种全新的公共计算基础设施，类似我们现在使用的互联网，但是其区别在于计算和数据存储是发生在很多个服务器上，而不是集中在大型数据中心的服务器上。这种架构上的不同带来了极大的去中心化优势，使其具有内在的隐私保护性、安全性和可扩展性。</p>
+<p>为了实现这个宏伟的愿景，Dfinity 需要在底层网络协议到软件生态系统各个层面进行技术创新。而作为这个层层创新的基石，也需要设计一门面向这个新平台的编程语言，为开发者提供直接开发应用的支持。Motoko 应运而生，它在语言这个层面上，将互联网计算机的核心理念具体化和实践化，为构建这个新世界的软件基础提供了关键支撑。</p>
+<br>
+<h2 id="motoko的设计理念"><a class="header" href="#motoko的设计理念">Motoko的设计理念</a></h2>
+<p>作为一门全新打造的语言，Motoko 在整体设计上进行了多方面的思考和创新，所有这些设计决策的指导原则都是充分利用这门语言来开发互联网计算机这个崭新的环境。</p>
+<p>Motoko 是一门强类型的基于 Actor 的语言，并内置支持正交持久性和异步消息传递。其生产力和安全特性包括自动内存管理、泛型、类型推断、模式匹配，以及任意精度和固定精度算术。消息传递透明，采用了互联网计算机的 Candid 接口定义语言和线格式，实现类型化的高级跨语言互操作性。</p>
+<p>以下几点是 Motoko 的核心设计理念：</p>
+<ul>
+<li>
+<p>基于 Actor 模型：Motoko 采用了 Actor 模型作为其并发和分布式编程的核心抽象。Actor 是一种天生支持异步和并发的编程实体。一个 Motoko 程序由多个 Actor 组成。这种模型非常适合构建分布式系统。</p>
+</li>
+<li>
+<p>支持异步消息传递：Actor 之间主要通过异步传递消息进行交互。这种通信方式非常适合网络环境，可以避免阻塞和等待。</p>
+</li>
+<li>
+<p>内置正交持久性：Motoko 通过语言层面的抽象极大地简化了状态持久化这一复杂问题。开发者可以忽略状态保存和恢复的细节。</p>
+</li>
+<li>
+<p>面向安全的设计：Motoko 在类型系统、运行时和并发控制方面都加强了各种检查和保护，大幅提高了程序的健壮性和安全性。</p>
+</li>
+<li>
+<p>多语言互操作性：Motoko 使用一种通用的接口定义语言，以实现不同语言编写的模块之间的安全互操作。</p>
+</li>
+<li>
+<p>编译为 WebAssembly ：利用 WebAssembly 带来的各项优势，包括可移植性、安全性和效率。</p>
+</li>
+</ul>
+<p>可以看到，这些设计理念都紧密地契合了互联网计算机的架构特征和应用需求，使 Motoko 成为在这个崭新的分布式平台上进行应用开发的理想语言。</p>
+<br>
+<h2 id="motoko语言特性概览"><a class="header" href="#motoko语言特性概览">Motoko语言特性概览</a></h2>
+<p>除了整体设计理念外，Motoko 语言本身作为一门通用编程语言，也集成了当代语言设计中许多优秀的特性和理念。</p>
+<ul>
+<li>静态类型系统：提供编译期类型检查，可以发现部分错误。</li>
+<li>自动内存管理：有编译器管理内存，通过引用计数回收不再使用的对象。</li>
+<li>泛型：支持泛型，提高代码复用性。</li>
+<li>类型推断：编译器可以推断大部分类型，但有时需要类型注解。</li>
+<li>模式匹配：支持模式匹配不同类型的值。</li>
+<li>不可变性：变量默认不可变，使用 var 声明可变变量。</li>
+<li>可选类型：有可选类型以代替空值。</li>
+<li>溢出检查：运行时检查整数溢出。</li>
+<li>并发安全：Actor 消息处理是原子的，在一个函数调用过程内保持原子性。</li>
+</ul>
+<p>上述这些语言特性可见， Motoko 汲取了过去几十年编程语言理论与实践的精华，将许多有助于可靠性和生产力的现代语言特性融入其中。</p>
+<br>
+<h2 id="actor模型与异步处理"><a class="header" href="#actor模型与异步处理">Actor模型与异步处理</a></h2>
+<p>Actor 是 Motoko 中的一种核心抽象，代表一个并发执行的实体。Motoko 程序由多个 Actor 组成，它们之间通过异步消息传递进行交互，没有任何共享状态。每个 Actor 都有其自己私有的可变状态。发送消息给 Actor 不会造成发送方阻塞，Actor 根据自身状态进行并发地消息处理。</p>
+<p>这种基于消息传递的 Actor 模型非常适合构建分布式系统。在互联网计算机上，Actor 会编译成能够跨网络进行通信的模块，成为所谓的 Canister 。</p>
+<br>
+<p>为了使异步编程更加便捷，并能够以顺序的 “ 直接风格 ” 来表达它。在 Motoko 中采用了另一个 40 多年前的编程语言用来研究历史记载中的想法，而且更幸运的是，这个想法最近变得更加流行了：Futures（在一些社区中也称为 promise（前途或者希望）），在 Motoko 中，它们以 “ 异步值 ” 的形式实现，类型为 “ 异步 ” 的值由前缀为 “ async ” 关键字的表达式产生。值得一提的是，函数体可以是一个异步表达式，因此很自然地取代了存在于其他一些语言中更单一的 “ 异步函数 ” 概念。</p>
+<p>这样来看，演绎的方法就可以有结果了——只要这些结果是未来的。未来可以等待获得他们的值，但是只能在另一个异步表达式中进行，类似于其他编程语言中的异步或者等待单元。</p>
+<br>
+<h2 id="正交持久性抽象"><a class="header" href="#正交持久性抽象">正交持久性抽象</a></h2>
+<p>对于构建分布式系统来说，状态的保存和恢复是一个非常关键也非常复杂的问题。传统上，开发者需要自己处理各种检查点的保存和恢复逻辑。而 Motoko 在语言层面做了抽象，提供了 “ 正交持久性 ” 功能，极大地减轻了开发者的工作。</p>
+<br>
+<p>所谓正交持久性，就是状态持久化与程序业务逻辑两个关注点的正交化。</p>
+<p>开发者只需要关注编写业务应用程序的逻辑，不必担心状态的保存和恢复。这项复杂的工作被抽象出去，有运行时环境处理，对开发者是透明的。</p>
+<p>这样，业务逻辑与状态持久化这两个交叉的关注点被分离开来，开发者只需要关注前者，可以专注在应用本身的功能上。</p>
+<p>这种抽象使开发者可以更加专注于应用程序本身的业务逻辑。底层平台会透明地处理状态的持久化，在 Actor 重新启动时进行恢复，开发者不必操心这些细节。</p>
+<br>
+<p>Motoko 的正交持久性是如何实现的呢？关键在于它提供了一个 “ 永生运行 ” 的抽象模型。</p>
+<p>对于程序员来说，写 Motoko 代码就像是在一个永远存在的运行环境中一样，变量和状态会持续存在，不存在程序重启的概念。</p>
+<p>而底层平台会透明地进行状态持久化，在 Actor 重新启动时，自动进行状态恢复，程序继续执行就像无事发生一样。</p>
+<p>具体技术上，平台会跟踪 Actor mutable 状态的变化，在每次消息处理之前保存快照，在 Actor 重新启动时进行恢复。对于不可变状态，则完全不需要特殊处理。</p>
+<p>正交持久性带来了以下优点：</p>
+<ul>
+<li>开发者可以更加专注于业务逻辑，不必分心处理状态持久化问题。</li>
+<li>避免了重复编写检查点保存和恢复代码的劳动。</li>
+<li>状态持久化代码被统一优化，提高了效率。</li>
+<li>简化了开发复杂分布式系统的难度。</li>
+<li>新手程序员也可以更轻松地上手。</li>
+<li>可测试性增强，可以将测试局限在单次执行中。</li>
+</ul>
+<p>通过提供正交持久性抽象，Motoko 极大地简化和改善了构建分布式系统时必须解决的一个关键难题，这是一个非常巧妙的语言层面设计的创新。</p>
+<br>
+<h2 id="多语言互操作性"><a class="header" href="#多语言互操作性">多语言互操作性</a></h2>
+<p>考虑到互联网计算机是一个开放的环境，不同的开发团队可能会使用各自偏好的编程语言进行开发，为了使这些不同语言编写的模块可以平滑地互操作，Motoko 采用了一种通用的接口描述语言 Candid 。</p>
+<p>每个 Canister 使用 Candid 描述其对外提供的接口和消息类型。Motoko 编译器可以自动将这些接口映射到 Motoko 内部类型。这样，使用不同语言开发的 Canister 可以通过这些共享接口进行交互，同时类型安全也得到保证。</p>
+<p>这种跨语言互操作性机制对一个开放的分布式计算平台来说是必须的。</p>
+<br>
+<h2 id="webassembly"><a class="header" href="#webassembly">WebAssembly</a></h2>
+<p>Motoko 编译器生成的最终目标是 WebAssembly（缩写 Wasm ）。选择 Wasm 作为目标，是 Motoko 设计者经过深思熟虑的结果，主要基于以下考虑：</p>
+<p><strong>什么是 WebAssembly</strong></p>
+<p>WebAssembly 是一个面向未来的通用低级字节码格式，它的设计目标是可移植、安全和高效。最初是针对 Web 应用的需求开发的，但实际上适用范围更广。</p>
+<p>Wasm 模块通过类似汇编语言的字节码在沙盒环境中执行，和具体语言无关。运行时通过栈来执行指令。相比虚拟机，Wasm 更贴近硬件，没有语言特定的优化。</p>
+<p><strong>为什么选择 Wasm</strong></p>
+<p>Motoko 选择 Wasm 作为编译目标、Canister 采用 Wasm，主要基于以下几点考虑：</p>
+<ul>
+<li><strong>可移植性</strong>。Wasm 可以运行在支持它的任意平台上，不依赖特定语言或操作系统。</li>
+<li><strong>安全性</strong>。Wasm 的沙盒化执行保证了代码的安全隔离。这对区块链和去中心化应用尤为重要。</li>
+<li><strong>效率</strong>。Wasm 的执行效率接近原生代码，对性能要求高的 IC 很关键。</li>
+<li><strong>异步性</strong>。Wasm 对异步调用提供了支持，很适合 Actor 模型。</li>
+<li><strong>未来性</strong>。Wasm 正在快速发展并成为行业标准，有几大浏览器巨头合作推进，选择它更加未来。</li>
+</ul>
+<p>选择 Wasm 具有以下优势：</p>
+<ul>
+<li>
+<p>可以跨平台运行，具备极强的可移植性。</p>
+</li>
+<li>
+<p>沙盒化执行提供了安全性保证。</p>
+</li>
+<li>
+<p>执行效率接近原生代码，对性能非常关键。</p>
+</li>
+<li>
+<p>内置的异步调用机制，适合 Actor 模型。</p>
+</li>
+<li>
+<p>Wasm 作为通用标准，其未来发展前景非常 optimistic 。</p>
+</li>
+<li>
+<p>Motoko 直接编译到 IC 运行的目标代码，技术一致性。</p>
+</li>
+</ul>
+<p>Motoko 选择 Wasm 作为编译目标，是其设计中一个极为明智的选择。利用 Wasm 的各项优势，对 Motoko 的跨平台性、安全性和效率都提供了保证。支持一次部署，到处运行。也使其业界影响力更大。可以说这是一种典范级的工程技术选择。</p>
+<br>
+<h2 id="总结"><a class="header" href="#总结">总结</a></h2>
+<p>Motoko 是 Dfinity 基金会呕心沥血打造的一门全新语言，旨在为其激进的互联网计算机项目提供编程语言层面的支持。</p>
+<p>Motoko在总体设计上采用了 Actor 模型、内置正交持久性等创新理念，语言本身也集成了静态类型检查、自动内存管理等优秀特性。可以说 Motoko 在设计上进行了多方面的大量创新，这些设计决策都旨在减少开发者的心智负担，让他们可以专注于构建这个面向未来的分布式计算平台之上的应用软件。</p>
+<p>虽然作为新语言 Motoko 还有大量工作要做，但它的雄心勃勃充满了对未来的想象。随着时间的推移，相信 Motoko 会日益成熟，最终成为构建互联网计算机世界的一个强力工具。</p>
+<p>现在了解完 Motoko 了，来试试<a href="3.%E9%83%A8%E7%BD%B2%E8%87%AA%E5%B7%B1%E7%9A%84Canister.html">部署自己的 Canister</a> 吧。</p>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../4.容器(Canister)/1.Canister.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../4.容器(Canister)/3.部署自己的Canister.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../4.容器(Canister)/1.Canister.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../4.容器(Canister)/3.部署自己的Canister.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "4.容器(Canister)/2.Motoko.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>
