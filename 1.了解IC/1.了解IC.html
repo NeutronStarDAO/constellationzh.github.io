@@ -326,13 +326,13 @@
 </ul>
 <p>在<a href="../2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/4.%E6%89%A7%E8%A1%8C%E5%B1%82.html">这里</a>了解 IC 执行层的更多运行机制。</p>
 <br>
-<h3 id="边缘节点boundary-node"><a class="header" href="#边缘节点boundary-node">边缘节点（Boundary node）</a></h3>
+<h3 id="边缘节点"><a class="header" href="#边缘节点">边缘节点</a></h3>
 <p>前面说过，IC 就是去中心化的云，可以给用户直接提供完整的网络服务，而不依赖任何中心化服务。</p>
 <p>那么用户的请求是怎么发给某个子网里的副本（节点）的？ IC 是怎么防护 DDoS 攻击的？有防火墙吗？有 CDN 缓存吗？ 😏 You know what I mean. </p>
 <div class="center-image">
     <img src="assets/1.了解IC/image-20230707233030143.png" style="zoom:39%;" />
 </div>
-<p>这些服务就是 IC 的边缘节点提供的。</p>
+<p>这些服务就是 IC 的边缘节点（Boundary node）提供的。</p>
 <p>边缘节点负责把请求转发到对应的子网，保护子网，提供缓存。</p>
 <p>当用户通过浏览器访问 IC 时，IC 会通过域名上的 Canister id 找到对应的 Canister 。首先，浏览器会查找域名对应的 DNS 记录，得到边缘节点的 IP 地址。然后向边缘节点发送一个 HTTPS 请求。边缘节点返回一个 JS 库 “ 服务助手 ”（或网络服务助手，Service worker），在浏览器上运行。</p>
 <p>这个服务助手的一个主要任务就是用链钥密码学来验证 IC 发过来的响应。为了实现这个功能，NNS 的公共验证密钥被硬编码在服务助手里面。</p>
@@ -375,8 +375,8 @@
     <img src="assets/1.了解IC/image-20230706114004742.jpg" style="zoom:35%;" />
 </div>
 <br>
-<h2 id="链钥密码学chain-key"><a class="header" href="#链钥密码学chain-key">链钥密码学（Chain Key）</a></h2>
-<p>IC 使用了一种高级加密机制工具箱，统称为<a href="../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html">链密钥密码学</a>。这种技术让 IC 实现了其他区块链无法实现的功能和可扩展性。</p>
+<h2 id="链钥密码学"><a class="header" href="#链钥密码学">链钥密码学</a></h2>
+<p>IC 使用了一种高级加密机制工具箱，统称为<a href="../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html">链密钥密码学</a>（Chain Key）。这种技术让 IC 实现了其他区块链无法实现的功能和可扩展性。</p>
 <p>它的一个关键组成部分是阈值签名方案，这类似于普通的数字签名方案，但它有个不同之处，就是秘密签名密钥分布在子网的副本中，这样密钥就不会被轻易泄露或窃取。</p>
 <div class="center-image">
     <img src="assets/1.了解IC/image-20230706154712633.png" style="zoom:27%;" />
@@ -435,7 +435,7 @@
 <p>还有 HTTP 集成，可以让 Canister 读取 IC 外部的任意网页，不用预言机！</p>
 <p>在<a href="../4.%E5%AE%B9%E5%99%A8(Canister)/1.Canister.html">这里</a>可以看到更多关于 Canister 的内容。</p>
 <br>
-<h2 id="互联网身份internet-identity"><a class="header" href="#互联网身份internet-identity">互联网身份（Internet Identity）</a></h2>
+<h2 id="互联网身份"><a class="header" href="#互联网身份">互联网身份</a></h2>
 <p>在网络上我们通常用用户名和密码来识别和验证身份，但这些方法很难管理，而且安全漏洞很多。为了解决这些问题，IC 做了一种更先进、更安全的加密身份验证方法，它叫做<strong>互联网身份</strong>（Internet Identity），可以在 IC 生态的 Dapp 上使用。登录 Dapp 时不需要输入任何密码，也不用记下复杂的私钥或者助记词，就可以轻松的控制自己的去中心化身份。</p>
 <p>用户<a href="https://identity.ic0.app">使用互联网身份</a>时，网站就收集不到关于用户在线活动的信息了。因为它会帮你在每个网站上创建和管理匿名、独立的帐户，让你可以在不用担心管理这些帐户的情况下，享受到拥有许多不同帐户的隐私保护。它不仅让你摆脱了复杂的用户名和密码管理，还能让你在使用网络服务时更加安全、更加隐私。</p>
 <br>

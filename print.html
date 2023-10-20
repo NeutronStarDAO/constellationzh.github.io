@@ -1208,13 +1208,13 @@
 </ul>
 <p>在<a href="1.%E4%BA%86%E8%A7%A3IC/../2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/4.%E6%89%A7%E8%A1%8C%E5%B1%82.html">这里</a>了解 IC 执行层的更多运行机制。</p>
 <br>
-<h3 id="边缘节点boundary-node"><a class="header" href="#边缘节点boundary-node">边缘节点（Boundary node）</a></h3>
+<h3 id="边缘节点"><a class="header" href="#边缘节点">边缘节点</a></h3>
 <p>前面说过，IC 就是去中心化的云，可以给用户直接提供完整的网络服务，而不依赖任何中心化服务。</p>
 <p>那么用户的请求是怎么发给某个子网里的副本（节点）的？ IC 是怎么防护 DDoS 攻击的？有防火墙吗？有 CDN 缓存吗？ 😏 You know what I mean. </p>
 <div class="center-image">
     <img src="1.了解IC/assets/1.了解IC/image-20230707233030143.png" style="zoom:39%;" />
 </div>
-<p>这些服务就是 IC 的边缘节点提供的。</p>
+<p>这些服务就是 IC 的边缘节点（Boundary node）提供的。</p>
 <p>边缘节点负责把请求转发到对应的子网，保护子网，提供缓存。</p>
 <p>当用户通过浏览器访问 IC 时，IC 会通过域名上的 Canister id 找到对应的 Canister 。首先，浏览器会查找域名对应的 DNS 记录，得到边缘节点的 IP 地址。然后向边缘节点发送一个 HTTPS 请求。边缘节点返回一个 JS 库 “ 服务助手 ”（或网络服务助手，Service worker），在浏览器上运行。</p>
 <p>这个服务助手的一个主要任务就是用链钥密码学来验证 IC 发过来的响应。为了实现这个功能，NNS 的公共验证密钥被硬编码在服务助手里面。</p>
@@ -1257,8 +1257,8 @@
     <img src="1.了解IC/assets/1.了解IC/image-20230706114004742.jpg" style="zoom:35%;" />
 </div>
 <br>
-<h2 id="链钥密码学chain-key"><a class="header" href="#链钥密码学chain-key">链钥密码学（Chain Key）</a></h2>
-<p>IC 使用了一种高级加密机制工具箱，统称为<a href="1.%E4%BA%86%E8%A7%A3IC/../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html">链密钥密码学</a>。这种技术让 IC 实现了其他区块链无法实现的功能和可扩展性。</p>
+<h2 id="链钥密码学"><a class="header" href="#链钥密码学">链钥密码学</a></h2>
+<p>IC 使用了一种高级加密机制工具箱，统称为<a href="1.%E4%BA%86%E8%A7%A3IC/../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html">链密钥密码学</a>（Chain Key）。这种技术让 IC 实现了其他区块链无法实现的功能和可扩展性。</p>
 <p>它的一个关键组成部分是阈值签名方案，这类似于普通的数字签名方案，但它有个不同之处，就是秘密签名密钥分布在子网的副本中，这样密钥就不会被轻易泄露或窃取。</p>
 <div class="center-image">
     <img src="1.了解IC/assets/1.了解IC/image-20230706154712633.png" style="zoom:27%;" />
@@ -1317,7 +1317,7 @@
 <p>还有 HTTP 集成，可以让 Canister 读取 IC 外部的任意网页，不用预言机！</p>
 <p>在<a href="1.%E4%BA%86%E8%A7%A3IC/../4.%E5%AE%B9%E5%99%A8(Canister)/1.Canister.html">这里</a>可以看到更多关于 Canister 的内容。</p>
 <br>
-<h2 id="互联网身份internet-identity"><a class="header" href="#互联网身份internet-identity">互联网身份（Internet Identity）</a></h2>
+<h2 id="互联网身份"><a class="header" href="#互联网身份">互联网身份</a></h2>
 <p>在网络上我们通常用用户名和密码来识别和验证身份，但这些方法很难管理，而且安全漏洞很多。为了解决这些问题，IC 做了一种更先进、更安全的加密身份验证方法，它叫做<strong>互联网身份</strong>（Internet Identity），可以在 IC 生态的 Dapp 上使用。登录 Dapp 时不需要输入任何密码，也不用记下复杂的私钥或者助记词，就可以轻松的控制自己的去中心化身份。</p>
 <p>用户<a href="https://identity.ic0.app">使用互联网身份</a>时，网站就收集不到关于用户在线活动的信息了。因为它会帮你在每个网站上创建和管理匿名、独立的帐户，让你可以在不用担心管理这些帐户的情况下，享受到拥有许多不同帐户的隐私保护。它不仅让你摆脱了复杂的用户名和密码管理，还能让你在使用网络服务时更加安全、更加隐私。</p>
 <br>
@@ -2385,7 +2385,7 @@
 <p><strong>冗余和容错</strong>：下载可分为多个数据块的大型工件时，P2P 层会尝试从发布了工件的多个副本下载数据块。这提高了下载速度和带宽利用率。同时，在副本出现恶意行为或故障时，它还具有容错功能。</p>
 <p><strong>经过验证的连接</strong>：P2P 层的底层传输组件在子网中的副本之间建立基于 TLS 和 TCP 的安全连接。副本使用私钥进行相互认证，确保只有同一子网的副本才能通信。这减少了未授权副本将恶意流量注入子网的风险。</p>
 <p><strong>监控和重新发送请求</strong>：P2P 层持续监测连接质量和收到的工件。如果副本遇到工件问题，比如丢失或无效的数据，它可以向对方副本请求重新发送工件。这个机制有助于从恶意副本可能引发的问题中恢复。</p>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="链钥密码学"><a class="header" href="#链钥密码学">链钥密码学</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="链钥密码学-1"><a class="header" href="#链钥密码学-1">链钥密码学</a></h2>
 <img src="3.链钥密码学(ChainKey)/assets/1.ChainKey/image-20230925163327385.jpg" style="zoom:25%;" />
 <p>链钥密码学（Chain-key cryptography）是对嵌入 IC 底层系统密码学的统称，是 IC 运行时依赖的一套完整的密码学协议，包括了 BLS 阈值签名、非交互式密钥分发协议（NIDKG）、非交互式零知识证明（NIZK）、阈值 EDCSA 、可验证加密阈值密钥（VETKeys）等等技术。</p>
 <p>其中最重要的是 BLS 阈值签名。</p>
@@ -4787,7 +4787,7 @@ $$</p>
 <p>Actor 之间可以互相发送消息进行通信。就像人可以互相给对方打电话或发短信一样。当一个 Actor 收到消息时，它会根据消息内容改变自身的状态或行为。举个例子，当小明收到妈妈的短信 “ 记得买菜 ” 时，他会改变自己的状态，从 “ 在玩游戏 ” 变为 “ 去买菜 ” ，并返回买菜的结果给妈妈。</p>
 <p>每个 Actor 都是并发运行且相互独立的，Actor 之间的消息处理是异步的。就像每个人都可以同时做自己的事，并不需要关心别人在做什么一样。这使得 Actor 模型非常适合编写高并发和分布式的程序。</p>
 <p>Actor 模型通过 Actor 的并发和分布式来实现高性能和高扩展性。它用消息传递来实现 Actor 之间的通信和协作。这种模式在如今的互联网系统中非常常见和重要。</p>
-<h2 id="边缘节点boundary-node-1"><a class="header" href="#边缘节点boundary-node-1">边缘节点（boundary node）</a></h2>
+<h2 id="边缘节点boundary-node"><a class="header" href="#边缘节点boundary-node">边缘节点（boundary node）</a></h2>
 <p>边缘节点（Boundary Node）是互联网计算机（IC）的入口，它允许用户无缝访问运行在其上的 Canister 智能合约。边缘节点构成了 IC 的全球分布边缘，所有对 Canister 智能合约的访问都必须通过其中一个边缘节点。边缘节点为 IC 提供了一个公共端点，并将所有传入请求路由到正确的子网，跨副本节点负载均衡请求，并缓存响应以提高性能。</p>
 <p>边缘节点提供了两种访问 IC 上托管的 Canister 智能合约的方式：一种是通过 HTTP 网关使用标准浏览器访问它们；另一种是通过 API 边缘节点使用 API Canister 调用访问它们。HTTP 网关允许用户通过浏览器以与访问任何 Web 2.0 服务相同的方式访问 IC 上托管的 Dapp 。为此，HTTP 网关将所有传入的 HTTP 请求转换为 API Canister 调用，然后将其路由到正确的子网。API 边缘节点允许 IC 原生应用程序直接调用 Canister 智能合约。在这种情况下，边缘节点只是将 API Canister 调用路由到正确的子网。因此，用户和边缘节点之间不需要信任。</p>
 <h2 id="canister"><a class="header" href="#canister">Canister</a></h2>
