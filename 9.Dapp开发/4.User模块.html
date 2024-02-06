@@ -1,0 +1,788 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>User模块 - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item "><a href="../1.了解IC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/2.Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/3.经济模型.html">经济模型</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><a href="../6.区块链网络服务/5.可信执行环境.html">可信执行环境</a></li><li class="chapter-item "><a href="../6.区块链网络服务/6.链上随机数.html">链上随机数</a></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><a href="../8.IC里的密码学/基础密码学知识.html">基础密码学介绍</a></li><li class="chapter-item "><a href="../8.IC里的密码学/BLS签名.html">BLS</a></li><li class="chapter-item "><a href="../8.IC里的密码学/秘密共享.html">秘密共享</a></li><li class="chapter-item "><a href="../8.IC里的密码学/哈希算法.html">哈希算法</a></li><li class="chapter-item affix "><li class="part-title">开发DApp🌟</li><li class="chapter-item "><a href="../9.Dapp开发/安装开发环境.html">安装开发环境</a></li><li class="chapter-item "><a href="../9.Dapp开发/dfx常用命令.html">dfx常用命令</a></li><li class="chapter-item "><a href="../9.Dapp开发/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../9.Dapp开发/1.入门DApp.html">入门DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/2.设计DApp.html">设计DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/3.开发Proton.html">开发Proton</a></li><li class="chapter-item expanded "><a href="../9.Dapp开发/4.User模块.html" class="active">User模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/5.Post模块.html">Post模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/6.Feed模块.html">Feed模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/7.Fetch模块.html">Fetch模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/8.共享类型.html">共享类型</a></li><li class="chapter-item "><a href="../9.Dapp开发/9.完成.html">完成</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <p>先来看看 User 模块。</p>
+<h2 id="user"><a class="header" href="#user">User</a></h2>
+<p>User 负责 Proton 有关用户资料的功能。</p>
+<p>我们需要的功能是：关注用户、取消关注、获取关注列表、获取粉丝列表、创建和更新用户个人资料，以及搜索用户功能。</p>
+<br>
+<p>要实现用户互相关注的功能，首先需要存储用户之间的关注关系，我们可以使用有向图这种数据结构。</p>
+<p>对于用户互相关注功能，可以将其模型化为一个有向图：</p>
+<ul>
+<li>每个用户为一个点。</li>
+<li>如果用户 A 关注了用户 B，则从点 A 向点 B 引一条有向边（箭头）。</li>
+<li>这样就构成了一个有向图，表示用户之间的关注关系。</li>
+</ul>
+<div class="center-image">
+<img src="assets/4.User模块/image-20240121085153960.png" style="zoom:39%;" />
+</div>
+<p>有向图可以直观地表示用户间关注关系，便于理解和实现相关算法。</p>
+<p>还可以利用图算法分析社交关系，比如寻找点间最短路径，查询你关注的人里有谁关注了他。</p>
+<br>
+<h3 id="定义用户资料typesmo"><a class="header" href="#定义用户资料typesmo">定义用户资料：types.mo</a></h3>
+<p>在有向图之前，我们需要先定义一些类型别名，把用户资料里有哪些信息列出来。在 Motoko 里用 <code>type</code> 关键字创建类型别名，我们就可以给一个类型赋予一个新名字，使得代码更加直观、易懂。</p>
+<p>参考之前的 <a href="">LinkedUp</a> ，用一个模块单独定义，在使用模块的文件中引入即可。</p>
+<p>下面我们定义好有向图的点（用户），和用户个人资料。</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;; // 从motoko基础库导入相关内容
+import Time &quot;mo:base/Time&quot;;
+
+module {
+
+    public type Vertex = Principal;
+    public type UserId = Principal;
+    public type Time = Time.Time;
+
+    public type NewProfile = {
+        name: Text;
+        biography: Text;
+        company: Text;
+        education: Text;
+        imgUrl: Text;
+        feedCanister: ?Principal;
+    };
+
+    public type Profile = {
+        id: UserId;
+        name: Text;
+        biography: Text;
+        company: Text;
+        education: Text;
+        imgUrl: Text;
+        feedCanister: ?Principal;
+    };
+
+};
+</code></pre>
+<p>import 语句：</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;;
+</code></pre>
+<p>这行代码的意思是从 Motoko 的标准库中引入了一个模块，这里引入的是 <code>Principal</code> 模块，它和身份标识有关，可以认为这是 IC 上的用户或者服务的身份证。</p>
+<br>
+<h3 id="有向图digraphmo"><a class="header" href="#有向图digraphmo">有向图：digraph.mo</a></h3>
+<p>现在我们创建 digraph.mo 文件，定义一个有向图的类 <code>Digraph</code> ，用于表示用户之间的关注关系。</p>
+<p>把之前定义的类型写出来：</p>
+<pre><code class="language-js">module {
+  type Vertex = Types.Vertex;
+}；
+</code></pre>
+<p><code>vertexList</code> 存储所有的点，<code>edgeList</code> 存储所有的单向边，即关注关系：</p>
+<pre><code class="language-js">type Vertex = Types.Vertex;
+
+public class Digraph() {
+    var vertexList: [Vertex] = []; // 点
+    var edgeList: [(Vertex, Vertex)] = []; // 单向边
+}；
+</code></pre>
+<p><code>addVertex</code> 用于添加点（用户），<code>addEdge</code> 用于添加边（关注关系），用 <code>assert</code> 来确保边的唯一性：</p>
+<pre><code class="language-js">type Vertex = Types.Vertex;
+
+public class Digraph() {
+    var vertexList: [Vertex] = []; // 点
+    var edgeList: [(Vertex, Vertex)] = []; // 单向边
+
+    // public关键字表示这个函数是公开的，任何人的可以调用
+    // 如果用private就只能由Canister内部的代码调用，不公开
+    public func addVertex(vertex: Vertex) {
+      vertexList := Array.append&lt;Vertex&gt;(vertexList, [vertex]);
+    };
+
+    // 添加 from 到 to 的单向边
+    public func addEdge(fromVertex: Vertex, toVertex: Vertex) {
+      // 检查是否已经存在
+      assert(Array.find&lt;(Vertex, Vertex)&gt;(edgeList, func((x, y): (Vertex, Vertex)): Bool {
+        x == fromVertex and y == toVertex
+      }) == null);
+      edgeList := Array.append&lt;(Vertex, Vertex)&gt;(edgeList, [(fromVertex, toVertex)]);
+    };
+
+}；
+</code></pre>
+<br>
+<p><code>getForwardAdjacent</code> 和 <code>getReverseAdjacent</code> 用于获取正向和反向邻居点，即用户的关注列表和粉丝列表，通过遍历边列表实现：</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Types &quot;./types&quot;;
+
+module {
+
+  type Vertex = Types.Vertex;
+
+  public class Digraph() {
+
+    var vertexList: [Vertex] = []; // 点
+    var edgeList: [(Vertex, Vertex)] = []; // 单向边
+
+    public func addVertex(vertex: Vertex) {
+      vertexList := Array.append&lt;Vertex&gt;(vertexList, [vertex]);
+    };
+
+    // 添加 from 到 to 的单向边
+    public func addEdge(fromVertex: Vertex, toVertex: Vertex) {
+      // 检查是否已经存在
+      assert(Array.find&lt;(Vertex, Vertex)&gt;(edgeList, func((x, y): (Vertex, Vertex)): Bool {
+        x == fromVertex and y == toVertex
+      }) == null);
+      edgeList := Array.append&lt;(Vertex, Vertex)&gt;(edgeList, [(fromVertex, toVertex)]);
+    };
+
+    // 获取正向领边的节点 即得到某人的关注列表
+    public func getForwardAdjacent(vertex: Vertex): [Vertex] {
+      var adjacencyList: [Vertex] = [];
+      for ((fromVertex, toVertex) in Iter.fromArray&lt;(Vertex, Vertex)&gt;(edgeList)) {
+        if (fromVertex == vertex) {
+          adjacencyList := Array.append&lt;Vertex&gt;(adjacencyList, [toVertex]);
+        };
+      };
+      adjacencyList
+    };
+    
+    // 获取反向领边的节点 即得到某人的粉丝列表
+    public func getReverseAdjacent(vertex: Vertex): [Vertex] {
+      var adjacencyList: [Vertex] = [];
+      for ((fromVertex, toVertex) in Iter.fromArray&lt;(Vertex, Vertex)&gt;(edgeList)) {
+        if (toVertex == vertex) {
+          adjacencyList := Array.append&lt;Vertex&gt;(adjacencyList, [fromVertex]);
+        };
+      };
+      adjacencyList
+    };
+
+  };
+  
+};
+</code></pre>
+<p>有了有向图存储用户关系，还需要有个存储用户资料的地方。</p>
+<br>
+<h3 id="存储用户信息databasemo"><a class="header" href="#存储用户信息databasemo">存储用户信息：database.mo</a></h3>
+<p>我们再创建一个专门存储用户资料的文件：database.mo 。</p>
+<p>定义一个用户信息的存储类 <code>Directory</code> ，用 <code>HashMap</code> 来存储用户 ID 和其对应的个人资料：</p>
+<pre><code class="language-js">public class Directory() {
+    let hashMap = HashMap.HashMap&lt;UserId, Profile&gt;(1, isEq, Principal.hash);
+};
+</code></pre>
+<blockquote>
+<p>哈希表（Hash table）又叫散列表，是一种可以根据键值（Key value）直接访问的数据结构。哈希表会通过某种哈希算法计算一个键值的函数（这个函数也叫哈希函数或散列函数），并将所查询的数据映射到某个位置以供访问，借此加快查找特定键值的速度。</p>
+<p>哈希表的工作原理可以用这样一个直观的例子来说明：</p>
+<p>字典中收录了大量汉字的信息。为了便于快速找到某个字，可以首先创建一个按照每个字的拼音字母顺序排列的表（也就是字典开头部分的“拼音检字表”），这就类似于在每个字和拼音字母之间建立了一种函数关系。要查找某个字时，只需在这个表中依次定位首字母、第二个字母、第三个字母…… 以此类推，大部分时候甚至不需要完整查找该字拼音的每个字母，就能确定这个字在字典中对应的准确位置。</p>
+<p>在上述例子中，“ 查找拼音的第 n 的字母 ” 就是哈希函数的函数法则，而 “ 拼音检字表 ” 就可以理解为一种哈希表（或散列表）。</p>
+</blockquote>
+<p>还要一些函数实现创建用户资料、更新用户资料、查找单个用户资料、查找多个用户资料以及按照关键词搜索用户的功能。</p>
+<p><code>createOne</code> 和 <code>updateOne</code> 函数分别用于创建和更新用户资料，通过调用 <code>put</code> 函数将用户 ID 和资料放入 HashMap 中。</p>
+<pre><code class="language-js">public class Directory() {
+  let hashMap = HashMap.HashMap&lt;UserId, Profile&gt;(1, isEq, Principal.hash);
+  
+  public func createOne(userId: UserId, profile: NewProfile) {
+    hashMap.put(userId, makeProfile(userId, profile));
+  };
+
+  public func updateOne(userId: UserId, profile: NewProfile) {
+    hashMap.put(userId, makeProfile(userId, profile));
+  };
+  
+  // 其他函数... 
+}
+</code></pre>
+<p><code>findOne</code> 函数用于查找单个用户资料，通过调用 <code>get</code> 函数从 HashMap 中获取。</p>
+<pre><code class="language-js">public func findOne(userId: UserId): ?Profile {
+  hashMap.get(userId)
+};
+</code></pre>
+<p><code>findMany</code> 函数用于查找多个用户资料，通过遍历用户 ID 列表调用 <code>getProfile</code> 函数。</p>
+<pre><code class="language-js">public func findMany(userIds: [UserId]): [Profile] {
+  func getProfile(userId: UserId): Profile {
+    Option.unwrap&lt;Profile&gt;(hashMap.get(userId))
+  };
+  Array.map&lt;UserId, Profile&gt;(userIds, getProfile)
+};
+</code></pre>
+<p><code>findBy</code> 函数用于按关键词搜索用户，通过遍历 HashMap 中的用户资料，找到匹配的用户资料。</p>
+<pre><code class="language-js">public func findBy(term: Text): [Profile] {
+  var profiles: [Profile] = [];
+  for ((id, profile) in hashMap.entries()) {
+    if (includesText(profile.name, term)) {
+      profiles := Array.append&lt;Profile&gt;(profiles, [profile]);
+    };
+  };
+  profiles
+};
+</code></pre>
+<p>辅助函数 <code>makeProfile</code> 用于创建用户资料实例，<code>includesText</code> 用来判断一个字符串是否包含另一个字符串。</p>
+<pre><code class="language-js">    func makeProfile(userId: UserId, profile: NewProfile): Profile {
+      {
+        id = userId;
+        name = profile.name;
+        biography = profile.biography;
+        company = profile.company;
+        education = profile.education;
+        imgUrl = profile.imgUrl;
+        feedCanister = profile.feedCanister;
+      }
+    };
+
+    func includesText(string: Text, term: Text): Bool {
+      let stringArray = Iter.toArray&lt;Char&gt;(string.chars());
+      let termArray = Iter.toArray&lt;Char&gt;(term.chars());
+
+      var i = 0;
+      var j = 0;
+
+      while (i &lt; stringArray.size() and j &lt; termArray.size()) {
+        if (stringArray[i] == termArray[j]) {
+          i += 1;
+          j += 1;
+          if (j == termArray.size()) { return true; }
+        } else {
+          i += 1;
+          j := 0;
+        }
+      };
+      false
+    };
+</code></pre>
+<p>database.mo 文件：</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import Hash &quot;mo:base/Hash&quot;;
+import HashMap &quot;mo:base/HashMap&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Nat &quot;mo:base/Nat&quot;;
+import Option &quot;mo:base/Option&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Time &quot;mo:base/Time&quot;;
+import Types &quot;./types&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import TrieSet &quot;mo:base/TrieSet&quot;;
+
+module {
+  
+  type NewProfile = Types.NewProfile;
+  type Profile = Types.Profile;
+  type UserId = Types.UserId;
+  type Time = Time.Time;
+
+  public class Directory() {
+
+    let hashMap = HashMap.HashMap&lt;UserId, Profile&gt;(1, isEq, Principal.hash);
+
+    public func createOne(userId: UserId, profile: NewProfile) {
+      hashMap.put(userId, makeProfile(userId, profile));
+    };
+
+    public func updateOne(userId: UserId, profile: NewProfile) {
+      hashMap.put(userId, makeProfile(userId, profile));
+    };
+
+    public func findOne(userId: UserId): ?Profile {
+      hashMap.get(userId)
+    };
+
+    public func findMany(userIds: [UserId]): [Profile] {
+      func getProfile(userId: UserId): Profile {
+        Option.unwrap&lt;Profile&gt;(hashMap.get(userId))
+      };
+      Array.map&lt;UserId, Profile&gt;(userIds, getProfile)
+    };
+
+    public func findBy(term: Text): [Profile] {
+      var profiles: [Profile] = [];
+      for ((id, profile) in hashMap.entries()) {
+        if (includesText(profile.name, term)) {
+          profiles := Array.append&lt;Profile&gt;(profiles, [profile]);
+        };
+      };
+      profiles
+    };
+
+    // Helpers
+
+    func makeProfile(userId: UserId, profile: NewProfile): Profile {
+      {
+        id = userId;
+        name = profile.name;
+        biography = profile.biography;
+        company = profile.company;
+        education = profile.education;
+        imgUrl = profile.imgUrl;
+        feedCanister = profile.feedCanister;
+      }
+    };
+
+    func includesText(string: Text, term: Text): Bool {
+      let stringArray = Iter.toArray&lt;Char&gt;(string.chars());
+      let termArray = Iter.toArray&lt;Char&gt;(term.chars());
+
+      var i = 0;
+      var j = 0;
+
+      while (i &lt; stringArray.size() and j &lt; termArray.size()) {
+        if (stringArray[i] == termArray[j]) {
+          i += 1;
+          j += 1;
+          if (j == termArray.size()) { return true; }
+        } else {
+          i += 1;
+          j := 0;
+        }
+      };
+      false
+    };
+  };
+
+  func isEq(x: UserId, y: UserId): Bool { x == y };
+};
+</code></pre>
+<br>
+<h3 id="集成所有功能mainmo"><a class="header" href="#集成所有功能mainmo">集成所有功能：main.mo</a></h3>
+<p>在完成 types.mo 、digraph.mo 、database.mo 之后，最后一件事就是用 actor 集成前面的模块，实现所有功能。</p>
+<div class="center-image">
+<img src="assets/4.User模块/image-20240117170030924.png" style="zoom:40%;" />
+</div>
+<p>Digraph 类实现了一个有向图数据结构，用于存储用户之间的关注关系。Database 类实现了一个用户资料的数据库。</p>
+<div class="center-image">
+<img src="assets/4.User模块/image-20240119131709662.png" style="zoom:50%;" />
+</div>
+<p>现在我们用 User actor 类实现用户模块的主要功能。<code>User</code> 类代表社交网络中的用户，包含了用户关注功能、获取关注列表、获取粉丝列表、创建和更新用户个人资料，以及搜索用户等功能。</p>
+<br>
+<p>模块之间的关系：</p>
+<p>User actor 依赖 Digraph 和 Database 类实现底层数据结构。</p>
+<div class="center-image">
+<img src="assets/4.User模块/image-20240121114437945.png" alt="image-20240121114437945" style="zoom:39%;" />
+</div>
+<p><code>actor</code> 是一个可以并发处理消息的独立实体，类似于面向服务的架构中的微服务。<code>actor class</code> 则是可以创建 <code>actor</code> 实例的类。</p>
+<p>User actor 还要与 RootFeedActor 和 FeedActor 交互，通过它们触发信息流的更新。</p>
+<pre><code class="language-js">import Digraph &quot;./digraph&quot;;
+import Database &quot;./database&quot;;
+import Types &quot;./types&quot;;
+
+// 定义 UserActor
+actor class User() = this {
+    
+}
+</code></pre>
+<p>actor 和 actor class ：</p>
+<p><code>actor</code> 是一种特殊的类型，你可以将其理解为一个可以执行代码的小机器或服务。每个 <code>actor</code> 都有一个独一无二的 <code>Principal</code> ID。如果你把它想象成一个微服务，那么 <code>actor</code> 就是这个微服务的入口点。</p>
+<pre><code class="language-js">actor class Feed(...) = this { ... }
+</code></pre>
+<p>这里我们看到 <code>actor class</code> ，它是 <code>actor</code> 的一种特殊形式，可以接受一些参数来创建新的 <code>actor</code> 实例。这类似于面向对象编程中的类。</p>
+<br>
+<p>根据之前的设计，我们要实现的功能可以总结为：</p>
+<ul>
+<li>让一个用户关注另一个用户，它会更新有向图中的边，并通知被关注用户的 Feed Canister 更新粉丝列表。</li>
+<li>通过有向图查询某个用户的关注列表和粉丝列表。</li>
+<li>新增和更新一个用户的资料。</li>
+<li>查询用户资料。</li>
+</ul>
+<div class="center-image">
+<img src="assets/4.User模块/image-20240119131806105.png" style="zoom:50%;" />
+</div>
+<br>
+<p>我们创建一个 <code>rootFeedCanister</code> 用来记录 Root Feed Canister 。</p>
+<p><code>init</code> 函数用于初始化用户的根 Feed Canister 。</p>
+<p><code>getRootFeedCanister</code> 函数用于获取用户的根 Feed Canister 。</p>
+<pre><code class="language-js">// 定义 UserActor
+actor class User() = this {
+    
+    // 用一个变量表示 Root Feed Canister（用于存储用户Feed数据）
+    // 这里用到了Principal.fromText，所以要在上面导入模块：import Principal
+    stable var rootFeedCanister = Principal.fromText(&quot;2vxsx-fae&quot;);
+
+    // 初始化函数，设置 Root Feed Canister
+    public shared({caller}) func init(_rootFeedCanister: Principal) {
+        rootFeedCanister := _rootFeedCanister;
+    };
+
+    // 查询 Root Feed Canister
+    // query关键字表示查询函数，用于查询数据
+    // 响应极快，不经过共识，不改变Canister状态
+    public query func getRootFeedCanister(): async Principal {
+        rootFeedCanister
+    };
+}
+</code></pre>
+<p>public 、private 和 shared 函数：</p>
+<p>Motoko 中的函数可以是 <code>public</code>（公开的），也可以是 <code>private</code>（私有的），类似于其他编程语言中的访问控制。<code>shared</code> 函数是一种特殊的公开函数，它们可以在不同的 <code>actors</code> 之间进行通信。</p>
+<pre><code class="language-js">public shared({caller}) func init(...) { ... }
+</code></pre>
+<p>这个函数可以被外部的 <code>actor</code> 调用，<code>{caller}</code> 是一个模式匹配，用来获取调用者的身份。</p>
+<br>
+<p><code>follow</code> 函数用来用户关注其他用户，涉及到更新关注者的 Feed Canister 以及有向图的更新。</p>
+<pre><code class="language-js">// 用户关注其他用户的函数
+public shared({caller}) func follow(user: Vertex): async () {
+    // 检查 Root Feed Canister 是否是匿名的
+    assert(not Principal.isAnonymous(rootFeedCanister));
+    
+    // 根据 Root Feed Canister 创建 RootFeedActor 实例
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+    
+    // 遍历 Root Feed Actor 中的所有用户 Feed Canister
+    for((_, _feedCanister) in (await rootFeedActor.getAllUserFeedCanister()).vals()) {
+        
+        // 根据 Feed Canister 创建 FeedActor 实例
+        let feedActor: FeedActor = actor(Principal.toText(_feedCanister));
+        
+        // ignore调用followers 时的返回值，关注者列表在 Feed Canister 里
+        ignore feedActor.updateFollowers(Array.append(
+            graph.getReverseAdjacent(user),
+            [caller]
+        ));
+    };
+    // 在图中添加一条边，表示用户关注了另一个用户
+    graph.addEdge(caller, user);
+};
+</code></pre>
+<p><code>shared</code> 关键字用于声明一个函数或类型是共享的。这意味着它们可以在不同的 Actor 之间共享和使用。</p>
+<p>假如你在一个 Actor 中声明一个 <code>public shared</code> 函数时，这个函数可以被其他 Actor 调用和修改其状态，通过异步消息传递实现。</p>
+<p><a href="https://github.com/Web3NL/motoko-book/blob/main/src/internet-computer-programming-concepts/actors.md">public shared func oneway() { };</a> 就是个例子，这个函数没有返回类型，可以修改 Actor 的状态，无论是否执行成功都返回 <code>()</code> 。</p>
+<p>Motoko 还定义了一系列的共享类型（Shared Types）。只有共享类型才能作为公共共享函数的参数和返回值。这些共享类型包括所有的原始类型（除了 <code>Error</code> 类型）、Option 类型、元组类型、不可变数组类型、对象类型等。比如 <a href="https://github.com/Web3NL/motoko-book/blob/main/src/internet-computer-programming-concepts/async-data/shared-types.md"><code>Nat</code></a> 和 <a href="https://github.com/Web3NL/motoko-book/blob/main/src/internet-computer-programming-concepts/async-data/shared-types.md"><code>Text</code></a> 就是共享类型。</p>
+<br>
+<p><code>getFollowingList</code> 和 <code>getFollowersList</code> 函数获取用户的关注列表和粉丝列表。</p>
+<p><code>createProfile</code> 和 <code>updateProfile</code> 函数创建和更新用户个人资料。</p>
+<p><code>getProfile</code> 函数获取用户的个人资料。</p>
+<p><code>searchProfile</code> 函数根据关键词搜索用户。</p>
+<p>总体上就是这样：</p>
+<div class="center-image">
+<img src="assets/4.User模块/image-20240117165647559.png" />
+</div>
+<p>完整 main.mo 文件如下：</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import Digraph &quot;./digraph&quot;;
+import Database &quot;./database&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Types &quot;./types&quot;;
+
+// 定义 UserActor
+actor class User() = this {
+    
+    // 用一个变量表示 Root Feed Canister（用于存储用户Feed数据）
+    // 这里用到了Principal.fromText，所以要在上面导入模块：import Principal
+    stable var rootFeedCanister = Principal.fromText(&quot;2vxsx-fae&quot;);
+
+    // 初始化函数，设置 Root Feed Canister
+    public shared({caller}) func init(_rootFeedCanister: Principal) {
+        rootFeedCanister := _rootFeedCanister;
+    };
+
+    // 查询 Root Feed Canister
+    // query关键字表示查询函数，用于查询数据
+    // 响应极快，不经过共识，不改变Canister状态
+    public query func getRootFeedCanister(): async Principal {
+        rootFeedCanister
+    };
+
+// ==================== Follow Info ====================
+
+    // 定义类型别名
+    type Vertex = Types.Vertex;
+    type RootFeedActor = Types.RootFeedActor;
+    type FeedActor = Types.FeedActor;
+
+    // 创建有向图实例
+    var graph: Digraph.Digraph = Digraph.Digraph();
+
+    // 用户关注其他用户的函数
+    public shared({caller}) func follow(user: Vertex): async () {
+        // 检查 Root Feed Canister 是否是匿名的
+        assert(not Principal.isAnonymous(rootFeedCanister));
+        
+        // 根据 Root Feed Canister 创建 RootFeedActor 实例
+        let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+        
+        // 遍历 Root Feed Actor 中的所有用户 Feed Canister
+        for((_, _feedCanister) in (await rootFeedActor.getAllUserFeedCanister()).vals()) {
+            
+            // 根据 Feed Canister 创建 FeedActor 实例
+            let feedActor: FeedActor = actor(Principal.toText(_feedCanister));
+            
+            // ignore调用followers时的返回值，关注者列表在 Feed Canister 里
+            ignore feedActor.updateFollowers(Array.append(
+                graph.getReverseAdjacent(user),
+                [caller]
+            ));
+        };
+        // 在图中添加一条边，表示用户关注了另一个用户
+        graph.addEdge(caller, user);
+    };
+
+    // 获取用户关注列表
+    public query({caller}) func getFollowingList(user: Vertex): async [Vertex] {
+        graph.getForwardAdjacent(user)
+    };
+
+    // 获取粉丝列表
+    public query({caller}) func getFollowersList(user: Vertex): async [Vertex] {
+        graph.getReverseAdjacent(user)
+    };
+
+// ==================== Profiles ====================
+
+    // 定义类型别名
+    type NewProfile = Types.NewProfile;
+    type Profile = Types.Profile;
+    type UserId = Types.UserId;
+
+    // 创建数据库实例，用于存储用户的个人资料
+    var directory: Database.Directory = Database.Directory();
+
+    // 创建用户的个人资料
+    public shared({caller}) func createProfile(profile: NewProfile): async () {
+        directory.createOne(caller, profile);
+    };
+
+    // 更新用户的个人资料
+    public shared({caller}) func updateProfile(profile: NewProfile): async () {
+        directory.updateOne(caller, profile);
+    };
+
+    // 根据用户ID获取用户的个人资料
+    public query func getProfile(userId: UserId): async ?Profile {
+        directory.findOne(userId)
+    };
+
+    // 根据搜索词查询用户的个人资料
+    public query func searchProfile(term: Text): async [Profile] {
+        directory.findBy(term)
+    };
+
+}
+</code></pre>
+<p>现在关于 User 的模块就完成了，有了基本的社交网络功能。通过有向图维护用户之间的关注关系，通过数据库存储和查询用户个人资料，以及通过 Root Feed Canister 实现用户动态的更新。</p>
+<p>接下来开始构建 <a href="./5.Post%E6%A8%A1%E5%9D%97.html">Post</a> 模块。</p>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.Dapp开发/3.开发Proton.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.Dapp开发/5.Post模块.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.Dapp开发/3.开发Proton.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.Dapp开发/5.Post模块.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.Dapp开发/4.User模块.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

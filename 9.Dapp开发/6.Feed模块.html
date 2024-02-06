@@ -1,0 +1,1321 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Feed模块 - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item "><a href="../1.了解IC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/2.Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/3.经济模型.html">经济模型</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><a href="../6.区块链网络服务/5.可信执行环境.html">可信执行环境</a></li><li class="chapter-item "><a href="../6.区块链网络服务/6.链上随机数.html">链上随机数</a></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><a href="../8.IC里的密码学/基础密码学知识.html">基础密码学介绍</a></li><li class="chapter-item "><a href="../8.IC里的密码学/BLS签名.html">BLS</a></li><li class="chapter-item "><a href="../8.IC里的密码学/秘密共享.html">秘密共享</a></li><li class="chapter-item "><a href="../8.IC里的密码学/哈希算法.html">哈希算法</a></li><li class="chapter-item affix "><li class="part-title">开发DApp🌟</li><li class="chapter-item "><a href="../9.Dapp开发/安装开发环境.html">安装开发环境</a></li><li class="chapter-item "><a href="../9.Dapp开发/dfx常用命令.html">dfx常用命令</a></li><li class="chapter-item "><a href="../9.Dapp开发/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../9.Dapp开发/1.入门DApp.html">入门DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/2.设计DApp.html">设计DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/3.开发Proton.html">开发Proton</a></li><li class="chapter-item "><a href="../9.Dapp开发/4.User模块.html">User模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/5.Post模块.html">Post模块</a></li><li class="chapter-item expanded "><a href="../9.Dapp开发/6.Feed模块.html" class="active">Feed模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/7.Fetch模块.html">Fetch模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/8.共享类型.html">共享类型</a></li><li class="chapter-item "><a href="../9.Dapp开发/9.完成.html">完成</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="feed"><a class="header" href="#feed">Feed</a></h2>
+<p>在 Feed 模块，我们有以下几个文件：</p>
+<p><strong>types.mo 文件</strong></p>
+<p>定义了整个系统中使用的主要数据类型别名。它导入了一个叫 <code>Types</code> 的模块，然后重新导出该模块中定义的类型，如帖子（Post）、评论（Comment）、点赞（Like）等。</p>
+<p><strong>rootFeed.mo 文件</strong></p>
+<p>它负责统计和创建用户的 Feed 。</p>
+<ul>
+<li><code>createFeedCanister</code> 函数允许用户创建自己的信息流 Canister（容器），这是用户在平台上存储帖子和信息流的地方。</li>
+<li><code>updateFetchUserToFeed</code> 函数负责在用户创建新的信息流 Canister 时更新其他系统组件，如帖子、评论和点赞的抓取服务。</li>
+<li><code>getUserFeedCanister</code> 和 <code>getAllUserFeedCanister</code> 函数提供了检索用户信息流 Canister 的方式。</li>
+</ul>
+<p><strong>database.mo 文件</strong></p>
+<p>实现了一个帖子目录（<code>PostDirectory</code>）和一个信息流目录（<code>FeedDirectory</code>），它们是用于存储和管理帖子及其相关动作（如评论、点赞和转发）的数据库。</p>
+<ul>
+<li><code>PostDirectory</code> 类中有一个 <code>postMap</code>，它是一个使用 <code>TrieMap</code> 实现的键值对集合，用于存储帖子及其索引。</li>
+<li><code>createPost</code> 函数实现了发帖的功能。它创建一个新帖子并将其添加到 <code>postMap</code> 中，同时将帖子索引递增。</li>
+<li><code>getPost</code> 函数允许通过帖子 ID 检索帖子。</li>
+<li><code>createComment</code> 、<code>createLike</code> 和 <code>createRepost</code> 分别用于创建评论、点赞和转发。</li>
+<li><code>getAllPost</code> 函数可以获取所有帖子，并按创建时间排序。</li>
+</ul>
+<p><code>FeedDirectory</code> 类则负责管理用户的信息流。它使用 <code>TrieMap</code> 存储和检索用户信息流中的帖子。</p>
+<p><strong>feed.mo 文件</strong></p>
+<p>Feed 代表了社交媒体平台中的用户信息流。它用前面数据库文件定义的 <code>PostDirectory</code> 和 <code>FeedDirectory</code> 来管理帖子和信息流。</p>
+<ul>
+<li><code>Feed</code> 类中有多个函数，<code>createPost</code>、<code>createRepost</code>、<code>createComment</code> 和 <code>createLike</code>，它们实现了用户在社交媒体上的基本互动。</li>
+<li><code>receiveFeed</code> 、<code>batchReceiveFeed</code> 、<code>receiveComment</code> 、<code>batchReceiveComment</code> 、<code>receiveLike</code> 和 <code>batchReceiveLike</code> 函数用于接收其他用户的帖子、评论和点赞，并将这些活动加入到当前用户的信息流中。</li>
+<li><code>getLatestFeed</code> 函数允许用户检索他们信息流中的最新帖子。</li>
+</ul>
+<br>
+<h3 id="创建feedcanisterrootfeedmo"><a class="header" href="#创建feedcanisterrootfeedmo">创建FeedCanister：rootFeed.mo</a></h3>
+<p>管理用户的 Feed Canister ：</p>
+<ul>
+<li>
+<p>定义存储用户和对应 Feed Canister 的映射关系的 TrieMap - <code>userFeedCanisterMap</code></p>
+</li>
+<li>
+<p>提供创建用户个人 Feed Canister 的方法 - <code>createFeedCanister()</code></p>
+</li>
+<li>
+<p>提供用户 Feed Canister 的方法 - <code>getUserFeedCanister()</code></p>
+</li>
+<li>
+<p>提供获取所有用户 Feed 映射的方法 - <code>getAllUserFeedCanister()</code></p>
+</li>
+<li>
+<p>提供获取总共创建的 Feed Canister 数量的方法 - <code>getTotalUserFeedCanisterNumber()</code></p>
+</li>
+</ul>
+<p>管理 Feed 系统的其他 Canister ：</p>
+<ul>
+<li>
+<p>存储和提供接口查询 / 更新 Post 、Comment 、Like 的 Fetch Canister</p>
+</li>
+<li>
+<p>在创建用户 Feed 时，同步更新这些 Fetch Canister 中的映射关系</p>
+</li>
+</ul>
+<br>
+<p>首先依然是定义 Feed 系统需要的一些基础类型和数据结构，包括用于获取 Feed 的数据的 Actor ，用于存储映射关系的 TrieMap 。</p>
+<pre><code class="language-js">// 自定义的Actor类型，用于获取Feed的不同部分的数据
+type RootFetchActor = Types.RootFetchActor;
+type PostFetchActor = Types.PostFetchActor;
+type CommentFetchActor = Types.CommentFetchActor;
+type LikeFetchActor = Types.LikeFetchActor;
+
+stable let T_CYCLES = 1_000_000_000_000; // 1万亿个cycles，1T，方便后续操作
+
+// 一个存储键值对的数组，键是用户Principal，值是对应的 feed canister 的Principal
+stable var userFeedCanisterMapEntries: [(Principal, Principal)] = [];
+// 一个从用户Principal到 feed canister Principal 的TrieMap
+// 通过fromEntries构造，传入userFeedCanisterMapEntries
+let userFeedCanisterMap = TrieMap.fromEntries&lt;Principal, Principal&gt;(userFeedCanisterMapEntries.vals(), Principal.equal, Principal.hash);
+let ic: IC.Service = actor(&quot;aaaaa-aa&quot;);
+</code></pre>
+<p><code>TrieMap</code> 是一种键值存储结构，它可以高效地插入和查找数据。</p>
+<pre><code class="language-js">let postMap = TrieMap.fromEntries&lt;Nat, Post&gt;(postMapEntries.vals(), Nat.equal, Hash.hash);
+</code></pre>
+<p>这里创建了一个 <code>TrieMap</code>，它用来存储帖子数据，其中 <code>Nat</code> 是键的类型，<code>Post</code> 是值的类型。</p>
+<br>
+<p>为用户创建自己的 Feed Canister 的逻辑：给用户创建自己的 Feed Canister ，并做身份验证、授权设置、数据映射关系同步等工作。</p>
+<pre><code class="language-js">// 给用户创建一个用户自己的Canister
+public shared({caller}) func createFeedCanister(): async ?Principal {
+    // 检查调用者身份
+    assert(_getUserFeedCanister(caller) == null);
+    // 给每个新Canister分配 2T Cycles
+    Cycles.add(2 * T_CYCLES);
+    // 调用 `Feed.Feed` 方法创建用户的 Feed Canister
+    let feedCanister = await Feed.Feed(
+        caller, rootPostCanister, userCanister, 
+        postFetchCanister,
+        commentFetchCanister,
+        likeFetchCanister
+    );
+    // 获取Canister的ID，存入映射TrieMap中
+    let feedCanisterId = Principal.fromActor(feedCanister);
+    userFeedCanisterMap.put(caller, feedCanisterId);
+    // 调用ic方法更新该Canister的设置，授权Root Canister和用户自己作为controllers
+    await ic.update_settings({
+        canister_id = feedCanisterId;
+        settings = {
+            freezing_threshold = null;
+            controllers = ?[Principal.fromActor(this), feedCanisterId];
+            memory_allocation = null;
+            compute_allocation = null;
+        }
+    });
+    
+    // 更新fetch中的信息，在 Post/Comment/Like Fetch Canister 中也更新该用户的映射关系
+    ignore updateFetchUserToFeed((caller, feedCanisterId));
+    
+    // 返回新创建的 Feed Canister ID
+    ?feedCanisterId
+};
+</code></pre>
+<br>
+<p>当有用户 Feed Canister 创建时，同步到其他依赖这个映射关系的 Canister ，保证 Feed 系统的数据一致性。</p>
+<p>总共分 3 步：</p>
+<ol>
+<li>从 Root Fetch Canister 获取所有 Post 、Comment 、Like Fetch Canister 的 ID 。</li>
+<li>遍历每个 Fetch Canister ，创建 Actor 引用。</li>
+<li>调用每个 Fetch Canister 的 <code>addUserToFeedEntry</code> 方法，传入用户和对应 Feed Canister 的映射关系。</li>
+</ol>
+<pre><code class="language-js">func updateFetchUserToFeed(entry: (Principal, Principal)): async () {
+    let rootFetchActor: RootFetchActor = actor(Principal.toText(rootFetchCanister));
+
+    // 更新 postFetch 中的信息
+    let postFetchCanisterArray = await rootFetchActor.getAllPostFetchCanister();
+    for(_canister in postFetchCanisterArray.vals()) {
+        let postFetchActor: PostFetchActor = actor(Principal.toText(_canister));
+        ignore postFetchActor.addUserToFeedEntry(entry);
+    };
+
+    // 更新 commentFetch
+    let commentFetchCanisterArray = await rootFetchActor.getAllCommentFetchCanister();
+    for(_canister in commentFetchCanisterArray.vals()) {
+        let commentFetchActor: CommentFetchActor = actor(Principal.toText(_canister));
+        ignore commentFetchActor.addUserToFeedEntry(entry);
+    };
+    
+    // 更新 likeFetch
+    let likeFetchCanisterArray = await rootFetchActor.getAllLikeFetchCanister();
+    for(_canister in likeFetchCanisterArray.vals()) {
+        let likeFetchActor: LikeFetchActor = actor(Principal.toText(_canister));
+        ignore likeFetchActor.addUserToFeedEntry(entry);
+    };
+};
+</code></pre>
+<br>
+<p>这几个函数是用于查询用户 Feed Canister 映射关系的：</p>
+<p>按用户查询、获取全部映射、获取总数等不同粒度的接口，可以查询用户 Feed Canister 的映射关系，用于读取当前的 Feed 系统内部状态。</p>
+<pre><code class="language-js">// 接收一个用户Principal作为参数
+public query func getUserFeedCanister(user: Principal): async ?Principal {
+    // 调用私有函数，返回该用户对应的 Feed Canister Principal
+    _getUserFeedCanister(user)
+};
+
+// return [(user, feedCanister)]
+public query func getAllUserFeedCanister(): async [(Principal, Principal)] {
+    // 将内部的userFeedCanisterMap转换成数组
+    // 返回所有用户到Feed Canister的映射关系数组
+    Iter.toArray(userFeedCanisterMap.entries())
+};
+
+// 总共创建了多少个Canister
+public query func getTotalUserFeedCanisterNumber(): async Nat {
+    // 返回userFeedCanisterMap的大小，也就是全部 Feed Canister 的数量
+    userFeedCanisterMap.size()
+};
+
+// 内部私有方法，查询用户的Feed
+private func _getUserFeedCanister(user: Principal): ?Principal {
+    // 查询userFeedCanisterMap
+    switch(userFeedCanisterMap.get(user)) {
+        case(null) { return null;};
+        // 根据给定用户Principal,返回对应的 Feed Canister Id
+        case(?canister) { return ?canister;};
+    };
+};
+</code></pre>
+<br>
+<p>在创建 Bucket 时，我们还得告诉 Bucket 系统中的 Post Fetch 、Comment Fetch 和 Like Fetch 的 Canister ID ，所以在 Root Post 中，我们还要记录、保存 Post Fetch 、Comment Fetch 和 Like Fetch ：</p>
+<pre><code class="language-js">stable var postFetchCanister = _postFetchCanister;
+
+public query func getPostFetchCanister(): async Principal { postFetchCanister };
+
+public shared({caller}) func updatePostFetchCanister(
+    newPostFetchCanister: Principal
+): async () {
+    postFetchCanister := newPostFetchCanister;
+};
+
+// CommentFetchCanister
+
+stable var commentFetchCanister = _commentFetchCanister;
+    
+public query func getCommentFetchCanister(): async Principal { commentFetchCanister };
+
+public shared({caller}) func updateCommentFetchCanister(
+    newCommentFetchCanister: Principal
+): async () {
+    commentFetchCanister := commentFetchCanister;
+};
+
+// LikeFetchCanister
+
+stable var likeFetchCanister = _likeFetchCanister;
+    
+public query func getLikeFetchCanister(): async Principal { likeFetchCanister };
+
+public shared({caller}) func updateLikeFetchCanister(
+    newLikeFetchCanister: Principal
+): async () {
+    likeFetchCanister := newLikeFetchCanister;
+};
+
+system func preupgrade() {
+    userFeedCanisterMapEntries := Iter.toArray(userFeedCanisterMap.entries());
+};
+
+system func postupgrade() {
+    userFeedCanisterMapEntries := [];
+};
+</code></pre>
+<p>最后是两个系统函数 <code>preupgrade()</code> 和 <code>postupgrade()</code> ，用来在 Canister 升级前后保存数据。</p>
+<br>
+<h3 id="存储数据databasemo"><a class="header" href="#存储数据databasemo">存储数据：database.mo</a></h3>
+<p>database.mo 文件负责存储用户的 Feed Canister 里的数据。</p>
+<p>首先还是定义帖子索引和映射关系的存储结构，以及相关的查询接口。</p>
+<p>postIndex 用于生成帖子唯一 ID ；postMap 存储帖子数据。getPostIndexEntries 和 getPostMapEntries 用于查询帖子的索引范围和映射关系。</p>
+<pre><code class="language-js">// 定义一些与帖子相关的类型别名
+type Post = Types.Post;
+type PostImmutable = Types.PostImmutable;
+type Comment = Types.Comment;
+type NewComment = Types.NewComment;
+type UserId = Types.UserId;
+type Time = Types.Time;
+type Like = Types.Like;
+type NewLike = Types.NewLike;
+type Repost = Types.Repost;
+type NewRepost = Types.NewRepost;
+
+// 一个自增的帖子索引值
+var postIndex: Nat = postIndexEntries;
+// 一个从帖子索引到帖子的映射表,使用TrieMap实现
+let postMap = TrieMap.fromEntries&lt;Nat, Post&gt;(postMapEntries.vals(), Nat.equal, Hash.hash); // postIndex -&gt; Post
+
+// 返回当前的最大帖子索引值
+public func getPostIndexEntries(): Nat { postIndex };
+
+// 返回postMap中的全部映射关系数组
+public func getPostMapEntries(): [(Nat, Post)] { Iter.toArray(postMap.entries()) };
+
+// 用于生成帖子的唯一id，格式为: bucket#user#index
+private func _getPostId(bucket: Principal, user: Principal, index: Nat): Text {
+    Principal.toText(bucket) # &quot;#&quot; # Principal.toText(user) # &quot;#&quot; # Nat.toText(index)
+};
+</code></pre>
+<br>
+<h4 id="发帖"><a class="header" href="#发帖">发帖</a></h4>
+<p>在 Feed Canister 中发帖的逻辑：</p>
+<p>实现对帖子信息的构造，并存储到帖子映射表中。</p>
+<p>同时返回了一个不可变的帖子对象，避免帖子被修改。</p>
+<p>通过 postIndex 的自增可以保证每篇帖子拥有一个全局唯一的 ID 。</p>
+<p>帖子数据被存储在 TrieMap 中，可以高效查询。</p>
+<pre><code class="language-js">// 发帖
+public func createPost(user: UserId, feedCanister: Principal, content: Text, time: Time, bucket: Principal): PostImmutable {
+    let post: Post = {
+        // 生成帖子的唯一id
+        postId = _getPostId(bucket, user, postIndex);
+        // 构造一个Post记录，包括帖子内容、用户信息、时间等字段
+        feedCanister = feedCanister;
+        index = postIndex;
+        user = user;
+        content = content;
+        var repost = [];
+        var like = [];
+        var comment = [];
+        createdAt = time;
+    };
+    
+    // 将这个Post记录放入postMap中
+    postMap.put(postIndex, post);
+    // postIndex自增
+    postIndex += 1;
+
+    // 返回PostImmutable
+    Utils._convertPostToImmutable(post)
+};
+</code></pre>
+<br>
+<p>提供外部查询帖子的基础接口。</p>
+<p>实现获取帖子总数和根据 id 获取单个帖子的功能。</p>
+<pre><code class="language-js">// 获取帖子总数
+public func getPostNumber(): Nat {
+    // 直接调用postMap的size()
+    postMap.size()
+};
+
+// 根据id获取单个帖子
+public func getPost(postId: Text): ?PostImmutable {
+    // 接收帖子id作为参数，首先调用checkPostId()校验id格式
+    let (bucket, user, index) = utils.checkPostId(postId);
+    // 从postMap中根据索引取出帖子记录post
+    switch(postMap.get(index)) {
+        // 如果不存在，返回null
+        case(null) { return null; };
+        // 如果存在，返回帖子
+        case(?post) {
+            return ?{
+                postId = post.postId;
+                feedCanister = post.feedCanister;
+                index = post.index;
+                user = post.user;
+                repost = post.repost;
+                content = post.content;
+                like = post.like;
+                comment = post.comment;
+                createdAt = post.createdAt;
+            }
+        };
+    };
+};
+</code></pre>
+<br>
+<h4 id="评论"><a class="header" href="#评论">评论</a></h4>
+<p>返回包含 Bucket 和更新后的帖子评论数组的元组。</p>
+<p>所以这个函数会检查帖子是否存在，如果存在就添加新评论，并返回包含帖子所在桶和更新后的帖子信息的元组。</p>
+<p>主要逻辑是检查参数，获取原帖子信息，更新帖子评论，返回更新后的帖子评论。</p>
+<pre><code class="language-js">// 评论
+public func createComment(commentUser: UserId, postId: Text, content: Text, createdAt: Time): ?(Principal, NewComment) {
+    // 检查帖子ID是否有效，并返回帖子所在的bucket、用户和帖子在数组中的索引
+    let (bucket, user, index) = utils.checkPostId(postId);
+    // 获取要评论的帖子post，如果不存在则返回null
+    switch(postMap.get(index)) {
+        case(null) { return null;};
+        case(?post) {
+            // 如果帖子存在，则将新评论添加到帖子的comment数组中
+            // 评论内容包含用户ID、评论内容和时间
+            post.comment := Array.append(post.comment, [{
+            user = commentUser; // 发表评论的用户ID
+            content = content; // 评论内容
+            createdAt = createdAt; // 评论时间
+        }]);
+            ?(bucket, post.comment)
+        };
+    };
+};
+</code></pre>
+<br>
+<h4 id="点赞"><a class="header" href="#点赞">点赞</a></h4>
+<p>其实和前面的评论差不多。都是通过 <code>postMap.get(index)</code> 实现。</p>
+<pre><code class="language-js">// 点赞
+public func createLike(likeUser: UserId, postId: Text, createdAt: Time): ?(Principal, NewLike) {
+    let (bucket, user, index) = utils.checkPostId(postId);
+    switch(postMap.get(index)) {
+        case(null) { return null; };
+        case(?post) {
+            for(like in post.like.vals()) {
+                // 已经点赞过
+                if(like.user == likeUser) { return null;};
+        };
+        post.like := Array.append&lt;Like&gt;(post.like, [{
+            user = likeUser;
+            createdAt = createdAt;
+        }]);
+            ?(bucket, post.like)
+        };
+    }
+};
+</code></pre>
+<br>
+<h4 id="转发"><a class="header" href="#转发">转发</a></h4>
+<p>和上面一样。</p>
+<pre><code class="language-js">// 转发
+public func createRepost(repostUser: UserId, postId: Text, createdAt: Time): ?(Principal, NewRepost) {
+    let (bucket, user, index) = utils.checkPostId(postId);
+    switch(postMap.get(index)) {
+        case(null) { return null; };
+        case(?post) {
+            for(repost in post.repost.vals()) {
+                // 已经转发过
+                if(repost.user == repostUser) { return null;};
+            };
+        post.repost := Array.append&lt;Repost&gt;(post.repost, [{
+            user = repostUser;
+            createdAt = createdAt;
+        }]);
+            ?(bucket, post.repost)
+        };
+    }
+};
+</code></pre>
+<br>
+<h4 id="查询所有帖子"><a class="header" href="#查询所有帖子">查询所有帖子</a></h4>
+<p>函数 <code>getAllPost</code>，该函数从一个映射 (<code>postMap</code>) 中获取所有的帖子 (<code>Post</code>)，将它们转换成不可变的形式 (<code>PostImmutable</code>)，并按照创建时间进行排序。最后，返回排序后的帖子数组。</p>
+<ul>
+<li>
+<p><strong><code>TrieMap.map</code>：</strong></p>
+<p>使用 <code>TrieMap.map</code> 对 <code>postMap</code> 中的每一对键值进行映射，将其转换为不可变的 <code>PostImmutable</code> 类型。这个映射是通过 <code>Nat</code> 类型的键来执行的，使用 <code>Nat.equal</code> 和 <code>Hash.hash</code> 来处理键的相等性和哈希。</p>
+<pre><code class="language-motoko">TrieMap.map&lt;Nat, Post, PostImmutable&gt;(
+    postMap, Nat.equal, Hash.hash,
+    func (k: Nat, v1: Post): PostImmutable {
+        Utils._convertPostToImmutable(v1)
+    }
+)
+</code></pre>
+</li>
+<li>
+<p><strong><code>.vals()</code>：</strong></p>
+<p>获取映射的所有值，返回一个包含所有转换后的 <code>PostImmutable</code> 的数组。</p>
+<pre><code class="language-motoko">TrieMap.map&lt;Nat, Post, PostImmutable&gt;(...).vals()
+</code></pre>
+</li>
+<li>
+<p><strong><code>Iter.sort</code>：</strong></p>
+<p>对值数组进行排序，按照帖子的创建时间 (<code>createdAt</code>) 进行比较。使用 <code>Order.Order</code> 来指定排序的顺序，其中 <code>#less</code> 表示升序，<code>#greater</code> 表示降序，<code>#equal</code> 表示相等。</p>
+<pre><code class="language-motoko">Iter.sort&lt;PostImmutable&gt;(
+    TrieMap.map&lt;Nat, Post, PostImmutable&gt;(...).vals(),
+    func (x: PostImmutable, y: PostImmutable): Order.Order {
+        if(x.createdAt &gt; y.createdAt) return #less
+        else if(x.createdAt &lt; y.createdAt) return #greater
+        else return #equal
+    }
+)
+</code></pre>
+</li>
+<li>
+<p><strong><code>Iter.toArray</code>：</strong></p>
+<p>将排序后的帖子数组转换为一个 Motoko 数组，最终作为函数的返回值。</p>
+<pre><code class="language-motoko">Iter.toArray(...)
+</code></pre>
+</li>
+</ul>
+<p>整个函数的目的是获取映射中的所有帖子，将它们转换为不可变的形式，并按照创建时间排序，最后返回排序后的帖子数组。</p>
+<pre><code class="language-js">public func getAllPost(): [PostImmutable] {
+    Iter.toArray(
+        Iter.sort&lt;PostImmutable&gt;(
+            TrieMap.map&lt;Nat, Post, PostImmutable&gt;(
+                postMap, Nat.equal, Hash.hash,
+                func (k: Nat, v1: Post): PostImmutable {
+                Utils._convertPostToImmutable(v1)
+            }
+        ).vals(),
+        func (x: PostImmutable, y: PostImmutable): Order.Order {
+              if(x.createdAt &gt; y.createdAt) return #less
+              else if(x.createdAt &lt; y.createdAt) return #greater
+              else return #equal
+        }))
+    };
+
+};
+</code></pre>
+<br>
+<h4 id="feeddirectory-类"><a class="header" href="#feeddirectory-类">FeedDirectory 类</a></h4>
+<p>废话不用多说，直接看代码：</p>
+<pre><code class="language-js">public class FeedDirectory(
+    feedMapEntries: [(Text, PostImmutable)]
+) {
+    
+    type PostImmutable = Types.PostImmutable;
+
+    // 使用TrieMap类型创建了一个映射，键是Text类型，值是PostImmutable类型
+    // 用于存储帖子数据
+    let feedMap = TrieMap.fromEntries&lt;Text, PostImmutable&gt;(feedMapEntries.vals(), Text.equal, Text.hash);
+
+    // 返回包含所有映射项的数组
+    public func getFeedMapEntries(): [(Text, PostImmutable)] { Iter.toArray(feedMap.entries()) };
+
+    // 将帖子添加到映射中，键是帖子的postId
+    public func storeFeed(post: PostImmutable) {
+        feedMap.put(post.postId, post);
+    };
+
+    // 批量将帖子数组中的所有帖子添加到映射中
+    public func batchStoreFeed(postArray: [PostImmutable]) {
+        for(_post in postArray.vals()) {
+            feedMap.put(_post.postId, _post);
+        };
+    };
+
+    // 返回映射中存储的帖子数量
+    public func getFeedNumber(): Nat {
+        feedMap.size()
+    };
+
+    // 根据给定的postId返回相应的帖子
+    // 如果帖子不存在，返回null
+    public func getFeed(postId: Text): ?PostImmutable {
+        switch(feedMap.get(postId)) {
+            case(null) { return null; };
+            case(?_feed) { return ?_feed; };
+        };
+    };
+
+    // 返回最新的n个帖子，按照创建时间排序
+    public func getLatestFeed(n: Nat): [PostImmutable] {
+        let feedArray = Iter.toArray(
+            Iter.sort&lt;PostImmutable&gt;(
+            feedMap.vals(),
+            func (x: PostImmutable, y: PostImmutable): Order.Order {
+                if(x.createdAt &gt; y.createdAt) return #less
+                else if(x.createdAt &lt; y.createdAt) return #greater
+                else return #equal
+        }));
+        // 如果请求的数量超过实际帖子数量，返回所有帖子
+        if(n &lt;= feedArray.size()) {
+            Array.subArray(feedArray, 0, n)
+        } else {
+            Array.subArray(feedArray, 0, feedArray.size())
+        }
+    };
+
+};
+</code></pre>
+<br>
+<p>database.mo 完整文件：</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import HashMap &quot;mo:base/HashMap&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Option &quot;mo:base/Option&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Types &quot;./types&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import TrieSet &quot;mo:base/TrieSet&quot;;
+import Hash &quot;mo:base/Hash&quot;;
+import Nat &quot;mo:base/Nat&quot;;
+import Time &quot;mo:base/Time&quot;;
+import utils &quot;../utils&quot;;
+import Text &quot;mo:base/Text&quot;;
+import Order &quot;mo:base/Order&quot;;
+import Utils &quot;../utils&quot;;
+
+module {
+  type Post = Types.Post;
+  public class PostDirectory(
+    postIndexEntries: Nat,
+    postMapEntries: [(Nat, Post)]
+  ) {
+
+    type Post = Types.Post;
+    type PostImmutable = Types.PostImmutable;
+    type Comment = Types.Comment;
+    type NewComment = Types.NewComment;
+    type UserId = Types.UserId;
+    type Time = Types.Time;
+    type Like = Types.Like;
+    type NewLike = Types.NewLike;
+    type Repost = Types.Repost;
+    type NewRepost = Types.NewRepost;
+
+    var postIndex: Nat = postIndexEntries;
+    let postMap = TrieMap.fromEntries&lt;Nat, Post&gt;(postMapEntries.vals(), Nat.equal, Hash.hash); // postIndex -&gt; Post
+
+    public func getPostIndexEntries(): Nat { postIndex };
+
+    public func getPostMapEntries(): [(Nat, Post)] { Iter.toArray(postMap.entries()) };
+
+    private func _getPostId(bucket: Principal, user: Principal, index: Nat): Text {
+      Principal.toText(bucket) # &quot;#&quot; # Principal.toText(user) # &quot;#&quot; # Nat.toText(index)
+    };
+
+    // 发帖
+    public func createPost(user: UserId, feedCanister: Principal, content: Text, time: Time, bucket: Principal): PostImmutable {
+      let post: Post = {
+        postId = _getPostId(bucket, user, postIndex);
+        feedCanister = feedCanister;
+        index = postIndex;
+        user = user;
+        content = content;
+        var repost = [];
+        var like = [];
+        var comment = [];
+        createdAt = time;
+      };
+
+      postMap.put(postIndex, post);
+      postIndex += 1;
+
+      Utils._convertPostToImmutable(post)
+    };
+
+    public func getPostNumber(): Nat {
+      postMap.size()
+    };
+
+    public func getPost(postId: Text): ?PostImmutable {
+      let (bucket, user, index) = utils.checkPostId(postId);
+      switch(postMap.get(index)) {
+        case(null) { return null; };
+        case(?post) {
+          return ?{
+            postId = post.postId;
+            feedCanister = post.feedCanister;
+            index = post.index;
+            user = post.user;
+            repost = post.repost;
+            content = post.content;
+            like = post.like;
+            comment = post.comment;
+            createdAt = post.createdAt;
+          }
+        };
+      };
+    };
+
+    // 评论
+    public func createComment(commentUser: UserId, postId: Text, content: Text, createdAt: Time): ?(Principal, NewComment) {
+      let (bucket, user, index) = utils.checkPostId(postId);
+      switch(postMap.get(index)) {
+        case(null) { return null;};
+        case(?post) {
+          post.comment := Array.append(post.comment, [{
+            user = commentUser;
+            content = content;
+            createdAt = createdAt;
+          }]);
+          ?(bucket, post.comment)
+        };
+      };
+    };
+
+    // 点赞
+    public func createLike(likeUser: UserId, postId: Text, createdAt: Time): ?(Principal, NewLike) {
+      let (bucket, user, index) = utils.checkPostId(postId);
+      switch(postMap.get(index)) {
+        case(null) { return null; };
+        case(?post) {
+          for(like in post.like.vals()) {
+            // 已经点赞过
+            if(like.user == likeUser) { return null;};
+          };
+          post.like := Array.append&lt;Like&gt;(post.like, [{
+            user = likeUser;
+            createdAt = createdAt;
+          }]);
+          ?(bucket, post.like)
+        };
+      }
+    };
+
+    // 转发
+    public func createRepost(repostUser: UserId, postId: Text, createdAt: Time): ?(Principal, NewRepost) {
+      let (bucket, user, index) = utils.checkPostId(postId);
+      switch(postMap.get(index)) {
+        case(null) { return null; };
+        case(?post) {
+          for(repost in post.repost.vals()) {
+            // 已经转发过
+            if(repost.user == repostUser) { return null;};
+          };
+          post.repost := Array.append&lt;Repost&gt;(post.repost, [{
+            user = repostUser;
+            createdAt = createdAt;
+          }]);
+          ?(bucket, post.repost)
+        };
+      }
+    };
+
+    public func getAllPost(): [PostImmutable] {
+      Iter.toArray(
+        Iter.sort&lt;PostImmutable&gt;(
+          TrieMap.map&lt;Nat, Post, PostImmutable&gt;(
+            postMap, Nat.equal, Hash.hash,
+            func (k: Nat, v1: Post): PostImmutable {
+              Utils._convertPostToImmutable(v1)
+            }
+          ).vals(),
+          func (x: PostImmutable, y: PostImmutable): Order.Order {
+              if(x.createdAt &gt; y.createdAt) return #less
+              else if(x.createdAt &lt; y.createdAt) return #greater
+              else return #equal
+          }))
+    };
+
+  };
+  
+  type PostImmutable = Types.PostImmutable;
+
+  public class FeedDirectory(
+    feedMapEntries: [(Text, PostImmutable)]
+  ) {
+    
+    type PostImmutable = Types.PostImmutable;
+
+    let feedMap = TrieMap.fromEntries&lt;Text, PostImmutable&gt;(feedMapEntries.vals(), Text.equal, Text.hash);
+
+    public func getFeedMapEntries(): [(Text, PostImmutable)] { Iter.toArray(feedMap.entries()) };
+
+    public func storeFeed(post: PostImmutable) {
+      feedMap.put(post.postId, post);
+    };
+
+    public func batchStoreFeed(postArray: [PostImmutable]) {
+      for(_post in postArray.vals()) {
+        feedMap.put(_post.postId, _post);
+      };
+    };
+
+    public func getFeedNumber(): Nat {
+      feedMap.size()
+    };
+
+    public func getFeed(postId: Text): ?PostImmutable {
+      switch(feedMap.get(postId)) {
+        case(null) { return null; };
+        case(?_feed) { return ?_feed; };
+      };
+    };
+
+    public func getLatestFeed(n: Nat): [PostImmutable] {
+      let feedArray = Iter.toArray(
+        Iter.sort&lt;PostImmutable&gt;(
+        feedMap.vals(),
+        func (x: PostImmutable, y: PostImmutable): Order.Order {
+            if(x.createdAt &gt; y.createdAt) return #less
+            else if(x.createdAt &lt; y.createdAt) return #greater
+            else return #equal
+      }));
+      if(n &lt;= feedArray.size()) {
+        Array.subArray(feedArray, 0, n)
+      } else {
+        Array.subArray(feedArray, 0, feedArray.size())
+      }
+    };
+
+  };
+};
+</code></pre>
+<br>
+<h3 id="用户云终端feedmo"><a class="header" href="#用户云终端feedmo">用户云终端：feed.mo</a></h3>
+<br>
+<h4 id="owner"><a class="header" href="#owner">owner</a></h4>
+<p>Feed Canister 里需要存储 owner 是谁，以及后期可以转移自己的控制权。</p>
+<pre><code class="language-js">stable var owner = _owner;
+
+// 查询owner，允许合约的用户异步地获取当前的owner
+// 由于是查询函数，它不修改合约状态，因此可以被任何用户调用而不需要经过共识
+public query func getOwner(): async Principal { owner };
+
+// 更新owner
+public shared({caller}) func updateOwner(newOwner: Principal): async () {
+    assert(caller == owner);
+    owner := newOwner;
+};
+
+public query({caller}) func whoami(): async Principal { caller };
+</code></pre>
+<br>
+<h4 id="fetchcanister"><a class="header" href="#fetchcanister">FetchCanister</a></h4>
+<p>同样，Feed Canister 里还需要记录各种 Fetch Canister 。</p>
+<pre><code class="language-js">stable var postFetchCanister = _postFetchCanister;
+
+public query func getPostFetchCanister(): async Principal { postFetchCanister };
+
+public shared({caller}) func updatePostFetchCanister(
+    newPostFetchCanister: Principal
+): async () {
+    postFetchCanister := newPostFetchCanister;
+};
+</code></pre>
+<p>CommentFetchCanister ：</p>
+<pre><code class="language-js">stable var commentFetchCanister = _commentFetchCanister;
+
+public query func getCommentFetchCanister(): async Principal { commentFetchCanister };
+
+public shared({caller}) func updateCommentFetchCanister(
+    newCommentFetchCanister: Principal
+): async () {
+    commentFetchCanister := commentFetchCanister;
+};
+</code></pre>
+<p>LikeFetchCanister ：</p>
+<pre><code class="language-js">stable var likeFetchCanister = _likeFetchCanister;
+
+public query func getLikeFetchCanister(): async Principal { likeFetchCanister };
+
+public shared({caller}) func updateLikeFetchCanister(
+    newLikeFetchCanister: Principal
+): async () {
+    likeFetchCanister := newLikeFetchCanister;
+};
+</code></pre>
+<br>
+<h4 id="followers"><a class="header" href="#followers">Followers</a></h4>
+<p>Feed Canister 里同样维护着一个粉丝列表。在用户发帖时，Feed Canister 会把帖子 ID 和粉丝发给 Fetch Canister ，告诉 Fetch 应该通知哪些人。</p>
+<p>在紧急情况下，可以直接点对点向粉丝发送帖子，也可以用来点对点留言。</p>
+<pre><code class="language-js">stable var followers: [Principal] = [];
+
+// 接收 user canister 的更新
+public shared({caller}) func updateFollowers(newFollowers: [Principal]): async () {
+    followers := newFollowers;
+};
+
+public query func getFollowers(): async [Principal] {
+    followers
+};
+</code></pre>
+<br>
+<h4 id="bucket"><a class="header" href="#bucket">Bucket</a></h4>
+<pre><code class="language-js">type RootPostActor = Types.RootPostActor;
+stable var bucket: ?Principal = null;
+stable let rootPostActor: RootPostActor = actor(Principal.toText(rootPostCanister));
+
+// 更新当前feed去存储的bucket canister
+public shared func checkAvailableBucket(): async Bool {
+    switch((await rootPostActor.getAvailableBucket())) {
+        case(null) { return false; };
+        case(?_bucket) {
+            bucket := ?_bucket;
+            return true;
+        };
+    };
+};
+
+public query func getbucket(): async ?Principal { bucket };
+</code></pre>
+<br>
+<h4 id="post"><a class="header" href="#post">Post</a></h4>
+<p>然后是和帖子有关的功能。</p>
+<pre><code class="language-js">type Time = Types.Time;
+type UserId = Types.UserId;
+type BucketActor = Types.BucketActor;
+type PostFetchActor = Types.PostFetchActor;
+type Post = Types.Post;
+
+stable var postIndexEntries: Nat = 0;
+stable var postMapEntries: [(Nat, Post)] = [];
+let postDirectory: Database.PostDirectory = Database.PostDirectory(postIndexEntries, postMapEntries);
+
+// 查询用户发了多少帖子（统计总数）
+public query func getPostNumber(): async Nat {
+    postDirectory.getPostNumber()
+};
+
+// 根据帖子ID查询用户发的某个帖子
+public query func getPost(postId: Text): async  ?PostImmutable {
+    postDirectory.getPost(postId)
+};
+
+// 查询所有帖子
+public query func getAllPost(): async [PostImmutable] {
+    postDirectory.getAllPost()
+};
+</code></pre>
+<br>
+<p>用户发帖的核心逻辑。</p>
+<pre><code class="language-js">public shared({caller}) func createPost(title: Text, content: Text): async Text {
+    // 检查是否由信息流的所有者调用，确保bucket（用于存储帖子的地方）是存在的
+    assert(caller == owner and bucket != null);
+    let _bucket = Option.unwrap(bucket);
+    // 创建一个新帖子
+    let post: PostImmutable = postDirectory.createPost(caller, Principal.fromActor(this), content, Time.now(), _bucket);
+
+    // 将帖子内容发送给公共区的Bucket 
+    let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+    assert(await bucketActor.storeFeed(post));
+
+    // 通知PostFetch有新帖子发布
+    let postFetchActor: PostFetchActor = actor(Principal.toText(postFetchCanister));
+    await postFetchActor.receiveNotify(followers, post.postId);
+
+    post.postId
+};
+</code></pre>
+<br>
+<p>创建转发。</p>
+<pre><code class="language-js">public shared({caller}) func createRepost(postId: Text): async Bool {
+    switch(postDirectory.createRepost(caller, postId, Time.now())) {
+        case(null) { return false; };
+        case(?(_bucket, _newRepost)) {
+            // 通知bucket更新转发信息
+            let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+            assert(await bucketActor.updatePostRepost(postId, _newRepost));
+
+            // 获取转发者的粉丝
+            let userActor: UserActor = actor(Principal.toText(userCanister));
+            let _repostUserFollowers = await userActor.getFollowersList(caller);
+
+            // 通知PostFetch
+            let postFetchActor: PostFetchActor = actor(Principal.toText(postFetchCanister));
+            await postFetchActor.receiveNotify(_repostUserFollowers, postId);
+            return true;
+        };
+    };
+};
+</code></pre>
+<br>
+<p>评论与点赞。</p>
+<p>我们使用 <code>postDirectory</code> 对象来创建评论或点赞。</p>
+<pre><code class="language-js">// 共享函数，需要提供调用者的信息（caller）
+public shared({caller}) func createComment(postId: Text, content: Text): async Bool {
+    // 根据postDirectory.createComment的返回值进行匹配处理
+    switch(postDirectory.createComment(caller, postId, content, Time.now())) {
+        // 创建失败
+        case(null) { return false; };
+        // 如果返回一个包含_bucket和_newComment的元组，表示成功创建评论，进行以下处理
+        case(?(_bucket, _newComment)) {
+            // 通知对应的bucket更新评论
+            let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+            // assert关键字用于确保更新操作成功
+            assert(await bucketActor.updatePostComment(postId, _newComment));
+            return true;
+        };
+    };
+};
+
+public shared({caller}) func createLike(postId: Text): async Bool {
+    switch(postDirectory.createLike(caller, postId, Time.now())) {
+        case(null) { return false; };
+        case(?(_bucket, _newLike)) {
+            // 通知bucket更新点赞信息
+            let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+            assert(await bucketActor.updatePostLike(postId, _newLike));
+            return true;
+        };
+    };
+};
+</code></pre>
+<br>
+<h4 id="feed-1"><a class="header" href="#feed-1">Feed</a></h4>
+<p>定义一些类型别名和变量。</p>
+<pre><code class="language-js">type PostImmutable = Types.PostImmutable;
+type FeedActor = Types.FeedActor;
+type UserActor = Types.UserActor;
+type CommentFetchActor = Types.CommentFetchActor;
+type LikeFetchActor = Types.LikeFetchActor;
+
+stable var feedMapEntries: [(Text, PostImmutable)] = [];
+let feedDirectory = Database.FeedDirectory(feedMapEntries);
+</code></pre>
+<br>
+<p>除了 Feed 发布帖子、评论、点赞以外，Feed 还需要接收其他 Fetch的通知，更新 Feed 内部的信息流。</p>
+<pre><code class="language-js">public shared({caller}) func receiveFeed(postId: Text): async Bool {
+    let (_bucket, _, _) = Utils.checkPostId(postId);
+    let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+    switch((await bucketActor.getPost(postId))) {
+        case(null) { return false; };
+        case(?_post) {
+            feedDirectory.storeFeed(_post);
+            return true;
+        };
+    };
+};
+</code></pre>
+<br>
+<p>有时候 Feed 得一次性接收很多个帖子，所以我们还需要一个批量接收帖子函数。</p>
+<p>接收一个包含多个帖子 ID 的数组，针对每个帖子 ID 从相应的 Bucket 中获取帖子信息，如果帖子存在，则将其存储到 <code>feedDirectory</code> 中。</p>
+<pre><code class="language-js">public shared({caller}) func batchReceiveFeed(postIdArray: [Text]): async () {
+    for(_postId in postIdArray.vals()) {
+        let (_bucket, _, _) = Utils.checkPostId(_postId);
+        let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+        switch((await bucketActor.getPost(_postId))) {
+            case(null) { };
+            case(?_post) {
+                feedDirectory.storeFeed(_post);
+            };
+        };
+    };
+};
+</code></pre>
+<br>
+<p>接收评论，并根据帖子的转发信息通知相应的用户粉丝。如果帖子不存在，函数返回 <code>false</code> 。</p>
+<pre><code class="language-js">public shared({caller}) func receiveComment(postId: Text): async Bool {
+    let (_bucket, _, _) = Utils.checkPostId(postId);
+    let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+    switch((await bucketActor.getPost(postId))) {
+        case(null) { return false; };
+        case(?_post) {
+
+            feedDirectory.storeFeed(_post);
+
+            if(Utils._isRepostUser(_post, owner)) {
+                // 如果该用户是此贴的转发者，则继续向自己的粉丝推流                    
+                let userActor: UserActor = actor(Principal.toText(userCanister));
+                let repostUserFollowers = await userActor.getFollowersList(owner);
+
+                let commentFetchActor: CommentFetchActor = actor(Principal.toText(commentFetchCanister));
+                await commentFetchActor.receiveRepostUserNotify(repostUserFollowers, postId);
+            };
+
+            return true;
+        };
+    };
+};
+</code></pre>
+<br>
+<p>批量接收评论。</p>
+<pre><code class="language-js">public shared({caller}) func batchReceiveComment(postIdArray: [Text]): async () {
+    for(_postId in postIdArray.vals()) {
+        let (_bucket, _, _) = Utils.checkPostId(_postId);
+        let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+        switch((await bucketActor.getPost(_postId))) {
+            case(null) { };
+            case(?_post) {
+                // Debug.print(&quot;Canister Feed, Func batchReceiveComment&quot;);
+                feedDirectory.storeFeed(_post);
+
+                if(Utils._isRepostUser(_post, owner)) {
+                    // 如果该用户是此贴的转发者，则继续向自己的粉丝推流                
+                    let userActor: UserActor = actor(Principal.toText(userCanister));
+                    let repostUserFollowers = await userActor.getFollowersList(owner);
+
+                    let commentFetchActor: CommentFetchActor = actor(Principal.toText(commentFetchCanister));
+                    await commentFetchActor.receiveRepostUserNotify(repostUserFollowers, _postId);
+                };
+            };
+        };
+    };
+};
+</code></pre>
+<br>
+<p>接收点赞。</p>
+<pre><code class="language-js">public shared({caller}) func receiveLike(postId: Text): async Bool {
+    let (_bucket, _, _) = Utils.checkPostId(postId);
+    let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+    switch((await bucketActor.getPost(postId))) {
+        case(null) { return false; };
+        case(?_post) {
+
+            feedDirectory.storeFeed(_post);
+
+            if(Utils._isRepostUser(_post, owner)) {
+                // 如果该用户是此贴的转发者，则继续向自己的粉丝推流                    
+                let userActor: UserActor = actor(Principal.toText(userCanister));
+                let repostUserFollowers = await userActor.getFollowersList(owner);
+
+                let likeFetchActor: LikeFetchActor = actor(Principal.toText(likeFetchCanister));
+                await likeFetchActor.receiveRepostUserNotify(repostUserFollowers, postId);
+            };
+
+            return true;
+        };
+    };
+};
+</code></pre>
+<br>
+<p>批量接收点赞。</p>
+<pre><code class="language-js">public shared({caller}) func batchReceiveLike(postIdArray: [Text]): async () {
+    for(_postId in postIdArray.vals()) {
+        let (_bucket, _, _) = Utils.checkPostId(_postId);
+        let bucketActor: BucketActor = actor(Principal.toText(_bucket));
+        switch((await bucketActor.getPost(_postId))) {
+            case(null) {};
+            case(?_post) {
+
+                feedDirectory.storeFeed(_post);
+
+                if(Utils._isRepostUser(_post, owner)) {
+                    // 如果该用户是此贴的转发者，则继续向自己的粉丝推流                    
+                    let userActor: UserActor = actor(Principal.toText(userCanister));
+                    let repostUserFollowers = await userActor.getFollowersList(owner);
+
+                    let likeFetchActor: LikeFetchActor = actor(Principal.toText(likeFetchCanister));
+                    await likeFetchActor.receiveRepostUserNotify(repostUserFollowers, _postId);
+                };
+            };
+        };
+    };
+};
+</code></pre>
+<br>
+<p>最后是一些查询函数。</p>
+<pre><code class="language-js">public query func getFeedNumber(): async Nat {
+    feedDirectory.getFeedNumber()
+};
+
+public query func getFeed(postId: Text): async ?PostImmutable {
+    feedDirectory.getFeed(postId)
+};
+
+public query func getLatestFeed(n: Nat): async [PostImmutable] {
+    feedDirectory.getLatestFeed(n)
+};
+</code></pre>
+<br>
+<p><a href="https://github.com/NeutronStarDAO/Proton/blob/rust/src/feed/feed.mo">这里</a>可以查看 feed.mo 的完整文件。</p>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.Dapp开发/5.Post模块.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.Dapp开发/7.Fetch模块.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.Dapp开发/5.Post模块.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.Dapp开发/7.Fetch模块.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.Dapp开发/6.Feed模块.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

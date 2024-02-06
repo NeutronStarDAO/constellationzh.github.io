@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>链上随机数 - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item "><a href="../1.了解IC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/2.Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/3.经济模型.html">经济模型</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><a href="../6.区块链网络服务/5.可信执行环境.html">可信执行环境</a></li><li class="chapter-item expanded "><a href="../6.区块链网络服务/6.链上随机数.html" class="active">链上随机数</a></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><a href="../8.IC里的密码学/基础密码学知识.html">基础密码学介绍</a></li><li class="chapter-item "><a href="../8.IC里的密码学/BLS签名.html">BLS</a></li><li class="chapter-item "><a href="../8.IC里的密码学/秘密共享.html">秘密共享</a></li><li class="chapter-item "><a href="../8.IC里的密码学/哈希算法.html">哈希算法</a></li><li class="chapter-item affix "><li class="part-title">开发DApp🌟</li><li class="chapter-item "><a href="../9.Dapp开发/安装开发环境.html">安装开发环境</a></li><li class="chapter-item "><a href="../9.Dapp开发/dfx常用命令.html">dfx常用命令</a></li><li class="chapter-item "><a href="../9.Dapp开发/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../9.Dapp开发/1.入门DApp.html">入门DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/2.设计DApp.html">设计DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/3.开发Proton.html">开发Proton</a></li><li class="chapter-item "><a href="../9.Dapp开发/4.User模块.html">User模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/5.Post模块.html">Post模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/6.Feed模块.html">Feed模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/7.Fetch模块.html">Fetch模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/8.共享类型.html">共享类型</a></li><li class="chapter-item "><a href="../9.Dapp开发/9.完成.html">完成</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="阈值中继---优雅的链上随机数方案"><a class="header" href="#阈值中继---优雅的链上随机数方案">阈值中继 - 优雅的链上随机数方案</a></h2>
+<p>无论是现实生活中，还是区块链系统这种分布式系统中，我们通常会用到随机数。</p>
+<p>而且在区块链中尤其需要随机数。</p>
+<p>在区块链底层的共识协议中，需要随机数指定一个 leader 出块。比如以太坊的信标链。在以太坊的 PoS 共识中，每个时期（epoch）36 个 slot ，每个 slot（12 秒）出一个区块。在每一个 slot 开始时，会从验证者集合中随机选出一个验证者负责给这个 slot 出块。</p>
+<p>在上层应用中，智能合约也需要随机数实现抽奖、摇骰子等等。</p>
+<p>以及一些多方安全（MPC）协议的乘法运算也需要随机数源去生成数组。</p>
+<br>
+<p>那么如何为一组参与者提供一个可靠的随机数源，就是一个很重要的问题。</p>
+<br>
+<h3 id="不可预测不可偏移"><a class="header" href="#不可预测不可偏移">不可预测，不可偏移</a></h3>
+<p>在区块链系统中，首先要确保每个成员拿到的随机数是一样的。</p>
+<p>其次还要是可靠的，也就是这个随机数是不可预测的，且不可偏移的：</p>
+<ul>
+<li>
+<p>在敌手有历史信息和本轮信息的情况下，任然无法预测未来的随机数。</p>
+<p>不光包含当前的随机数，恶意敌手也不能预测未来的随机数。比如敌手现在不能预测随机数，但是能通过自己的影响，预测到 3 轮以后的一个随机数，这个也是不行的。</p>
+</li>
+<li>
+<p>不可偏移性也可以理解为破坏性。即恶意敌手是没法干扰到生成随机数的过程的。比如敌手现在动了一点手脚，控制了最后几位比特，导致破坏了原有的随机数，这就不安全了。</p>
+</li>
+</ul>
+<p>即不能从不同的输入中提取到任何有效信息。</p>
+<br>
+<h3 id="threshold-relay"><a class="header" href="#threshold-relay">Threshold Relay</a></h3>
+<p>使用 BLS 阈值签名生成随机数的方案是很简单很实用的方案。（当然 BLS 阈值签名需要 DKG 协议，这是一个劣势，不过在 IC 上已经有 <a href="../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html#nidkg">NIDKG</a> 解决这个问题了，所以剩下的都很简单了 ~ ）</p>
+<br>
+<p>在 IC 上，有个随机信标委员会，委员会里的成员负责在每轮产生一个随机数。每过一个时期（epoch）就更换一次<a href="../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html#%E6%91%98%E8%A6%81%E5%9D%97">委员会成员</a>。委员会的成员是子网里所有节点的子集。</p>
+<p>委员会可以确保在子网的节点数量较多时性能不会下降太多。子网性能与参与共识的节点数量有关，更多的节点会导致更多通信开销和计算开销。</p>
+<br>
+<p>产生随机数的方法也很简单。就是对一个消息签名。</p>
+<br>
+<p>我们先想一下，生成一对密钥。用单个私钥对一个消息签名，<strong>私钥和消息确定了，那么这个签名结果是唯一的</strong>。</p>
+<p>而且在签名出来之前，没有人知道签名是什么。</p>
+<blockquote>
+<p>当然如果私钥泄露了，那么别人也能用私钥对这个消息做签名，从而提前知道签名内容。</p>
+</blockquote>
+<div class="center-image">
+<img src="assets/6.链上随机数/image-20240201150851417.png" style="zoom:50%;" />
+</div>
+<p>而阈值签名没有那个唯一的私钥，所有成员都用自己的私钥片段单独计算一个签名片段。最后通过广播收集到足够的签名片段，合成签名。</p>
+<p>所以即使是负责签名的成员也不能预知签名结果，也无法干扰到签名结果，只有聚合签名片段了才知道结果。而后面的签名需要节点们在下一轮广播出新的签名片段才能合成完整签名，获得随机数。</p>
+<p>假设总共有 7 个成员，阈值是 5 。即使有 2 个成员拒绝签名都影响不了签名诞生。</p>
+<div class="center-image">
+<img src="assets/6.链上随机数/image-20240201150914470.png" style="zoom:50%;" />
+</div>
+<p>只要签名的消息每次都不一样，签名结果就每次不一样。</p>
+<br>
+<p>我们就可以对上一轮的签名结果哈希一下，再做一次签名，产生一个新签名。新的签名又可以作为种子，导出随机数。再对签名哈希一下再签名 ... </p>
+<div class="center-image">
+<img src="assets/6.链上随机数/image-20240202092006875.png" style="zoom:50%;" />
+</div>
+<p>每一轮都是对之前的签名再签名，不断套娃。</p>
+<div class="center-image">
+<img src="assets/6.链上随机数/image-20240202092207819.png" style="zoom:55%;" />
+</div>
+<p>生成随机数过程不可操纵、不可预测、低成本、快速、方便，很难串谋，是一个比较理想的随机数生成方案。。😎💪🚀 </p>
+<p>这里有 2017 年关于阈值中继的 <a href="https://dfinity.org/pdf-viewer/pdfs/viewer?file=../library/threshold-relay-blockchain-stanford.pdf">presentation</a> 。</p>
+<br>
+<p>而且大家都可以子网的公钥验证已经产生的随机数（签名）。从而达到公开可验证的不可预测的安全快速高效的随机数（buff 叠满了）。而且使用 BLS 阈值签名方案可以连续不停地输出签名，一轮又一轮，太方便啦。</p>
+<br>
+<p>那么在 <a href="../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html#nidkg">NIDKG</a> 解决密钥分发的问题之后，BLS 阈值签名便可以用来产生随机数。在<a href="../2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/2.%E5%85%B1%E8%AF%86%E5%B1%82.html">共识算法</a>中用这种可验证随机数，能达到跟 PoW 类似的效果，就是为了随机而又安全地抽取出块节点。共识委员会的每个成员都有机会出块。</p>
+<p>智能合约（Canister）也可以用这个种子导出随机数。</p>
+<p>每个子网，每个轮次，都有不同的随机数产生。</p>
+<div class="center-image">
+<img src="assets/6.链上随机数/image-20240203102147977.png" style="zoom:39%;" />
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>什么是真随机数和伪随机数呢？这两者之间有什么区别？</p>
+<p>伪随机数是由确定的算法生成的数字序列，它们的分布和相关性可以通过统计测试来判断。但是，由于伪随机数是由算法产生的，而不是来自一个真实的随机过程，所以它们只能尽可能地模拟真正的随机性。伪随机数是可以预测和控制的，因为它们依赖于一个 “ 种子值 ” 来初始化。常见的伪随机数生成算法有线性同余法、梅森旋转法等。</p>
+<p>而真随机数则是完全不可预测、不可重复的。真随机数通常需要依靠某种物理过程来产生，比如掷骰子、转轮、电子元件的噪声以及核裂变等。真随机数发生器的实现难度较大，效率也比较低。</p>
+<p>另外，如果熵源信息量有限，也不一定能产生真正的随机性。熵越高，随机性越好。也就是越混乱，越随机嘛。从概率论的角度来说，真随机数可以细分为统计随机和量子随机。量子随机数受量子力学中的固有随机性影响，理论上比统计随机数更 “ 真 ” 。</p>
+<blockquote>
+<p>因为传统的随机性本质上取决于对各种变量不了解，因此无法计算预测。如果我们掌握影响相关变量、有足够的算力就能计算（预测）出结果。</p>
+<p>比如如果我们有精确到皮米级别的重力加速度、整个密闭空间的空气模型、扔硬币过程中的所有受力、硬币的质量密度材质等等，所有能影响结果的数据，以及强大的算力，就能计算出硬币的运动过程和结果。</p>
+</blockquote>
+<p>在计算机中，Linux 内核实现了一个统计方式的真随机数发生器，它通过收集机器运行时的各种噪声来产生随机性，噪音源包括各种硬件运行时速，用户和计算机交互时速，比如击键的间隔时间、鼠标移动速度、特定中断的时间间隔和块 IO 请求的响应时间等。random number generator 就是这样一个利用大气噪声产生真随机数的例子。还有一些系统试图通过监测量子粒子的自发性来获取更真的随机数。</p>
+<br>
+<p>随机数生成方案衡量标准</p>
+<p>不可预测：不可预测是针对所有参与者的，不管是生产者和消费者，都无法根据历史数据预测下一个随机数的可能值，即便是稍稍提高一点点预测的成功率都做不到，即具有马尔可夫性质。在公共随机数的方案中，还要求任何人根据任何公开信息也都不能提高预测概率，例如 Bitcoin Beacon 的方案中，即便知道区块的历史数据，矿池的公钥，待打包的交易列表等，也无法获得预测上的优势。</p>
+<p>不可串谋：在随机数的生成过程中，部分参与方联合起来，互相交换各自的私有信息，并不能影响随机数的生成过程或改变随机数的结果，或具有其他比较优势，比如相比其他人提前获得即将生成的随机数的结果。</p>
+<p>不可提前获知：随机数的参与方同时知晓该随机数，任何一方不能提前知道结果。</p>
+<p>不可篡改：即随机数的生产者不能伪造一个随机数出来，而当一个随机数生成好后，该随机数无法被任何人修改。</p>
+<p>不可选择：随机数的生产过程可能同时有很多个随机数生成，生产者无法只选择其中的某一个提供出去，或用其中一个替代另外一个。</p>
+<p>不可隐瞒：生产者在随机数生成完成后，不能拒绝公开该随机数。即生产好的随机数一定会被公开，无法被隐藏或者撤回。</p>
+<p>可参与：随机数的生成过程中，随机数的相关方可以容易的参与进来，随机数生成方案应该为一般人的广泛参与提供便利，降低或消除参与门槛，参与的权力不应该被剥夺。</p>
+<p>可审计：在随机数生成过程结束后，其整体过程是可以被时候审计的。</p>
+<p>成本：随机数的生产成本应该尽可能低。</p>
+<p>响应速度：随机数的生成过程应该足够快。</p>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../6.区块链网络服务/5.可信执行环境.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../7.互联网身份/1.ii.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../6.区块链网络服务/5.可信执行环境.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../7.互联网身份/1.ii.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "6.区块链网络服务/6.链上随机数.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

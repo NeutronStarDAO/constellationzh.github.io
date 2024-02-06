@@ -1,0 +1,803 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Fetch模块 - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item "><a href="../1.了解IC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/2.Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/3.经济模型.html">经济模型</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><a href="../6.区块链网络服务/5.可信执行环境.html">可信执行环境</a></li><li class="chapter-item "><a href="../6.区块链网络服务/6.链上随机数.html">链上随机数</a></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><a href="../8.IC里的密码学/基础密码学知识.html">基础密码学介绍</a></li><li class="chapter-item "><a href="../8.IC里的密码学/BLS签名.html">BLS</a></li><li class="chapter-item "><a href="../8.IC里的密码学/秘密共享.html">秘密共享</a></li><li class="chapter-item "><a href="../8.IC里的密码学/哈希算法.html">哈希算法</a></li><li class="chapter-item affix "><li class="part-title">开发DApp🌟</li><li class="chapter-item "><a href="../9.Dapp开发/安装开发环境.html">安装开发环境</a></li><li class="chapter-item "><a href="../9.Dapp开发/dfx常用命令.html">dfx常用命令</a></li><li class="chapter-item "><a href="../9.Dapp开发/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../9.Dapp开发/1.入门DApp.html">入门DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/2.设计DApp.html">设计DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/3.开发Proton.html">开发Proton</a></li><li class="chapter-item "><a href="../9.Dapp开发/4.User模块.html">User模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/5.Post模块.html">Post模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/6.Feed模块.html">Feed模块</a></li><li class="chapter-item expanded "><a href="../9.Dapp开发/7.Fetch模块.html" class="active">Fetch模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/8.共享类型.html">共享类型</a></li><li class="chapter-item "><a href="../9.Dapp开发/9.完成.html">完成</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="fetch"><a class="header" href="#fetch">Fetch</a></h2>
+<p>Fetch 模块负责通知相关用户。总共有 4 种 Canister ：</p>
+<div class="center-image">
+<img src="assets/7.Fetch模块/image-20240128104854006.png" style="zoom:50%;" />
+</div>
+<p>Root Fetch Canister 的功能相对比较简单，它负责创建和管理所有种类的 Fetch Canister 。</p>
+<p>Post Fetch Canister 负责通知粉丝更新帖子。Comment Fetch Canister 和 Like Fetch Canister 负责推送评论和点赞的通知。</p>
+<p>因为这个模块里的代码重复度较高，我们只详细讲 Root Fetch Canister 、Post Fetch Canister 和 Like Fetch Canister 的代码。</p>
+<br>
+<h3 id="rootfetchmo"><a class="header" href="#rootfetchmo">rootFetch.mo</a></h3>
+<div class="center-image">
+<img src="assets/7.Fetch模块/image-20240128223418061.png" alt="image-20240128223418061" style="zoom:50%;" />
+</div>
+<p>首先还是定义好类型、变量。</p>
+<pre><code class="language-js">actor class RootFetch(
+    userCanister: Principal,
+) = this {
+
+    type RootFeedActor = Types.RootFeedActor;
+    type PostFetchActor = Types.PostFetchActor;
+    type CommentFetchActor = Types.CommentFetchActor;
+    type LikeFetchActor = Types.LikeFetchActor;
+
+    stable let T_CYCLES = 1_000_000_000_000;
+    stable var rootFeedCanister = Principal.fromText(&quot;2vxsx-fae&quot;);
+    stable var postFetchCanisterIndex: Nat = 0;
+    stable var commentFetchCanisterIndex: Nat = 0;
+    stable var likeFetchCanisterIndex: Nat = 0;
+
+    // 创建三个TrieMap，分别存储帖子、评论和点赞
+    // 这样可以方便地管理和检索相关数据，例如查找某个帖子的评论或点赞信息
+    
+    // 它的类型是一个元组数组，每个元组包含一个自然数（Nat）和一个Principal
+    stable var postFetchMapEntries: [(Nat, Principal)] = [];
+    // 从postFetchMapEntries数组的值中构建Map，使用Nat.equal处理键的相等性，使用Hash.hash进行哈希
+    let postFetchMap = TrieMap.fromEntries&lt;Nat, Principal&gt;(postFetchMapEntries.vals(), Nat.equal, Hash.hash);
+
+    stable var commentFetchMapEntries: [(Nat, Principal)] = [];
+    let commentFetchMap = TrieMap.fromEntries&lt;Nat, Principal&gt;(commentFetchMapEntries.vals(), Nat.equal, Hash.hash);
+    
+    stable var likeFetchMapEntries: [(Nat, Principal)] = [];
+    let likeFetchMap = TrieMap.fromEntries&lt;Nat, Principal&gt;(likeFetchMapEntries.vals(), Nat.equal, Hash.hash);    
+};
+</code></pre>
+<br>
+<p>我们通过初始化函数在创建 Root Fetch Canister 之后创建子 Canister ，建立了用户 Feed 、帖子、评论和点赞之间的联系。</p>
+<pre><code class="language-js">public shared({caller}) func init(
+    _rootFeedCanister: Principal,
+    _initPostFetchCanister: Principal,
+    _initCommentFetchCanister: Principal,
+    _initLikeFetchCanister: Principal
+): async () {
+    rootFeedCanister := _rootFeedCanister;
+
+    // 定义三个map存储不同类型的 fetch canister
+    postFetchMap.put(postFetchCanisterIndex, _initPostFetchCanister);
+    commentFetchMap.put(commentFetchCanisterIndex, _initCommentFetchCanister);
+    likeFetchMap.put(likeFetchCanisterIndex, _initLikeFetchCanister);
+
+    // 还定义了三个索引变量，用于为每个 fetch canister 生成一个唯一的索引
+    postFetchCanisterIndex += 1;
+    commentFetchCanisterIndex += 1;
+    likeFetchCanisterIndex += 1;
+
+    // 用actor函数创建四个actor对象
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(_rootFeedCanister));
+    let _postFetchActor: PostFetchActor = actor(Principal.toText(_initPostFetchCanister));
+    let _commentFetchActor: CommentFetchActor = actor(Principal.toText(_initCommentFetchCanister));
+    let _likeFetchActor: LikeFetchActor = actor(Principal.toText(_initLikeFetchCanister));
+    let _allUserFeedCanister = await rootFeedActor.getAllUserFeedCanister();
+
+    // 调用三个Fetch的initUserToFeed方法，传入用户 feed canister 列表，在这些Fetch里初始化用户和feed的关系
+    // 用assert确认三个initUserToFeed调用都成功执行
+    assert(await _postFetchActor.initUserToFeed(_allUserFeedCanister));
+    assert(await _commentFetchActor.initUserToFeed(_allUserFeedCanister));
+    assert(await _likeFetchActor.initUserToFeed(_allUserFeedCanister));
+};
+</code></pre>
+<br>
+<p>接下来是创建 Post Fetch Canister 的函数：</p>
+<p>创建一个新 Post Fetch Canister ，并将新创建的 Canister ID 存储在 Map 中。它还与 Root Feed Canister 进行一些交互。</p>
+<pre><code class="language-js">public shared({caller}) func createPostFetchCanister(): async Principal {
+    // 给每个Canister添加 4T Cycles
+    Cycles.add(4 * T_CYCLES);
+    // 调用PostFetch模块的构造函数来创建一个新的 PostFetch Canister
+    let _canister = await PostFetch.PostFetch();
+    // 获取新创建的 Canister id
+    let _canisterId = Principal.fromActor(_canister);
+    // 将新Canister的Principal放入postFetchMap中
+    postFetchMap.put(postFetchCanisterIndex, _canisterId);
+    // 索引+1
+    postFetchCanisterIndex += 1;
+
+    // postFetch : initUserToFeed
+    // 使用assert检查rootFeedCanister是否不是匿名
+    assert(not Principal.isAnonymous(rootFeedCanister));
+    // 通过Principal.toText将rootFeedCanister转换为文本，然后用actor关键字创建RootFeedActor
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+    // 使用assert检查并确保调用_canister的initUserToFeed方法，并传递所有用户 Feed Canister 的Principal列表
+    assert(await _canister.initUserToFeed((await rootFeedActor.getAllUserFeedCanister())));
+
+    // 返回新创建的 Canister id
+    _canisterId
+};
+</code></pre>
+<br>
+<p>创建负责通知评论和点赞的 Fetch Canister ，基本和上面创建 Post Fetch Canister 一样：</p>
+<pre><code class="language-js">public shared({caller}) func createCommentFetchCanister(): async Principal {
+    Cycles.add(4 * T_CYCLES);
+    let _canister = await CommentFetch.CommentFetch(
+        userCanister
+    );
+    let _canisterId = Principal.fromActor(_canister);
+    commentFetchMap.put(commentFetchCanisterIndex, _canisterId);
+    commentFetchCanisterIndex += 1;
+
+    // initUserToFeed
+    assert(not Principal.isAnonymous(rootFeedCanister));
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+    assert(await _canister.initUserToFeed((await rootFeedActor.getAllUserFeedCanister())));
+
+    _canisterId
+};
+
+public shared({caller}) func createLikeFetchCanister(): async Principal {
+    Cycles.add(4 * T_CYCLES);
+    let _canister = await LikeFetch.LikeFetch(
+        userCanister
+    );
+    let _canisterId = Principal.fromActor(_canister);
+    likeFetchMap.put(likeFetchCanisterIndex, _canisterId);
+    likeFetchCanisterIndex += 1;
+
+    // initUserToFeed
+    assert(not Principal.isAnonymous(rootFeedCanister));
+    let rootFeedActor: RootFeedActor = actor(Principal.toText(rootFeedCanister));
+    assert(await _canister.initUserToFeed((await rootFeedActor.getAllUserFeedCanister())));
+
+    _canisterId
+};
+</code></pre>
+<br>
+<p>最后我们写出查询函数，查询各种 Fetch Canister 。</p>
+<pre><code class="language-js">public query func getAllPostFetchCanister(): async [Principal] {
+    // 获取Map中所有 Canister id
+    Iter.toArray(postFetchMap.vals())
+    // Iter.toArray是一个将迭代器转换为数组的函数，它将Map中所有的 Canister id 转换成一个数组
+};
+
+public query func getAllCommentFetchCanister(): async [Principal] {
+    Iter.toArray(commentFetchMap.vals())
+};
+
+public query func getAllLikeFetchCanister(): async [Principal] {
+    Iter.toArray(likeFetchMap.vals())
+};
+</code></pre>
+<br>
+<h3 id="postfetchmo"><a class="header" href="#postfetchmo">postFetch.mo</a></h3>
+<p>Post Fetch 负责把用户的帖子通知给他的粉丝。</p>
+<div class="center-image">
+<img src="assets/7.Fetch模块/image-20240128232529601.png" style="zoom:45%;" />
+</div>
+<p>记录哪些帖子需要通知给哪些用户，依次通知他们。用 <code>TrieMap</code> 快速查找和更新数据，用 <code>Timer</code> 来周期性执行任务。</p>
+<pre><code class="language-js">import Types &quot;./types&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Array &quot;mo:base/Array&quot;;
+import Timer &quot;mo:base/Timer&quot;;
+import Debug &quot;mo:base/Debug&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+
+actor class PostFetch() = this {
+
+    // 内部维护一个通知表：记录每个用户待通知的帖子ID有哪些
+    // 定义notifyMapEntries元组数组，每个元组包含一个Principal和一个文本数组[Text]
+    // stable关键字确保了即使在合约升级的情况下，这个变量的数据也会被保存下来
+    stable var notifyMapEntries: [(Principal, [Text])] = [];
+    let notifyMap = TrieMap.fromEntries&lt;Principal, [Text]&gt;(notifyMapEntries.vals(), Principal.equal, Principal.hash);
+
+    // 接收通知函数：帖子ID、发帖人、转发人、followers、Cycles
+    // 当receiveNotify被调用时，它接收一个Principal数组和一个帖子ID
+    public shared({caller}) func receiveNotify(to: [Principal], postId: Text): async () {
+        for(_user in to.vals()) {
+            Debug.print(
+                &quot;Canister PostFetch, Func receiveNotify, &quot;
+                # &quot;to : &quot; # Principal.toText(_user) # &quot; ,&quot;
+                # &quot;postId : &quot; # postId
+            );
+        };
+        // 每个Principal代表一个用户，函数遍历数组中的每个用户，并检查notifyMap中有没有用户的记录
+        for(_follower in to.vals()) {
+            switch(notifyMap.get(_follower)) {
+                case(null) {
+                    // 如果没有，就新建一个，只包含当前帖子ID
+                    notifyMap.put(_follower, [postId]);
+                };
+                // 如果有，就将当前的帖子ID追加到这个用户的帖子ID数组中
+                case(?_postIdArray) {
+                    notifyMap.put(_follower, Array.append(_postIdArray, [postId]));
+                };
+            };
+        };
+    };
+
+    // 提供一种查询notifyMap当前状态的方式，将TrieMap的entries转换为数组形式并返回
+    public query func getNotifyMapEntries(): async [(Principal, [Text])] {
+        Iter.toArray(notifyMap.entries())
+    };
+
+// userToFeed
+
+    // 用户关系的管理
+    // 定义了一个新TrieMap，保存每个用户的 principal id 和他们的 Feed Canister id 之间的关系
+    stable var userToFeedEntries: [(Principal, Principal)] = [];
+    var userToFeed = TrieMap.fromEntries&lt;Principal, Principal&gt;(userToFeedEntries.vals(), Principal.equal, Principal.hash);
+    
+    // 初始化userToFeed
+    public shared({caller}) func initUserToFeed(_userToFeedArray: [(Principal, Principal)]): async Bool {
+        userToFeed := TrieMap.fromEntries(
+            _userToFeedArray.vals(),
+            Principal.equal,
+            Principal.hash
+        );
+        true
+    };
+
+    // 添加新关系
+    public shared({caller}) func addUserToFeedEntry(entry: (Principal, Principal)): async Bool {
+        switch(userToFeed.get(entry.0)) {
+            case(?_feedCanister) { return false; };
+            case(null) {
+                userToFeed.put(entry.0, entry.1);
+                true
+            } 
+        }
+    };
+
+    // 查询现有的哈希表
+    public query func getUserToFeedEntries(): async [(Principal, Principal)] {
+        Iter.toArray(userToFeed.entries())
+    };
+
+    public query({caller}) func whoami(): async Principal { caller };
+
+// Timer
+
+    type FeedActor = Types.FeedActor;
+
+    // 根据算法用 ignore call 分批次通知followers的Feed
+    // 定时器触发的回调函数
+    func notify(): async () {
+        // Debug.print(&quot;postFetch notify !&quot;);
+        let _notifyMap = notifyMap;
+        // 检查notifyMap中的每个条目，对于每个用户
+        for((_user, _postIdArray) in _notifyMap.entries()) {
+            // 尝试从userToFeed中获取对应的 Feed canister
+            switch(userToFeed.get(_user)) {
+                case(null) { };
+                // 如果找到了 Feed canister，就会创建通知
+                // 并调用batchReceiveFeed函数来传递所有待通知的帖子ID
+                case(?_feedId) {
+                    // Debug.print(&quot;Notify feed canister &quot; # Principal.toText(_feedId));
+                    let feedActor: FeedActor = actor(Principal.toText(_feedId));
+                    ignore feedActor.batchReceiveFeed(_postIdArray);
+                    // 从notifyMap中删除该用户的条目，以避免重复通知
+                    notifyMap.delete(_user);
+                };
+            };
+        };
+    };
+
+    // 定义一个定时器cycleTimer，它定期（每2秒）调用notify函数
+    // notify函数的目的是通知用户他们的Feed有更新
+    let cycleTimer = Timer.recurringTimer(
+        #seconds(2),
+        notify
+    );
+
+    // 系统函数，前面说过，这里就不赘述了
+    system func preupgrade() {
+        notifyMapEntries := Iter.toArray(notifyMap.entries());
+        userToFeedEntries := Iter.toArray(userToFeed.entries());
+    };
+
+    system func postupgrade() {
+        notifyMapEntries := [];
+        userToFeedEntries := [];
+    };
+};
+</code></pre>
+<br>
+<h3 id="likefetchmo"><a class="header" href="#likefetchmo">likeFetch.mo</a></h3>
+<p>Like Fetch Canister 和 Post Fetch Canister 很像，只有一个流程上的区别。Like Fetch Canister 会根据帖子的主人查询粉丝，然后通知粉丝们，而 Post Fetch Canister 只负责根据发帖人直接发的粉丝名单通知。</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import Types &quot;./types&quot;;
+import Array &quot;mo:base/Array&quot;;
+import Timer &quot;mo:base/Timer&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Debug &quot;mo:base/Debug&quot;;
+
+actor class LikeFetch(
+    userCanister: Principal
+) = this {
+
+    // 定义类型别名
+    type UserActor = Types.UserActor;
+    type PostImmutable = Types.PostImmutable;
+    type Repost = Types.Repost;
+
+    // 使用一个稳定的变量notifyMapEntries来存储通知（Principal和一组Text的元组）
+    // 初始化一个TrieMap作为实际的通知Map
+    stable var notifyMapEntries: [(Principal, [Text])] = [];
+    let notifyMap = TrieMap.fromEntries&lt;Principal, [Text]&gt;(notifyMapEntries.vals(), Principal.equal, Principal.hash);
+    
+    // 接收帖子的通知
+    // 首先从用户的actor里获取帖子主人的粉丝列表，然后调用_storeNotify函数来为粉丝和转发者存储通知
+    public shared({caller}) func receiveNotify(post: PostImmutable): async () {
+        // 查到这个帖子的主用户的followers
+        let userActor: UserActor = actor(Principal.toText(userCanister));
+        let postUserFollowers = await userActor.getFollowersList(post.user);
+
+        // 通知粉丝
+        _storeNotify(postUserFollowers, post.postId);
+
+        // 通知转发帖子的人
+        _storeNotify(
+            Array.map&lt;Repost, Principal&gt;(
+                post.repost,
+                func (x: Repost): Principal {
+                    x.user
+                }
+            ), 
+            post.postId
+        );
+    };
+
+    public shared({caller}) func receiveRepostUserNotify(to: [Principal], postId: Text): async () {
+        _storeNotify(to, postId);
+    };
+
+    public query func getNotifyMapEntries(): async [(Principal, [Text])] {
+        Iter.toArray(notifyMap.entries())
+    };
+
+    // 存储通知
+    // 它检查指定的Principal是否已经有通知列表
+    // 如果没有则创建一个新的列表并添加帖子ID，如果有则在现有的列表中添加帖子ID
+    private func _storeNotify(to: [Principal], postId: Text) {
+        for(_follower in to.vals()) {
+            switch(notifyMap.get(_follower)) {
+                case(null) {
+                    notifyMap.put(_follower, [postId]);
+                };
+                case(?_postIdArray) {
+                    let _newPostIdArray = Array.append(_postIdArray, [postId]);
+                    notifyMap.put(_follower, _newPostIdArray);
+                };
+            };
+        };
+    };
+// userToFeed
+
+    stable var userToFeedEntries: [(Principal, Principal)] = [];
+    var userToFeed = TrieMap.fromEntries&lt;Principal, Principal&gt;(userToFeedEntries.vals(), Principal.equal, Principal.hash);
+
+    public shared({caller}) func initUserToFeed(_userToFeedArray: [(Principal, Principal)]): async Bool {
+        userToFeed := TrieMap.fromEntries(
+            _userToFeedArray.vals(),
+            Principal.equal,
+            Principal.hash
+        );
+        true
+    };
+
+    public shared({caller}) func addUserToFeedEntry(entry: (Principal, Principal)): async Bool {
+        switch(userToFeed.get(entry.0)) {
+            case(?_feedCanister) { return false; };
+            case(null) {
+                userToFeed.put(entry.0, entry.1);
+                true
+            } 
+        }
+    };
+
+    public query func getUserToFeedEntries(): async [(Principal, Principal)] {
+        Iter.toArray(userToFeed.entries())
+    };
+    
+    public query({caller}) func whoami(): async Principal { caller };
+
+// Timer
+
+    type FeedActor = Types.FeedActor;
+
+    func notify(): async () {
+        // Debug.print(&quot;likeFetch notify !&quot;);
+        let _notifyMap = notifyMap; 
+        for((_user, _postIdArray) in _notifyMap.entries()) {
+            switch(userToFeed.get(_user)) {
+                case(null) { };
+                case(?_feedId) {
+                    let feedActor: FeedActor = actor(Principal.toText(_feedId));
+                    ignore feedActor.batchReceiveLike(_postIdArray);
+                    notifyMap.delete(_user);
+                };
+            };
+        };
+    };
+
+    let cycleTimer = Timer.recurringTimer(
+        #seconds(2),
+        notify
+    );
+
+    system func preupgrade() {
+        notifyMapEntries := Iter.toArray(notifyMap.entries());
+        userToFeedEntries := Iter.toArray(userToFeed.entries());
+    };
+
+    system func postupgrade() {
+        notifyMapEntries := [];
+        userToFeedEntries := [];
+    };
+
+};
+</code></pre>
+<br>
+<h3 id="commentfetchmo"><a class="header" href="#commentfetchmo">commentFetch.mo</a></h3>
+<p>Comment Fetch Canister 和 Like Fetch Canister 是一样的，所以就不重复讲了。</p>
+<p>以下是 commentFetch.mo 源文件：</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;;
+import TrieMap &quot;mo:base/TrieMap&quot;;
+import Types &quot;./types&quot;;
+import Array &quot;mo:base/Array&quot;;
+import Timer &quot;mo:base/Timer&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Debug &quot;mo:base/Debug&quot;;
+
+actor class CommentFetch(
+    userCanister: Principal
+) = this {
+    
+    type UserActor = Types.UserActor;
+    type PostImmutable = Types.PostImmutable;
+    type Repost = Types.Repost;
+
+    // 一个列表，其中每个元素都是一个元组，包含一个Principal和一个文本字符串的数组
+    // 这个列表被用来初始化notifyMap，后者是一个TrieMap结构，用来高效地存储和检索键值对
+    stable var notifyMapEntries: [(Principal, [Text])] = [];
+    let notifyMap = TrieMap.fromEntries&lt;Principal, [Text]&gt;(notifyMapEntries.vals(), Principal.equal, Principal.hash);
+    
+    public shared({caller}) func receiveNotify(post: PostImmutable): async () {
+        // 查到这个帖子的主用户的 followers
+        let userActor: UserActor = actor(Principal.toText(userCanister));
+        let postUserFollowers = await userActor.getFollowersList(post.user);
+
+        // 通知粉丝
+        _storeNotify(postUserFollowers, post.postId);
+
+        // 通知转帖者
+        _storeNotify(
+            Array.map&lt;Repost, Principal&gt;(
+                post.repost,
+                func (x: Repost): Principal {
+                    x.user
+                }
+            ), 
+            post.postId
+        );
+    };
+
+    public shared({caller}) func receiveRepostUserNotify(to: [Principal], postId: Text): async () {
+        _storeNotify(to, postId);
+    };
+
+    private func _storeNotify(to: [Principal], postId: Text) {
+        for(_follower in to.vals()) {
+            switch(notifyMap.get(_follower)) {
+                case(null) {
+                    notifyMap.put(_follower, [postId]);
+                };
+                case(?_postIdArray) {
+                    notifyMap.put(_follower, Array.append(_postIdArray, [postId]));
+                };
+            };
+        };
+    };
+
+    public query func getNotifyMapEntries(): async [(Principal, [Text])] {
+        Iter.toArray(notifyMap.entries())
+    };
+
+// userToFeed
+
+    stable var userToFeedEntries: [(Principal, Principal)] = [];
+    var userToFeed = TrieMap.fromEntries&lt;Principal, Principal&gt;(userToFeedEntries.vals(), Principal.equal, Principal.hash);
+
+    public shared({caller}) func initUserToFeed(_userToFeedArray: [(Principal, Principal)]): async Bool {
+        userToFeed := TrieMap.fromEntries(
+            _userToFeedArray.vals(),
+            Principal.equal,
+            Principal.hash
+        );
+        true
+    };
+
+    public shared({caller}) func addUserToFeedEntry(entry: (Principal, Principal)): async Bool {
+        switch(userToFeed.get(entry.0)) {
+            case(?_feedCanister) { return false; };
+            case(null) {
+                userToFeed.put(entry.0, entry.1);
+                true
+            } 
+        }
+    };
+
+    public query func getUserToFeedEntries(): async [(Principal, Principal)] {
+        Iter.toArray(userToFeed.entries())
+    };
+    
+    public query({caller}) func whoami(): async Principal { caller };
+
+// Timer
+
+    type FeedActor = Types.FeedActor;
+
+    func notify(): async () {
+        // Debug.print(&quot;commentFetch notify !&quot;);
+        let _notifyMap = notifyMap; 
+        for((_user, _postIdArray) in _notifyMap.entries()) {
+            switch(userToFeed.get(_user)) {
+                case(null) { };
+                case(?_feedId) {
+                    // Debug.print(&quot;commentFetch Notify feed canister &quot; # Principal.toText(_feedId));
+                    let feedActor: FeedActor = actor(Principal.toText(_feedId));
+                    ignore feedActor.batchReceiveComment(_postIdArray);
+                    notifyMap.delete(_user);
+                };
+            };
+        };
+    };
+
+    let cycleTimer = Timer.recurringTimer(
+        #seconds(2),
+        notify
+    );
+
+    system func preupgrade() {
+        notifyMapEntries := Iter.toArray(notifyMap.entries());
+        userToFeedEntries := Iter.toArray(userToFeed.entries());
+    };
+
+    system func postupgrade() {
+        notifyMapEntries := [];
+        userToFeedEntries := [];
+    };
+}; 
+</code></pre>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.Dapp开发/6.Feed模块.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.Dapp开发/8.共享类型.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.Dapp开发/6.Feed模块.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.Dapp开发/8.共享类型.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.Dapp开发/7.Fetch模块.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>开发Proton - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item "><a href="../1.了解IC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/2.Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/3.经济模型.html">经济模型</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><a href="../6.区块链网络服务/5.可信执行环境.html">可信执行环境</a></li><li class="chapter-item "><a href="../6.区块链网络服务/6.链上随机数.html">链上随机数</a></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><a href="../8.IC里的密码学/基础密码学知识.html">基础密码学介绍</a></li><li class="chapter-item "><a href="../8.IC里的密码学/BLS签名.html">BLS</a></li><li class="chapter-item "><a href="../8.IC里的密码学/秘密共享.html">秘密共享</a></li><li class="chapter-item "><a href="../8.IC里的密码学/哈希算法.html">哈希算法</a></li><li class="chapter-item affix "><li class="part-title">开发DApp🌟</li><li class="chapter-item "><a href="../9.Dapp开发/安装开发环境.html">安装开发环境</a></li><li class="chapter-item "><a href="../9.Dapp开发/dfx常用命令.html">dfx常用命令</a></li><li class="chapter-item "><a href="../9.Dapp开发/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../9.Dapp开发/1.入门DApp.html">入门DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/2.设计DApp.html">设计DApp</a></li><li class="chapter-item expanded "><a href="../9.Dapp开发/3.开发Proton.html" class="active">开发Proton</a></li><li class="chapter-item "><a href="../9.Dapp开发/4.User模块.html">User模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/5.Post模块.html">Post模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/6.Feed模块.html">Feed模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/7.Fetch模块.html">Fetch模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/8.共享类型.html">共享类型</a></li><li class="chapter-item "><a href="../9.Dapp开发/9.完成.html">完成</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <div class="center-image">
+<img src="assets/3.开发Proton/1.png" style="zoom:25%;" />
+</div>
+<p>按照上一篇的设计，现在我们来逐步完成 Proton 的代码。</p>
+<p>我们可以把 Proton 分为 4 个模块。👇 </p>
+<div class="center-image">
+<img src="assets/2.设计DApp/image-20231121215915409.png" style="zoom:50%;" />
+</div>
+<p>每个模块对应不同的功能，灵活组合。</p>
+<a href="4.User模块.html">
+<div class="home-box">
+    <div class="box">1️⃣
+            <div>
+                User 模块
+            </div>
+            <div>
+                管理用户关系与用户资料
+            </div>
+    </div>
+</div>
+</a>
+<div class="home-box">
+    <div class="box">1️⃣
+        <a href="4.User模块.html#定义用户资料typesmo">
+            <div>
+                typse.mo
+            </div>
+            <div>
+                定义类型别名
+            </div>
+        </a>
+    </div>
+    <div class="box">2️⃣
+        <a href="4.User模块.html#有向图digraphmo">
+            <div>
+                digraph.mo
+            </div>
+            <div>
+                有向图
+            </div>
+        </a>
+    </div>
+    <div class="box">3️⃣
+        <a href="4.User模块.html#存储用户信息databasemo">
+            <div>
+                database.mo
+            </div>
+            <div>
+                存储用户资料
+            </div>
+        </a>
+    </div>
+    <div class="box">4️⃣
+        <a href="4.User模块.html#集成所有功能mainmo">
+            <div>
+                main.mo
+            </div>
+            <div>
+                管理用户
+            </div>
+        </a>
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<a href="5.Post模块.html">
+<div class="home-box">
+    <div class="box">2️⃣
+        <div>
+            Post 模块
+        </div>
+        <div>
+            存储所有帖子
+        </div>
+    </div>
+</div>
+</a>
+<div class="home-box">
+    <div class="box">1️⃣
+    <a href="5.Post模块.html#管理canisterrootpostmo">
+        <div>
+            rootPost.mo
+        </div>
+        <div>
+            管理所有Bucket
+        </div>
+    </a>
+    </div>
+    <div class="box">2️⃣
+    <a href="5.Post模块.html#存储帖子bucketmo">
+        <div>
+           bucket.mo
+        </div>
+        <div>
+            存储帖子
+        </div>
+    </a>
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<a href="6.Feed模块.html">
+<div class="home-box">
+    <div class="box">3️⃣
+        <div>
+            Feed 模块
+        </div>
+        <div>
+            用户自己的云终端
+        </div>
+    </div>
+</div>
+</a>
+<div class="home-box">
+    <div class="box">1️⃣
+    <a href="6.Feed模块.html#创建feedcanisterrootfeedmo">
+        <div>
+            rootFeed.mo
+        </div>
+        <div>
+            创建Feed
+        </div>
+    </a>
+    </div>
+    <div class="box">2️⃣
+    <a href="6.Feed模块.html#存储数据databasemo">
+        <div>
+            database.mo
+        </div>
+        <div>
+            存储模块
+        </div>
+    </a>
+    </div>
+    <div class="box">3️⃣
+    <a href="6.Feed模块.html#用户云终端feedmo">
+        <div>
+            feed.mo
+        </div>
+        <div>
+            用户云终端
+        </div>
+    </a>
+    </div>
+</div>
+<br>
+<hr>
+<br>
+<a href="7.Fetch模块.html">
+<div class="home-box">
+    <div class="box">4️⃣
+        <div>
+            Fetch 模块
+        </div>
+        <div>
+            管理用户关系与用户资料
+        </div>
+    </div>
+</div>
+</a>
+<div class="home-box">
+    <div class="box">1️⃣
+    <a href="7.Fetch模块.html#rootfetchmo">
+        <div>
+            rootFetch.mo
+        </div>
+        <div>
+            管理 Fetch Canister
+        </div>
+    </a>
+    </div>
+    <div class="box">2️⃣
+    <a href="7.Fetch模块.html#postfetchmo">
+        <div>
+            postFetch.mo
+        </div>
+        <div>
+            通知帖子
+        </div>
+    </a>
+    </div>
+    <div class="box">3️⃣
+    <a href="7.Fetch模块.html#likefetchmo">
+        <div>
+            likeFetch.mo
+        </div>
+        <div>
+            通知点赞
+        </div>
+    </a>
+    </div>
+    <div class="box">4️⃣
+    <a href="7.Fetch模块.html#commentfetchmo">
+        <div>
+            commentFetch.mo
+        </div>
+        <div>
+            通知评论
+        </div>
+    </a>
+    </div>
+</div>
+</a>
+<br>
+<div class="center-image">
+<img src="assets/3.开发Proton/image-20240206095751397.png" style="zoom:39%;" />
+</div>
+🫡
+<div class="center-image">
+<img src="assets/3.开发Proton/image-20231222150455236.png" style="zoom:50%;" />
+</div>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.Dapp开发/2.设计DApp.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.Dapp开发/4.User模块.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.Dapp开发/2.设计DApp.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.Dapp开发/4.User模块.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.Dapp开发/3.开发Proton.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

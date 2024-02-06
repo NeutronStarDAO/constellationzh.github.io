@@ -1,0 +1,888 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>入门DApp - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item "><a href="../1.了解IC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/2.Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/3.经济模型.html">经济模型</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><a href="../6.区块链网络服务/5.可信执行环境.html">可信执行环境</a></li><li class="chapter-item "><a href="../6.区块链网络服务/6.链上随机数.html">链上随机数</a></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><a href="../8.IC里的密码学/基础密码学知识.html">基础密码学介绍</a></li><li class="chapter-item "><a href="../8.IC里的密码学/BLS签名.html">BLS</a></li><li class="chapter-item "><a href="../8.IC里的密码学/秘密共享.html">秘密共享</a></li><li class="chapter-item "><a href="../8.IC里的密码学/哈希算法.html">哈希算法</a></li><li class="chapter-item affix "><li class="part-title">开发DApp🌟</li><li class="chapter-item "><a href="../9.Dapp开发/安装开发环境.html">安装开发环境</a></li><li class="chapter-item "><a href="../9.Dapp开发/dfx常用命令.html">dfx常用命令</a></li><li class="chapter-item "><a href="../9.Dapp开发/Motoko.html">Motoko</a></li><li class="chapter-item expanded "><a href="../9.Dapp开发/1.入门DApp.html" class="active">入门DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/2.设计DApp.html">设计DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/3.开发Proton.html">开发Proton</a></li><li class="chapter-item "><a href="../9.Dapp开发/4.User模块.html">User模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/5.Post模块.html">Post模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/6.Feed模块.html">Feed模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/7.Fetch模块.html">Fetch模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/8.共享类型.html">共享类型</a></li><li class="chapter-item "><a href="../9.Dapp开发/9.完成.html">完成</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="dapp开发快速入门"><a class="header" href="#dapp开发快速入门">DApp开发快速入门</a></h2>
+<p>互联网计算机（Internet Computer ，简称 IC ）是由 DFINITY 基金会推出的一个公共区块链平台，旨在扩展区块链的功能，使其能够托管网站与后端软件。</p>
+<p>IC 通过创新的协议和先进的技术，提供了无与伦比的速度、存储效率和直接在链上部署网站的能力。</p>
+<p>它的核心特点是：</p>
+<ul>
+<li><strong>去中心化</strong>：IC 是去中心化的云服务系统，可靠、没有单点故障。</li>
+<li><strong>可扩展性</strong>：IC 的结构允许它在保持高性能的同时，有无限扩容的能力。</li>
+<li><strong>互操作性</strong>：IC 上的不同应用可以无缝交互，提供了更流畅的用户体验。</li>
+<li><strong>成本效率</strong>：IC 提供了低成本的计算资源，比其他区块链和传统云服务便宜。</li>
+</ul>
+<br>
+<h2 id="dapp"><a class="header" href="#dapp">DApp</a></h2>
+<p>DApp（Decentralized Application）去中心化应用。DApp 是一种运行在区块链网络上的应用程序。DApp 与传统的中心化应用不同，它不受任何个体的控制，而且内部数据是不可篡改的。</p>
+<p>DApp 的去中心化特性得益于区块链技术的应用。区块链是一个由多个节点组成的分布式数据库，每个节点都保存有完整的数据副本，区块链通过共识算法确保数据的一致性。</p>
+<p>智能合约就像一台自动售货机，而且是不需要信任任何第三方：部署自动售货机的人、机器提供商、城管等等。不受任何人（单一实体）管制的自动售货机！</p>
+<img src="assets/1.入门DApp/image-20240206121640220.png" style="zoom:39%;" />
+<p>在 IC 上开发一个 DApp 非常容易：只要有一个前端 Canister 和几个后端 Canister 即可。</p>
+<ol>
+<li><strong>智能合约开发（后端）：</strong> 运行在区块链上的自动执行合约，定义了 DApp 的核心业务逻辑。</li>
+<li><strong>用户界面（前端）：</strong> 用户与 DApp 进行交互的界面，可以是网页、移动应用或其他形式。</li>
+</ol>
+<p>合约是由 Motoko 语言或 Rust 语言编写，编译为 Wasm 字节码后部署在 Canister 中运行。</p>
+<br>
+<h2 id="在ic上开发dapp"><a class="header" href="#在ic上开发dapp">在IC上开发DApp</a></h2>
+<h3 id="准备工作"><a class="header" href="#准备工作">准备工作</a></h3>
+<p>在开始之前，我们需要具备一些基础的知识和工具：</p>
+<ul>
+<li><strong>安装必要的软件</strong>：包括 DFINITY Canister SDK（dfx），这是 IC 的命令行工具。如果你还没有安装，先看<a href="%E5%AE%89%E8%A3%85%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">这里</a>安装。</li>
+<li><strong>选择编程语言</strong>：主要使用 Motoko（专门为 IC 设计的语言）和 Rust ，还支持多种编程语言：<a href="https://demergent-labs.github.io/kybra">Python</a> 、<a href="https://demergent-labs.github.io/azle">TS</a> 、<a href="https://docs.icpp.world">C++</a> 。</li>
+</ul>
+<br>
+<h3 id="考虑的最佳实践"><a class="header" href="#考虑的最佳实践">考虑的最佳实践</a></h3>
+<ul>
+<li><strong>代码安全</strong>：始终确保智能合约代码是安全的。</li>
+<li><strong>用户体验</strong>：设计直观且响应迅速的用户界面。</li>
+<li><strong>合约升级</strong>：计划好如何更新和升级智能合约。</li>
+<li><strong>资源优化</strong>：优化合约以减少资源消耗和成本。</li>
+</ul>
+<br>
+<h3 id="实战剖析"><a class="header" href="#实战剖析">实战剖析</a></h3>
+<p>我们用一个 Web3 版的 LinkedIn（领英）demo 入手，剖析代码并尝试增加新功能。</p>
+<p>LinkedUp 的<a href="https://github.com/dfinity/linkedup">源代码</a>位于 DFINITY 官方仓库，现在我们先试着理解代码（这里我们暂时忽略前端部分）。</p>
+<p>我们要构建的是一个社交网络，那么主要的<strong>需求</strong>就是：</p>
+<ul>
+<li>用户能够创建自己的主页。</li>
+<li>用户能修改自己的个人主页。</li>
+<li>用户能查看别人的主页信息。</li>
+<li>用户之间可以互相关注建立联系。</li>
+</ul>
+<br>
+<p>我们先看项目根目录下的 <code>dfx.json</code> 文件。</p>
+<p><code>dfx.json</code> 文件是整个项目的基础配置文件，从这个文件里我们可以看到项目里有哪些 Canister 、这些 Canister 在哪个目录里、dfx 版本等信息。</p>
+<p>项目包含三个 Canister ： Connectd 、Linkedup 和 Linkedup_assets 。</p>
+<p>Linkedup_assets 是用来放前端代码的 Canister ，我们暂时忽略它；先看其余两个后端的 Canister 。</p>
+<pre><code class="language-json">{
+  &quot;canisters&quot;: {
+    &quot;connectd&quot;: {
+      &quot;main&quot;: &quot;src/connectd/main.mo&quot;
+    },
+    &quot;linkedup&quot;: {
+      &quot;main&quot;: &quot;src/linkedup/main.mo&quot;
+    },
+    &quot;linkedup_assets&quot;: {
+      &quot;dependencies&quot;: [&quot;linkedup&quot;],
+      &quot;frontend&quot;: {
+        &quot;entrypoint&quot;: &quot;src/linkedup/public/main.js&quot;
+      },
+      &quot;type&quot;: &quot;assets&quot;,
+      &quot;source&quot;: [
+        &quot;src/linkedup/public&quot;,
+        &quot;dist/linkedup_assets&quot;
+      ]
+    }
+  },
+  &quot;defaults&quot;: {
+    &quot;build&quot;: {
+      &quot;packtool&quot;: &quot;&quot;
+    }
+  },
+  &quot;networks&quot;: {
+    &quot;tungsten&quot;: {
+      &quot;providers&quot;: [&quot;https://gw.dfinity.network&quot;],
+      &quot;type&quot;: &quot;persistent&quot;
+    },
+    &quot;local&quot;: {
+      &quot;bind&quot;: &quot;0.0.0.0:8000&quot;,
+      &quot;type&quot;: &quot;ephemeral&quot;
+    }
+  },
+  &quot;dfx&quot;: &quot;0.6.22&quot;
+}
+</code></pre>
+<h4 id="项目后端结构"><a class="header" href="#项目后端结构">项目后端结构：</a></h4>
+<ul>
+<li>
+<p>Linkedup Canister 主要负责业务逻辑，例如创建个人主页、修改个人主页资料等。它也提供了调用 Connectd Canister 的 API 接口，这样的话前端只需要和 Linkedup 交互即可。</p>
+</li>
+<li>
+<p>Connectd Canister 主要负责建立用户间的关系，提供给 Linkedup Canister 调用。</p>
+</li>
+</ul>
+<br>
+<h4 id="connectd-canister"><a class="header" href="#connectd-canister">Connectd Canister</a></h4>
+<p>我们先仔细剖析下 Connectd Canister 的代码：</p>
+<pre><code class="language-json">├── connectd
+│   ├── digraph.mo
+│   ├── main.mo
+│   └── types.mo
+</code></pre>
+<p>Connectd  Canister 下面有三个 motoko 文件：</p>
+<p><code>main.mo</code> 是 Connectd Canister 的主要代码文件，在这个文件中定义了 <code>actor</code> 。</p>
+<p><code>types.mo</code> 是 Connectd Canister 的自定义类型模块文件，被引入 <code>main.mo</code> 中使用。</p>
+<p><code>digraph.mo</code> 是 Connectd Canister 的模块文件，它定义了一个公共类，<code>main.mo</code> 可以实例化这个类，使用其 API ，主要用来处理关系的数据。</p>
+<p>了解了框架后我们来深入代码一行行的剖析。</p>
+<br>
+<p><code>types.mo</code> 定义了一些自定义类型：</p>
+<pre><code class="language-js">// 引入Principal库，用于定义身份，mo:base是motoko的基本库
+import Principal &quot;mo:base/Principal&quot;;
+
+// 定义一个模块
+module { 
+  // 定义一个公共的&quot;顶点&quot;类型，其本质是Principal类型
+  public type Vertex = Principal;
+};
+
+</code></pre>
+<br>
+<p><code>digraph.mo</code> 是一个模块文件，它主要实现了一个简单的有向图数据结构，提供了添加顶点、添加边和查询邻接顶点的基本功能。这样的实现能够轻松地构建和操作有向图。</p>
+<p>这段代码定义了一个 “ 用户关系图 ”（Digraph）的类，用于表示用户之间的关系。这个关系图是有向图，其中用户被视为图的顶点，用户之间的关系则被视为图的有向边。</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;; // 引入Array库
+import Iter &quot;mo:base/Iter&quot;; // 引入Iter库
+import Types &quot;./types&quot;; // 引入自定义类型模块
+
+// 定义模块
+module {
+  // 定义一个类型Vertex
+  // 它来自于引入的types模块中的Vertex类型
+  // 这个Vertex类型用于表示图中的顶点
+  type Vertex = Types.Vertex;
+
+  // 定义“用户关系图”公共类，这个类表示有向图
+  // 在这里我们将“用户”比作一个图的一个”点“，将用户间的”关系“比作图的一条”边“
+  public class Digraph() {
+
+    // 类中包含两个属性，vertexList用于存储顶点，edgeList用于存储有向边
+    var vertexList: [Vertex] = []; // 定义顶点(用户点)数组
+    var edgeList: [(Vertex, Vertex)] = []; // 定义边(用户关系)数组，数组元素的类型是一个元组(from, to)
+
+    // 定义一个公共函数，这个函数可以在图中添加一个顶点
+    // 通过调用Array.append将新顶点添加到vertexList中
+    public func addVertex(vertex: Vertex) { // 函数参数名称为vertex，类型为Vertex；没有返回值
+      // 在motoko中，var为可变值，可变值的再赋值需要用 &quot;:=&quot;
+      vertexList := Array.append&lt;Vertex&gt;(vertexList, [vertex]);
+    };
+
+    // 定义新增一条边的公共函数
+    public func addEdge(fromVertex: Vertex, toVertex: Vertex) {
+      // 通过调用Array.append将新边添加到edgeList中
+      edgeList := Array.append&lt;(Vertex, Vertex)&gt;(edgeList, [(fromVertex, toVertex)]);
+    };
+
+    // 这个函数用于查询某个顶点的邻接顶点
+    // 通过遍历edgeList，找到与输入顶点相关的边，并将对应的邻接顶点添加到adjacencyList中
+    // 也就是查询用户的关系：谁关注了我，我关注了谁
+    public func getAdjacent(vertex: Vertex): [Vertex] { 
+      var adjacencyList: [Vertex] = [];
+      for ((fromVertex, toVertex) in Iter.fromArray&lt;(Vertex, Vertex)&gt;(edgeList)) {
+        if (fromVertex == vertex) {
+          adjacencyList := Array.append&lt;Vertex&gt;(adjacencyList, [toVertex]);
+        };
+      };
+      adjacencyList
+    };
+
+  };
+};
+</code></pre>
+<br>
+<p><code>main.mo</code> 用于管理用户之间的连接关系。</p>
+<p>主要定义了可供外部调用的 API 接口，图的相关操作是实例化图公共类后调用相关函数。</p>
+<p>这有助于组织和查询用户之间的关联关系，适用于社交网络、关系图等场景。</p>
+<pre><code class="language-js">import Digraph &quot;./digraph&quot;; // 引入用户图模块
+import Types &quot;./types&quot;; // 引入自定义类型模块
+
+// 定义名称为Connectd的actor
+actor Connectd {
+  // 定义“点”类型
+  type Vertex = Types.Vertex;
+
+  // 实例化用户图模块的图公共类
+  var graph: Digraph.Digraph = Digraph.Digraph();
+    
+  // 检查 Canister 是否正常运行
+  public func healthcheck(): async Bool { true };
+
+  // 用户A建立与用户B的关系，供外部调用的函数是async异步的
+  public func connect(userA: Vertex, userB: Vertex): async () {
+    graph.addEdge(userA, userB);
+  };
+
+  // 获取一个用户的关系（用户点的邻边）
+  public func getConnections(user: Vertex): async [Vertex] {
+    graph.getAdjacent(user)
+  };
+
+};
+</code></pre>
+<h4 id="linkedup-canister"><a class="header" href="#linkedup-canister">Linkedup Canister</a></h4>
+<p>了解完 Connectd Canister 后我们再来看 Linkedup Canister ，我们需要记住，Connectd Canister 是为 Linkedup Canister “ 服务 ” 的。</p>
+<p>同样的，我们看一下 Linkedup Canister 代码的目录结构：</p>
+<pre><code class="language-json">linkedup
+    ├── database.mo
+    ├── main.mo
+    ├── types.mo
+    └── utils.mo
+</code></pre>
+<p>Linkedup Canister 同样有 <code>main.mo</code> 和 <code>type.mo</code> ，<code>main.mo</code> 是负责主要业务逻辑的，<code>types.mo</code> 负责新类型的定义。</p>
+<p>而新增的 <code>utils.mo</code> 模块主要有常用的实用函数。</p>
+<p><code>database.mo</code> 则与上文的 <code>digraph.mo</code> 类似，其定义了一个简易的数据库模块，主要用于处理业务逻辑所涉及的数据结构和相应处理函数</p>
+<p>我们接着深入代码。</p>
+<p><code>types.mo</code> 定义了 <code>UserId、NewProfile、Profile</code> 三个类型：</p>
+<pre><code class="language-js">import Principal &quot;mo:base/Principal&quot;;
+
+module {
+  public type UserId = Principal;
+
+  public type NewProfile = {
+    firstName: Text; // Text为文本类型
+    lastName: Text;
+    title: Text;
+    company: Text;
+    experience: Text;
+    education: Text;
+    imgUrl: Text;
+  };
+
+  public type Profile = {
+    id: UserId;
+    firstName: Text;
+    lastName: Text;
+    title: Text;
+    company: Text;
+    experience: Text;
+    education: Text;
+    imgUrl: Text;
+  };
+};
+</code></pre>
+<p><code>database.mo</code> 模块实现了一个简单的用户目录系统。它定义了名为目录的公共类，公共类中定义了一个 Key 为 <code>UserId</code> 、value 为 <code>Profile</code> 的 <code>hashmap</code> ，用于存储和查询用户的个人资料：</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import HashMap &quot;mo:base/HashMap&quot;;
+import Iter &quot;mo:base/Iter&quot;;
+import Option &quot;mo:base/Option&quot;;
+import Principal &quot;mo:base/Principal&quot;;
+import Types &quot;./types&quot;;
+
+module {
+  // 这里定义了三个自定义类型
+  // 这些类型主要用于表示用户的个人资料以及用户ID
+  type NewProfile = Types.NewProfile;
+  type Profile = Types.Profile;
+  type UserId = Types.UserId;
+
+  // 这个类代表用户目录，用于存储和查询用户的个人资料
+  public class Directory() {
+    // The &quot;database&quot; is just a local hash map
+    // Directory 类内部包含一个 HashMap 对象，用于实际存储用户个人资料
+    // 这个 hashMap 的键是用户ID，值是用户的个人资料
+    let hashMap = HashMap.HashMap&lt;UserId, Profile&gt;(1, isEq, Principal.hash);
+
+    // 用于新增一个用户的个人资料，通过调用 hashMap.put 将新的个人资料放入HashMap中
+    public func createOne(userId: UserId, profile: NewProfile) {
+      hashMap.put(userId, makeProfile(userId, profile));
+    };
+
+    // 更新某个用户的个人资料
+    public func updateOne(userId: UserId, profile: Profile) {
+      hashMap.put(userId, profile);
+    };
+     
+    // 查询某个用户的个人资料
+    // 返回值为?Profile，表示返回值是Option的，如果没有查询到结果则返回null
+    public func findOne(userId: UserId): ?Profile {
+      hashMap.get(userId)
+    };
+
+    // 查询一组用户的个人资料
+    public func findMany(userIds: [UserId]): [Profile] {
+      func getProfile(userId: UserId): Profile {
+        Option.unwrap&lt;Profile&gt;(hashMap.get(userId))
+      };
+      Array.map&lt;UserId, Profile&gt;(userIds, getProfile)
+    };
+
+    // 根据名字查询用户个人资料
+    public func findBy(term: Text): [Profile] {
+      var profiles: [Profile] = [];
+      for ((id, profile) in hashMap.entries()) {
+        // 字符串拼接
+        let fullName = profile.firstName # &quot; &quot; # profile.lastName;
+        if (includesText(fullName, term)) {
+          profiles := Array.append&lt;Profile&gt;(profiles, [profile]);
+        };
+      };
+      profiles
+    };
+
+    // Helpers
+    // 用UserId和NewProfile生成Profile类型实例，New一个新对象
+    func makeProfile(userId: UserId, profile: NewProfile): Profile {
+      {
+        id = userId;
+        firstName = profile.firstName;
+        lastName = profile.lastName;
+        title = profile.title;
+        company = profile.company;
+        experience = profile.experience;
+        education = profile.education;
+        imgUrl = profile.imgUrl;
+      }
+    };
+
+    // 用于判断一个字符串是否包含另一个字符串，实现了简单的字符串匹配逻辑
+    func includesText(string: Text, term: Text): Bool {
+      let stringArray = Iter.toArray&lt;Char&gt;(string.chars());
+      let termArray = Iter.toArray&lt;Char&gt;(term.chars());
+
+      var i = 0;
+      var j = 0;
+
+      while (i &lt; stringArray.size() and j &lt; termArray.size()) {
+        if (stringArray[i] == termArray[j]) {
+          i += 1;
+          j += 1;
+          if (j == termArray.size()) { return true; }
+        } else {
+          i += 1;
+          j := 0;
+        }
+      };
+      false
+    };
+  };
+
+  func isEq(x: UserId, y: UserId): Bool { x == y };
+};
+</code></pre>
+<p><code>utils.mo</code> 则定义了一些实用函数：</p>
+<pre><code class="language-js">import Array &quot;mo:base/Array&quot;;
+import Option &quot;mo:base/Option&quot;;
+import Database &quot;./database&quot;;
+import Types &quot;./types&quot;;
+
+module {
+  type NewProfile = Types.NewProfile;
+  type Profile = Types.Profile;
+  type UserId = Types.UserId;
+
+  // Profiles
+  // 提供数据库模块的“目录”类实例和userId来查询Profile
+  public func getProfile(directory: Database.Directory, userId: UserId): Profile {
+    let existing = directory.findOne(userId);
+    switch (existing) {
+      case (?existing) { existing };
+      case (null) {
+        {
+          id = userId;
+          firstName = &quot;&quot;;
+          lastName = &quot;&quot;;
+          title = &quot;&quot;;
+          company = &quot;&quot;;
+          experience = &quot;&quot;;
+          education = &quot;&quot;;
+          imgUrl = &quot;&quot;;
+        }
+      };
+    };
+  };
+
+  // Connections
+  // x是否包含在xs数组中
+  public func includes(x: UserId, xs: [UserId]): Bool {
+    func isX(y: UserId): Bool { x == y };
+    switch (Array.find&lt;UserId&gt;(xs, isX)) {
+      case (null) { false };
+      case (_) { true };
+    };
+  };
+
+  // Authorization 权限管理
+
+  let adminIds: [UserId] = [];
+
+  public func isAdmin(userId: UserId): Bool {
+    func identity(x: UserId): Bool { x == userId };
+    Option.isSome(Array.find&lt;UserId&gt;(adminIds,identity))
+  };
+
+  public func hasAccess(userId: UserId, profile: Profile): Bool {
+    userId == profile.id or isAdmin(userId)
+  };
+};
+</code></pre>
+<p><code>main.mo</code> 则定义了 <code>actor</code> ，负责业务逻辑：</p>
+<pre><code class="language-js">// Make the Connectd app's public methods available locally
+import Connectd &quot;canister:connectd&quot;;
+import Database &quot;./database&quot;;
+import Types &quot;./types&quot;;
+import Utils &quot;./utils&quot;;
+
+actor LinkedUp {
+  // 实例化数据库模块中的目录类
+  var directory: Database.Directory = Database.Directory();
+
+  type NewProfile = Types.NewProfile;
+  type Profile = Types.Profile;
+  type UserId = Types.UserId;
+
+  // Healthcheck
+    
+  public func healthcheck(): async Bool { true };
+
+  // Profiles
+
+  // 用户创建主页
+  public shared(msg) func create(profile: NewProfile): async () {
+    // 调用directory类的函数
+    directory.createOne(msg.caller, profile);
+  };
+
+  // 用户修改信息
+  public shared(msg) func update(profile: Profile): async () {
+     // 检查用户是否有权限
+    if(Utils.hasAccess(msg.caller, profile)) {
+      directory.updateOne(profile.id, profile);
+    };
+  };
+  
+  // 查询用户的主页信息
+  public query func get(userId: UserId): async Profile {
+    Utils.getProfile(directory, userId)
+  };
+
+  // 用名字查询用户信息
+  public query func search(term: Text): async [Profile] {
+    directory.findBy(term)
+  };
+
+  // Connections
+
+  // 调用者与另一个用户连接
+  public shared(msg) func connect(userId: UserId): async () {
+    // Call Connectd's public methods without an API
+    // 调用Connectd Canister 的公共函数API, await等待结果
+    await Connectd.connect(msg.caller, userId);
+  };
+
+  // 查询某人的好友的Profile
+  public func getConnections(userId: UserId): async [Profile] {
+    let userIds = await Connectd.getConnections(userId);
+    directory.findMany(userIds)
+  };
+
+  // 查询某人是否是调用者的好友
+  public shared(msg) func isConnected(userId: UserId): async Bool {
+    let userIds = await Connectd.getConnections(msg.caller);
+    Utils.includes(userId, userIds)
+  };
+
+  // User Auth
+  // 查询调用者的Principal Id
+  public shared query(msg) func getOwnId(): async UserId { msg.caller }
+
+};
+</code></pre>
+<p>了解完代码架构和细节后，我们尝试<a href="https://github.com/xiaoyuanxun/linkedup">编译部署该项目</a>。</p>
+<p>我们进入项目根目录，然后先启动 IC 本地网络：</p>
+<pre><code class="language-shell">dfx start
+</code></pre>
+<p>然后在终端可以看到类似如下信息：</p>
+<pre><code class="language-shell">Running dfx start for version 0.14.3
+Initialized replica.
+
+Dashboard: http://localhost:55777/_/dashboard
+</code></pre>
+<p>这表示 IC 本地网络成功启动，我们可以打开上面的 Dashboard 链接，查看网络状态等：</p>
+<p><img src="./assets/image-1-1.png" alt="网络状态仪表盘" /></p>
+<p>然后我们编译部署 Canister ：</p>
+<pre><code class="language-shell">dfx deploy
+</code></pre>
+<p>终端会显示如下信息：</p>
+<pre><code class="language-shell">Deploying all canisters.
+Creating a wallet canister on the local network.
+The wallet canister on the &quot;local&quot; network for user &quot;default&quot; is &quot;bnz7o-iuaaa-aaaaa-qaaaa-cai&quot;
+Creating canisters...
+Creating canister connectd...
+connectd canister created with canister id: bkyz2-fmaaa-aaaaa-qaaaq-cai
+Creating canister linkedup...
+linkedup canister created with canister id: bd3sg-teaaa-aaaaa-qaaba-cai
+Creating canister linkedup_assets...
+linkedup_assets canister created with canister id: be2us-64aaa-aaaaa-qaabq-cai
+Building canisters...
+
+Building frontend...
+Installing canisters...
+Creating UI canister on the local network.
+The UI canister on the &quot;local&quot; network is &quot;br5f7-7uaaa-aaaaa-qaaca-cai&quot;
+Installing code for canister connectd, with canister ID bkyz2-fmaaa-aaaaa-qaaaq-cai
+Installing code for canister linkedup, with canister ID bd3sg-teaaa-aaaaa-qaaba-cai
+Installing code for canister linkedup_assets, with canister ID be2us-64aaa-aaaaa-qaabq-cai
+Uploading assets to asset canister...
+Fetching properties for all assets in the canister.
+Starting batch.
+Staging contents of new and changed assets in batch 1:
+  /index.html 1/1 (7196 bytes) sha c7545fb06d97f8eede0a28524035f8c909e2ad456e26da2e29e4510bd87b8eb4 
+  /templates.js 1/1 (3188 bytes) sha 9a29bc111afcbbf07194ee385d7c7c5dc084fc6a5c545f9f3a75e01aba19d4bd 
+  /templates.js (gzip) 1/1 (772 bytes) sha 2b9db874caa4da5e3fa029c49c9f1970846d8f184dbbed38ada826b340525239 
+  /index.js.LICENSE.txt 1/1 (494 bytes) sha bce8afa69662344f3076e34d586e8a319541e6220f7d33d24c638d2e41e8b3f5 
+  /index.js.LICENSE.txt (gzip) 1/1 (303 bytes) sha 825daec9b568cb21931839f253a52c6568c67067f728b017d07e3e8e4ab9ad4b 
+  /index.js.map (gzip) 1/1 (486875 bytes) sha 292293e601f5d89b74f738059ac3de6f0f8880de21e4b02900f5b3dde4b7f133 
+  /index.js.map 2/2 (512088 bytes) sha d3bc05cedd9145e6e95ac69e617677e9362afab04be5c2aaec484e5ea18b6e91 
+  /index.js 1/1 (1532332 bytes) sha 9a45f461b9eb3685fd69f74e51717a809a2781621308f32c78c36c44f9ac7b09 
+  /utils.js 1/1 (267 bytes) sha d931b0c93683a02c41427208d424ad52239ae1f5ada1d8dbea5a3fd041969c13 
+  /index.html (gzip) 1/1 (1448 bytes) sha 532c56fb849e459afdeee85fa91f59ac9990ad03b8db655bc3aa36acff1e65c6 
+  /utils.js (gzip) 1/1 (199 bytes) sha 054727654de247397e5db169d1399ad9001a9a19cc8381e2a3a7d184ee87d32a 
+  /index.js.map 1/2 (1900000 bytes) sha d3bc05cedd9145e6e95ac69e617677e9362afab04be5c2aaec484e5ea18b6e91 
+  /index.js (gzip) 1/1 (256156 bytes) sha cf3ba66fe82622bb31d124a1c8daa3abbf387760a858e3a25f6a27b161230fbb 
+  /main.js (gzip) 1/1 (2038 bytes) sha 1ebe40bb131aed3f67823a56b0536387c6a4820855f4e3db3f9879ff7ca9289f 
+  /main.js 1/1 (7682 bytes) sha bea749dd6d5fe8dace9812606f02eb76754c31992ecf2e69801de5585cf3f87c 
+  /index.css 1/1 (15386 bytes) sha 5488d6d439f6abdc3104b499e399ce2f588448ce81be46cbdb9a5e9ef2bedf2b 
+  /index.css (gzip) 1/1 (3082 bytes) sha 166ed706f6011b8b95c3160cca68d47955421dd29d64d609e6e6d4cf6b3c47a6 
+Committing batch.
+Committing batch with 24 operations.
+Deployed canisters.
+URLs:
+  Frontend canister via browser
+    linkedup_assets: http://127.0.0.1:4943/?canisterId=be2us-64aaa-aaaaa-qaabq-cai
+  Backend canister via Candid interface:
+    connectd: http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&amp;id=bkyz2-fmaaa-aaaaa-qaaaq-cai
+    linkedup: http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&amp;id=bd3sg-teaaa-aaaaa-qaaba-cai
+</code></pre>
+<p>我们一段段来理解 <code>dfx deploy</code> 做了哪些工作：</p>
+<p>首先，在本地网络给 <code>default</code> 用户创建了一个钱包 Canister ，其钱包默认有一些 Cycles ，将用来创建和管理其他 Canister ：</p>
+<pre><code class="language-shell">Creating a wallet canister on the local network.
+The wallet canister on the &quot;local&quot; network for user &quot;default&quot; is &quot;bnz7o-iuaaa-aaaaa-qaaaa-cai&quot;
+</code></pre>
+<p>然后创建了业务需要的 2 个后端 Canister 和一个前端 Asset Canister ：</p>
+<pre><code class="language-shell">Creating canisters...
+Creating canister connectd...
+connectd canister created with canister id: bkyz2-fmaaa-aaaaa-qaaaq-cai
+Creating canister linkedup...
+linkedup canister created with canister id: bd3sg-teaaa-aaaaa-qaaba-cai
+Creating canister linkedup_assets...
+linkedup_assets canister created with canister id: be2us-64aaa-aaaaa-qaabq-cai
+</code></pre>
+<p>然后编译后端和前端代码为可部署在 Canister 中的 Wasm 文件：</p>
+<pre><code class="language-shell">Building canisters...
+Building frontend...
+</code></pre>
+<p>然后将 Wasm 文件安装到 Canister 中：</p>
+<pre><code class="language-shell">Installing canisters...
+Creating UI canister on the local network.
+The UI canister on the &quot;local&quot; network is &quot;br5f7-7uaaa-aaaaa-qaaca-cai&quot;
+Installing code for canister connectd, with canister ID bkyz2-fmaaa-aaaaa-qaaaq-cai
+Installing code for canister linkedup, with canister ID bd3sg-teaaa-aaaaa-qaaba-cai
+Installing code for canister linkedup_assets, with canister ID be2us-64aaa-aaaaa-qaabq-cai
+Deployed canisters.
+</code></pre>
+<p>上传前端静态资源到 Asset Canister 中：</p>
+<pre><code class="language-shell">Uploading assets to asset canister...
+Fetching properties for all assets in the canister.
+Starting batch.
+Staging contents of new and changed assets in batch 1:
+  /index.html 1/1 (7196 bytes) sha c7545fb06d97f8eede0a28524035f8c909e2ad456e26da2e29e4510bd87b8eb4 
+  /templates.js 1/1 (3188 bytes) sha 9a29bc111afcbbf07194ee385d7c7c5dc084fc6a5c545f9f3a75e01aba19d4bd 
+  /templates.js (gzip) 1/1 (772 bytes) sha 2b9db874caa4da5e3fa029c49c9f1970846d8f184dbbed38ada826b340525239 
+  /index.js.LICENSE.txt 1/1 (494 bytes) sha bce8afa69662344f3076e34d586e8a319541e6220f7d33d24c638d2e41e8b3f5 
+  /index.js.LICENSE.txt (gzip) 1/1 (303 bytes) sha 825daec9b568cb21931839f253a52c6568c67067f728b017d07e3e8e4ab9ad4b 
+  /index.js.map (gzip) 1/1 (486875 bytes) sha 292293e601f5d89b74f738059ac3de6f0f8880de21e4b02900f5b3dde4b7f133 
+  /index.js.map 2/2 (512088 bytes) sha d3bc05cedd9145e6e95ac69e617677e9362afab04be5c2aaec484e5ea18b6e91 
+  /index.js 1/1 (1532332 bytes) sha 9a45f461b9eb3685fd69f74e51717a809a2781621308f32c78c36c44f9ac7b09 
+  /utils.js 1/1 (267 bytes) sha d931b0c93683a02c41427208d424ad52239ae1f5ada1d8dbea5a3fd041969c13 
+  /index.html (gzip) 1/1 (1448 bytes) sha 532c56fb849e459afdeee85fa91f59ac9990ad03b8db655bc3aa36acff1e65c6 
+  /utils.js (gzip) 1/1 (199 bytes) sha 054727654de247397e5db169d1399ad9001a9a19cc8381e2a3a7d184ee87d32a 
+  /index.js.map 1/2 (1900000 bytes) sha d3bc05cedd9145e6e95ac69e617677e9362afab04be5c2aaec484e5ea18b6e91 
+  /index.js (gzip) 1/1 (256156 bytes) sha cf3ba66fe82622bb31d124a1c8daa3abbf387760a858e3a25f6a27b161230fbb 
+  /main.js (gzip) 1/1 (2038 bytes) sha 1ebe40bb131aed3f67823a56b0536387c6a4820855f4e3db3f9879ff7ca9289f 
+  /main.js 1/1 (7682 bytes) sha bea749dd6d5fe8dace9812606f02eb76754c31992ecf2e69801de5585cf3f87c 
+  /index.css 1/1 (15386 bytes) sha 5488d6d439f6abdc3104b499e399ce2f588448ce81be46cbdb9a5e9ef2bedf2b 
+  /index.css (gzip) 1/1 (3082 bytes) sha 166ed706f6011b8b95c3160cca68d47955421dd29d64d609e6e6d4cf6b3c47a6 
+Committing batch.
+Committing batch with 24 operations.
+</code></pre>
+<p>还在本地创建了 UI Canister ，他可以用来形象化调用和测试后端 Canister 接口：</p>
+<pre><code class="language-shell">Creating UI canister on the local network.
+The UI canister on the &quot;local&quot; network is &quot;br5f7-7uaaa-aaaaa-qaaca-cai&quot;
+</code></pre>
+<p>最后显示部署成功的链接，我们可以点击 Linkedup_assets 的链接来查看前端。</p>
+<p>点击 Connectd 和 Linkedup 可以通过 CandidUI 来调试后端接口：</p>
+<pre><code class="language-shell">Deployed canisters.
+URLs:
+  Frontend canister via browser
+    linkedup_assets: http://127.0.0.1:4943/?canisterId=be2us-64aaa-aaaaa-qaabq-cai
+  Backend canister via Candid interface:
+    connectd: http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&amp;id=bkyz2-fmaaa-aaaaa-qaaaq-cai
+    linkedup: http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&amp;id=bd3sg-teaaa-aaaaa-qaaba-cai
+</code></pre>
+<p>我们打开 Linkedup CandidUI 窗口来测试一下后端的业务逻辑：</p>
+<div class="center-image">
+    <img src="./assets/image-1-2.png">
+</div>
+<p>我们尝试调用 <code>create</code> 函数来创建个人主页信息。</p>
+<p>输入信息后点击 CALL 。</p>
+<p>可以看到成功返回 <code>()</code> ，用时 2.107s ，因为 update 函数（也就是定义为 <code>public shared</code> 的函数）需要经过底层系统的共识，一般需要 2s 左右。</p>
+<div class="center-image">
+    <img src="./assets/image-1-3.png">
+</div>
+<p>我们也可以通过 <code>get</code> 函数来查询某人的主页信息。</p>
+<p>其返回的是一个 <code>record</code> 结构，而这次调用仅用了 0.015s 就返回了结果，因为 query 函数不经过共识，基本是毫秒级别的。</p>
+<div class="center-image">
+    <img src="./assets/image-1-4.png">
+</div>
+<p>其他函数的调用大家可以自己尝试。</p>
+<p>Candid UI 其实也不是万能的，其最主要的缺点是身份单一，比如我们就无法测试 Connect 的业务逻辑，让两个身份建立联系。</p>
+<p>所以上线业务一般用 <code>Rust Agent</code> 或 <code>JS Agent</code> 库来编写自动化测试。</p>
+<p>至此，我们了解完了这个 demo ，可以停止本地 IC 网络：</p>
+<pre><code class="language-shell">dfx stop
+</code></pre>
+<br>
+<h2 id="ressources"><a class="header" href="#ressources">Ressources</a></h2>
+<p><a href="https://internetcomputer.org/docs/current/motoko/main/motoko">Motoko documentation</a>：Motoko 语言的官方文档</p>
+<p><a href="https://m7sm4-2iaaa-aaaab-qabra-cai.raw.ic0.app">Motoko playground</a>：一个沙盒，用于从浏览器快速编写和测试 Motoko 代码</p>
+<p><a href="https://github.com/dfinity/examples">examples</a>：DFINITY 的官方代码实例</p>
+<p><a href="https://github.com/orgs/DFINITY-Education/repositories">DFINITY education</a>：有关数据结构、Web 开发、区块链等的教育资源</p>
+<p><a href="https://github.com/MioQuispe/create-ic-app">create-ic-app</a>：包含了主流框架的模板（Vue, React, Vanilla JS,Svelte）</p>
+<p><a href="https://juno.build/docs/intro">juno</a>：通过 UI 界面构建链上后端服务</p>
+<p><a href="https://github.com/dfinity/invoice-canister">The invoice canister</a>：在 IC 上处理付款相关代码</p>
+<p><a href="https://github.com/Web3NL/motoko-book">motoko-book</a>：一本关于 Motoko 的书</p>
+<p><a href="https://github.com/motoko-bootcamp/motokobootcamp-2023">motokobootcamp-2023</a>：2023 年的 motoko 训练营，包含各种开发教程</p>
+<p><a href="https://github.com/motoko-bootcamp/bootcamp-2022">bootcamp-2022</a>：2022 年的 motoko 训练营，包含各种开发教程</p>
+<p><a href="https://kyle-peacock.com/blog">kyle 的 blog</a>：Kyle 的博客</p>
+<p><a href="https://kyle-peacock.com/blog/dfinity/integrating-internet-identity">集成互联网身份</a>：Kyle 演示了如何集成互联网身份</p>
+<p><a href="https://github.com/dfinity/awesome-icp">awesome-icp</a>：优秀的项目列表</p>
+<p><a href="https://github.com/motoko-unofficial/awesome-motoko">awesome-motoko</a>：优秀的项目列表</p>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../9.Dapp开发/Motoko.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../9.Dapp开发/2.设计DApp.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../9.Dapp开发/Motoko.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../9.Dapp开发/2.设计DApp.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "9.Dapp开发/1.入门DApp.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>

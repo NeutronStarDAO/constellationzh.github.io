@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>BLS - 互联网计算机漫游指南</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The constellation book for you.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.png">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/style.css">
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../about.html">👽互联网计算机漫游指南🛸</a></li><li class="chapter-item affix "><li class="part-title">去中心化之旅🔍</li><li class="chapter-item "><a href="../0.去中心化之旅/造梦家的冒险之旅.html">造梦家的冒险之旅</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../0.去中心化之旅/未来已来.html">未来已来</a></li><li class="chapter-item "><a href="../0.去中心化之旅/加密朋克的那些事.html">加密朋克的那些事</a></li><li class="chapter-item "><a href="../0.去中心化之旅/区块链是啥？.html">区块链是啥？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/什么是以太坊？.html">什么是以太坊？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/我的网络隐私呢？.html">我的网络隐私呢？</a></li><li class="chapter-item "><a href="../0.去中心化之旅/比特币.html">比特币</a></li></ol></li><li class="chapter-item "><li class="part-title">了解IC📡</li><li class="chapter-item "><a href="../1.了解IC/1.了解IC.html">了解IC</a></li><li class="chapter-item "><a href="../1.了解IC/ICP=Web3.0.html">ICP = Web 3.0</a></li><li class="chapter-item affix "><li class="part-title">核心协议⭐</li><li class="chapter-item "><a href="../2.核心协议/1.P2P层.html">P2P层</a></li><li class="chapter-item "><a href="../2.核心协议/2.共识层.html">共识层</a></li><li class="chapter-item "><a href="../2.核心协议/3.消息路由层.html">消息路由层</a></li><li class="chapter-item "><a href="../2.核心协议/4.执行层.html">执行层</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/简介.html">相关概念</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/共识委员会数量如何确定？.html">共识委员会数量如何确定？</a></li><li class="chapter-item "><a href="../2.核心协议/相关概念介绍/P2P层是如何降低恶意攻击的？.html">P2P层是如何降低恶意攻击的？</a></li></ol></li><li class="chapter-item "><li class="part-title">链钥密码学🪄</li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/1.ChainKey.html">Chain Key</a></li><li class="chapter-item "><a href="../3.链钥密码学(ChainKey)/VetKeys.html">VETKeys</a></li><li class="chapter-item affix "><li class="part-title">容器🧰</li><li class="chapter-item "><a href="../4.容器(Canister)/1.Canister.html">Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/2.Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../4.容器(Canister)/3.部署自己的Canister.html">部署Canister</a></li><li class="chapter-item "><a href="../4.容器(Canister)/4.XRC.html">XRC</a></li><li class="chapter-item affix "><li class="part-title">网络神经系统(NNS)⚙️</li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/1.NNS.html">NNS</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/2.DAO.html">DAO</a></li><li class="chapter-item "><a href="../5.网络神经系统(NNS)/3.经济模型.html">经济模型</a></li><li class="chapter-item affix "><li class="part-title">区块链网络服务🎯</li><li class="chapter-item "><a href="../6.区块链网络服务/5.可信执行环境.html">可信执行环境</a></li><li class="chapter-item "><a href="../6.区块链网络服务/6.链上随机数.html">链上随机数</a></li><li class="chapter-item affix "><li class="part-title">互联网身份🔑</li><li class="chapter-item "><a href="../7.互联网身份/1.ii.html">互联网身份</a></li><li class="chapter-item "><a href="../7.互联网身份/3.pid.html">pid</a></li><li class="chapter-item affix "><li class="part-title">IC里的密码学🔒</li><li class="chapter-item "><a href="../8.IC里的密码学/基础密码学知识.html">基础密码学介绍</a></li><li class="chapter-item expanded "><a href="../8.IC里的密码学/BLS签名.html" class="active">BLS</a></li><li class="chapter-item "><a href="../8.IC里的密码学/秘密共享.html">秘密共享</a></li><li class="chapter-item "><a href="../8.IC里的密码学/哈希算法.html">哈希算法</a></li><li class="chapter-item affix "><li class="part-title">开发DApp🌟</li><li class="chapter-item "><a href="../9.Dapp开发/安装开发环境.html">安装开发环境</a></li><li class="chapter-item "><a href="../9.Dapp开发/dfx常用命令.html">dfx常用命令</a></li><li class="chapter-item "><a href="../9.Dapp开发/Motoko.html">Motoko</a></li><li class="chapter-item "><a href="../9.Dapp开发/1.入门DApp.html">入门DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/2.设计DApp.html">设计DApp</a></li><li class="chapter-item "><a href="../9.Dapp开发/3.开发Proton.html">开发Proton</a></li><li class="chapter-item "><a href="../9.Dapp开发/4.User模块.html">User模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/5.Post模块.html">Post模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/6.Feed模块.html">Feed模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/7.Fetch模块.html">Fetch模块</a></li><li class="chapter-item "><a href="../9.Dapp开发/8.共享类型.html">共享类型</a></li><li class="chapter-item "><a href="../9.Dapp开发/9.完成.html">完成</a></li><li class="spacer"></li><li class="chapter-item affix "><a href="../词汇表.html">词汇表</a></li><li class="chapter-item affix "><a href="../贡献者名单.html">贡献者名单</a></li><li class="chapter-item affix "><a href="../参考资料.html">参考资料</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">互联网计算机漫游指南</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/NeutronStarDAO/ConstellationBook-Chinese" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+
+                    // Get viewed page store
+                    var viewed_key = 'mdbook-viewed';
+                    var viewed_map = {};
+                    try {
+                        var viewed_storage = localStorage.getItem(viewed_key);
+                        if (viewed_storage) {
+                            viewed_map = JSON.parse(viewed_storage)
+                        }
+                    } catch (e) { }
+
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                        
+                        // Apply viewed style
+                        if (viewed_map[link.pathname]) {
+                            link.classList.add('md-viewed')
+                        }
+                    }); 
+
+                    // Mark viewed after 30s
+                    setTimeout(function() {
+                        viewed_map[location.pathname] = 1;
+                        localStorage.setItem(viewed_key, JSON.stringify(viewed_map));
+                    }, 30000)
+                </script>
+
+                <div id="content" class="content">
+                    <!-- Page table of contents -->
+                    <div class="sidetoc"><nav class="pagetoc"></nav></div>
+                    <main>
+                        <h2 id="双线性映射"><a class="header" href="#双线性映射">双线性映射</a></h2>
+<p>双线性映射是一个非常重要的密码学原语，通常表示为 \(e\) ：\(G_{1} * G_{2} -&gt; G_{T}\) 。其中 \(G_{1}\) ，\(G_{2}\) 和 \(G_{T}\) 都是具有相同阶的循环群。</p>
+<blockquote>
+<p>定义：一个双线性映射是由两个向量空间上的元素，生成第三个向量空间上一个元素之函数，并且该函数对每个参数都是线性的。</p>
+</blockquote>
+<p>双线性映射 \(e\) 需要满足以下两个条件：</p>
+<ol>
+<li>双线性</li>
+</ol>
+<p>对任意的 \(g_{1}∈G1\) ，\(g_{2}∈G2\) 和 \(a,b∈Z\) ，有：
+$$
+e(g_{1}^{a}, g_{2}^{b}) = e(g_{1}, g_{2})^{ab}
+$$</p>
+<ol start="2">
+<li>非退化</li>
+</ol>
+<p>存在 \(g_{1}∈G1\) 和 \(g_{2}∈G2\) ，使得：
+$$
+e(g_{1},g_{2})≠1_{G_{T}}
+$$
+\(e\) 需要是关于每个变量的同态映射，且不能把所有元素都映射成 1 。</p>
+<br>
+<p>若有 A ，B ，C 三个向量空间，映射 e ： A × B → C 是一个双线性映射，则 A 固定，B 可变时，B 到 C 的映射是线性的。B 固定，A 可变时，A 到 C 的映射也是线性的。也就是说保持双线性映射中的任意一个参数固定，另一个参数对 C 的映射都是线性的。</p>
+<p>即双线性的函数有两个输入，而且对这两个输入分别满足线性。</p>
+<p>例如矩阵乘法，数据库两张表的笛卡尔积都是双线性配对的例子。</p>
+<p>矩阵乘法满足：</p>
+<p>(A+B)C = AC + BC （对 C 线性）</p>
+<p>A(B+C) = AB + AC （对 A 线性）</p>
+<p>两张表的笛卡尔积也满足类似的性质。</p>
+<br>
+<p>双线性映射是一个非常强大的工具，使得许多基于硬问题的公钥密码方案成为可能。比如 BLS 签名就是建立在双线性 Diffie-Hellman 问题的难度之上的。</p>
+<br>
+<p>双线性映射通常由 pairing 函数实现。目前常用的 pairing 函数包括 Tate pairing 、Weil pairing 等。这些 pairing 函数可以由特定的椭圆曲线来构造。</p>
+<p>双线性映射让我们能在群之间轻松转换，并利用群之间关系来设计各种密码方案。它是许多密码学协议的关键基础，也是现代密码学发展的重要成果之一。</p>
+<br>
+<h2 id="bls签名"><a class="header" href="#bls签名">BLS签名</a></h2>
+<p>BLS 签名是一种基于双线性对称加密的数字签名方案。</p>
+<p>它的密码学原理如下：</p>
+<p>选择一个双线性对 \((G_{1},G_{2})\) ，其中 \(G_{T}\) , \(G_{1}\) 和 \(G_{2}\) 都是循环群，阶为一个大素数 \(q\) 。\(P\) 是 \(G_{1}\) 的生成元。</p>
+<p>KeyGen 生成密钥：</p>
+<p>选择一个随机的私钥 \(sk\) ，计算公钥 \(pk=sk*P\)​ 。</p>
+<p>Sign 签名：</p>
+<p>消息 \(m\) 先进行哈希运算，得到 \(H(m)\) 。</p>
+<p>对 \(H(m)\) 进行签名，计算签名 \(σ = sk * H(m)\)。</p>
+<p>Verify 验证：</p>
+<p>验证签名 \(σ\) ，计算 \(e(P, σ) = e(pk, H(m))\) 。其中 \(e\) 是一个双线性映射，如果等式成立，则签名有效。</p>
+<br>
+<p>为什么可以这样验证？</p>
+<p>这就用到了上面略过的<strong>曲线配对函数</strong>，简介如下：</p>
+<p>有一个（或一种）特殊的函数记为 \(e\) ，它可以接受输入一条（或两条不同）曲线上两点 \(P\) 和 \(Q\) ，输出至一个数字，如下式：
+$$
+e(P, Q) → n
+$$
+之所以说这个函数特殊，是因为它有一些特殊性质。例如我们有一个数 \(x\) 和两点 \(P\) 和 \(Q\) ，无论哪一个点乘以这个数字，函数结果相同即：
+$$
+e(x * P, Q) = e(P, x * Q)
+$$
+更进一步：
+$$
+e(a * P, b * Q) = e(P, ab * Q) = e(ab * P, Q) = e(P, Q)^{ab}
+$$
+当然还有其他性质，但是对于我们用来验证签名，主要用到以上性质。</p>
+<br>
+<p>BLS 签名的安全性建立在双线性对计算困难问题（bilinear Diffie-Hellman problem）的基础之上。它只需要两次群运算就可以完成签名和验证，效率很高。同时它还具有短签名、随机签名等优点。</p>
+<p>BLS 支持简单的签名聚合：多个 BLS 签名可以通过群运算聚合成一个短签名。验证时对聚合签名做配对检验。</p>
+<p>有了单个签名，我们再来看下聚合签名。</p>
+<br>
+<h2 id="bls聚合签名"><a class="header" href="#bls聚合签名">BLS聚合签名</a></h2>
+<p>区块链系统中，签名验证是一个非常重要也比较频繁的运算。为了确保安全，每个交易输入通常都需要一个签名来进行验证。但对于多方合作的场景，比如多签地址，这会导致交易大小急剧增长，并降低处理效率。</p>
+<p>为了解决这个问题，研究人员提出了 BLS 多签名方案。BLS 签名是一种非常高效的数字签名方式，它基于双线性配对原理，只需要很短的签名即可确保安全。而 BLS 多签名方案在此基础上，通过一定的密码学技巧，可以将多个 BLS 签名聚合成一个，从而大大缩减存储和传输成本。</p>
+<br>
+<p>BLS 阈值签名如何工作呢？先简单回顾一下 BLS 签名本身的原理。它需要以下参数：一个双线性配对函数,两个循环群 G1 和 G0 ，G1 的生成元 P ，以及一个散列函数 H 。密钥生成是随机选择一个数字 sk ，计算公钥 pk=sk*P 。签名是对消息计算散列 H(m) ，然后计算签名 σ = sk * H(m) 。验证就是检验配对关系 e(P, σ) = e(pk, H(m)) 是否成立。</p>
+<br>
+<p>这个验证方程也解释了为什么可以进行签名聚合。如果有 n 个签名都是对同一消息 m 的签名，那么将所有签名乘起来，验证方程依然成立。因此验证方只需要提供一个聚合后的短签名，就可以同时验证 n 个签名，效率大大提升。</p>
+<p>多个 BLS 签名可以简单地将签名值相乘得到聚合签名。也就是对于 \((pk_{1},m_{1},σ_{1}),\ ...\ ,(pk_{n},m_{n},σ_{n})\) ，计算：</p>
+<p>$$
+σ = σ_{1} * ... * σ_{n}
+$$
+验证聚合签名 σ 时，对每个签名分别检查签名验证等式。</p>
+<p>当签名的消息 m 都相同时，验证可以更加简化，只需要：
+$$
+e(g_{1}, σ) = e(pk_{1} * ... * pk_{n}, H(m))
+$$
+这样只需要 2 个配对运算。这就是 BLS 签名聚合的优势所在。</p>
+<br>
+<p>但是直接聚合签名是不安全的，会存在 “ 恶意公钥 ” 攻击的风险。为了解决这个问题，BLS 多签名加入了一个新散列函数 H1 。这个散列函数输入是所有参与签名用户的公钥，输出是每个用户一个 “ 权重 ” 。在生成聚合签名时，每个用户的签名都要以其权重作为指数幂，才能计算出安全的聚合签名。关键思路是对每个公钥引入一个随机指数，这些指数由所有公钥的散列值决定。</p>
+<p>验证时也是类似，重新计算出每个用户的权重，将公钥按权重聚合，与普通 BLS 签名验证流程一致。因此验证一个多签名与单签效率是相同的。这种机制可以有效防止恶意公钥攻击，每个用户签名的贡献是精确控制的。</p>
+<ol>
+<li>生成密钥对 \((sk, pk=g1^sk)\) 。</li>
+<li>对消息 \(m\) 签名，输出 \(σ = H(m)^sk\) 。</li>
+<li>聚合时，对所有公钥计算指数 \((t_{1},...,t_{n}) = H1(pk_{1},...,pk_{n})\) 。</li>
+<li>计算聚合签名 \(σ = σ_{1}^{t_{1}} * ... * σ_{n}^{t_{n}}\) 。</li>
+<li>验证时，计算 \((t_{1},...,t_{n}) = H1(pk_{1},...,pk_{n})\) ，并计算聚合公钥 \(apk = pk_{1}^{t_{1}} * ... * pk_{n}^{t_{n}}\) 。</li>
+<li>检查 \(e(g_{1}, σ) = e(apk, H(m))\) ，等式成立即验证成功。</li>
+</ol>
+<p>这个方案能防止公钥替换攻击，理论上也是安全的，基于 co-CDH 问题的难度假设。该方案保留了 BLS 签名聚合的优势，同时也不需要证明私钥知识。因此这是 BLS 多签名一个很好的改进方案。</p>
+<br>
+<p>BLS 阈值签名机制非常适合区块链系统。它不仅可以缩小交易大小，节省存储空间，还兼容交易批量验证，可以进一步提升处理性能。BLS 阈值签名可以非交互式聚合，更具有灵活性。未来如果搭配聚合公钥证明 (POP) 使用，可以完全隐藏用户的公钥信息。</p>
+<p>随着区块链进入大规模商用的新阶段，各种效率和隐私技术会越来越重要。BLS 阈值签名为我们提供了一个非常实用的工具。</p>
+<br>
+<p>BLS 签名算法主要需要进行曲线配对和签名聚合两项工作。</p>
+<p>曲线配对需要一个特殊的函数把曲线上的两个映射为一个数，需要满足的属性是无论哪个点乘以未知数x，结果必须相同。这种函数是存在的，并且不会暴露 x 的任何相关信息（安全性）。</p>
+<p>在验签时，只需验证公钥和消息的哈希值（曲线上两个点）与曲线生成点和签名（曲线上另两个点）是否映射到同一个数，如果是就说明这是一个有效的 BLS 签名。</p>
+<p>当然，BLS 签名也不是完美无缺的，它的复杂度要比 ECDSA 高上一个数量级。在验证区块中 1000 笔交易的聚合签名时，仍需要进行 1000 次配对计算，这可能比使用 ECDSA 时对 1000 个单独签名进行验证还要慢。唯一的好处在于，可以在区块中放更多笔的交易，毕竟聚合签名只占 32 字节。另外还有一种针对椭圆曲线加密体系的 MOV 攻击，利用配对函数来危害系统安全。</p>
+<br>
+<p>对 ECDSA 、Schnorr 和 BLS 签名算法的资料整理如下表：</p>
+<div class="table-wrapper"><table><thead><tr><th></th><th>ECDSA</th><th>Schnorr</th><th>BLS</th></tr></thead><tbody>
+<tr><td>验证多重签名</td><td>每个签名和公钥</td><td>每笔交易的合并签名和公钥 [1]</td><td>每个区块的合并签名和公钥</td></tr>
+<tr><td>随机数生成器</td><td>指定随机点</td><td>依赖随机数生成器</td><td>不需要随机数生成器</td></tr>
+<tr><td>签名者通信</td><td></td><td>需要</td><td>不需要</td></tr>
+<tr><td>签名长度</td><td>320 比特</td><td>320 比特</td><td>160 比特</td></tr>
+</tbody></table>
+</div>
+<p>[1] Schnorr 签名算法可以把一笔交易中的所有签名和公钥合并成单个签名和公钥，而且无从追溯是否合并过，一次性对合并后的签名验证，加快区块验证速度。</p>
+<br>
+
+                        <div id="giscus-container"></div>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../8.IC里的密码学/基础密码学知识.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../8.IC里的密码学/秘密共享.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../8.IC里的密码学/基础密码学知识.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../8.IC里的密码学/秘密共享.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" charset="utf-8">
+        var pagePath = "8.IC里的密码学/BLS签名.md"
+        </script>
+
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../assets/custom.js"></script>
+        <script type="text/javascript" src="../assets/bigPicture.js"></script>
+
+
+    </body>
+</html>
