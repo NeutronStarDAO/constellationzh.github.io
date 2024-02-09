@@ -317,7 +317,7 @@ await Registry.register(&quot;hello&quot;);
   }
 }
 </code></pre>
-<p>由于<code>value</code>已声明<code>stable</code>，因此服务的当前状态n会在升级后保留。计数将从 n 开始继续，而不是从 0 重新开始。</p>
+<p>由于<code>value</code>已声明<code>stable</code>，因此服务的当前状态 n 会在升级后保留。计数将从 n 开始继续，而不是从 0 重新开始。</p>
 <p>由于新接口与前一个接口兼容，引用该容器的现有客户端将继续工作，但新客户端将能够利用其升级的功能（附加 reset 功能）。</p>
 <p>对于无法单独使用稳定变量解决的场景，Motoko 提供了用户可定义的升级 hooks ，这些 hooks 在升级之前和之后立即运行，并允许您将任意状态迁移到稳定变量。</p>
 <br>
@@ -326,6 +326,7 @@ await Registry.register(&quot;hello&quot;);
 <p>Motoko 不是、也无意成为实现 Canister 智能合约的唯一语言。如果它不能满足您的需求，还有一个适用于 Rust 编程语言的容器开发套件（CDK）。IC 的目标是使任何语言（具有对应的 WebAssembly 编译器）都能够生成在 IC 上运行的 Canister 智能合约，并通过语言中立的 Candid 接口与其他（可能是其他语言实现的）Canister 智能合约进行互操作。</p>
 <p>其量身定制的设计意味着 Motoko 是互联网计算机上最简单、最安全的编码语言。</p>
 <br>
+
                         <div id="giscus-container"></div>
                     </main>
 

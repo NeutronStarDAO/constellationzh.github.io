@@ -2397,7 +2397,7 @@
 <p><strong>经过验证的连接</strong>：P2P 层的底层传输组件在子网中的副本之间建立基于 TLS 和 TCP 的安全连接。副本使用私钥进行相互认证，确保只有同一子网的副本才能通信。这减少了未授权副本将恶意流量注入子网的风险。</p>
 <p><strong>监控和重新发送请求</strong>：P2P 层持续监测连接质量和收到的工件。如果副本遇到工件问题，比如丢失或无效的数据，它可以向对方副本请求重新发送工件。这个机制有助于从恶意副本可能引发的问题中恢复。</p>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="链钥密码学-1"><a class="header" href="#链钥密码学-1">链钥密码学</a></h2>
-<img src="3.链钥密码学(ChainKey)/assets/1.ChainKey/image-20230925163327385.jpg" style="zoom:25%;" />
+<img src="3.链钥密码学(ChainKey)/assets/1.ChainKey/chainkey.jpg" alt="chainkey" style="zoom:50%;" />
 <p>链钥密码学（Chain-key cryptography）是对嵌入 IC 底层系统密码学的统称，是 IC 运行时依赖的一套完整的密码学协议，包括了 BLS 阈值签名、非交互式密钥分发协议（NIDKG）、非交互式零知识证明（NIZK）、阈值 EDCSA 、可验证加密阈值密钥（VETKeys）等等技术。</p>
 <p>其中最重要的是 BLS 阈值签名。</p>
 <br>
@@ -5278,7 +5278,7 @@ await Registry.register(&quot;hello&quot;);
   }
 }
 </code></pre>
-<p>由于<code>value</code>已声明<code>stable</code>，因此服务的当前状态n会在升级后保留。计数将从 n 开始继续，而不是从 0 重新开始。</p>
+<p>由于<code>value</code>已声明<code>stable</code>，因此服务的当前状态 n 会在升级后保留。计数将从 n 开始继续，而不是从 0 重新开始。</p>
 <p>由于新接口与前一个接口兼容，引用该容器的现有客户端将继续工作，但新客户端将能够利用其升级的功能（附加 reset 功能）。</p>
 <p>对于无法单独使用稳定变量解决的场景，Motoko 提供了用户可定义的升级 hooks ，这些 hooks 在升级之前和之后立即运行，并允许您将任意状态迁移到稳定变量。</p>
 <br>
@@ -5286,7 +5286,8 @@ await Registry.register(&quot;hello&quot;);
 <p>Motoko 还提供了很多开发人员生产力功能，包括子类型、任意精度算术和垃圾回收。</p>
 <p>Motoko 不是、也无意成为实现 Canister 智能合约的唯一语言。如果它不能满足您的需求，还有一个适用于 Rust 编程语言的容器开发套件（CDK）。IC 的目标是使任何语言（具有对应的 WebAssembly 编译器）都能够生成在 IC 上运行的 Canister 智能合约，并通过语言中立的 Candid 接口与其他（可能是其他语言实现的）Canister 智能合约进行互操作。</p>
 <p>其量身定制的设计意味着 Motoko 是互联网计算机上最简单、最安全的编码语言。</p>
-<br><div style="break-before: page; page-break-before: always;"></div><h2 id="dapp开发快速入门"><a class="header" href="#dapp开发快速入门">DApp开发快速入门</a></h2>
+<br>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="dapp开发快速入门"><a class="header" href="#dapp开发快速入门">DApp开发快速入门</a></h2>
 <p>互联网计算机（Internet Computer ，简称 IC ）是由 DFINITY 基金会推出的一个公共区块链平台，旨在扩展区块链的功能，使其能够托管网站与后端软件。</p>
 <p>IC 通过创新的协议和先进的技术，提供了无与伦比的速度、存储效率和直接在链上部署网站的能力。</p>
 <p>它的核心特点是：</p>
