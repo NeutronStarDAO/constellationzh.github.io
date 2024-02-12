@@ -186,7 +186,7 @@
 <br>
 <p>为了安全和可靠性，每个 Canister 都在一个隔离的沙盒环境中执行。执行每条单独的消息时，调度器启动托管 Canister 的沙盒进程，并在提供的消息上执行。每条消息执行可能会向其他 Canister 发送新消息、修改 Canister 状态的内存页面或生成响应。执行环境会根据 Canister 消耗的指令数量进行记账。</p>
 <img src="assets/4.执行层/image-20230626172541627.png" style="zoom:50%;" />
-<p>如上图，更多关于 Canister 的内容请看<a href="">第四章</a>。</p>
+<p>如上图，更多关于 Canister 的内容请看<a href="../4.%E5%AE%B9%E5%99%A8(Canister)/1.Canister.html">第四章</a>。</p>
 <br>
 <p>为了管理 Canister 的执行时间，IC 对每个 Canister 执行的指令数量做了限制。每个 Canister 在每轮都有固定的指令数量。在一轮执行结束时，Canister 的执行会暂停，并在下一轮继续。为了防止 Canister 占用过多资源，对每个 Canister 的单次调用所能执行的最大指令数量有限制。若超过限制，执行将被终止，Canister 的状态回滚，同时会扣除消耗的 Cycles 。</p>
 <p>执行环境还对 Canister 在每一轮可以修改的堆页数做了限制。不过 Canister 超过限制后，仍会保存执行结果，只是不会执行后续操作了。Canister 计划修改的堆内存页数低于限制时，才会执行后续操作。</p>
@@ -275,7 +275,7 @@
 <p>冻结之后 Canister 不会再接收和发送消息，停止计算，直接拒绝所有请求。这时 Canister 只消耗存储数据的 Cycles 。Canister 被冻结之后充值一些 Cycles ，让余额高于阈值就可以解冻了。如果 30 天之后还没有充值 Cycles ，那 Cycles 耗尽时 Canister 会被子网删掉。</p>
 <p>并且，如果执行某个操作扣除了 Cycles 之后会低于冻结阈值， Canister 也无法执行这个操作。</p>
 <br>
-<p>现在 IC 的 4 层核心协议都介绍完了，下一章我们来看看 IC 的看家本领：<a href="">链钥密码学</a>（ChainKey）。</p>
+<p>现在 IC 的 4 层核心协议都介绍完了，下一章我们来看看 IC 的看家本领：<a href="../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html">链钥密码学</a>（ChainKey）。</p>
 <br>
 
                         <div id="giscus-container"></div>

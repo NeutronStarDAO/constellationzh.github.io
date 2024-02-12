@@ -2258,7 +2258,7 @@
 <br>
 <p>为了安全和可靠性，每个 Canister 都在一个隔离的沙盒环境中执行。执行每条单独的消息时，调度器启动托管 Canister 的沙盒进程，并在提供的消息上执行。每条消息执行可能会向其他 Canister 发送新消息、修改 Canister 状态的内存页面或生成响应。执行环境会根据 Canister 消耗的指令数量进行记账。</p>
 <img src="2.核心协议/assets/4.执行层/image-20230626172541627.png" style="zoom:50%;" />
-<p>如上图，更多关于 Canister 的内容请看<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">第四章</a>。</p>
+<p>如上图，更多关于 Canister 的内容请看<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/../4.%E5%AE%B9%E5%99%A8(Canister)/1.Canister.html">第四章</a>。</p>
 <br>
 <p>为了管理 Canister 的执行时间，IC 对每个 Canister 执行的指令数量做了限制。每个 Canister 在每轮都有固定的指令数量。在一轮执行结束时，Canister 的执行会暂停，并在下一轮继续。为了防止 Canister 占用过多资源，对每个 Canister 的单次调用所能执行的最大指令数量有限制。若超过限制，执行将被终止，Canister 的状态回滚，同时会扣除消耗的 Cycles 。</p>
 <p>执行环境还对 Canister 在每一轮可以修改的堆页数做了限制。不过 Canister 超过限制后，仍会保存执行结果，只是不会执行后续操作了。Canister 计划修改的堆内存页数低于限制时，才会执行后续操作。</p>
@@ -2347,7 +2347,7 @@
 <p>冻结之后 Canister 不会再接收和发送消息，停止计算，直接拒绝所有请求。这时 Canister 只消耗存储数据的 Cycles 。Canister 被冻结之后充值一些 Cycles ，让余额高于阈值就可以解冻了。如果 30 天之后还没有充值 Cycles ，那 Cycles 耗尽时 Canister 会被子网删掉。</p>
 <p>并且，如果执行某个操作扣除了 Cycles 之后会低于冻结阈值， Canister 也无法执行这个操作。</p>
 <br>
-<p>现在 IC 的 4 层核心协议都介绍完了，下一章我们来看看 IC 的看家本领：<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/">链钥密码学</a>（ChainKey）。</p>
+<p>现在 IC 的 4 层核心协议都介绍完了，下一章我们来看看 IC 的看家本领：<a href="2.%E6%A0%B8%E5%BF%83%E5%8D%8F%E8%AE%AE/../3.%E9%93%BE%E9%92%A5%E5%AF%86%E7%A0%81%E5%AD%A6(ChainKey)/1.ChainKey.html">链钥密码学</a>（ChainKey）。</p>
 <br>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="相关概念介绍"><a class="header" href="#相关概念介绍">相关概念介绍</a></h1>
 <ul>
@@ -3375,9 +3375,9 @@ $$
 <h3 id="canister的内存管理"><a class="header" href="#canister的内存管理">Canister的内存管理</a></h3>
 <p>Canister 利用两种不同类型的内存。第一种是堆内存，它用作临时的数据存储空间。第二种是稳定内存，这是一个更大的内存池，用于永久的数据存储。</p>
 <p>一种是<strong>堆内存</strong>，这是 WebAssembly 暴露出来的内存堆空间，类似于计算机程序运行时使用的堆。用高级语言定义的所有变量和数据结构都存储在 Wasm 堆中，这是一个 <strong>4 GiB</strong> 的 32 位地址空间。但是堆内存其实只适合作为暂存空间使用，因为每次智能合约升级后，堆内存都有可能被清除。数据结构的布局也可能发生改变。因此不建议将重要数据长期存放在堆内存中。</p>
-<p>另一种是<strong>稳定内存</strong>，这是 Canister 提供的额外的 64 位可寻址内存空间，目前其大小为 <strong>96 GiB</strong> 。开发者需要通过相关 API 显式地使用稳定内存。稳定内存可以看作是持久化的存储空间，开发者可以将需要长期存储的数据放入这里。一种常见的用法模式是，开发者会在升级前后，将堆内存中的状态序列化成字节流，保存到稳定内存中，在恢复时再反序列化加载回来。</p>
+<p>另一种是<strong>稳定内存</strong>，这是 Canister 提供的额外的 64 位可寻址内存空间，目前其大小为 <strong>400 GiB</strong> 。开发者需要通过相关 API 显式地使用稳定内存。稳定内存可以看作是持久化的存储空间，开发者可以将需要长期存储的数据放入这里。一种常见的用法模式是，开发者会在升级前后，将堆内存中的状态序列化成字节流，保存到稳定内存中，在恢复时再反序列化加载回来。</p>
 <div class="center-image">
-    <img src="4.容器(Canister)/assets/1.Canister/image-20230918233748532.png" style="zoom:37%;" />
+    <img src="4.容器(Canister)/assets/1.Canister/image-20240212224034281.png" style="zoom:33%;" />
 </div>
 <p>为了实现内存的正交持久化，使程序在升级后可以恢复运行，Canister 使用了一些特殊的机制：</p>
 <ol>
