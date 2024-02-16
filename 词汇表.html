@@ -585,11 +585,10 @@ $$</p>
 <p>Canister 具有无限扩展潜力，它们是互联网计算机的智能合约。它们具有传统智能合约的所有特性，外加额外的功能和存储软件和用户数据的内存，因此它们是智能合约的进一步演变。</p>
 <h2 id="canister-account"><a class="header" href="#canister-account">Canister account</a></h2>
 <p>A <strong>canister account</strong> is a ledger account owned by a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> (i.e. whose <a href="https://wiki.internetcomputer.org/wiki/Glossary#fiduciary">fiduciary</a> is a canister). A non-canister account is a ledger account whose fiduciary is a non-canister <a href="https://wiki.internetcomputer.org/wiki/Glossary#principal">principal</a>.</p>
-<p>Canister 帐户是 Canister 拥有的分类帐帐户，这意味着 Canister 的委托人是该帐户的所有者。容器账户可以持有ICP，ICP可以用来支付计算和存储资源，也可以持有周期，周期是互联网计算机上的计算单位。另一方面，非罐账户是分类账户，其所有者是非罐委托人，例如个人或组织，也可以持有 ICP。</p>
-<p>一个canister账户是由一个canister拥有的账户，即其受托人是一个canister。一个非canister账户是其受托人是非canister原则的账户。</p>
+<p>Canister 帐户是 Canister 拥有的分类帐帐户，这意味着 Canister 的委托人是该帐户的所有者。容器账户可以持有 ICP ，ICP 可以用来支付计算和存储资源，也可以持有周期，周期是互联网计算机上的计算单位。另一方面，非罐账户是分类账户，其所有者是非罐委托人，例如个人或组织，也可以持有 ICP 。</p>
+<p>一个 Canister 账户是由一个 Canister 拥有的账户，即其受托人是一个 Canister 。一个非canister账户是其受托人是非canister原则的账户。</p>
 <h2 id="canister-identifier"><a class="header" href="#canister-identifier">Canister identifier</a></h2>
-<p>The <strong>canister identifier</strong> or <strong>canister ID</strong> is a globally-unique identifier that identifies a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> and can be used to interact with it.</p>
-<p>canister标识符或canister ID是一种全局唯一的标识符，用于标识canister并与之交互。</p>
+<p>Canister identifier 或 Canister ID 是一种全局唯一的标识符，用于标识 Canister 并与之交互。</p>
 <h2 id="canister-signature"><a class="header" href="#canister-signature">Canister signature</a></h2>
 <p>A <strong>canister signature</strong> uses a signature scheme based on <a href="https://wiki.internetcomputer.org/wiki/Glossary#certified_variables">certified variables</a>. Public “keys” include a <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister_identifier">canister id</a> plus a seed (so that every <a href="https://wiki.internetcomputer.org/wiki/Glossary#canister">canister</a> has many public keys); signatures are certificates that prove that the canister has put the signed message at a specific place in its state tree. Details in the <a href="https://smartcontracts.org/docs/interface-spec/#canister-signatures">The Internet Computer Interface Specification</a>.</p>
 <p>容器签名是一种加密签名，用于验证消息是否已由特定容器签名。使用的签名方案基于经过认证的变量，其中公钥由容器 ID 和种子组成，允许每个容器拥有多个公钥。当容器对消息进行签名时，生成的签名是一个证书，证明容器已将已签名的消息放在其状态树中的特定位置。有关容器签名的更多信息，请参阅互联网计算机接口规范。</p>
@@ -610,8 +609,8 @@ $$</p>
 <p>一般情况下，一个 Canister 的 Controller 可以指定为某个身份、或者某个身份对应的 Wallet Canister。</p>
 <p>在 dfx 0.9 之后，默认「身份」是 Canister 的 Controller 了，Wallet Canister 不再是默认 Controller（相当于 dfx 指定了 --no-wallet）。</p>
 <h2 id="cycle"><a class="header" href="#cycle">Cycle</a></h2>
-<p>在Internet Computer上，一个“cycle”（周期）是衡量处理、内存、存储和网络带宽消耗资源的计量单位。每个 “ canister ” 都有一个 “ cycles account ”（周期账户）， canister 消耗的资源会计入该账户。Internet Computer的实用代币ICP可以转换为“cycles”，并转移到 canister 上。“Cycles”也可以通过将它们附加到一个 canister 间的消息上，在 canister 之间进行转移。</p>
-<p>ICP可以根据当前以SDR计价的ICP价格，按照一万亿个“cycles”对应一个SDR的约定进行转换。</p>
+<p>在 Internet Computer 上，一个 “ cycle ” （周期）是衡量处理、内存、存储和网络带宽消耗资源的计量单位。每个 “ Canister ” 都有一个 “ cycles account ”（周期账户）， Canister 消耗的资源会计入该账户。Internet Computer 的实用代币 ICP 可以转换为 “ cycles ” ，并转移到 Canister 上。“ Cycles ” 也可以通过将它们附加到一个 Canister 间的消息上，在 Canister 之间进行转移。</p>
+<p>ICP 可以根据当前以 SDR 计价的ICP价格，按照一万亿个 “ cycles ” 对应一个 SDR 的约定进行转换。</p>
 <h2 id="motoko"><a class="header" href="#motoko">Motoko</a></h2>
 <p>Motoko 是一种新型的、现代的、具有类型安全的编程语言，专为希望构建下一代分布式应用程序并在互联网计算机区块链网络上运行的开发人员而设计。Motoko 专门为支持互联网计算机的独特功能而设计，提供了一个熟悉且强大的编程环境。作为一种新语言，Motoko 不断演进，支持新功能和其他改进。Motoko 编译器、文档和其他工具都是开源的，并在 Apache 2.0 许可下发布。</p>
 <p>Motoko 具有对 Canister 智能合约的原生支持，Canister 被表示为 Motoko Actor 。Actor 是一个自治对象，它完全封装了它的状态，并且仅通过异步消息与其他 Actor 通信。例如，下面的代码定义了一个有状态的 Counter Actor ：</p>
@@ -641,12 +640,7 @@ $$</p>
 <h2 id="副本replica"><a class="header" href="#副本replica">副本（Replica）</a></h2>
 <p>在 IC 中，副本（Replica）是指运行在 IC 节点上的客户端 / 副本软件。“ Replica ” 是一个由多个协议组件组成的集合，这些组件是一个节点（node）加入子网（subnet）的必要条件。</p>
 <h2 id="注册表registry"><a class="header" href="#注册表registry">注册表（Registry）</a></h2>
-<p>The IC <strong>registry</strong> manages the system meta-data maintained on the network nervous system (<a href="https://wiki.internetcomputer.org/wiki/Glossary#network_nervous_system_.28NNS.29">NNS</a>) and accessed by all <a href="https://wiki.internetcomputer.org/wiki/Glossary#subnet">subnet</a> blockchains.</p>
-<p>IC注册表（IC registry）管理着维护在网络神经系统（NNS）上的系统元数据，并被所有子网区块链所访问。</p>
-<h2 id="service-worker"><a class="header" href="#service-worker">Service worker</a></h2>
-<p>当浏览器向互联网计算机（Internet Computer，IC）请求资源时，这些资源可能存储在一个名为 API canister 的特殊神经元上。为了使这些资源可用，需要一个服务工作者来实现 HTTP 网关协议，将浏览器的请求转换为 API canister 调用，并验证这些资源的真实性。因此，这个服务工作者将作为一个中介，将浏览器和 API canister 连接起来，从而使浏览器可以访问存储在 IC 上的资源。</p>
-<p>它的作用是实现 HTTP 网关协议，将浏览器请求的静态资源转换为与 IC 通信的 API  canister 调用，并验证资源的认证。简单来说，就是它可以帮助浏览器请求静态资源并将其转换为与 IC（Internet Computer）通信的 API canister 调用，并且还可以确保这些资源是可信的。</p>
-<p>其中，HTTP 网关协议是指浏览器和服务工作者之间的通信协议，API canister 调用是指服务工作者向 IC 发送请求的方式，资产认证则是指在请求过程中确保资产的真实性和安全性。</p>
+<p>IC 注册表（IC registry）管理着维护在网络神经系统（NNS）上的系统元数据，并被所有子网区块链所访问。</p>
 <h2 id="节点node"><a class="header" href="#节点node">节点（Node）</a></h2>
 <p>Node 是承载 IC 的物理机节点。</p>
 <h2 id="webassembly"><a class="header" href="#webassembly">WebAssembly</a></h2>
